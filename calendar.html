@@ -28,31 +28,33 @@
 
 
   <section class="calender">
-    <h1 class="section-title">畳サーバーイベントカレンダー</h1>
-    <h2 class="mini-title">イベントカレンダー</h2>
-    <img src="img/calender.png" alt="イベントカレンダー">
-    <p><br></p>
+    <div class="container">
+      <h1 class="section-title">畳サーバーイベントカレンダー</h1>
+      <h2 class="mini-title">イベントカレンダー</h2>
+      <img src="img/calender.png" alt="イベントカレンダー">
+      <p><br></p>
 
 
-    <script type="text/javascript">
-      
-      var d = new Date();
-      
-      var year = d.getFullYear(); // 年
-      var month = d.getMonth() + 1; // 月
-      var day = d.getDate(); // 日
-      // 数値が1桁の場合、頭に0を付けて2桁で表示する指定
-      if(month < 10) { 
-        month = "0" + month; 
-      }
+      <script type="text/javascript">
 
-      if(day < 10) { 
-        day = "0" + day; 
-      }
+        var d = new Date();
 
-      document.write('更新：' + year + '年' + month + '月' + day + '日');
+        var year = d.getFullYear(); // 年
+        var month = d.getMonth() + 1; // 月
+        var day = d.getDate(); // 日
+        // 数値が1桁の場合、頭に0を付けて2桁で表示する指定
+        if(month < 10) { 
+          month = "0" + month; 
+        }
 
-      </script>
+        if(day < 10) { 
+          day = "0" + day; 
+        }
+
+        document.write('更新：' + year + '年' + month + '月' + day + '日');
+
+        </script>
+    </div>
   </section>
 
 
