@@ -269,6 +269,10 @@ footer li + li {
   .mini-title{
     margin:40px 20px 5px;
   }
+  
+  .product{
+    width: calc((100% - 32px) / 2);
+  }
 }
 
 /* large screen */
