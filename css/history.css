@@ -123,7 +123,7 @@ a:hover {
   font-weight:normal;
 }
 
-.desc .pic{
+.desc, .pic{
   width:50%;
 }
 
