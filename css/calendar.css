@@ -158,6 +158,13 @@ header button {
   cursor: pointer;
 }
 
+.igusa{
+  background-color: rgb(188, 255, 133);
+}
+
+.igusa > p{
+  font-weight:normal;
+}
 /* 一応残してる */
 .color1{
   color:#59a5ed;
