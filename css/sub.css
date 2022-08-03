@@ -233,6 +233,16 @@ header button {
 .table{
   margin: 0 auto;
   margin-bottom: 60px;
+  overflow-x:scroll;
+}
+
+.igusa{
+  background-color: rgb(188, 255, 133);
+  margin-top: 48px;
+}
+
+.igusa > p{
+  font-weight:normal;
 }
 
 /* footer */
