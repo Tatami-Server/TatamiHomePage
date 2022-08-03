@@ -104,6 +104,14 @@ a:hover {
   background-color: rgba(135, 181, 255,0.4);
 }
 
+.igusa{
+  background-color: rgb(188, 255, 133);
+}
+
+.igusa > p{
+  font-weight:normal;
+}
+
 /* header */
 
 header {
