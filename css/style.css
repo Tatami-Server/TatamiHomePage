@@ -219,6 +219,20 @@ header button {
   margin: 100px 40px;
 }
 
+.igusa{
+  background-color: rgb(188, 255, 133);
+  margin: 0 auto;
+}
+
+.igusa > h4{
+  text-align: left;
+}
+
+.igusa > p{
+  font-weight:normal;
+  text-align-last: left;
+}
+
 /* changed */
 .table{
   margin: 0 auto;
