@@ -221,16 +221,11 @@ header button {
 
 .igusa{
   background-color: rgb(188, 255, 133);
-  margin: 0 auto;
-}
-
-.igusa > h4{
-  text-align: left;
+  margin-top: 48px;
 }
 
 .igusa > p{
   font-weight:normal;
-  text-align-last: left;
 }
 
 /* changed */
