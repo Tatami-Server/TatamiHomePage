@@ -223,6 +223,7 @@ header button {
 .table{
   margin: 0 auto;
   margin-bottom: 60px;
+  overflow-x:scroll;
 }
 
 
