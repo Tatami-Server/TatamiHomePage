@@ -101,6 +101,7 @@ a:hover {
 .mini-title{
   margin:40px 0 5px;
   background-color: rgba(135, 181, 255,0.4);
+  text-align: center;
 }
 
 /* header */
