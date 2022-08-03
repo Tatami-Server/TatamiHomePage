@@ -183,7 +183,6 @@ header button {
   font-weight: bold;
 }
 
-
 .normal{
   font-weight: normal;
 }
@@ -254,4 +253,13 @@ footer li + li {
   .mini-title{
     margin:40px 320px 5px;
   }
+}
+
+.igusa{
+  background-color: rgb(188, 255, 133);
+  margin-top: 48px;
+}
+
+.igusa > p{
+  font-weight:normal;
 }
