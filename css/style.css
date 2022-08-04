@@ -94,8 +94,8 @@ a:hover {
 
 .kotira{
   color:blue;
-  border-bottom: 2px solid #000;
-  font-weight:bold
+  /* border-bottom: 2px solid #000; */
+  /*font-weight:bold; */
 }
 
 .mini-title{
@@ -230,12 +230,11 @@ header button {
 }
 
 /* changed */
-.table{
+.table {
   margin: 0 auto;
   margin-bottom: 60px;
-  overflow-x:scroll;
+  overflow-x: scroll;
 }
-
 
 /* footer */
 
