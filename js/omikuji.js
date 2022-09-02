@@ -104,7 +104,7 @@
 
     if (fortune_number == 0 || fortune_number == 4) 
     {
-      play("./music/シャキーン2.mp3"); // 音楽を再生
+      play("./music/zyaki.mp3"); // 音楽を再生
       splash_text.innerHTML = "こ、これは、、、⁈"
       
   
@@ -123,10 +123,10 @@
       if ( fortune_number == 0 ) {
         fortune_content.innerHTML = "大当たり!!";
         window.setTimeout(function(){
-          play("./music/大当たり.mp3");
+          play("./music/atari.mp3");
       }, 2500);
         window.setTimeout(function(){
-          play("./music/歓声と拍手.mp3");
+          play("./music/pati.mp3");
           btn.disabled = false;
       }, 4200);
       }
@@ -134,7 +134,7 @@
       if (fortune_number == 4) {
         fortune_content.innerHTML = "残念…";
         window.setTimeout(function(){
-          play("./music/大外れ.mp3")
+          play("./music/hazure.mp3")
           btn.disabled = false;
       }, 2500);
       }
