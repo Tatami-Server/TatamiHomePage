@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>畳サーバー ~畳おみくじ~</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/omikuji.css">
+</head>
+
+<body id = "body">
+  <div class="container">
+
+    <div id="splash">
+      <p id="splash-text"></p>
+    </div>
+      
+      </div><!---画面遷移用-->
+      
+    <main>
+      <div class="marquee">
+        <p id = "fortune-text">今日の運勢を占おう！</p>
+      </div>
+      
+      <form class="quest_list" name="form1">
+        <p>特定のクエストを拒否</p>
+        <label><input type="checkbox" name="cbx" value="0">ダイヤモンドを10個集める</label>
+        <label><input type="checkbox" name="cbx" value="1">2000G稼ぐ</label>
+        <label><input type="checkbox" name="cbx" value="2">ガチャを3回引く</label>
+        <label><input type="checkbox" name="cbx" value="3">10000G稼ぐ</label>
+        <label><input type="checkbox" name="cbx" value="4">一部屋以上建築する</label>
+        <label><input type="checkbox" name="cbx" value="5">職業レベルを2あげる</label>
+        <label><input type="checkbox" name="cbx" value="6">新しい他人の構造物を見つける</label>
+        <label><input type="checkbox" name="cbx" value="7">ガチャを10回引く</label>
+        <label><input type="checkbox" name="cbx" value="8">ネザライトインゴットを獲得する</label>
+      </form>
+      <div class="omikuji">
+        <h1>畳おみくじ</h1>
+        <h2><span id="today"></span>の運勢とクエスト</h2>
+        <h2>おみくじとクエストが当たります</h2>
+        <button class="btn--orange btn--cubic btn--shadow" id="button">おみくじスタート</button>
+        <h3 id = 'fortune-label'>今日のクエストも出てきます</h3>
+        <div id = "fortune-result"></div>
+        <div id = "fortune-content"></div>
+        <ul id="list">
+        </ul>
+        <br><br><a href="index.html" class="kotira2">元のページに戻る</p></a>
+    </div>
+  </main>
+
+  ​  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/omikuji.js"></script>
+    <script>
+
+        var music = new Audio("");
+        function init() {
+          music.preload = "auto";
+          music.load();
+        }
+
+        function play(sample) {
+          music.src = sample;
+          music.loop = false;
+          music.play();
+        }
+
+        function stop() {
+          music.pause();
+          music.currentTime = 0;
+        }
+
+        init();
+    
+    </script>
+    
+  </div>
+
+
+
+  <a href="#" id="to_top">
+    <i class="bi bi-caret-up-square"></i>
+  </a>
+
+</body>
+</html>
