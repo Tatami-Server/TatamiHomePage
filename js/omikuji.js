@@ -16,7 +16,7 @@
   const span = document.getElementById("today");
   span.innerHTML = result;
   //クエスト表示
-  let names = new Array('ダイヤモンドを10個集める','2000G稼ぐ','ガチャを3回引く','10000G稼ぐ','一部屋以上建築する', '職業レベルを2あげる', '新しい他人の構造物を見つける' , 'ガチャを10回引く','ネザライトインゴットを獲得する');
+  let names = new Array('ダイヤモンドを10個集める','3000G消費する','ガチャでURを引き当てる','5000G稼ぐ','一部屋以上建築する', '#畳サーバー でツイートする', '普段行かない資源ワールドで採集する' , 'ガチャを10回引く','ネザライトインゴットを獲得する');
   const number = 1;
   const list = document.getElementById('list');
   const btn = document.getElementById('button');
