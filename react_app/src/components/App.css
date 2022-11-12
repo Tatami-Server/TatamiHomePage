@@ -42,57 +42,5 @@ header .logo {
   object-fit: cover;
 }
 
-/* mainPage */
-.mainPage{
-  padding-left: 10vw;
-  padding-right: 10vw;
-}
 
-/* products */
-.products{
-  margin-top: calc(100vh - 287px) ;
-}
-.products a{
-  text-decoration: none;
-  color: #000;
-}
-
-/* mainProducts*/
-.mainProducts .mainProduct{
-  padding-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-}
-.mainProducts .mainProduct:nth-child(even){
-  flex-direction: row-reverse;
-}
-
-/* .productImgBox */
-.productImgBox{
-  display: flex;
-  width: 40vw;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.productImgBox .fill{
-  width: 60%;
-  background-color:rgb(164, 221, 231);
-  display: inline-block;
-}
-.productImgBox img{
-  width: 100%;
-  height: auto;
-  opacity: 0.9;
-  display: block;
-}
-.productImgBox .textBox{
-  width: 40%;
-  background-color:rgb(67, 102, 68) ;
-  color: white;
-  font-size: 200%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 

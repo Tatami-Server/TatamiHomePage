@@ -1,13 +1,18 @@
-/* mainProducts*/
-.mainProducts .mainProduct{
-  padding-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
+/* mainPage */
+.mainPage{
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
-.mainProducts .mainProduct:nth-child(even){
-  flex-direction: row-reverse;
+
+/* products */
+.products{
+  margin-top: calc(100vh - 287px) ;
 }
+.products a{
+  text-decoration: none;
+  color: #000;
+}
+
 
 /* .productImgBox */
 .productImgBox{
@@ -35,4 +40,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* mainProducts*/
+.mainProducts{
+  padding-bottom: 100px;
+}
+.mainProducts .mainProduct{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.mainProducts .mainProduct:nth-child(even){
+  flex-direction: row-reverse;
 }
