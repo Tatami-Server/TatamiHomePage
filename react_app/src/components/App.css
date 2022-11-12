@@ -1,0 +1,98 @@
+body{
+  margin: 0;
+}
+
+/* header */
+header .spuare{
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  border-bottom: 7px solid rgb(67, 102, 68);
+}
+header .triangle {
+  width: 0px;
+  height: 0px;
+  border-top: 100px solid rgb(67, 102, 68);
+  border-left:200px solid rgb(67, 102, 68);
+  border-right: 200px solid transparent;
+  border-bottom: 100px solid transparent;
+  position: relative;
+}
+header .line{
+  border-top-color:white ;
+  border-left-color:white ;
+  position:absolute;
+  top: 78px;
+}
+header .logo {
+  width: 270px;
+  height: auto;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+}
+
+/* hero */
+.heroPhoto{
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* mainPage */
+.mainPage{
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+/* products */
+.products{
+  margin-top: calc(100vh - 287px) ;
+}
+.products a{
+  text-decoration: none;
+  color: #000;
+}
+
+/* mainProducts*/
+.mainProducts .mainProduct{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.mainProducts .mainProduct:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+/* .productImgBox */
+.productImgBox{
+  display: flex;
+  width: 40vw;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.productImgBox .fill{
+  width: 60%;
+  background-color:rgb(164, 221, 231);
+  display: inline-block;
+}
+.productImgBox img{
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  display: block;
+}
+.productImgBox .textBox{
+  width: 40%;
+  background-color:rgb(67, 102, 68) ;
+  color: white;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
