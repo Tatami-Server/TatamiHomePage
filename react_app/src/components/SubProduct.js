@@ -15,7 +15,7 @@ const SubProduct = (props) => {
       </a>
         <div className="subProductText">
           <h2>{props.title}</h2>
-          <p>{props.Description}</p>
+          <p>{props.description}</p>
         </div>
     </div>
   );

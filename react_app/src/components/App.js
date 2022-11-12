@@ -14,27 +14,29 @@ import inquery from '../imges/App.imges/inquery.jpg';
 
 import MainProduct from './MainProduct.js';
 import SubProduct from './SubProduct.js';
+import Footer from './Footer.js';
 import './App.css';
 
 function App() {
   const MainProductsList=[
-    {href:"join.html",imgTitle:"参加方法",img:join,title:"サーバー参加方法",Description:"Discordやマイクラサーバーへの参加方法を紹介しています。"},
-    {href:"life.html",imgTitle:"生活鯖",img:life,title:"生活サーバー",Description:"半年ぶりに復活した新しい生活サーバーについて紹介しています。"},
-    {href:"event.html",imgTitle:"イベント",img:event,title:"イベント一覧",Description:"当サーバーが提供しているイベント一覧とルールを紹介しています。"}
+    {href:"join.html",imgTitle:"参加方法",img:join,title:"サーバー参加方法",description:"Discordやマイクラサーバーへの参加方法を紹介しています。"},
+    {href:"life.html",imgTitle:"生活鯖",img:life,title:"生活サーバー",description:"半年ぶりに復活した新しい生活サーバーについて紹介しています。"},
+    {href:"event.html",imgTitle:"イベント",img:event,title:"イベント一覧",description:"当サーバーが提供しているイベント一覧とルールを紹介しています。"}
   ];
   const SubProductsList=[
-    {href:"offer.html",imgTitle:"マップ",img:map,title:"配布マップ",Description:"当サーバーが提供している配布マップ等を紹介しています。"},
-    {href:"history.html",imgTitle:"歴史",img:history,title:"畳サーバーの歴史",Description:"当サーバーの過去を知ることができます。過去にこんな事が...。"},
-    {href:"sns.html",imgTitle:"SNS",img:sns,title:"公式SNS",Description:"Twitch・YouTube・Twitter等のURLを記載しています。"},
-    {href:"sub.html",imgTitle:"ご寄付",img:donation,title:"サブスクライブ・ご寄付",Description:"平素よりご支援いただきありがとうございます！"},
-    {href:"helper.html",imgTitle:"応募",img:application,title:"運営への応募",Description:"建築や開発など、私たちと共に制作しませんか？"},
-    {href:"contact.html",imgTitle:"お問い合わせ",img:inquery,title:"お問い合わせ・意見箱",Description:"意見や要望はこちらから！"},
-    {href:"please.html",imgTitle:"お願い",img:please,title:"運営からのお願い",Description:"サーバーの維持や盛り上げのためにお願いしていることを記載しています。"},
-    {href:"omikuji.html",imgTitle:"おみくじ",img:omikuzi,title:"畳おみくじ",Description:"今日の運勢とクエストを占おう！ちょっとした遊び心で用意したコンテンツです。"}
+    {href:"offer.html",imgTitle:"マップ",img:map,title:"配布マップ",description:"当サーバーが提供している配布マップ等を紹介しています。"},
+    {href:"history.html",imgTitle:"歴史",img:history,title:"畳サーバーの歴史",description:"当サーバーの過去を知ることができます。過去にこんな事が...。"},
+    {href:"sns.html",imgTitle:"SNS",img:sns,title:"公式SNS",description:"Twitch・YouTube・Twitter等のURLを記載しています。"},
+    {href:"sub.html",imgTitle:"ご寄付",img:donation,title:"サブスクライブ・ご寄付",description:"平素よりご支援いただきありがとうございます！"},
+    {href:"helper.html",imgTitle:"応募",img:application,title:"運営への応募",description:"建築や開発など、私たちと共に制作しませんか？"},
+    {href:"contact.html",imgTitle:"お問い合わせ",img:inquery,title:"お問い合わせ・意見箱",description:"意見や要望はこちらから！"},
+    {href:"please.html",imgTitle:"お願い",img:please,title:"運営からのお願い",description:"サーバーの維持や盛り上げのためにお願いしていることを記載しています。"},
+    {href:"omikuji.html",imgTitle:"おみくじ",img:omikuzi,title:"畳おみくじ",description:"今日の運勢とクエストを占おう！ちょっとした遊び心で用意したコンテンツです。"}
   ]
+
   return (
-    <body>
-      <header>
+  <body>
+    <header>
       <div className="headerContainer">
         <div className="spuare"></div>
         <div className="triangle"></div>
@@ -52,31 +54,33 @@ function App() {
           {MainProductsList.map((productItem) =>{
             return(
             <MainProduct
-              href={productItem.href}
-              imgTitle={productItem.imgTitle}
-              img={productItem.img}
-              title={productItem.title}
-              Description={productItem.Description}
+            {...productItem}
             />
             );
           })}
 
         </div>
         <div className="subProducts">
-          {SubProductsList.map((productItem) =>{
+          {SubProductsList.map(({href, imgTitle, img, title, description}) =>{
               return(
               <SubProduct
-                href={productItem.href}
-                imgTitle={productItem.imgTitle}
-                img={productItem.img}
-                title={productItem.title}
-                Description={productItem.Description}
+                href={href}
+                imgTitle={imgTitle}
+                img={img}
+                title={title}
+                description={description}
               />
               );
             })}
         </div>
       </section>
-    </div>  
+    </div> 
+    <div className="news">
+
+
+    </div>
+    <Footer/>      
+
   </body>
   );
 }

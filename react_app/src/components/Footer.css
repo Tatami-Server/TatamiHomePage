@@ -1,0 +1,23 @@
+/* footer */
+footer{
+  background-color: rgb(67, 102, 68);
+}
+
+.footerContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.icons{
+  list-style: none;
+  display: flex;
+  gap:30px;
+}
+
+.footerText{
+ padding-left: 10vw;
+}

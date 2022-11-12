@@ -15,7 +15,7 @@ const MainProduct = (props) => {
       </a>
         <div className="mainProductText">
           <h2>{props.title}</h2>
-          <p>{props.Description}</p>
+          <p>{props.description}</p>
         </div>
     </div>
   );
