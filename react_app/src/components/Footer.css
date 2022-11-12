@@ -1,9 +1,9 @@
 /* footer */
-footer{
+footer {
   background-color: rgb(67, 102, 68);
 }
 
-.footerContainer{
+.footerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,12 +12,12 @@ footer{
   padding-right: 10vw;
 }
 
-.icons{
+.icons {
   list-style: none;
   display: flex;
-  gap:30px;
+  gap: 30px;
 }
 
-.footerText{
- padding-left: 10vw;
+.footerText {
+  padding-left: 10vw;
 }

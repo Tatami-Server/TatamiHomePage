@@ -1,27 +1,25 @@
-
 /* sns */
 .icon {
   font-size: 60px;
   padding-left: 20px;
 }
 
-.twitch{
+.twitch {
   color: rgb(198, 3, 232);
 }
 
-.twitter{
-  color:#4ba8e6;
+.twitter {
+  color: #4ba8e6;
 }
 
-.youtube{
+.youtube {
   color: red;
 }
 
-.discord{
+.discord {
   color: rgb(141, 80, 255);
 }
 
-.other{
-  color:rgb(92, 62, 100)
+.other {
+  color: rgb(92, 62, 100)
 }
-

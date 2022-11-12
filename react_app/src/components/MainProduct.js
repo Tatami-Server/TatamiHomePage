@@ -9,14 +9,14 @@ const MainProduct = (props) => {
             <p>{props.imgTitle}</p>
           </div>
           <div className="fill">
-            <img src={props.img} alt="サーバー参加方法"/>
+            <img src={props.img} alt="サーバー参加方法" />
           </div>
         </div>
       </a>
-        <div className="mainProductText">
-          <h2>{props.title}</h2>
-          <p>{props.description}</p>
-        </div>
+      <div className="mainProductText">
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+      </div>
     </div>
   );
 }

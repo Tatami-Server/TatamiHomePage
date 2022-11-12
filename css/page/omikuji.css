@@ -1,10 +1,10 @@
-html,body 
-    { 
-    height: 100%;
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 .marquee p {
   margin: 0;
   padding-left: 100%;
@@ -18,19 +18,29 @@ html,body
   font-weight: bold;
   color: white;
 }
-  @keyframes marquee {
-    from { transform : translate( 0% ) ;}
-    99% , to { transform : translate(-100%);}
+
+@keyframes marquee {
+  from {
+    transform: translate(0%);
   }
+
+  99%, to {
+    transform: translate(-100%);
+  }
+}
+
 main {
   margin: 50px 0;
 }
+
 h1 {
   font-size: 50px;
 }
+
 h2 {
   margin-bottom: 48px;
 }
+
 h3 {
   text-align: center;
 }
@@ -40,46 +50,52 @@ button {
   padding: 25px;
   cursor: pointer;
   font-weight: bold;
-  transition:all 0.2s;
+  transition: all 0.2s;
 }
+
 button.btn--orange {
   color: #fff;
   background-color: #85eb00d0;
   border-bottom: 5px solid #259905;
 }
+
 button.btn--orange:hover {
   color: rgb(41, 41, 41);
   background-color: #fff719fb;
   border-bottom: 5px solid #89870b;
-  opacity:0.8;
+  opacity: 0.8;
 }
+
 button.btn--orange:active {
   margin-top: 3px;
   color: rgb(41, 41, 41);
   background: #fff719fb;
   border-bottom: 2px solid #89870b;
 }
+
 button.btn--shadow {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
 }
+
 #list {
   width: 50%;
-  margin: 0 auto ;
+  margin: 0 auto;
   display: none;
 }
+
 #list li {
   font-size: 32px;
-  color:rgb(255, 196, 19);
+  color: rgb(255, 196, 19);
   font-weight: bold;
   list-style: none;
   text-align: center;
   margin-right: 24px;
   background-color: rgba(191, 255, 52, 0.537);
-  text-shadow:2px 2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0),
-  -2px 2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0),
-  0px 2px 0 rgb(0, 0, 0),  -2px 0 rgb(0, 0, 0),
-  -2px 0 0 rgb(0, 0, 0), 2px 0 0 rgb(0, 0, 0);
+  text-shadow: 2px 2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0),
+    -2px 2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0),
+    0px 2px 0 rgb(0, 0, 0), -2px 0 rgb(0, 0, 0),
+    -2px 0 0 rgb(0, 0, 0), 2px 0 0 rgb(0, 0, 0);
 }
 
 #today {
@@ -97,7 +113,7 @@ button.btn--shadow {
   height: 180px;
   width: 400px;
   text-align: center;
-  left : 20px;
+  left: 20px;
   bottom: 20px;
   border: 5px solid black;
   background-color: #fff;
@@ -107,16 +123,21 @@ button.btn--shadow {
   position: absolute;
   font-size: 120px;
   font-weight: bold;
-  bottom: 250px; 
+  bottom: 250px;
   right: 50px;
   transform: rotate(-35deg);
   color: rgba(105, 255, 82, 0.79);
-  animation: 0.1s linear infinite rotation1 ;
+  animation: 0.1s linear infinite rotation1;
 }
 
 @keyframes rotation1 {
-  0%{ transform:rotate(0);}
-  100%{ transform:rotate(360deg); }
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #fortune-label {
@@ -129,15 +150,15 @@ button.btn--shadow {
   width: 100%;
   height: 100%;
   background: #333;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: 9999999;
-  text-align:center;
-  color:#fff;
+  text-align: center;
+  color: #fff;
 }
 
 #splash p {
-  
+
   font-weight: bold;
 
 }
@@ -159,47 +180,52 @@ button.btn--shadow {
   text-align: center;
 }
 
-.omikuji h1{
+.omikuji h1 {
   color: rgb(148, 255, 40);
   text-shadow: 6px 6px rgb(23, 67, 1);
 }
 
-.omikuji h2{
+.omikuji h2 {
   color: #fff;
 }
 
-h4 .appear{
+h4 .appear {
   display: block;
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .splashbg{
-    display: block;
-    border-radius: 50%; 
-  animation-name:PageAnime;
-  animation-duration:2s;
-  animation-fill-mode:forwards;
+body.appear .splashbg {
+  display: block;
+  border-radius: 50%;
+  animation-name: PageAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes PageAnime{
-  0% {/*丸のスタート位置と形状*/
-    transform: scale(100);
-  
-  }
-  100% {/*丸の終了位置と形状*/
-    transform: scale(0);
-    display: none;/*終了時は消える*/
-  }
-}
-
-
-@keyframes PageAnimeAppear{
+@keyframes PageAnime {
   0% {
-  opacity: 0;
+    /*丸のスタート位置と形状*/
+    transform: scale(100);
+
   }
+
   100% {
-  opacity: 1;
+    /*丸の終了位置と形状*/
+    transform: scale(0);
+    display: none;
+    /*終了時は消える*/
+  }
 }
+
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .quest_list {
@@ -209,7 +235,7 @@ body.appear .splashbg{
   background-color: #fff;
 }
 
-.quest_list label  {
+.quest_list label {
   display: block;
   margin-bottom: 7px;
 }
@@ -218,50 +244,53 @@ body.appear .splashbg{
   font-weight: bold;
 
 }
+
 .quest_list {
   background-color: rgb(158, 246, 100);
-  border: outset 10px #06a225; }
+  border: outset 10px #06a225;
+}
 
-  @media (min-width: 1280px) {
+@media (min-width: 1280px) {
 
-    /* 画像全体を見せる */
-    body  { 
+  /* 画像全体を見せる */
+  body {
     height: 100%;
-    background-image:url("https://i.gyazo.com/0c16b1a12553a5709a835b670e1230d9.png");
+    background-image: url("https://i.gyazo.com/0c16b1a12553a5709a835b670e1230d9.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-    position:relative;
-    z-index:1;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 余白に画像のぼかし */
+  body::before {
+    background: inherit;
+    content: '';
+    position: absolute;
+    filter: blur(1px);
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+  }
+
+  html::before {
+    background: inherit;
+    content: '';
+    position: absolute;
+    filter: blur(5px);
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+  }
 }
-    /* 余白に画像のぼかし */
-    body::before {
-      background: inherit; 
-      content: '';
-      position: absolute;
-      filter: blur(1px);  
-      top: -5px;
-      right: -5px;
-      bottom: -5px;
-      left: -5px;
-      z-index:-1;
-    }
 
-    html::before {
-      background: inherit; 
-      content: '';
-      position: absolute;
-      filter: blur(5px);  
-      top: -5px;
-      right: -5px;
-      bottom: -5px;
-      left: -5px;
-      z-index:-1;
-    }
- } 
-
- /* common */
+/* common */
 
 body {
   margin: 0;
@@ -269,11 +298,11 @@ body {
   background-color: rgb(223, 255, 178);
 }
 
-h1{
+h1 {
   margin: 0;
 }
 
-h2{
+h2 {
   margin: 0;
 }
 
@@ -287,11 +316,11 @@ img {
   vertical-align: bottom;
 }
 
-.section-title{
+.section-title {
   text-align: center;
 }
 
-.contents-title{
+.contents-title {
   font-size: 24px;
 }
 
@@ -342,77 +371,77 @@ a:hover {
 
 }
 
-.btn:hover{
+.btn:hover {
   opacity: 0.8;
   transition: color 0.01s;
   cursor: pointer;
 }
 
-.btn:active{
+.btn:active {
   position: relative;
   top: 5px;
   box-shadow: none;
   opacity: 1;
 }
 
-.kotira{
-  color:blue;
+.kotira {
+  color: blue;
   border-bottom: 2px solid #000;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.kotira2{
-  color:rgb(0, 106, 255);
-  font-weight:bold;
+.kotira2 {
+  color: rgb(0, 106, 255);
+  font-weight: bold;
   font-size: 28px;
   background-color: rgb(183, 233, 240);
 }
 
-.mini-title{
-  margin:40px 0 5px;
-  background-color: rgba(135, 181, 255,0.4);
+.mini-title {
+  margin: 40px 0 5px;
+  background-color: rgba(135, 181, 255, 0.4);
 }
 
-.igusa{
+.igusa {
   background-color: rgb(188, 255, 133);
   margin-top: 48px;
 }
 
-.igusa > p{
-  font-weight:normal;
-}
-
-/* join */
-.color1{
-  color:#59a5ed;
-  background-color: rgba(238, 238, 238, 0.415);
-  font-weight: bold;
-}
-
-.color2{
-  color:#000000;
-  background-color: rgba(238, 238, 238, 0.415);
-  font-weight: bold;
-}
-
-.color3{
-  color:#28de31;
-  background-color: rgba(238, 238, 238, 0.415);
-  font-weight: bold;
-}
-
-.color4{
-  color:#ab10da;
-  background-color: rgba(238, 238, 238, 0.415);
-  font-weight: bold;
-}
-
-
-.normal{
+.igusa>p {
   font-weight: normal;
 }
 
-.bold{
+/* join */
+.color1 {
+  color: #59a5ed;
+  background-color: rgba(238, 238, 238, 0.415);
+  font-weight: bold;
+}
+
+.color2 {
+  color: #000000;
+  background-color: rgba(238, 238, 238, 0.415);
+  font-weight: bold;
+}
+
+.color3 {
+  color: #28de31;
+  background-color: rgba(238, 238, 238, 0.415);
+  font-weight: bold;
+}
+
+.color4 {
+  color: #ab10da;
+  background-color: rgba(238, 238, 238, 0.415);
+  font-weight: bold;
+}
+
+
+.normal {
+  font-weight: normal;
+}
+
+.bold {
   font-weight: bold;
   font-size: 27px;
 }
@@ -446,7 +475,7 @@ footer ul {
   display: flex;
 }
 
-footer li + li {
+footer li+li {
   margin-left: 8px;
 }
 
@@ -457,8 +486,8 @@ footer li + li {
     width: calc((100% - 32px) / 3);
   }
 
-  .mini-title{
-    margin:40px 20px 5px;
+  .mini-title {
+    margin: 40px 20px 5px;
   }
 }
 
@@ -475,7 +504,7 @@ footer li + li {
     display: block;
   }
 
-  .mini-title{
-    margin:40px 320px 5px;
+  .mini-title {
+    margin: 40px 320px 5px;
   }
 }

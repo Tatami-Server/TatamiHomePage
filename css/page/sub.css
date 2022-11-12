@@ -1,4 +1,3 @@
-
 .color5{
   color:red;
   background-color: rgba(238, 238, 238, 0.415);
@@ -27,8 +26,6 @@
   transform:none;
 }
 
-
-
 .table{
   margin: 0 auto;
   margin-bottom: 60px;
@@ -40,7 +37,6 @@
 }
 
 /* medium screen */
-
 @media (min-width: 600px) {
 
   .desc .pic{
@@ -49,7 +45,6 @@
 }
 
 /* large screen */
-
 @media (min-width: 920px) {
   
   .features section{

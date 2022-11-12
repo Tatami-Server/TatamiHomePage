@@ -107,7 +107,6 @@ a:hover {
   font-weight:normal;
 }
 
-
 /* color */
 .color1{
   color:#59a5ed;
@@ -175,8 +174,6 @@ a:hover {
   margin: 32px auto 0;
 }
 
-
-
 /* medium screen */
 
 @media (min-width: 600px) {
@@ -190,7 +187,6 @@ a:hover {
 }
 
 /* large screen */
-
 @media (min-width: 920px) {
   .container {
     width: calc(100% - 32px);
