@@ -15,6 +15,7 @@ import inquery from '../imges/App.imges/inquery.jpg';
 import MainProduct from './MainProduct.js';
 import SubProduct from './SubProduct.js';
 import Footer from './Footer.js';
+import News from './News.js';
 import './App.css';
 
 function App() {
@@ -75,10 +76,7 @@ function App() {
           </div>
         </section>
       </div>
-      <div className="news">
-
-
-      </div>
+      <News/>
       <Footer />
 
     </body>

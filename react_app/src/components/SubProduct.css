@@ -65,3 +65,7 @@
 .subProducts .productImgBox .textBox {
   font-size: 150%;
 }
+
+.subProduct h2{
+  text-align: center;
+}

@@ -1,4 +1,6 @@
-/* mainPage */
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+
+	/* mainPage */
 .mainPage {
   padding-left: 10vw;
   padding-right: 10vw;
@@ -59,4 +61,13 @@
 
 .mainProducts .mainProduct:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+.mainProduct h2{
+  font-family: 'Yuji Syuku', serif;
+  font-size: 50px;
+}
+
+.mainProduct p{
+  
 }

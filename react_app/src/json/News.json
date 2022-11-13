@@ -1,0 +1,39 @@
+{
+  "newsData":[
+    {
+      "date":"2022年10月25日",
+      "content":"Knock Shot、チャレンジタワーのイベント解説ページを作成しました。",
+      "href":"event.html"
+    },
+    {
+      "date":"2022年9月20日",
+      "content":"当鯖鯖主の名前が「おとたき」になりました。",
+      "href":"https://www.twitch.tv/Ototaki0622/"
+    },
+    {
+      "date":"2022年9月11日",
+      "content":"生活サーバーでWebマップが使用可能になりました。",
+      "href":"life.html"
+    },
+    {
+      "date":"2022年9月2日",
+      "content":"お遊びで畳おみくじ機能を導入しました。",
+      "href":"omikuji.html"
+    },
+    {
+      "date":"2022年8月29日",
+      "content":"生活サーバーに関する記事を追加しました！",
+      "href":"life.html"
+    },
+    {
+      "date":"2022年8月29日",
+      "content":"運営からのお願いを追加しました。",
+      "href":"please.html"
+    },
+    {
+      "date":"2022年8月24日",
+      "content":"畳サーバーの歴史を見やすくしました。",
+      "href":"history.html"
+    }
+  ]
+}
