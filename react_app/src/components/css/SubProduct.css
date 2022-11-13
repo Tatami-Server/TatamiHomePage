@@ -1,0 +1,35 @@
+
+/* Subproducts */
+.subProducts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  border-bottom: solid 2px rgba(67, 102, 68, 0.486);
+}
+
+.subProducts .Product {
+  padding-top: 50px;
+}
+
+.subProducts .productImgBox, .ProductText {
+  width: 25vw;
+}
+
+.subProducts .productImgBox .textBox {
+  font-size: 150%;
+}
+
+.subProducts .Product h2 {
+  text-align: center;
+}
+
+.subProducts .ProductText h2 {
+  font-family: 'Yuji Syuku', serif;
+  font-size: 30px;
+}
+
+.subProducts .ProductText {
+  font-size: 16px;
+}

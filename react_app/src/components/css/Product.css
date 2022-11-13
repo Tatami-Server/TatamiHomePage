@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
-/* mainPage */
+
+	/* mainPage */
 .mainPage {
   padding-left: 10vw;
   padding-right: 10vw;
@@ -38,44 +39,10 @@
 
 .productImgBox .textBox {
   width: 40%;
-  background-color: rgb(67, 102, 68);
+  background-color: rgb(66, 102, 68);
   color: white;
   font-size: 200%;
   display: flex;
+  justify-content: center;
   align-items: center;
-}
-
-/* Subproducts */
-.subProducts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2vw;
-  padding-bottom: 100px;
-  padding-top: 100px;
-  border-bottom: solid 2px rgba(67, 102, 68, 0.486);
-}
-
-.subProduct {
-  padding-top: 50px;
-}
-
-.subProducts .productImgBox, .subProductText {
-  width: 25vw;
-}
-
-.subProducts .productImgBox .textBox {
-  font-size: 150%;
-}
-
-.subProduct h2 {
-  text-align: center;
-}
-
-.subProductText h2 {
-  font-family: 'Yuji Syuku', serif;
-  font-size: 30px;
-}
-
-.subProductText {
-  font-size: 16px;
 }

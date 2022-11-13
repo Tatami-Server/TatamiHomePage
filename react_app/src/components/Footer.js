@@ -7,7 +7,7 @@ import { IconContext } from 'react-icons'
 import {IoIosArrowUp} from 'react-icons/io'
 
 import React from 'react';
-import './Footer.css';
+import './css/Footer.css';
 
 const Footer = () => {
   const FooterIconList = [
@@ -31,7 +31,7 @@ const Footer = () => {
             {FooterIconList.map((iconItem) => {
               return (
                 <li>
-                  <a href={iconItem.href} target="_blank">
+                  <a href={iconItem.href} target="_blank" rel="noopener noreferrer">
                     <iconItem.reactIcon />
                   </a>
                 </li>

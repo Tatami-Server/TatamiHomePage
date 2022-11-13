@@ -14,11 +14,13 @@ import inquery from '../imges/App.imges/inquery.jpg';
 import {IoIosArrowDown} from 'react-icons/io'
 import { IconContext } from 'react-icons'
 
-import MainProduct from './MainProduct.js';
-import SubProduct from './SubProduct.js';
+import Product from './Product.js';
 import Footer from './Footer.js';
 import News from './News.js';
-import './App.css';
+import './css/App.css';
+import './css/MainProduct.css';
+import './css/SubProduct.css';
+import './css/Product.css';
 
 function App() {
   const MainProductsList = [
@@ -61,7 +63,7 @@ function App() {
           <div className="mainProducts">
             {MainProductsList.map((productItem) => {
               return (
-                <MainProduct
+                <Product
                   {...productItem}
                 />
               );
@@ -71,7 +73,7 @@ function App() {
           <div className="subProducts">
             {SubProductsList.map(({ href, imgTitle, img, title, description }) => {
               return (
-                <SubProduct
+                <Product
                   href={href}
                   imgTitle={imgTitle}
                   img={img}

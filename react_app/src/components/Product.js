@@ -1,8 +1,7 @@
 import React from 'react';
-import './SubProduct.css';
-const SubProduct = (props) => {
+const Product = (props) => {
   return (
-    <div className="subProduct">
+    <div className="Product">
       <a href={props.href}>
         <div className="productImgBox">
           <div className="textBox">
@@ -13,11 +12,11 @@ const SubProduct = (props) => {
           </div>
         </div>
       </a>
-      <div className="subProductText">
+      <div className="ProductText">
         <h2>{props.title}</h2>
         <p>{props.description}</p>
       </div>
     </div>
   );
 }
-export default SubProduct;
+export default Product;
