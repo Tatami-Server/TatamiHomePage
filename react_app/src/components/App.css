@@ -36,11 +36,22 @@ header .logo {
 }
 
 /* hero */
-.heroPhoto {
+.hero {
   position: absolute;
   bottom: 0;
   z-index: -1;
   width: 100%;
   height: 100vh;
+}
+
+.heroPhoto {
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
+}
+
+.arrowIcon {
+  position: absolute;
+  left: 50%;
+  transform: translateY( -100%);
 }

@@ -39,7 +39,7 @@
 
 .productImgBox .textBox {
   width: 40%;
-  background-color: rgb(67, 102, 68);
+  background-color: rgb(66, 102, 68);
   color: white;
   font-size: 200%;
   display: flex;
@@ -49,13 +49,15 @@
 
 /* mainProducts*/
 .mainProducts {
+  padding-top: 150px;
   padding-bottom: 100px;
+  border-bottom: solid 2px rgba(67, 102, 68, 0.486);
 }
 
 .mainProducts .mainProduct {
   padding-top: 50px;
   display: flex;
-  justify-content: space-between;
+  gap:60px;
   align-items: center;
 }
 
@@ -63,11 +65,11 @@
   flex-direction: row-reverse;
 }
 
-.mainProduct h2{
+.mainProductText h2{
   font-family: 'Yuji Syuku', serif;
   font-size: 50px;
 }
 
-.mainProduct p{
-  
+.mainProductText p{
+  font-size: 20px;
 }

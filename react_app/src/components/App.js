@@ -11,6 +11,8 @@ import application from '../imges/App.imges/application.jpg';
 import history from '../imges/App.imges/history.jpg';
 import sns from '../imges/App.imges/sns.jpg';
 import inquery from '../imges/App.imges/inquery.jpg';
+import {IoIosArrowDown} from 'react-icons/io'
+import { IconContext } from 'react-icons'
 
 import MainProduct from './MainProduct.js';
 import SubProduct from './SubProduct.js';
@@ -30,7 +32,7 @@ function App() {
     { href: "sns.html", imgTitle: "SNS", img: sns, title: "公式SNS", description: "Twitch・YouTube・Twitter等のURLを記載しています。" },
     { href: "sub.html", imgTitle: "ご寄付", img: donation, title: "サブスクライブ・ご寄付", description: "平素よりご支援いただきありがとうございます！" },
     { href: "helper.html", imgTitle: "応募", img: application, title: "運営への応募", description: "建築や開発など、私たちと共に制作しませんか？" },
-    { href: "contact.html", imgTitle: "お問い合わせ", img: inquery, title: "お問い合わせ・意見箱", description: "意見や要望はこちらから！" },
+    { href: "contact.html", imgTitle: "問い合わせ", img: inquery, title: "お問い合わせ・意見箱", description: "意見や要望はこちらから！" },
     { href: "please.html", imgTitle: "お願い", img: please, title: "運営からのお願い", description: "サーバーの維持や盛り上げのためにお願いしていることを記載しています。" },
     { href: "omikuji.html", imgTitle: "おみくじ", img: omikuzi, title: "畳おみくじ", description: "今日の運勢とクエストを占おう！ちょっとした遊び心で用意したコンテンツです。" }
   ]
@@ -47,6 +49,11 @@ function App() {
       </header>
       <section className="hero">
         <img className="heroPhoto" src={hero} alt="ハロウィンの写真" />
+        <div className="arrowIcon">
+          <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
+            <IoIosArrowDown/>
+          </IconContext.Provider>
+        </div>
       </section>
 
       <div className="mainPage">
