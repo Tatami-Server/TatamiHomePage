@@ -55,3 +55,8 @@ header .logo {
   left: 50%;
   transform: translateY( -100%);
 }
+
+/* mainPage */
+.mainPage {
+  background-color: #f2faf0;
+}

@@ -26,7 +26,7 @@ function App() {
   const MainProductsList = [
     { href: "join.html", imgTitle: "参加方法", img: join, title: "サーバー参加方法", description: "Discordやマイクラサーバーへの参加方法を紹介しています。" },
     { href: "life.html", imgTitle: "生活鯖", img: life, title: "生活サーバー", description: "半年ぶりに復活した新しい生活サーバーについて紹介しています。" },
-    { href: "event.html", imgTitle: "イベント", img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
+    { href: "./Event.js", imgTitle: "イベント", img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
   ];
   const SubProductsList = [
     { href: "offer.html", imgTitle: "マップ", img: map, title: "配布マップ", description: "当サーバーが提供している配布マップ等を紹介しています。" },
@@ -84,8 +84,8 @@ function App() {
             })}
           </div>
         </section>
-      </div>
       <News/>
+      </div>
       <Footer />
 
     </body>
