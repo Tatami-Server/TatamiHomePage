@@ -27,17 +27,17 @@ const Footer = () => {
         <p>(c)畳サーバー</p>
         <p className="footerText">JEでもBEでも遊べるマイクラサーバー</p>
         <ul className="icons">
-          <IconContext.Provider value={{ color: '#fff', size: '30px' }}>
             {FooterIconList.map((iconItem) => {
               return (
-                <li>
-                  <a href={iconItem.href} target="_blank" rel="noopener noreferrer">
-                    <iconItem.reactIcon />
-                  </a>
-                </li>
+                <IconContext.Provider value={{ color: '#fff', size: '30px' }}>
+                  <li>
+                    <a href={iconItem.href} target="_blank" rel="noopener noreferrer">
+                      <iconItem.reactIcon />
+                    </a>
+                  </li>
+                </IconContext.Provider>
               );
             })}
-          </IconContext.Provider>
         </ul>
       </div>
     </footer>
