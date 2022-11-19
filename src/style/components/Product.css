@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
 
 	/* mainPage */
-.mainPage {
+main {
   padding-left: 10vw;
   padding-right: 10vw;
 }
@@ -11,33 +10,33 @@
   margin-top: calc(100vh - 287px);
 }
 
-.products a {
+.product a {
   text-decoration: none;
   color: #000;
 }
 
-/* .productImgBox */
-.productImgBox {
+/* .product-img-box */
+.product-img-box {
   display: flex;
   width: 40vw;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.productImgBox .fill {
+.product-img-box .fill {
   width: 60%;
   background-color: rgb(164, 221, 231);
   display: inline-block;
 }
 
-.productImgBox img {
+.product-img-box img {
   width: 100%;
   height: auto;
   opacity: 0.9;
   display: block;
 }
 
-.productImgBox .textBox {
+.product-img-box .text-box {
   width: 40%;
   background-color: rgb(66, 102, 68);
   color: white;

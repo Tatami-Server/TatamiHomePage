@@ -7,7 +7,7 @@ import { IconContext } from 'react-icons'
 import {IoIosArrowUp} from 'react-icons/io'
 
 import React from 'react';
-import './css/Footer.css';
+import '../../style/components/Footer.css';
 
 const Footer = () => {
   const FooterIconList = [

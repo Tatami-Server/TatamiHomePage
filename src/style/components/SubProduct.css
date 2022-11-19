@@ -1,0 +1,34 @@
+
+/* sub-products */
+.sub-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.sub-products .product {
+  padding-top: 50px;
+}
+
+.sub-products .product-img-box, .product-text {
+  width: 25vw;
+}
+
+.sub-products .product-img-box .text-box {
+  font-size: 150%;
+}
+
+.sub-products .product h2 {
+  text-align: center;
+}
+
+.sub-products .product-text h2 {
+  font-family: 'Yuji Syuku', serif;
+  font-size: 30px;
+}
+
+.sub-products .product-text {
+  font-size: 16px;
+}

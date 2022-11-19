@@ -1,0 +1,23 @@
+/* heading */
+.heading_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.heading_line {
+  height: 3px;
+  width: 30%;
+  border-bottom: solid 2px rgb(89, 138, 94);
+  border-top: solid 2px rgb(89, 138, 94);
+}
+
+.heading_text {
+  font-size: 45px;
+  font-weight: bold;
+}
+

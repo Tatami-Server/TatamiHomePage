@@ -2,15 +2,15 @@ body {
   margin: 0;
 }
 
-/* header */
-header .spuare {
+/* first view header */
+.first_view_header .spuare {
   width: 100%;
   height: 80px;
   background-color: white;
   border-bottom: 7px solid rgb(67, 102, 68);
 }
 
-header .triangle {
+.first_view_header .triangle {
   width: 0px;
   height: 0px;
   border-top: 100px solid rgb(67, 102, 68);
@@ -20,14 +20,14 @@ header .triangle {
   position: relative;
 }
 
-header .line {
+.first_view_header .line {
   border-top-color: white;
   border-left-color: white;
   position: absolute;
   top: 78px;
 }
 
-header .logo {
+.first_view_header .logo {
   width: 270px;
   height: auto;
   position: absolute;
@@ -56,7 +56,7 @@ header .logo {
   transform: translateY( -100%);
 }
 
-/* mainPage */
-.mainPage {
+/* main */
+main {
   background-color: #f2faf0;
 }

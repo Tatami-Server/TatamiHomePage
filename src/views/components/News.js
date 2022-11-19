@@ -1,7 +1,7 @@
 import React from 'react';
-import './css/News.css';
+import '../../style/components/News.css';
 
-import NewsJson from '../json/News.json'
+import NewsJson from '../../json/News.json'
 
 const News = () => {
   const { newsData } = NewsJson

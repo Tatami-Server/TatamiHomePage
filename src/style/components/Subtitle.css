@@ -1,0 +1,19 @@
+/* subtitle */
+.subtitle_container {
+  display: flex;
+  justify-content: center
+}
+
+.subtilte {
+  position: relative;
+  border-bottom: 5px solid rgb(187, 187, 187);
+  width: 80vw;
+
+}
+
+.subtilte span {
+  display: inline-block;
+  padding: 5px 10px;
+  border-bottom: 5px solid rgb(89, 138, 94);
+  margin-bottom: -5px;
+}

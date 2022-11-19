@@ -1,0 +1,62 @@
+/* header */
+header {
+  height: 100px;
+  border-bottom: solid 3px rgb(89, 138, 94);
+}
+
+header .items_container {
+  height: 100%;
+  width: 85vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between
+}
+
+header .logo {
+  width: 220px;
+  height: auto;
+}
+
+header .contents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+
+header .join_btn {
+  width: 160px;
+  height: 50px;
+	font-weight: bold;
+	border: 2px solid rgb(89, 138, 94);
+	background: rgb(89, 138, 94);
+	color: #fff;
+	transition: 0.5s;
+  border-radius: 10px;
+}
+
+header .join_btn:hover {
+  color: rgb(89, 138, 94);
+	background: #fff;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger span {
+  height: 5px;
+  background-color: rgb(89, 138, 94);
+  border-radius: 2px;
+  width: 100%;
+}
+
