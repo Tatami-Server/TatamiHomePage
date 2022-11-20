@@ -1,13 +1,13 @@
 import '../../style/components/Product.css';
 import '../../style/components/MainProduct.css';
 
-import Product from '../components/Product.js';
+import Product from './Product.js';
 
 
-const MainProduct = ({list}) => {
+const MainProducts = ({products}) => {
   return (
     <div className="main-products">
-    {list.map((productItem) => {
+    {products.map((productItem) => {
       return (
         <Product
           {...productItem}
@@ -17,4 +17,4 @@ const MainProduct = ({list}) => {
   </div>
   );
 }
-export default MainProduct;
+export default MainProducts;

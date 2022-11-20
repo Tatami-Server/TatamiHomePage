@@ -4,9 +4,6 @@ import { SiTwitch } from 'react-icons/si'
 import { SiDiscord } from 'react-icons/si'
 import { IconContext } from 'react-icons'
 
-import {IoIosArrowUp} from 'react-icons/io'
-
-import React from 'react';
 import '../../style/components/Footer.css';
 
 const Footer = () => {
@@ -18,12 +15,7 @@ const Footer = () => {
   ]
   return (
     <footer>
-      <div className="arrowIcon">
-        <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
-          <IoIosArrowUp/>
-        </IconContext.Provider>
-      </div>
-      <div className="footerContainer">
+      <div className="footer-contents-container">
         <p>(c)畳サーバー</p>
         <p className="footerText">JEでもBEでも遊べるマイクラサーバー</p>
         <ul className="icons">

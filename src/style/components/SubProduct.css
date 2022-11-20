@@ -4,12 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
-  padding-bottom: 100px;
-  padding-top: 100px;
 }
 
 .sub-products .product {
-  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .sub-products .product-img-box, .product-text {

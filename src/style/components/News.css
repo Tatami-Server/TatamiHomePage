@@ -4,9 +4,6 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  padding-bottom: 200px;
-  padding-top: 100px;
-  border-top: solid 2px rgba(67, 102, 68, 0.486);
 }
 
 .news {

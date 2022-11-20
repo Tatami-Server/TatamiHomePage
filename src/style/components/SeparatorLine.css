@@ -1,0 +1,8 @@
+/* separator-line */
+.separator-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(67, 102, 68, 0.486);
+  margin-bottom: 150px;
+  margin-top: 150px;
+}

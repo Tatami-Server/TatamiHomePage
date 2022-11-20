@@ -1,6 +1,7 @@
 import React from 'react';
+import FlexLink from 'src/util/FlexLink';
 
-import logo from '../../imges/App.imges/logo.png';
+import logo from '../../imges/Home.imges/logo.png';
 import '../../style/components/Header.css';
 
 const Header = () => {
@@ -9,9 +10,9 @@ const Header = () => {
       <div className="items_container">
         <img className="logo" src={logo} alt="畳アイコン" />
         <div className='contents'>
-          <a href="https://discord.com/invite/t4YAKKxaq9">
+          <FlexLink href={"https://discord.com/invite/t4YAKKxaq9"}>
             <button className='join_btn'>参加はこちらから！</button>
-          </a>
+          </FlexLink>
           <div className='hamburger'>
             <span></span>
             <span></span>

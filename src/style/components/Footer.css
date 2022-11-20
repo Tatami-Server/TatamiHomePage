@@ -3,7 +3,7 @@ footer {
   background-color: rgb(67, 102, 68);
 }
 
-.footerContainer {
+.footer-contents-container {
   display: flex;
   justify-content: space-between;
   align-items: center;

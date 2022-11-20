@@ -1,24 +1,28 @@
-import logo from '../../imges/App.imges/logo.png';
-import hero from '../../imges/App.imges/hero2.png';
-import join from '../../imges/App.imges/join.png';
-import event from '../../imges/App.imges/event.png';
-import life from '../../imges/App.imges/life.jpg';
-import donation from '../../imges/App.imges/donation.jpg';
-import map from '../../imges/App.imges/map.png';
-import omikuzi from '../../imges/App.imges/omikuzi.jpg';
-import please from '../../imges/App.imges/please.jpg';
-import application from '../../imges/App.imges/application.jpg';
-import history from '../../imges/App.imges/history.jpg';
-import sns from '../../imges/App.imges/sns.jpg';
-import inquery from '../../imges/App.imges/inquery.jpg';
+// 画像をインポート
+import logo from '../../imges/Home.imges/logo.png';
+import hero from '../../imges/Home.imges/hero2.png';
+import join from '../../imges/Home.imges/join.png';
+import event from '../../imges/Home.imges/event.png';
+import life from '../../imges/Home.imges/life.jpg';
+import donation from '../../imges/Home.imges/donation.jpg';
+import map from '../../imges/Home.imges/map.png';
+import omikuzi from '../../imges/Home.imges/omikuzi.jpg';
+import please from '../../imges/Home.imges/please.jpg';
+import application from '../../imges/Home.imges/application.jpg';
+import history from '../../imges/Home.imges/history.jpg';
+import sns from '../../imges/Home.imges/sns.jpg';
+import inquery from '../../imges/Home.imges/inquery.jpg';
 
 import {IoIosArrowDown} from 'react-icons/io'
 import { IconContext } from 'react-icons'
 
-import MainProduct from '../components/MainProduct';
-import SubProduct from '../components/SubProduct';
+// コンポーネントをインポート
+import MainProducts from '../components/MainProducts';
+import SubProducts from '../components/SubProducts';
 import News from '../components/News.js';
 import Footer from '../components/Footer.js';
+import SeparatorLine from '../components/SeparatorLine';
+import UpArrow from '../components/UpArrow';
 
 import '../../style/pages/Home.css';
 
@@ -60,10 +64,13 @@ function Home() {
 
       <main>
         <section className="products">
-          <MainProduct list={MainProductsList}/>
-          <SubProduct list={SubProductsList}/>
+          <MainProducts products={MainProductsList}/>
+          <SeparatorLine/>
+          <SubProducts products={SubProductsList}/>
         </section>
+      <SeparatorLine/>
       <News/>
+      <UpArrow/>
       </main>
       <Footer />
 
