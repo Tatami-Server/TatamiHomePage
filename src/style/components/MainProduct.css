@@ -3,6 +3,11 @@
   padding-top: 150px;
 }
 
+.main-products .product-img-box, .main-products .product-text {
+  width: 40vw;
+  height: 50vh;
+}
+
 .main-products .product {
   padding-top: 50px;
   display: flex;

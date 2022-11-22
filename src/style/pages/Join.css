@@ -11,10 +11,6 @@ main .join_btn {
   border-radius: 10px;
 }
 
-.join-content {
-  padding-bottom: 100px;
-}
-
 .join-content .green {
   color: rgb(40, 94, 44);
 }

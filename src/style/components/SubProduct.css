@@ -10,8 +10,13 @@
   padding-bottom: 50px;
 }
 
-.sub-products .product-img-box, .product-text {
+.sub-products .product-text {
   width: 25vw;
+}
+
+.sub-products .product-img-box {
+  width: 25vw;
+  height: 15vw;
 }
 
 .sub-products .product-img-box .text-box {

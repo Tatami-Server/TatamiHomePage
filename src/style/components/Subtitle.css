@@ -1,13 +1,16 @@
 /* subtitle */
 .subtitle_container {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 .subtilte {
   position: relative;
   border-bottom: 5px solid rgb(187, 187, 187);
   width: 80vw;
+  font-size: 30px;
 
 }
 
