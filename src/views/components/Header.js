@@ -1,7 +1,7 @@
 import React from 'react';
 import FlexLink from 'src/util/FlexLink';
 
-import logo from '../../imges/Home.imges/logo.png';
+import logo from '../../imges/Home.images/logo.png';
 import '../../style/components/Header.css';
 
 const Header = () => {

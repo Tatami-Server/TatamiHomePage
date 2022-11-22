@@ -1,17 +1,17 @@
 // 画像をインポート
-import logo from '../../imges/Home.imges/logo.png';
-import hero from '../../imges/Home.imges/hero2.png';
-import join from '../../imges/Home.imges/join.png';
-import event from '../../imges/Home.imges/event.png';
-import life from '../../imges/Home.imges/life.jpg';
-import donation from '../../imges/Home.imges/donation.jpg';
-import map from '../../imges/Home.imges/map.png';
-import omikuzi from '../../imges/Home.imges/omikuzi.jpg';
-import please from '../../imges/Home.imges/please.jpg';
-import application from '../../imges/Home.imges/application.jpg';
-import history from '../../imges/Home.imges/history.jpg';
-import sns from '../../imges/Home.imges/sns.jpg';
-import inquery from '../../imges/Home.imges/inquery.jpg';
+import logo from '../../imges/Home.images/logo.png';
+import hero from '../../imges/Home.images/hero2.png';
+import join from '../../imges/Home.images/join.png';
+import event from '../../imges/Home.images/event.png';
+import life from '../../imges/Home.images/life.jpg';
+import donation from '../../imges/Home.images/donation.jpg';
+import map from '../../imges/Home.images/map.png';
+import omikuzi from '../../imges/Home.images/omikuzi.jpg';
+import please from '../../imges/Home.images/please.jpg';
+import application from '../../imges/Home.images/application.jpg';
+import history from '../../imges/Home.images/history.jpg';
+import sns from '../../imges/Home.images/sns.jpg';
+import inquery from '../../imges/Home.images/inquery.jpg';
 
 import {IoIosArrowDown} from 'react-icons/io'
 import { IconContext } from 'react-icons'
