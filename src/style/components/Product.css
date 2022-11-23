@@ -1,15 +1,15 @@
-/* products */
-.products {
+ /* products */
+/* .products {
   margin-top: calc(100vh - 287px);
 }
 
 .product a {
   text-decoration: none;
   color: #000;
-}
+} */
 
 /* .product-img-box */
-.product-img-box {
+/* .product-img-box {
   display: flex;
   border-radius: 20px;
   overflow: hidden;
@@ -37,4 +37,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */ 

@@ -1,9 +1,6 @@
 // 画像をインポート
 import logo from '../../imges/Home.images/logo.png';
 import hero from '../../imges/Home.images/hero2.png';
-import join from '../../imges/Home.images/join.png';
-import event from '../../imges/Home.images/event.png';
-import life from '../../imges/Home.images/life.jpg';
 import donation from '../../imges/Home.images/donation.jpg';
 import map from '../../imges/Home.images/map.png';
 import omikuzi from '../../imges/Home.images/omikuzi.jpg';
@@ -12,6 +9,10 @@ import application from '../../imges/Home.images/application.jpg';
 import history from '../../imges/Home.images/history.jpg';
 import sns from '../../imges/Home.images/sns.jpg';
 import inquery from '../../imges/Home.images/inquery.jpg';
+import event from '../../imges/Home.images/event.png';
+import life from '../../imges/Home.images/life.png';
+import join from '../../imges/Home.images/join.png';
+
 
 import {IoIosArrowDown} from 'react-icons/io'
 import { IconContext } from 'react-icons'
@@ -26,10 +27,7 @@ import UpArrow from '../components/UpArrow';
 
 import HomeStyle from '../../style/pages/Home.module.css';
 
-console.log("test");
-
 function Home() {
-  console.log("test2");
   const SubProductsList = [
     { href: `/map/`, imgTitle: "マップ", img: map, title: "配布マップ", description: "当サーバーが提供している配布マップ等を紹介しています。" },
     { href: `/history/`, imgTitle: "歴史", img: history, title: "畳サーバーの歴史", description: "当サーバーの過去を知ることができます。過去にこんな事が...。" },
@@ -41,9 +39,9 @@ function Home() {
     { href: "omikuji.html", imgTitle: "おみくじ", img: omikuzi, title: "畳おみくじ", description: "今日の運勢とクエストを占おう！ちょっとした遊び心で用意したコンテンツです。" }
   ];
   const MainProductsList = [
-    { href: `/join/`, imgTitle: "参加方法", img: join, title: "サーバー参加方法", description: "Discordやマイクラサーバーへの参加方法を紹介しています。" },
-    { href: `/life/`, imgTitle: "生活鯖", img: life, title: "生活サーバー", description: "半年ぶりに復活した新しい生活サーバーについて紹介しています。" },
-    { href: `/event/`, imgTitle: "イベント", img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
+    { href: `/join/`,  img: join, title: "サーバー参加方法", description: "Discordやマイクラサーバーへの参加方法を紹介しています。" },
+    { href: `/life/`,  img: life, title: "生活サーバー", description: "半年ぶりに復活した新しい生活サーバーについて紹介しています。" },
+    { href: `/event/`,  img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
   ];
 
   return (

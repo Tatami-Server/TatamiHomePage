@@ -1,15 +1,11 @@
-/* main-products*/
+/* products */
 .main-products {
-  padding-top: 150px;
-}
-
-.main-products .product-img-box, .main-products .product-text {
-  width: 40vw;
-  height: 50vh;
+  padding-top: 100px;
+  margin-top: calc(100vh - 287px);
 }
 
 .main-products .product {
-  padding-top: 50px;
+  padding-top: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,15 +15,44 @@
   flex-direction: row-reverse;
 }
 
-.main-products .product-text {
-  width: 35vw;
+.product a {
+  text-decoration: none;
+  color: #000;
 }
 
+.main-products .product-img-box, .main-products .product-text {
+  width: 38vw;
+  height: 50vh;
+}
+/* .product-img-box */
+.product-img-box {
+  display: flex;
+  overflow: hidden;
+}
+
+.product-img-box .fill {
+  background-color: rgb(164, 221, 231);
+  display: inline-block;
+}
+
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  display: block;
+}
+
+.product-img-box img, .product-img-box .fill {
+  border-radius: 20px;
+}
+
+/* product-text */
 .main-products .product-text h2 {
   font-family: 'Yuji Syuku', serif;
   font-size: 50px;
 }
 
 .main-products .product-text p {
-  font-size: 20px;
+  font-size: 25px;
 }
