@@ -4,7 +4,7 @@ header {
   border-bottom: solid 3px rgb(89, 138, 94);
 }
 
-header .items_container {
+header .items-container {
   height: 100%;
   width: 85vw;
   margin: 0 auto;
@@ -26,7 +26,7 @@ header .contents {
   gap: 100px;
 }
 
-header .join_btn {
+header .join-btn {
   width: 160px;
   height: 50px;
 	font-weight: bold;
@@ -37,7 +37,7 @@ header .join_btn {
   border-radius: 10px;
 }
 
-header .join_btn:hover {
+header .join-btn:hover {
   color: rgb(89, 138, 94);
 	background: #fff;
 }

@@ -1,3 +1,4 @@
+// ルーティング設定
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../views/pages/Home';
 import Event from '../views/pages/Event';
@@ -10,6 +11,9 @@ import Please from '../views/pages/Please';
 import SNS from '../views/pages/SNS';
 import Subscription from '../views/pages/Subscription';
 import Map from '../views/pages/Map';
+
+// 共通CSSインポート
+import '../style/common.css';
 
 function App() {
   return (
@@ -26,7 +30,6 @@ function App() {
         <Route path={`/sns/`} element={<SNS />} />
         <Route path={`/sbuscription/`} element={<Subscription />} />
         <Route path={`/map/`} element={<Map />} />
-
       </Routes>
     </BrowserRouter>
   );

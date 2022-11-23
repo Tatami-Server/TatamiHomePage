@@ -4,7 +4,7 @@ import { SiTwitch } from 'react-icons/si'
 import { SiDiscord } from 'react-icons/si'
 import { IconContext } from 'react-icons'
 
-import '../../style/components/Footer.css';
+import FooterStyle from '../../style/components/Footer.module.css';
 
 const Footer = () => {
   const FooterIconList = [
@@ -15,10 +15,10 @@ const Footer = () => {
   ]
   return (
     <footer>
-      <div className="footer-contents-container">
+      <div className={FooterStyle["footer-contents-container"]}>
         <p>(c)畳サーバー</p>
-        <p className="footerText">JEでもBEでも遊べるマイクラサーバー</p>
-        <ul className="icons">
+        <p className={FooterStyle.footerText}>JEでもBEでも遊べるマイクラサーバー</p>
+        <ul className={FooterStyle.icons}>
             {FooterIconList.map((iconItem) => {
               return (
                 <IconContext.Provider value={{ color: '#fff', size: '30px' }}>

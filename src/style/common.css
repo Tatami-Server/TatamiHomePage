@@ -1,0 +1,25 @@
+/* 共通CSS */
+
+
+/* body */
+body {
+  margin: 0;
+}
+
+/* span 文字の色や太さを変える */
+.green {
+  color: rgb(40, 94, 44);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* main */
+main {
+  background-color: #f2faf0;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+

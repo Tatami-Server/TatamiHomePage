@@ -7,7 +7,7 @@ import UpArrow from '../components/UpArrow';
 import FlexLink from "src/util/FlexLink";
 
 // cssインポート
-import '../../style/pages/Join.css';
+import JoinStyle from '../../style/pages/Join.module.css';
 
 
 // imgインポート
@@ -21,17 +21,17 @@ const Join = () => {
       <Header/>
       <main>
           <Heading heading="サーバー接続方法"/>
-          <div className='join-content'>
+          <div className={JoinStyle["join-content"]}>
             <Subtitle subtitle="畳サーバー公式Discord"/>
             <p>
               畳サーバーで遊ぶにはDiscordサーバーへの参加が必須になります。<br/>
               Discordサーバーに参加したら、まず最初に利用規約をご確認ください！
             </p>
             <FlexLink href={"https://discord.com/invite/t4YAKKxaq9"}>
-              <button className='join_btn'>参加はこちらから！</button>
+              <button className={JoinStyle["join-btn"]}>参加はこちらから！</button>
             </FlexLink>
           </div>
-          <div className='join-content'>
+          <div className={JoinStyle["join-content"]}>
             <Subtitle subtitle="Discordにはいったら..."/>
             <img src={joinDiscord} alt="利用規約とはじめにをよく見てね"></img>
             <p>
@@ -44,7 +44,7 @@ const Join = () => {
               <span className='green'>Tatamiロール</span>が付与されますと、鯖民交流に必要なチャンネルが表示されるようになります。
             </p>
           </div>
-          <div className='join-content'>
+          <div className={JoinStyle["join-content"]}>
             <Subtitle subtitle="限定企画に参加したい！"/>
             <img src={joinTwichSub} alt="サブスクライバーとは？"></img>
             <p>

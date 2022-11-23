@@ -1,6 +1,6 @@
 /* join */
 
-main .join_btn {
+main .join-btn {
   width: 200px;
   height: 50px;
 	font-weight: bold;
@@ -10,16 +10,16 @@ main .join_btn {
 	transition: 0.5s;
   border-radius: 10px;
 }
-
+/* 
 .join-content .green {
   color: rgb(40, 94, 44);
 }
 
 .join-content .bold {
   font-weight: 600;
-}
+} */
 
-main .join_btn:hover {
+main .join-btn:hover {
   color: rgb(89, 138, 94);
 	background: #fff;
 }

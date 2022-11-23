@@ -1,9 +1,9 @@
-import '../../style/components/Subtitle.css';
+import SubtitleStyle from  '../../style/components/Subtitle.module.css';
 
 const SubTitle = (props) => {
   return (
-    <div className='subtitle_container'>
-      <h2 className='subtilte'>
+    <div className={SubtitleStyle["subtitle-container"]}>
+      <h2 className={SubtitleStyle.subtilte}>
         <span>
         {props.subtitle}
         </span>

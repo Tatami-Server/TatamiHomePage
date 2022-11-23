@@ -1,13 +1,13 @@
-import '../../style/components/Heading.css';
+import HeadingStyle from '../../style/components/Heading.module.css';
 
 const Heading = (props) => {
   return (
-    <div className='heading_container'>
-        <div className='heading_line'></div>
-        <h1 className='heading_text'>
+    <div className={HeadingStyle["heading-container"]}>
+        <div className={HeadingStyle["heading-line"]}></div>
+        <h1 className={HeadingStyle["heading-text"]}>
           {props.heading}
         </h1>
-        <div className='heading_line'></div>
+        <div className={HeadingStyle["heading-line"]}></div>
     </div>
   );
 }

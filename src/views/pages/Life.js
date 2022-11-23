@@ -6,7 +6,7 @@ import SubProducts from '../components/SubProducts';
 import UpArrow from '../components/UpArrow';
 
 // cssインポート
-import '../../style/pages/Life.css';
+import LifeStyle from '../../style/pages/Life.module.css';
 
 // imgインポート
 import life1 from '../../imges/Life.images/life1.png'
@@ -33,11 +33,11 @@ const Life = () => {
       <Header/>
       <main>
           <Heading heading="畳生活サーバー"/>
-          <div className='life-content'>
+          <div className={LifeStyle["life-content"]}>
             <Subtitle subtitle="生活サーバーで遊ぼう！"/>
-            <div className='life-img-container'>
-              <img src={life1}></img>
-              <img src={life2}></img>
+            <div className={LifeStyle["life-img-container"]}>
+              <img src={life1} alt="生活鯖写真"></img>
+              <img src={life2} alt="生活鯖写真"></img>
             </div>
             <p>
               当鯖はイベントのイメージが強いかもしれませんが、24時間対応の生活サーバーも運営しております。<br/>
@@ -46,7 +46,7 @@ const Life = () => {
               ガチャの中身が新しくなりました！
             </p>
           </div>
-          <div className='life-content'>
+          <div className={LifeStyle["life-content"]}>
             <Subtitle subtitle="生活サーバーを楽しむポイント"/>
             <div className="Products">
               <SubProducts products={funPointList}/>

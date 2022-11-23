@@ -24,9 +24,12 @@ import Footer from '../components/Footer.js';
 import SeparatorLine from '../components/SeparatorLine';
 import UpArrow from '../components/UpArrow';
 
-import '../../style/pages/Home.css';
+import HomeStyle from '../../style/pages/Home.module.css';
+
+console.log("test");
 
 function Home() {
+  console.log("test2");
   const SubProductsList = [
     { href: `/map/`, imgTitle: "マップ", img: map, title: "配布マップ", description: "当サーバーが提供している配布マップ等を紹介しています。" },
     { href: `/history/`, imgTitle: "歴史", img: history, title: "畳サーバーの歴史", description: "当サーバーの過去を知ることができます。過去にこんな事が...。" },
@@ -45,17 +48,17 @@ function Home() {
 
   return (
     <body>
-      <div className="first_view_header">
-        <div className="headerContainer">
-          <div className="spuare"></div>
-          <div className="triangle"></div>
-          <div className="triangle line"></div>
-          <img className="logo" src={logo} alt="畳アイコン" />
+      <div className={HomeStyle["first-view-header"]}>
+        <div className={HomeStyle.headerContainer}>
+          <div className={HomeStyle.spuare}></div>
+          <div className={HomeStyle.triangle}></div>
+          <div className={`${HomeStyle.triangle} ${HomeStyle.line}`}></div>
+          <img className={HomeStyle.logo} src={logo} alt="畳アイコン" />
         </div>
       </div>
-      <section className="hero">
-        <img className="heroPhoto" src={hero} alt="ハロウィンの写真" />
-        <div className="arrowIcon">
+      <section className={HomeStyle.hero}>
+        <img className={HomeStyle.heroPhoto} src={hero} alt="ハロウィンの写真" />
+        <div className={HomeStyle.arrowIcon}>
           <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
             <IoIosArrowDown/>
           </IconContext.Provider>
@@ -63,7 +66,7 @@ function Home() {
       </section>
 
       <main>
-        <section className="products">
+        <section className={HomeStyle.products}>
           <MainProducts products={MainProductsList}/>
           <SeparatorLine/>
           <SubProducts products={SubProductsList}/>
