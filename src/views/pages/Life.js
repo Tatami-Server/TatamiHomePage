@@ -33,26 +33,26 @@ const Life = () => {
       <Header/>
       <main>
           <Heading heading="畳生活サーバー"/>
-          <div className={LifeStyle["life-content"]}>
             <Subtitle subtitle="生活サーバーで遊ぼう！"/>
-            <div className={LifeStyle["life-img-container"]}>
-              <img src={life1} alt="生活鯖写真"></img>
-              <img src={life2} alt="生活鯖写真"></img>
-            </div>
-            <p>
-              当鯖はイベントのイメージが強いかもしれませんが、24時間対応の生活サーバーも運営しております。<br/>
-              やりこみ要素として職業機能やガチャ機能を用意しております。<br/>
-              以下では生活サーバーを楽しむポイントを紹介します。<br/>
-              ガチャの中身が新しくなりました！
-            </p>
-          </div>
-          <div className={LifeStyle["life-content"]}>
+              <div className='subtitle-content'>
+              <div className={LifeStyle["life-img-container"]}>
+                <img className='subtitle-img'  src={life1} alt="生活鯖写真"></img>
+                <img className='subtitle-img'  src={life2} alt="生活鯖写真"></img>
+              </div>
+              <p>
+                当鯖はイベントのイメージが強いかもしれませんが、24時間対応の生活サーバーも運営しております。<br/>
+                やりこみ要素として職業機能やガチャ機能を用意しております。<br/>
+                以下では生活サーバーを楽しむポイントを紹介します。<br/>
+                ガチャの中身が新しくなりました！
+              </p>
+              </div>
             <Subtitle subtitle="生活サーバーを楽しむポイント"/>
-            <div className="Products">
-              <SubProducts products={funPointList}/>
-            </div>
-          </div>
-          <UpArrow/>
+              <div className='subtitle-content'>
+              <div className="Products">
+                <SubProducts products={funPointList}/>
+              </div>
+              </div>
+            <UpArrow/>
       </main>
       <Footer/>
     </div>

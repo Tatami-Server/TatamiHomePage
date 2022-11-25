@@ -1,17 +1,16 @@
 /* products */
 .main-products {
-  padding-top: 100px;
   margin-top: calc(100vh - 287px);
 }
 
-.main-products .product {
+.product {
   padding-top: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.main-products .product:nth-child(even) {
+.product:nth-child(even) {
   flex-direction: row-reverse;
 }
 
@@ -20,9 +19,9 @@
   color: #000;
 }
 
-.main-products .product-img-box, .main-products .product-text {
-  width: 38vw;
-  height: 50vh;
+.product-img-box, .product-text {
+  width: 33vw;
+  height: 20vw;
 }
 /* .product-img-box */
 .product-img-box {
@@ -48,11 +47,11 @@
 }
 
 /* product-text */
-.main-products .product-text h2 {
+.product-text h2 {
   font-family: 'Yuji Syuku', serif;
   font-size: 50px;
 }
 
-.main-products .product-text p {
+.product-text p {
   font-size: 25px;
 }

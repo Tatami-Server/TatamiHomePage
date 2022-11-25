@@ -1,0 +1,17 @@
+/* subscription */
+.LargeCategory-content {
+  display: flex;
+  gap: 3vh;
+}
+
+.LargeCategory-container img {
+  width: 500px;
+}
+
+.LargeCategory-container p {
+  font-size: 20px;
+}
+
+.LargeCategory-container:nth-child(even) .LargeCategory-content {
+  flex-direction: row-reverse;
+}
