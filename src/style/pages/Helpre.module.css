@@ -1,13 +1,13 @@
 .QandA-container {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+  background-color: rgb(192, 216, 192);
+  border-radius: 10px;
+  padding: 10px 10px;
 }
 
 /* question */
 .question-container {
   font-weight: 600;
-  background-color: rgb(192, 216, 192);
-  border-radius: 5px;
-  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -41,8 +41,8 @@
 
 /* answr */
 .answer-container {
-  border: 30px solid rgb(192, 216, 192);
-  border-radius: 0px 0px 5px 5px;
+  border: 20px solid rgb(192, 216, 192);
+  background-color: #F2FAF0;
   display: flex;
   gap: 20px;
 }
@@ -65,11 +65,17 @@
 }
 
 
+/* つけ外しするクラス */
+.rotate {
+  width: 10%;
+  transform: rotate(45deg);
+}
+
 .isClose {
   display: none;
 }
 
 .isOpen {
-  display: block;
+  display: flex;
 }
 

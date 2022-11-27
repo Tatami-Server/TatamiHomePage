@@ -17,13 +17,32 @@ const Helper = () => {
   const toggle = () => setOpen(!open);
   const QuestionList=[
     {question:"面接の流れを教えてください。", answer:<>まずは指定のGoogleフォームで開発経験や希望する班をお聞きします。
-                                        回答を送信するとDiscordへの招待リンクが届きますので入室してください。
-                                        入室後 #面接の流れチャンネルをご確認の上、
-                                        #面接日時決定チャンネルで面接希望日時を複数記入いただきます。
-                                        面接は30分程度を予定しております。(複数班希望されると長くなりやすいです。)
-                                        面接終了後、面接官同士で審議を行い合否通知をDiscord上でお出しします。
-                                        ※Googleフォームも上記の記事からご記入いただけます。</>},
-    {}
+                                                    回答を送信するとDiscordへの招待リンクが届きますので入室してください。
+                                                    入室後 #面接の流れチャンネルをご確認の上、
+                                                    #面接日時決定チャンネルで面接希望日時を複数記入いただきます。
+                                                    面接は30分程度を予定しております。(複数班希望されると長くなりやすいです。)
+                                                    面接終了後、面接官同士で審議を行い合否通知をDiscord上でお出しします。
+                                                    ※Googleフォームも上記の記事からご記入いただけます。</>},
+    {question:"まだ勉強中で力になれるかわかりません。", answer:<>開発力の詳細は面接でお聞きしますが、
+                                                            まったくの無知(初学者)でない限り、さほど問題にならないことが多いです。
+                                                            開発意欲があり主体的に学んでいただける方であれば、勉強会・作業会もご用意致します。</>},
+    {question:"コマンドに興味はあるけど、やったことはないので不安です。", answer:<>ご安心ください。当サーバーにはコマンドの練習ができる"データパック研修"という制度がございます。
+                                                                            3週間に分けて無理なく楽しみながら進めることができるので、初学者でも安心です!</>},
+    {question:"絶対に参加しなければならない日はありますか？", answer:<>2022年10月現在、毎週月曜日の22時から40分程度、
+                                                                  進捗確認と方針決定のためのミーティングを開催しています。
+                                                                  ミーティングは強制参加ではありませんが、
+                                                                  2週間に1回は進捗報告をするようにお願いしています。</>},
+    {question:"運営になることで優遇されることはありますか？", answer:<>ございません。イベント優先参加等もございません。
+                                                                  強いて言うなら、新イベントのデバッグに参加できることくらいだと思います。</>},
+    {question:"報酬はもらえますか？", answer:<>お支払いしたいところですが、現状サーバーの維持だけで手一杯です。
+                                            あくまでお手伝いのつもりで応募をお願いしたいです。
+                                            お仕事のつもりで応募するのはおやめください。
+                                            生活サーバーでのガチャ券プレゼントは検討中です。</>},
+    {question:"数か月後忙しくなるのがわかっています。どうしたらよいですか？", answer:<>畳サーバーでは休職制度を設けています。
+                                                                                2週間以上のお休みを希望する場合、
+                                                                                「希望休職期間・理由」を報告いただければ一時お休みすることが可能です。
+                                                                                ただし無断で2週間以上反応がない場合は、,
+                                                                                厳重注意または運営権限はく奪となる可能性がありますのでご注意ください。</>},
   ]
   return (
     <div>
@@ -45,19 +64,16 @@ const Helper = () => {
         {QuestionList.map(({question, answer}) => {
             return (
               <div className={HelperStyle["QandA-container"]}>
-                <button onClick={toggle}>{open? 'close':'open'}</button>
-                  <div className={HelperStyle["question-container"]}>
-                    <div className={HelperStyle["q-icon"]}>Q</div>
-                    <p className={HelperStyle.question}>{question}</p>
-                    <IconContext.Provider value={{ color: '#436644', size: '20px' }}>
-                      <BsPlusLg className={`${HelperStyle["plus-icon"]} ${HelperStyle.rotate}`}/>
-                    </IconContext.Provider>
+                <div onClick={toggle} className={HelperStyle["question-container"]}>
+                  <div className={HelperStyle["q-icon"]}>Q</div>
+                  <p className={HelperStyle.question}>{question}</p>
+                  <IconContext.Provider value={{ color: '#436644', size: '20px' }}>
+                    <BsPlusLg className={open? HelperStyle.rotate : HelperStyle["plus-icon"]}/>
+                  </IconContext.Provider>
                 </div>
-                <div className={open? 'isOpen':'isClose'} >
-                  <div className={HelperStyle["answer-container"]}>
+                <div className={`${HelperStyle["answer-container"]} ${open? HelperStyle.isOpen : HelperStyle.isClose}`}>
                   <div className={HelperStyle["a-icon"]}>A</div>
                   <p className={HelperStyle.answer}>{answer}</p>
-                  </div>
                 </div>
               </div>
               );
