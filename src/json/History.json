@@ -1,20 +1,30 @@
 
   {
-    "y2020":[
-      {"img":"history2022-11.png",
+    "2020":[
+      {"img":"history2020-1.png",
       "month":"９月",
       "title":"Twitch配信スタート",
       "discription":"畳サーバー鯖主:おとたきがTwitchでの配信を始めました。PvP第1マップ「Basic」がリリースされました。"
+    },
+      {"img":"history2020-2.png",
+      "month":"10月",
+      "title":"逃走中マップを製作",
+      "discription":"当時から視聴者参加型でした。視聴者と一緒にマップを制作しました。"
+    },
+      {"img":"history2020-3.png",
+      "month":"12月",
+      "title":"Twitchフォロワー50人を達成",
+      "discription":"当時は統合版でやっていたので、スマホからの参加者が多く、早めに50人を達成しました。PvP第2マップ「前線基地」がリリースされました。PvP「制圧戦」「大将戦」がリリースされました。"
     }
     ],
-    "y2021":[
+    "2021":[
       {"img":"",
       "month":"９月",
       "title":"Twitch配信スタート",
       "discription":"畳サーバー鯖主:おとたきがTwitchでの配信を始めました。PvP第1マップ「Basic」がリリースされました。"
     }
     ],
-    "y2022":[
+    "2022":[
       {"img":"",
       "month":"９月",
       "title":"Twitch配信スタート",

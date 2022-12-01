@@ -6,11 +6,11 @@ import HistoryContentStyle from '../../style/components/HistoryContent.module.cs
 const Historycontent = () => {
   return (
     <div>
-        {HistoryJson.y2020.map(({month,img,title,discription}) => {
+        {HistoryJson['2020'].map(({month,img,title,discription}) => {
             return (
               <div className={HistoryContentStyle["history-content"]}>
                 <div className={HistoryContentStyle["img-box"]}>
-                  <img src={`${process.env.PUBLIC_URL}/History.images/2022/${img}`}alt="歴史の写真"></img>
+                  <img src={`${process.env.PUBLIC_URL}/HistoryContent.images/2020/${img}`}alt="歴史の写真"></img>
                 </div>
                 <div className={HistoryContentStyle["text-box"]}>
                   <p className={HistoryContentStyle.month}>{month}</p>
