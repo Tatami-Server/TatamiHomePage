@@ -1,0 +1,28 @@
+/* historyContent */
+.history-content {
+  display: flex;
+  gap: 50px;
+  padding-top: 100px;
+}
+
+.history-content img {
+  width: 500px;
+}
+
+/* text */
+.text-box .month {
+  font-size: 30px;
+  font-weight: 600;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin: 0;
+}
+
+.text-box .title {
+  font-size: 25px;
+  text-align: center;
+}
+
+.text-box .discription {
+  font-size: 18px;
+}

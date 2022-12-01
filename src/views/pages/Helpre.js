@@ -7,7 +7,6 @@ import QuestionAccordion from '../components/QuestionAccodion';
 
 import FlexLink from "src/util/FlexLink";
 
-import React, {useState} from 'react';
 
 import HelperStyle from '../../style/pages/Helpre.module.css';
 const Helper = () => {

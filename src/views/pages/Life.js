@@ -9,14 +9,14 @@ import UpArrow from '../components/UpArrow';
 import LifeStyle from '../../style/pages/Life.module.css';
 
 // imgインポート
-import life1 from '../../imges/Life.images/life1.png'
-import life2 from '../../imges/Life.images/life2.png'
-import lifeJob from '../../imges/Life.images/life-job.png'
-import lifeEvent from '../../imges/Life.images/life-event.png'
-import lifeCommond from '../../imges/Life.images/life-commond.png'
-import lifeGacha from '../../imges/Life.images/life-gacha.png'
-import lifeMap from '../../imges/Life.images/life-map.png'
-import lifeShop from '../../imges/Life.images/life-shop.png'
+import life1 from '../../images/Life.images/life1.png'
+import life2 from '../../images/Life.images/life2.png'
+import lifeJob from '../../images/Life.images/life-job.png'
+import lifeEvent from '../../images/Life.images/life-event.png'
+import lifeCommond from '../../images/Life.images/life-commond.png'
+import lifeGacha from '../../images/Life.images/life-gacha.png'
+import lifeMap from '../../images/Life.images/life-map.png'
+import lifeShop from '../../images/Life.images/life-shop.png'
 
 
 const Life = () => {

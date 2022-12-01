@@ -7,3 +7,7 @@
   margin-top: 150px;
 
 }
+
+.arrow-icon svg:hover {
+  fill: rgba(117, 175, 91, 0.733);
+}

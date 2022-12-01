@@ -1,10 +1,10 @@
 import {BsDownload} from 'react-icons/bs';
 import { IconContext } from 'react-icons';
 
-import PleaseVote from '../../imges/Please.images/please1.png';
-import PleaseProfile1 from '../../imges/Please.images/please2-1.png';
-import PleaseProfile2 from '../../imges/Please.images/please2-2.png';
-import PleaseJoin from '../../imges/Please.images/please3-1.png';
+import PleaseVote from '../../images/Please.images/please1.png';
+import PleaseProfile1 from '../../images/Please.images/please2-1.png';
+import PleaseProfile2 from '../../images/Please.images/please2-2.png';
+import PleaseJoin from '../../images/Please.images/please3-1.png';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -23,7 +23,7 @@ const Please = () => {
         <Heading heading="運営からのお願い"/>
         <Subtitle subtitle="投票にご協力ください！"/>
         <div className='subtitle-content'>
-          <img className='subtitle-img' src={PleaseVote}></img>
+          <img className='subtitle-img' src={PleaseVote} alt="サブスクイメージ画像"></img>
           <p>
           JEの方は、1日1回
           <FlexLink href={"https://minecraft.jp/servers/61488929d0215b4024000000"}>
@@ -49,13 +49,13 @@ const Please = () => {
           </div>
         <Subtitle subtitle="プロフィールカードを作ってみよう（＃畳サーバープロフィールカード)"/>
           <div className='subtitle-content'>
-            <img className='subtitle-img' src={PleaseProfile1}></img>
+            <img className='subtitle-img' src={PleaseProfile1} alt="プロフィールカード"></img>
             <IconContext.Provider value={{ color: '#ccc', size: '20px' }}>
               <a  className={PleaseStyle.download} href={PleaseProfile1} download>
                 <BsDownload />ダウンロード
               </a>
             </IconContext.Provider>
-            <img className='subtitle-img' src={PleaseProfile2}></img>
+            <img className='subtitle-img' src={PleaseProfile2} alt="プロフィールカードお手本"></img>
             <p>
             当サーバーにはプロフィールカードというものがあります。自己紹介シートと思っていただければ幸いです。<br/>
             こちらも
@@ -67,7 +67,7 @@ const Please = () => {
           </div>
         <Subtitle subtitle="サーバー維持の為いろんな方と交流してみてください！"/>
           <div className='subtitle-content'>
-            <img className='subtitle-img' src={PleaseJoin}></img>
+            <img className='subtitle-img' src={PleaseJoin} alt="交流している画像"></img>
             <p>
             サーバーの維持には莫大な費用が掛かります。<br/>
             普段サブスクライブやご寄付をいただきありがとうございます!<br/>

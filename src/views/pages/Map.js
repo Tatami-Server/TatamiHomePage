@@ -5,7 +5,7 @@ import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import SubProducts from '../components/SubProducts';
 
-import map1 from '../../imges/map.images/map1.png';
+import map1 from '../../images/map.images/map1.png';
 
 
 

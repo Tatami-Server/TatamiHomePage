@@ -1,14 +1,27 @@
 /* subscription */
 .LargeCategory-content {
   display: flex;
+  justify-content: space-between;
   gap: 3vh;
   padding-bottom: 50px;
 }
 
-.LargeCategory-container img {
+.LargeCategory-content img {
   width: 500px;
+}
+
+.LargeCategory-content p{
+  width: 600px;
 }
 
 .LargeCategory-container:nth-child(even) .LargeCategory-content {
   flex-direction: row-reverse;
+}
+
+.LargeCategory-container:nth-child(4) img,
+.LargeCategory-container:nth-child(5) img,
+.LargeCategory-container:nth-child(6) img{
+  width: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
 }

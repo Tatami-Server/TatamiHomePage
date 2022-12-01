@@ -1,17 +1,17 @@
 // 画像をインポート
-import logo from '../../imges/Home.images/logo.png';
-import hero from '../../imges/Home.images/hero2.png';
-import donation from '../../imges/Home.images/donation.jpg';
-import map from '../../imges/Home.images/map.png';
-import omikuzi from '../../imges/Home.images/omikuzi.jpg';
-import please from '../../imges/Home.images/please.jpg';
-import application from '../../imges/Home.images/application.jpg';
-import history from '../../imges/Home.images/history.jpg';
-import sns from '../../imges/Home.images/sns.jpg';
-import inquery from '../../imges/Home.images/inquery.jpg';
-import event from '../../imges/Home.images/event.png';
-import life from '../../imges/Home.images/life.png';
-import join from '../../imges/Home.images/join.png';
+import logo from '../../images/Home.images/logo.png';
+import hero from '../../images/Home.images/hero2.png';
+import donation from '../../images/Home.images/donation.jpg';
+import map from '../../images/Home.images/map.png';
+import omikuzi from '../../images/Home.images/omikuzi.jpg';
+import please from '../../images/Home.images/please.jpg';
+import application from '../../images/Home.images/application.jpg';
+import history from '../../images/Home.images/history.jpg';
+import sns from '../../images/Home.images/sns.jpg';
+import inquery from '../../images/Home.images/inquery.jpg';
+import event from '../../images/Home.images/event.png';
+import life from '../../images/Home.images/life.png';
+import join from '../../images/Home.images/join.png';
 
 
 import {IoIosArrowDown} from 'react-icons/io'
@@ -43,7 +43,12 @@ function Home() {
     { href: `/life/`,  img: life, title: "生活サーバー", description: "半年ぶりに復活した新しい生活サーバーについて紹介しています。" },
     { href: `/event/`,  img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
   ];
-
+  const goNextPage = () => {
+    window.scrollTo({
+      top: (0,500),
+      behavior: "smooth",
+    });
+  };
   return (
     <body>
       <div className={HomeStyle["first-view-header"]}>
@@ -56,7 +61,7 @@ function Home() {
       </div>
       <section className={HomeStyle.hero}>
         <img className={HomeStyle.heroPhoto} src={hero} alt="ハロウィンの写真" />
-        <div className={HomeStyle.arrowIcon}>
+        <div className={HomeStyle["arrow-icon"]} onClick={goNextPage}>
           <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
             <IoIosArrowDown/>
           </IconContext.Provider>

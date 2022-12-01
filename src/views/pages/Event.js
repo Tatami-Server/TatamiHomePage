@@ -6,24 +6,24 @@ import SubProducts from '../components/SubProducts';
 import UpArrow from '../components/UpArrow';
 
 // imgインポート
-import normalEvent1 from '../../imges/event.images/event1-1.png';
-import normalEvent2 from '../../imges/event.images/event1-2.png';
-import normalEvent3 from '../../imges/event.images/event1-3.png';
-import normalEvent4 from '../../imges/event.images/event1-4.png';
-import normalEvent5 from '../../imges/event.images/event1-5.png';
-import normalEvent6 from '../../imges/event.images/event1-6.png';
-import normalEvent7 from '../../imges/event.images/event1-7.png';
-import subEvent1 from '../../imges/event.images/event2-1.png';
-import subEvent2 from '../../imges/event.images/event2-2.png';
-import subEvent3 from '../../imges/event.images/event2-3.png';
-import subEvent4 from '../../imges/event.images/event2-4.png';
-import subEvent5 from '../../imges/event.images/event2-5.png';
-import subEvent6 from '../../imges/event.images/event2-6.png';
-import allTimeEvent1 from '../../imges/event.images/event3-1.png';
-import allTimeEvent2 from '../../imges/event.images/event3-2.png';
-import allTimeEvent3 from '../../imges/event.images/event3-3.png';
-import allTimeEvent4 from '../../imges/event.images/event3-4.png';
-import lifeSarver1 from '../../imges/event.images/event4-1.png';
+import normalEvent1 from '../../images/event.images/event1-1.png';
+import normalEvent2 from '../../images/event.images/event1-2.png';
+import normalEvent3 from '../../images/event.images/event1-3.png';
+import normalEvent4 from '../../images/event.images/event1-4.png';
+import normalEvent5 from '../../images/event.images/event1-5.png';
+import normalEvent6 from '../../images/event.images/event1-6.png';
+import normalEvent7 from '../../images/event.images/event1-7.png';
+import subEvent1 from '../../images/event.images/event2-1.png';
+import subEvent2 from '../../images/event.images/event2-2.png';
+import subEvent3 from '../../images/event.images/event2-3.png';
+import subEvent4 from '../../images/event.images/event2-4.png';
+import subEvent5 from '../../images/event.images/event2-5.png';
+import subEvent6 from '../../images/event.images/event2-6.png';
+import allTimeEvent1 from '../../images/event.images/event3-1.png';
+import allTimeEvent2 from '../../images/event.images/event3-2.png';
+import allTimeEvent3 from '../../images/event.images/event3-3.png';
+import allTimeEvent4 from '../../images/event.images/event3-4.png';
+import lifeSarver1 from '../../images/event.images/event4-1.png';
 
 const Event = () => {
   const normalEventList=[

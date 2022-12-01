@@ -50,8 +50,12 @@ body {
   object-fit: cover;
 }
 
-.arrowIcon {
+.arrow-icon {
   position: absolute;
   left: 50%;
   transform: translateY( -100%);
+}
+
+.arrow-icon svg:hover {
+  fill: rgba(167, 91, 185, 0.733);
 }

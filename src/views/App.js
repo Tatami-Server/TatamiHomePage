@@ -12,25 +12,28 @@ import SNS from '../views/pages/SNS';
 import Subscription from '../views/pages/Subscription';
 import Map from '../views/pages/Map';
 
+import ScrollToTop from '../util/ScrollToTop';
+
 // 共通CSSインポート
 import '../style/common.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path={`/`} element={<Home />} />
-        <Route path={`/event/`} element={<Event />} />
-        <Route path={`/contact/`} element={<Contact />} />
-        <Route path={`/helpre/`} element={<Helpre />} />
-        <Route path={`/history/`} element={<History />} />
-        <Route path={`/join/`} element={<Join />} />
-        <Route path={`/life/`} element={<Life />} />
-        <Route path={`/please/`} element={<Please />} />
-        <Route path={`/sns/`} element={<SNS />} />
-        <Route path={`/sbuscription/`} element={<Subscription />} />
-        <Route path={`/map/`} element={<Map />} />
-      </Routes>
+      <ScrollToTop/>
+        <Routes>
+          <Route path={`/`} element={<Home />} />
+          <Route path={`/event/`} element={<Event />} />
+          <Route path={`/contact/`} element={<Contact />} />
+          <Route path={`/helpre/`} element={<Helpre />} />
+          <Route path={`/history/`} element={<History />} />
+          <Route path={`/join/`} element={<Join />} />
+          <Route path={`/life/`} element={<Life />} />
+          <Route path={`/please/`} element={<Please />} />
+          <Route path={`/sns/`} element={<SNS />} />
+          <Route path={`/sbuscription/`} element={<Subscription />} />
+          <Route path={`/map/`} element={<Map />} />
+        </Routes>
     </BrowserRouter>
   );
 }

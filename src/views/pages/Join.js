@@ -11,8 +11,8 @@ import JoinStyle from '../../style/pages/Join.module.css';
 
 
 // imgインポート
-import joinDiscord from '../../imges/Join.images/join1.png';
-import joinTwichSub from '../../imges/Join.images/join2.png';
+import joinDiscord from '../../images/Join.images/join1.png';
+import joinTwichSub from '../../images/Join.images/join2.png';
 
 
 const Join = () => {

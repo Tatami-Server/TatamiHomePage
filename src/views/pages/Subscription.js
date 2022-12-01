@@ -5,15 +5,15 @@ import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import LargeCategory from '../components/LargeCategory';
 
-import twitchImg from '../../imges/Subscription.images/twitchImg.png';
-import sub1 from '../../imges/Subscription.images/sub1-1.png';
-import sub2 from '../../imges/Subscription.images/sub1-2.png';
-import sub3 from '../../imges/Subscription.images/sub1-3.png';
-import sub4 from '../../imges/Subscription.images/sub1-4.png';
-import sub5 from '../../imges/Subscription.images/sub1-5.png';
-import sub6 from '../../imges/Subscription.images/sub1-6.png';
-import sub7 from '../../imges/Subscription.images/sub1-7.png';
-import doneruLogo from '../../imges/Subscription.images/doneru-logo.png';
+import twitchImg from '../../images/Subscription.images/twitchImg.png';
+import sub1 from '../../images/Subscription.images/sub1-1.png';
+import sub2 from '../../images/Subscription.images/sub1-2.png';
+import sub3 from '../../images/Subscription.images/sub1-3.png';
+import sub4 from '../../images/Subscription.images/sub1-4.png';
+import sub5 from '../../images/Subscription.images/sub1-5.png';
+import sub6 from '../../images/Subscription.images/sub1-6.png';
+import sub7 from '../../images/Subscription.images/sub1-7.png';
+import doneruLogo from '../../images/Subscription.images/doneru-logo.png';
 
 import SubscriptionStyle from '../../style/pages/Subscription.module.css';
 
@@ -45,7 +45,7 @@ const Subscription = () => {
                 <div className={SubscriptionStyle["LargeCategory-container"]}>
                   <LargeCategory LargeCategory={title}/>
                   <div className={SubscriptionStyle["LargeCategory-content"]}>
-                    <img src={img}></img>
+                    <img src={img} alt="サブスクライブイメージ画像"></img>
                     <p>{description}</p>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const Subscription = () => {
         </div>
         <Subtitle subtitle="ご寄付"/>
         <div className='subtitle-content'>
-          <img src={doneruLogo}></img>
+          <img src={doneruLogo} alt="doneruのロゴ"></img>
           <p>
             平素より、畳サーバー並びに鯖主:おとたきの活動に関心をお寄せくださり、
             誠にありがとうございます。<br/>
