@@ -6,7 +6,7 @@ import SubProducts from '../components/SubProducts';
 import UpArrow from '../components/UpArrow';
 
 // cssインポート
-import LifeStyle from '../../style/pages/Life.module.css';
+import Style from '../../style/pages/Life.module.css';
 
 // imgインポート
 import life1 from '../../images/Life.images/life1.png'
@@ -35,7 +35,7 @@ const Life = () => {
           <Heading heading="畳生活サーバー"/>
             <Subtitle subtitle="生活サーバーで遊ぼう！"/>
               <div className='subtitle-content'>
-              <div className={LifeStyle["life-img-container"]}>
+              <div className={Style["life-img-container"]}>
                 <img className='subtitle-img'  src={life1} alt="生活鯖写真"></img>
                 <img className='subtitle-img'  src={life2} alt="生活鯖写真"></img>
               </div>

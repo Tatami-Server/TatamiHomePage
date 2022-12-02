@@ -1,24 +1,24 @@
-import SubProductStyle from '../../style/components/SubProduct.module.css';
+import Style from '../../style/components/SubProduct.module.css';
 
 import FlexLink from "src/util/FlexLink";
 
 const SubProducts = ({products}) => {
   return (
-    <div className={SubProductStyle["sub-products"]}>
+    <div className={Style["sub-products"]}>
     {products.map(({ href, imgTitle, img, title, description }) => {
       return (
-        <div className={SubProductStyle.product}>
+        <div className={Style.product}>
         <FlexLink href={href}>
-          <div className={SubProductStyle["product-img-box"]}>
-            <div className={SubProductStyle["text-box"]}>
+          <div className={Style["product-img-box"]}>
+            <div className={Style["text-box"]}>
               <h3>{imgTitle}</h3>
             </div>
-            <div className={SubProductStyle.fill}>
+            <div className={Style.fill}>
               <img src={img} alt="サーバー参加方法" />
             </div>
           </div>
         </FlexLink>
-        <div className={SubProductStyle["product-text"]}>
+        <div className={Style["product-text"]}>
           <h2>{title}</h2>
           <p>{description}</p>
         </div>

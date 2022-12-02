@@ -6,7 +6,7 @@ import UpArrow from '../components/UpArrow';
 
 import FlexLink from "src/util/FlexLink";
 
-import ContentStyle from '../../style/pages/Contact.module.css';
+import Style from '../../style/pages/Contact.module.css';
 
 
 const Contact = () => {
@@ -26,7 +26,7 @@ const Contact = () => {
                 までお問い合わせください。
                 ※基本的に返信をすることはございません。<br/>
                 返信を希望される場合は、Discordの
-                <span className={ContentStyle["bold"]}>＃チケット作成</span>
+                <span className={Style["bold"]}>＃チケット作成</span>
                 をご利用ください。
               </p>
             </div>

@@ -15,7 +15,7 @@ import sub6 from '../../images/Subscription.images/sub1-6.png';
 import sub7 from '../../images/Subscription.images/sub1-7.png';
 import doneruLogo from '../../images/Subscription.images/doneru-logo.png';
 
-import SubscriptionStyle from '../../style/pages/Subscription.module.css';
+import Style from '../../style/pages/Subscription.module.css';
 
 const Subscription = () => {
   const LargeCategoryContent=[
@@ -39,12 +39,12 @@ const Subscription = () => {
         </div>
         <Subtitle subtitle="サブスクライブのメリット！"/>
         <div className='subtitle-content'>
-          <div className={SubscriptionStyle["LargeCategory-wrapper"]}>
+          <div className={Style["LargeCategory-wrapper"]}>
             {LargeCategoryContent.map(( {title, img, description }) => {
               return (
-                <div className={SubscriptionStyle["LargeCategory-container"]}>
+                <div className={Style["LargeCategory-container"]}>
                   <LargeCategory LargeCategory={title}/>
-                  <div className={SubscriptionStyle["LargeCategory-content"]}>
+                  <div className={Style["LargeCategory-content"]}>
                     <img src={img} alt="サブスクライブイメージ画像"></img>
                     <p>{description}</p>
                   </div>
@@ -71,7 +71,7 @@ const Subscription = () => {
             PayPalまたはクレジットカードでのご寄付が可能です。<br/>
             ご寄付くださった方は、Special Thanksにて氏名(またはニックネーム)を掲載させていただきます。
           </p>
-          <p className={SubscriptionStyle["special-thenks"]}>Special Thenks</p>
+          <p className={Style["special-thenks"]}>Special Thenks</p>
           <table>
           {SpecialThenksList.map((name) => {
             return (

@@ -13,7 +13,7 @@ import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import FlexLink from 'src/util/FlexLink';
 
-import PleaseStyle from '../../style/pages/Please.module.css';
+import Style from '../../style/pages/Please.module.css';
 
 const Please = () => {
   return (
@@ -51,7 +51,7 @@ const Please = () => {
           <div className='subtitle-content'>
             <img className='subtitle-img' src={PleaseProfile1} alt="プロフィールカード"></img>
             <IconContext.Provider value={{ color: '#ccc', size: '20px' }}>
-              <a  className={PleaseStyle.download} href={PleaseProfile1} download>
+              <a  className={Style.download} href={PleaseProfile1} download>
                 <BsDownload />ダウンロード
               </a>
             </IconContext.Provider>

@@ -6,7 +6,7 @@ import UpArrow from '../components/UpArrow';
 // import Subtitle from '../components/Subtitle';
 import HistoryContent from '../components/HistoryContent';
 
-import HistoryStyle from '../../style/pages/History.module.css';
+import Style from '../../style/pages/History.module.css';
 
 
 
@@ -17,12 +17,12 @@ const History = () => {
     <div>
       <Header/>
       <main>
-        <div className={HistoryStyle["warp-content-wrapper"]} 
+        <div className={Style["warp-content-wrapper"]} 
           style={{backgroundImage: `url(${Historyimg})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize:"cover",
           }}>
-          <div className={HistoryStyle["warp-content-title"]}>
+          <div className={Style["warp-content-title"]}>
             <h3>畳サーバーの</h3>
             <h3>歴史</h3>
           </div>

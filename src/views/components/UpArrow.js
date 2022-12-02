@@ -2,7 +2,7 @@ import { IconContext } from 'react-icons'
 import {IoIosArrowUp} from 'react-icons/io'
 
 
-import UpArrowStyle from '../../style/components/UpArrow.module.css'
+import Style from '../../style/components/UpArrow.module.css'
 
 const UpArrow = () => {
   const returnTop = () => {
@@ -12,8 +12,8 @@ const UpArrow = () => {
     });
   };
   return (
-    <div className={UpArrowStyle["arrow-icon-container"]}>
-      <div className={UpArrowStyle["arrow-icon"]} onClick={returnTop}>
+    <div className={Style["arrow-icon-container"]}>
+      <div className={Style["arrow-icon"]} onClick={returnTop}>
         <IconContext.Provider value={{ color: '#67966a', size: '70px'}}>
           <IoIosArrowUp/>
         </IconContext.Provider>

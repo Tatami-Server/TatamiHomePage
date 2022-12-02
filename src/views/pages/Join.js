@@ -7,7 +7,7 @@ import UpArrow from '../components/UpArrow';
 import FlexLink from "src/util/FlexLink";
 
 // cssインポート
-import JoinStyle from '../../style/pages/Join.module.css';
+import Style from '../../style/pages/Join.module.css';
 
 
 // imgインポート
@@ -28,7 +28,7 @@ const Join = () => {
                   Discordサーバーに参加したら、まず最初に利用規約をご確認ください！
                 </p>
                 <FlexLink href={"https://discord.com/invite/t4YAKKxaq9"}>
-                  <button className={JoinStyle["join-btn"]}>参加はこちらから！</button>
+                  <button className={Style["join-btn"]}>参加はこちらから！</button>
                 </FlexLink>
               </div>
             <Subtitle subtitle="Discordにはいったら..."/>

@@ -9,7 +9,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 
-import SnsStyle from '../../style/pages/SNS.module.css';
+import Style from '../../style/pages/SNS.module.css';
 
 
 const SNS = () => {
@@ -30,29 +30,29 @@ const SNS = () => {
       <Header/>
       <main>
         <Heading heading="公式SNS等"/>
-        <div className={SnsStyle["sns-wrapper"]}>
+        <div className={Style["sns-wrapper"]}>
           {SnsContentList1.map((item) => {
             return(
-              <div className={SnsStyle["sns-content"]}>
-                <div className={SnsStyle.icon}>
+              <div className={Style["sns-content"]}>
+                <div className={Style.icon}>
                   <IconContext.Provider value={{ color: item.color, size: '60px' }}>
                     <item.icon />
                   </IconContext.Provider>
                 </div>
-                <h3 className={SnsStyle["sns-title"]}>{item.title}</h3>
-                <p className={SnsStyle["sns-discription"]}>{item.discription}</p>
+                <h3 className={Style["sns-title"]}>{item.title}</h3>
+                <p className={Style["sns-discription"]}>{item.discription}</p>
               </div>
             );
           })}
 
           {/* {SnsContentLis2.map(({img, title, discription}) => {
                       return(
-                        <div className={SnsStyle["sns-content"]}>
-                          <div className={SnsStyle.icon}>
+                        <div className={Style["sns-content"]}>
+                          <div className={Style.icon}>
                             <img src={img}></img>
                           </div>
-                          <h3 className={SnsStyle["sns-title"]}>{title}</h3>
-                          <p className={SnsStyle["sns-discription"]}>{discription}</p>
+                          <h3 className={Style["sns-title"]}>{title}</h3>
+                          <p className={Style["sns-discription"]}>{discription}</p>
                         </div>
                       );
                     })} */}

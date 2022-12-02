@@ -25,11 +25,11 @@ import Footer from '../components/Footer.js';
 import SeparatorLine from '../components/SeparatorLine';
 import UpArrow from '../components/UpArrow';
 
-import HomeStyle from '../../style/pages/Home.module.css';
+import Style from '../../style/pages/Home.module.css';
 
 function Home() {
   const SubProductsList = [
-    { href: `/map/`, imgTitle: "マップ", img: map, title: "配布マップ", description: "当サーバーが提供している配布マップ等を紹介しています。" },
+    { href: `/map/`, imgTitle: "マップ", img: map, title:"配布マップ", description: "当サーバーが提供している\n配布マップ等を紹介しています。" },
     { href: `/history/`, imgTitle: "歴史", img: history, title: "畳サーバーの歴史", description: "当サーバーの過去を知ることができます。過去にこんな事が...。" },
     { href: `/sns/`, imgTitle: "SNS", img: sns, title: "公式SNS", description: "Twitch・YouTube・Twitter等のURLを記載しています。" },
     { href: `/sbuscription/`, imgTitle: "ご寄付", img: donation, title: "サブスクライブ・ご寄付", description: "平素よりご支援いただきありがとうございます！" },
@@ -51,17 +51,17 @@ function Home() {
   };
   return (
     <body>
-      <div className={HomeStyle["first-view-header"]}>
-        <div className={HomeStyle.headerContainer}>
-          <div className={HomeStyle.spuare}></div>
-          <div className={HomeStyle.triangle}></div>
-          <div className={`${HomeStyle.triangle} ${HomeStyle.line}`}></div>
-          <img className={HomeStyle.logo} src={logo} alt="畳アイコン" />
+      <div className={Style["first-view-header"]}>
+        <div className={Style.headerContainer}>
+          <div className={Style.spuare}></div>
+          <div className={Style.triangle}></div>
+          <div className={`${Style.triangle} ${Style.line}`}></div>
+          <img className={Style.logo} src={logo} alt="畳アイコン" />
         </div>
       </div>
-      <section className={HomeStyle.hero}>
-        <img className={HomeStyle.heroPhoto} src={hero} alt="ハロウィンの写真" />
-        <div className={HomeStyle["arrow-icon"]} onClick={goNextPage}>
+      <section className={Style.hero}>
+        <img className={Style.heroPhoto} src={hero} alt="ハロウィンの写真" />
+        <div className={Style["arrow-icon"]} onClick={goNextPage}>
           <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
             <IoIosArrowDown/>
           </IconContext.Provider>
@@ -69,7 +69,7 @@ function Home() {
       </section>
 
       <main>
-        <section className={HomeStyle.products}>
+        <section className={Style.products}>
           <MainProducts products={MainProductsList}/>
           <SeparatorLine/>
           <SubProducts products={SubProductsList}/>

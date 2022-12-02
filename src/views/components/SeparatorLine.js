@@ -1,8 +1,8 @@
-import SeparatorLineStyle from '../../style/components/SeparatorLine.module.css'
+import Style from '../../style/components/SeparatorLine.module.css'
 
 const SeparatorLine = () =>{
   return(
-    <div className={SeparatorLineStyle["separator-line"]}></div>
+    <div className={Style["separator-line"]}></div>
   );
 }
 export default SeparatorLine;

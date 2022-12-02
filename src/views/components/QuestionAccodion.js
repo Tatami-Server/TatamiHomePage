@@ -1,7 +1,8 @@
 import {BsPlusLg} from 'react-icons/bs'
 import React, { useState } from 'react';
-import HelperStyle from '../../style/pages/Helpre.module.css';
 import { IconContext } from 'react-icons';
+
+import Style from '../../style/pages/Helpre.module.css';
   
 const QuestionAccordion = ({question, answer}) => {
   
@@ -9,17 +10,17 @@ const QuestionAccordion = ({question, answer}) => {
   const toggle = () => setOpen(!open);
   
   return (
-    <div className={HelperStyle["QandA-container"]}>
-      <div onClick={toggle} className={HelperStyle["question-container"]}>
-        <div className={HelperStyle["q-icon"]}>Q</div>
-        <p className={HelperStyle.question}>{question}</p>
+    <div className={Style["QandA-container"]}>
+      <div onClick={toggle} className={Style["question-container"]}>
+        <div className={Style["q-icon"]}>Q</div>
+        <p className={Style.question}>{question}</p>
         <IconContext.Provider value={{ color: '#436644', size: '20px' }}>
-          <BsPlusLg className={open? HelperStyle.rotate : HelperStyle["plus-icon"]}/>
+          <BsPlusLg className={open? Style.rotate : Style["plus-icon"]}/>
         </IconContext.Provider>
       </div>
-      <div className={`${HelperStyle["answer-container"]} ${open? HelperStyle.isOpen : HelperStyle.isClose}`}>
-        <div className={HelperStyle["a-icon"]}>A</div>
-        <p className={HelperStyle.answer}>{answer}</p>
+      <div className={`${Style["answer-container"]} ${open? Style.isOpen : Style.isClose}`}>
+        <div className={Style["a-icon"]}>A</div>
+        <p className={Style.answer}>{answer}</p>
       </div>
     </div>
   );

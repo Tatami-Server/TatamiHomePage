@@ -2,18 +2,18 @@ import React from 'react';
 import FlexLink from 'src/util/FlexLink';
 
 import logo from '../../images/Home.images/logo.png';
-import HeaderStyle from '../../style/components/Header.module.css';
+import Style from '../../style/components/Header.module.css';
 
 const Header = () => {
   return (
     <header>
-      <div className={HeaderStyle["items-container"]}>
-        <img className={HeaderStyle.logo} src={logo} alt="畳アイコン" />
-        <div className={HeaderStyle.contents}>
+      <div className={Style["items-container"]}>
+        <img className={Style.logo} src={logo} alt="畳アイコン" />
+        <div className={Style.contents}>
           <FlexLink href={"https://discord.com/invite/t4YAKKxaq9"}>
-            <button className={HeaderStyle["join-btn"]}>参加はこちらから！</button>
+            <button className={Style["join-btn"]}>参加はこちらから！</button>
           </FlexLink>
-          <div className={HeaderStyle.hamburger}>
+          <div className={Style.hamburger}>
             <span></span>
             <span></span>
             <span></span>
