@@ -3,7 +3,7 @@ import Historyimg from '../../images/History.images/history.png';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import UpArrow from '../components/UpArrow';
-import Subtitle from '../components/Subtitle';
+// import Subtitle from '../components/Subtitle';
 import HistoryContent from '../components/HistoryContent';
 
 import HistoryStyle from '../../style/pages/History.module.css';
@@ -27,7 +27,6 @@ const History = () => {
             <h3>歴史</h3>
           </div>
         </div>
-        <Subtitle subtitle="２０２０年"/>
         <HistoryContent/>
         <UpArrow/>
       </main>

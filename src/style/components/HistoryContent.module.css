@@ -3,6 +3,11 @@
   display: flex;
   gap: 50px;
   padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.history-content:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .history-content img {

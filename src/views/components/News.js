@@ -4,7 +4,6 @@ import NewsStyle from '../../style/components/News.module.css';
 
 const News = () => {
   const { newsData } = NewsJson
-  console.log(newsData)
   return (
     <div className={NewsStyle.newsContainer}>
         <h2>お知らせ</h2> 
