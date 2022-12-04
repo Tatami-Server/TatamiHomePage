@@ -22,9 +22,6 @@ const SNS = () => {
     {icon:FaWikipediaW, color:'#617A4E', title:"畳公式Wiki", discription:"当ホームページにも書いているようなイベント一覧や各種SNS等が載っています。また、イベントの詳細ルールも搭載されています。"},
   ]
 
-  // const SnsContentLis2=[
-  //   {img:a, title:a,  discription:a,}
-  // ]
   return (
     <div>
       <Header/>
@@ -44,18 +41,6 @@ const SNS = () => {
               </div>
             );
           })}
-
-          {/* {SnsContentLis2.map(({img, title, discription}) => {
-                      return(
-                        <div className={Style["sns-content"]}>
-                          <div className={Style.icon}>
-                            <img src={img}></img>
-                          </div>
-                          <h3 className={Style["sns-title"]}>{title}</h3>
-                          <p className={Style["sns-discription"]}>{discription}</p>
-                        </div>
-                      );
-                    })} */}
         </div>
       </main>
       <Footer/>

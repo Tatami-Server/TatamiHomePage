@@ -19,7 +19,7 @@ const News = () => {
             );
           })}
         </div>
-      </div>
+    </div>
   );
 }
 export default News;

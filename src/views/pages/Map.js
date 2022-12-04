@@ -19,11 +19,11 @@ const Map = () => {
       <main>
         <Heading heading="配布マップ等"/>
         <Subtitle subtitle="配布イベント（プラグイン）"/>
+          <p>※プライグインの動作確認にはpaperまたはspigot環境が必要です。</p>
           <div className='subtitle-content'>
-            </div>
-            <p>※プライグインの動作確認にはpaperまたはspigot環境が必要です。</p>
             <div className="Products">
-            <SubProducts products={pluginList}/>
+              <SubProducts products={pluginList}/>
+            </div>
           </div>
         <Subtitle subtitle="配布イベント（データパック）"/>
           <div className='subtitle-content'>

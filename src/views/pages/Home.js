@@ -74,12 +74,11 @@ function Home() {
           <SeparatorLine/>
           <SubProducts products={SubProductsList}/>
         </section>
-      <SeparatorLine/>
-      <News/>
-      <UpArrow/>
+        <SeparatorLine/>
+        <News/>
+        <UpArrow/>
       </main>
       <Footer />
-
     </body>
   );
 }

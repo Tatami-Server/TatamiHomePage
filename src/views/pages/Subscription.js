@@ -73,13 +73,13 @@ const Subscription = () => {
           </p>
           <p className={Style["special-thenks"]}>Special Thenks</p>
           <table>
-          {SpecialThenksList.map((name) => {
-            return (
-              <tr>
-                <td>{name}</td>
-              </tr>
-              );
-            })}
+            {SpecialThenksList.map((name) => {
+              return (
+                <tr>
+                  <td>{name}</td>
+                </tr>
+                );
+              })}
           </table>
         </div>
         <UpArrow/>
