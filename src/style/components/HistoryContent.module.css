@@ -3,7 +3,8 @@
   display: flex;
   gap: 50px;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 100px; 
+  justify-content: space-between;
   /* jsonの文字列が改行できるようになる */
   white-space: pre-wrap;
 }
@@ -12,16 +13,27 @@
   flex-direction: row-reverse;
 }
 
+.Carousel {
+  width: 600px;
+}
+
 .history-content img {
-  width: 500px;
+  width: 600px;
+  height: 340px;
+  object-fit: cover;
 }
 
 /* text */
+.text-box {
+  width: 500px;
+}
+
 .text-box .month {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
   padding-right: 50px;
   padding-left: 50px;
+  padding-bottom: 20px;
   margin: 0;
 }
 

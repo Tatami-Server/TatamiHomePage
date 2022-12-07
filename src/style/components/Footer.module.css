@@ -10,6 +10,12 @@ footer {
   color: #fff;
   padding-left: 10vw;
   padding-right: 10vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-contents-container p,  .icons {
+  margin: 0;
 }
 
 .icons {

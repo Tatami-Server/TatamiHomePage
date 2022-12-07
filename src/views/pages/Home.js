@@ -45,29 +45,31 @@ function Home() {
   ];
   const goNextPage = () => {
     window.scrollTo({
-      top: (0,500),
+      top: (0,1000),
       behavior: "smooth",
     });
   };
   return (
     <body>
-      <div className={Style["first-view-header"]}>
-        <div className={Style.headerContainer}>
-          <div className={Style.spuare}></div>
-          <div className={Style.triangle}></div>
-          <div className={`${Style.triangle} ${Style.line}`}></div>
-          <img className={Style.logo} src={logo} alt="畳アイコン" />
+      <section className={Style["hero-content-warpper"]}>
+        <div className={Style.hero}
+          style={{backgroundImage: `url(${hero})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize:"cover",
+        }}>
+        <div className={Style["first-view-header"]}>
+            <div className={Style.spuare}></div>
+            <div className={Style.triangle}></div>
+            <div className={`${Style.triangle} ${Style.line}`}></div>
+            <img className={Style.logo} src={logo} alt="畳アイコン" />
         </div>
-      </div>
-      <section className={Style.hero}>
-        <img className={Style.heroPhoto} src={hero} alt="ハロウィンの写真" />
-        <div className={Style["arrow-icon"]} onClick={goNextPage}>
-          <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
-            <IoIosArrowDown/>
-          </IconContext.Provider>
+          <div className={Style["arrow-icon"]} onClick={goNextPage}>
+            <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
+              <IoIosArrowDown/>
+            </IconContext.Provider>
+          </div>
         </div>
       </section>
-
       <main>
         <section className={Style.products}>
           <MainProducts products={MainProductsList}/>

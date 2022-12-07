@@ -3,7 +3,6 @@ import Historyimg from '../../images/History.images/history.png';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import UpArrow from '../components/UpArrow';
-// import Subtitle from '../components/Subtitle';
 import HistoryContent from '../components/HistoryContent';
 
 import Style from '../../style/pages/History.module.css';

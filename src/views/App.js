@@ -13,6 +13,7 @@ import Subscription from '../views/pages/Subscription';
 import Map from '../views/pages/Map';
 
 import ScrollToTop from '../util/ScrollToTop';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // 共通CSSインポート
 import '../style/common.css';
