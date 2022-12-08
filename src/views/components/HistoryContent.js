@@ -10,7 +10,7 @@ const Historycontent = () => {
     <div>
       {HistoryJson.map(({year,histories}) =>{
         return(
-          <div>
+          <div id={year}>
             <Subtitle subtitle={year} className={Style["subtitle-year"]}/>
             {histories.map(({month,images,title,discription}) => {
 
