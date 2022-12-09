@@ -3,4 +3,16 @@
   font-size: 15px;
   text-decoration: none;
   color: rgb(121, 121, 121);
+  position:absolute;
+  
+
 }
+
+.download-container img {
+  position: absolute;
+}
+
+.download-container {
+  position: relative;
+}
+

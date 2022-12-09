@@ -15,11 +15,21 @@ body {
   font-weight: 600;
 }
 
+.light-blue {
+  color: rgb(40, 177, 187);
+}
+
 /* main */
 main {
   background-color: #f2faf0;
   padding-left: 18vw;
   padding-right: 18vw;
+}
+
+
+.subtitle-content {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 /* subtitle-content サブタイトルの下の要素のｃｓｓ */
@@ -31,5 +41,6 @@ main {
 
 /* subcontent以外の画像のサイズを決める */
 .subtitle-content .subtitle-img{
-  width: 800px;
+  width: 1000px;
+  padding-bottom: 20px;
 }

@@ -2,12 +2,12 @@
 .LargeCategory-content {
   display: flex;
   justify-content: space-between;
-  gap: 3vh;
+  gap: 2vh;
   padding-bottom: 50px;
 }
 
 .LargeCategory-content img {
-  width: 500px;
+  width: 400px;
 }
 
 .LargeCategory-content p{
@@ -22,6 +22,10 @@
 .LargeCategory-container:nth-child(5) img,
 .LargeCategory-container:nth-child(6) img{
   width: 100px;
-  padding-left: 100px;
-  padding-right: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.LargeCategory-container {
+  padding-top: 50px;
 }

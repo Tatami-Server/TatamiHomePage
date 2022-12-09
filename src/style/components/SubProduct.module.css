@@ -26,6 +26,8 @@
 .sub-products .product-text h2 {
   font-family: 'Yuji Syuku', serif;
   font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .sub-products .product-text {

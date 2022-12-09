@@ -36,6 +36,14 @@ const Subscription = () => {
         <Subtitle subtitle="サブスクライバーとは？"/>
         <div className='subtitle-content'>
           <img className='subtitle-img' src={twitchImg} alt="twitchの画像"></img>
+          <p>
+            当サーバーにはサブスクライブ制度が存在します。なお当サーバーのサブスクライバーとは、鯖主：おとたきのTwitchチャンネルのサブスクライブをしている人を指します。<br/>
+            サブスクライブをすると、自動的にサブスクライバーロールが付与されます。<br/>
+            なおTwitchは
+            <span className='light-blue'>Amazon Prime会員</span>
+            であれば、毎月一人無料でサブスクライブできます！ぜひご検討ください。<br/>
+            以下ではメリットを紹介します。
+          </p>
         </div>
         <Subtitle subtitle="サブスクライブのメリット！"/>
         <div className='subtitle-content'>
@@ -55,7 +63,7 @@ const Subscription = () => {
         </div>
         <Subtitle subtitle="ご寄付"/>
         <div className='subtitle-content'>
-          <img src={doneruLogo} alt="doneruのロゴ"></img>
+          <img src={doneruLogo} className={Style["doneru-logo"]} alt="doneruのロゴ" width={"500"}></img>
           <p>
             平素より、畳サーバー並びに鯖主:おとたきの活動に関心をお寄せくださり、
             誠にありがとうございます。<br/>

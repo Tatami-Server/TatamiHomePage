@@ -49,12 +49,14 @@ const Please = () => {
           </div>
         <Subtitle subtitle="プロフィールカードを作ってみよう（＃畳サーバープロフィールカード)"/>
           <div className='subtitle-content'>
-            <img className='subtitle-img' src={PleaseProfile1} alt="プロフィールカード"></img>
-            <IconContext.Provider value={{ color: '#ccc', size: '20px' }}>
-              <a  className={Style.download} href={PleaseProfile1} download>
-                <BsDownload />ダウンロード
-              </a>
-            </IconContext.Provider>
+            <div className={Style["download-container"]}>
+              <img className='subtitle-img' src={PleaseProfile1} alt="プロフィールカード"></img>
+              <IconContext.Provider value={{ color: '#ccc', size: '20px' }}>
+                <a  className={Style.download} href={PleaseProfile1} download>
+                  <BsDownload />ダウンロード
+                </a>
+              </IconContext.Provider>
+            </div>
             <img className='subtitle-img' src={PleaseProfile2} alt="プロフィールカードお手本"></img>
             <p>
             当サーバーにはプロフィールカードというものがあります。自己紹介シートと思っていただければ幸いです。<br/>
