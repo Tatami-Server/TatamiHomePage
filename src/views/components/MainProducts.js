@@ -5,9 +5,9 @@ import FlexLink from "src/util/FlexLink";
 const MainProducts = ({products}) => {
   return (
     <div className={Style["main-products"]}>
-      {products.map(({href, img, title, description}) => {
+      {products.map(({href, img, title, description},index) => {
         return (
-          <div className={Style.product}>
+          <div className={Style.product} key={index}>
             <FlexLink href={href}>
               <div className={Style["product-img-box"]}>
                 <div className={Style.fill}>

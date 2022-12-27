@@ -19,9 +19,9 @@ const Footer = () => {
         <p>(c)畳サーバー</p>
         <p className={Style.footerText}>JEでもBEでも遊べるマイクラサーバー</p>
         <ul className={Style.icons}>
-            {FooterIconList.map((iconItem) => {
+            {FooterIconList.map((iconItem,index) => {
               return (
-                <IconContext.Provider value={{ color: '#fff', size: '30px' }}>
+                <IconContext.Provider value={{ color: '#fff', size: '30px' }} key={index}>
                   <li>
                     <a href={iconItem.href} target="_blank" rel="noopener noreferrer">
                       <iconItem.reactIcon />

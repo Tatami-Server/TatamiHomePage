@@ -4,21 +4,18 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Style from '../../style/components/HistoryWarp.module.css';
 
 const HistoryWarp= () => {
-  // const elm = documet.getElementById({year});
-  // const elemHeight = elm.clientHeight;
+
   return (
       <ul className={Style["warp-content"]}>
           {HistoryJson.map(({year}) =>{
         return(
-          // {window.addEventListener("scroll", function(){
-          //   let scroll = window.pageYOffset;
-          //   if(scroll > 4000){
+          <div key={year}>
 
-          //   }
-          // })}
-          <AnchorLink href={'#'+year} >
-            <li className={Style["warp-year"]}>{year}</li>
-          </AnchorLink>
+
+            <AnchorLink href={'#'+year} >
+              <li className={Style["warp-year"]}>{year}</li>
+            </AnchorLink>
+          </div>
         );
       })}
       </ul>

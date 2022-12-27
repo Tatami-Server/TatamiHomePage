@@ -1,44 +1,41 @@
-import HistoryJson from '../../json/History.json';
 import Subtitle from '../components/Subtitle';
+
+
 
 import Carousel from 'react-bootstrap/Carousel';
 
 import Style from '../../style/components/HistoryContent.module.css';
 
-const Historycontent = () => {
-  return (
-    <div>
-      {HistoryJson.map(({year,histories}) =>{
+const Historycontent = ({year,histories}) => {
+    function slideImage(images) {if(images.length === 1) {
+      return(
+        <img src={`${process.env.PUBLIC_URL}/HistoryContent.images/${images}`}alt="歴史の写真"></img>
+      )
+      } else {
         return(
-          <div id={year}>
+          <Carousel className={Style.Carousel} >
+            {/* returnなしでも書ける↓例　他のも統一する。 */}
+            {images.map((img,index) => 
+              <Carousel.Item interval={2000} key={index}> 
+              <img
+                className="d-block w-100"
+                src={`${process.env.PUBLIC_URL}/HistoryContent.images/${img}`}
+                alt="First slide"
+              /> 
+              </Carousel.Item>
+            )}
+          </Carousel>
+        )
+      }
+    }
+  return (
+          <div  id={year}>
             <Subtitle subtitle={year} className={Style["subtitle-year"]}/>
-            {histories.map(({month,images,title,discription}) => {
-
-              function slideImage() {if(images.length === 1) {
-                return(
-                  <img src={`${process.env.PUBLIC_URL}/HistoryContent.images/${images}`}alt="歴史の写真"></img>
-                )
-              } else {
-                return(
-                  <Carousel className={Style.Carousel} >
-                    {images.map((img) => 
-                      <Carousel.Item interval={2000}> 
-                      <img
-                        key={img}
-                        className="d-block w-100"
-                        src={`${process.env.PUBLIC_URL}/HistoryContent.images/${img}`}
-                        alt="First slide"
-                      /> 
-                      </Carousel.Item>
-                    )}
-                  </Carousel>
-                )
-              }
-            }
+            {histories.map(({month,images,title,discription},index) => {
               return (
-                <div className={Style["history-content"]}>
+                <div className={Style["history-content"]} key={index}>
                     <div className={Style["img-box"]}>
-                    {slideImage()}
+                    {slideImage(images)}
                     </div>
                     <div className={Style["text-box"]}>
                       <p className={Style.month}>{month}</p>
@@ -49,9 +46,6 @@ const Historycontent = () => {
                 );
             })}
           </div>
-        );
-      })}
-    </div>
   );
 }
 export default Historycontent;

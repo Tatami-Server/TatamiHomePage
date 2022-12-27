@@ -8,9 +8,9 @@ const News = () => {
     <div className={Style.newsContainer}>
         <h2>お知らせ</h2> 
         <div  className={Style.newsTable}>
-          {newsData.map(({ href, date, content }) => {
+          {newsData.map(({ href, date, content },index) => {
             return(
-              <div className={Style.news}>
+              <div className={Style.news} key={index}>
                 <p className={Style.newsDate}>{ date }</p>
                 <p className={Style.newsContent}>
                   <a className={Style.newsHlef} href={ href }>{ content } </a>

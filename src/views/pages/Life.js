@@ -20,6 +20,7 @@ import lifeShop from '../../images/Life.images/life-shop.png'
 
 
 const Life = () => {
+  // 中に定義する必要はない↓　外に定義したらreturnはいらない
   const funPointList=[
     { href: `/map/`, imgTitle: "職業", img: lifeJob, title: "職業機能", description: <>昨年やっていた職業システムが、報酬額調整の上復活！<br/>採掘や建築、冒険など多彩な職業の中から選んで楽しみながら稼ごう！</>},
     { href: `/map/`, imgTitle: "ガチャ", img: lifeGacha, title: "ガチャ機能", description: <>貯めたお金の使い道、ガチャはいかがですか？<br/>レアなブロックやガチャでしか手に入らないアイテムを手に入れよう！<br/>URを引き当ててSNSで自慢するのもありですね!</>},

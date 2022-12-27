@@ -8,13 +8,30 @@ import HistoryWarp from '../components/HistoryWarp';
 
 import Style from '../../style/pages/History.module.css';
 
+import { useRef,createRef} from 'react';
+
+import HistoryJson from '../../json/History.json';
 
 
 
 const History = () => {
+  // const historyContentRef = useRef(null);
+  // window.addEventListener('scroll', () => {
+  //   const yearPos = historyContentRef
+  //   const topPos = yearPos.getBoundingClientRect().top + window.scrollY
+  //   const bottomPos = yearPos.getBoundingClientRect().bottom + window.scrollY
+  //   const a = window.scrollY
+  //   console.log('topPos'+topPos);
+  //   console.log('bootomPos'+bottomPos);
+  //   console.log(a)
+  // });
 
+  const historyContentRefs = useRef([]);
+  HistoryJson.forEach((_,i) => {
+    historyContentRefs.current[i] = createRef();
+  })
   return (
-    <div>
+    <>
       <Header/>
       <main>
         <div className={Style["history-hero-content-wrapper"]} 
@@ -27,12 +44,19 @@ const History = () => {
             <h3>歴史</h3>
           </div>
         </div>
-        <HistoryContent/>
+
+        {HistoryJson.map((history,i) =>{
+          return(
+            <div ref={historyContentRefs.current[i]} key={i}>
+              <HistoryContent {...history}/>
+            </div>
+          );
+        })};
         <UpArrow/>
       </main>
       <HistoryWarp/>
       <Footer/>
-    </div>
+    </>
   );
 }
 export default History;

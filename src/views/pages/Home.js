@@ -50,7 +50,7 @@ function Home() {
     });
   };
   return (
-    <body>
+    <>
       <section className={Style["hero-content-warpper"]}>
         <div className={Style.hero}
           style={{backgroundImage: `url(${hero})`,
@@ -81,7 +81,7 @@ function Home() {
         <UpArrow/>
       </main>
       <Footer />
-    </body>
+    </>
   );
 }
 
