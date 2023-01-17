@@ -29,3 +29,29 @@
 .LargeCategory-container {
   padding-top: 50px;
 }
+
+.special-thenks-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.special-thenks {
+  display: flex;
+
+}
+
+.special-thenks h2 {
+  font-size: 30px;
+}
+
+.special-thenks-name {
+  font-size: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+.special-thenks-content tr {
+  border-width: 2px;
+}

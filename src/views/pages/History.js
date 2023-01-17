@@ -4,32 +4,29 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import UpArrow from '../components/UpArrow';
 import HistoryContent from '../components/HistoryContent';
-import HistoryWarp from '../components/HistoryWarp';
+import HistoryWarps from '../components/HistoryWarps';
 
 import Style from '../../style/pages/History.module.css';
 
-import { useRef,createRef} from 'react';
+import { useRef ,createRef, useEffect, useState} from 'react';
 
 import HistoryJson from '../../json/History.json';
 
 
-
 const History = () => {
-  // const historyContentRef = useRef(null);
-  // window.addEventListener('scroll', () => {
-  //   const yearPos = historyContentRef
-  //   const topPos = yearPos.getBoundingClientRect().top + window.scrollY
-  //   const bottomPos = yearPos.getBoundingClientRect().bottom + window.scrollY
-  //   const a = window.scrollY
-  //   console.log('topPos'+topPos);
-  //   console.log('bootomPos'+bottomPos);
-  //   console.log(a)
-  // });
-
+  // 外で定義しているので使える↓
   const historyContentRefs = useRef([]);
-  HistoryJson.forEach((_,i) => {
-    historyContentRefs.current[i] = createRef();
-  })
+      {HistoryJson.forEach((_,i) => {
+        // ここで書き換えてる↓？
+        historyContentRefs.current[i] = createRef();
+      })};
+
+  const[scrollPosition, setScrollPosition]= useState(window.scrollY);
+  const onScroll= () => setScrollPosition(window.scrollY);
+  useEffect(() => {
+    window.addEventListener("scroll",onScroll)
+    return() => window.removeEventListener("scroll",onScroll)
+  });
   return (
     <>
       <Header/>
@@ -45,7 +42,7 @@ const History = () => {
           </div>
         </div>
 
-        {HistoryJson.map((history,i) =>{
+        {HistoryJson.map((history,i) => {
           return(
             <div ref={historyContentRefs.current[i]} key={i}>
               <HistoryContent {...history}/>
@@ -54,7 +51,13 @@ const History = () => {
         })};
         <UpArrow/>
       </main>
-      <HistoryWarp/>
+
+      {/* {HistoryJson.map((_,i) => {
+      })} */}
+      <HistoryWarps 
+      contentRef={historyContentRefs.current} 
+      scrollPosition={scrollPosition}
+      />
       <Footer/>
     </>
   );

@@ -14,6 +14,8 @@ import sub5 from '../../images/Subscription.images/sub1-5.png';
 import sub6 from '../../images/Subscription.images/sub1-6.png';
 import sub7 from '../../images/Subscription.images/sub1-7.png';
 import doneruLogo from '../../images/Subscription.images/doneru-logo.png';
+import kirakira from '../../images/Subscription.images/kirakira.png';
+
 
 import Style from '../../style/pages/Subscription.module.css';
 
@@ -63,7 +65,8 @@ const Subscription = () => {
         </div>
         <Subtitle subtitle="ご寄付"/>
         <div className='subtitle-content'>
-          <img src={doneruLogo} className={Style["doneru-logo"]} alt="doneruのロゴ" width={"500"}></img>
+          <p>こちらをクリック↓</p>
+          <img src={doneruLogo} className={Style["doneru-logo"]} alt="doneruのロゴ" width={"400"}></img>
           <p>
             平素より、畳サーバー並びに鯖主:おとたきの活動に関心をお寄せくださり、
             誠にありがとうございます。<br/>
@@ -79,16 +82,22 @@ const Subscription = () => {
             PayPalまたはクレジットカードでのご寄付が可能です。<br/>
             ご寄付くださった方は、Special Thanksにて氏名(またはニックネーム)を掲載させていただきます。
           </p>
-          <p className={Style["special-thenks"]}>Special Thenks</p>
-          <table>
-            {SpecialThenksList.map((name) => {
-              return (
-                <tr>
-                  <td>{name}</td>
-                </tr>
-                );
-              })}
-          </table>
+          <div className={Style["special-thenks-content"]}>
+            <div className={Style["special-thenks"]}>
+              <img src={kirakira} width={"50"}></img>
+              <h2 >Special Thenks</h2>
+              <img src={kirakira} width={"50"}></img>
+            </div>
+            <table>
+              {SpecialThenksList.map((name) => {
+                return (
+                  <tr>
+                    <td className={Style["special-thenks-name"]}>{name}</td>
+                  </tr>
+                  );
+                })}
+            </table>
+          </div>
         </div>
         <UpArrow/>
       </main>
