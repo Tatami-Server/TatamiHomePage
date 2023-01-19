@@ -7,19 +7,17 @@ const MainProducts = ({products}) => {
     <div className={Style["main-products"]}>
       {products.map(({href, img, title, description},index) => {
         return (
-          <div className={Style.product} key={index}>
             <FlexLink href={href}>
               <div className={Style["product-img-box"]}>
                 <div className={Style.fill}>
                   <img src={img} alt="サーバー参加方法" />
                 </div>
               </div>
+              <div className={Style["product-text"]}>
+                <h2>{title}</h2>
+                <p>{description}</p>
+              </div>
             </FlexLink>
-            <div className={Style["product-text"]}>
-              <h2>{title}</h2>
-              <p>{description}</p>
-            </div>
-          </div>
         );
       })}
     </div>

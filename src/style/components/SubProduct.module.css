@@ -8,10 +8,15 @@
   color: #000;
 }
 
+.product a:hover{
+  color: #000;
+}
+
 /* sub-products */
 .sub-products {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 80px;
 }
 
@@ -76,4 +81,5 @@
 
 .product-img-box .text-box h3 {
   font-size: 25px;
+  padding-left: 10px;
 }

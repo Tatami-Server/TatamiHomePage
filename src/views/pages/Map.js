@@ -11,7 +11,7 @@ import map1 from '../../images/map.images/map1.png';
 
 const Map = () => {
   const pluginList=[
-    {href: "https://www.youtube.com/watch?v=C6j53vGcVAk", imgTitle: <>スコットランド<br/>ヤード</>, img: map1, title: "マイクラスコットランドヤード", description:<>ボードゲーム「スコットランドヤード」をマイクラで再現！<br/>最大6名。4~5人プレイ推奨。<br/>1試合1時間~2時間想定。</>},
+    {href: "https://www.youtube.com/watch?v=C6j53vGcVAk", imgTitle: <>スコットランドヤード</>, img: map1, title: "マイクラスコットランドヤード", description:<>ボードゲーム「スコットランドヤード」をマイクラで再現！<br/>最大6名。4~5人プレイ推奨。<br/>1試合1時間~2時間想定。</>},
   ]
   return (
     <div>

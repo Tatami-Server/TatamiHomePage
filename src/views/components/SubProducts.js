@@ -17,11 +17,11 @@ const SubProducts = ({products}) => {
                   <img src={img} alt="サーバー参加方法" />
                 </div>
               </div>
+              <div className={Style["product-text"]}>
+                <h2>{title}</h2>
+                <p>{description}</p>
+              </div>
             </FlexLink>
-            <div className={Style["product-text"]}>
-              <h2>{title}</h2>
-              <p>{description}</p>
-            </div>
           </div>
         );
       })}

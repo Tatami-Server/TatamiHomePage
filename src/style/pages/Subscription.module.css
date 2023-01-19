@@ -37,6 +37,10 @@
   padding-top: 30px;
 }
 
+.doneru-logo:hover {
+  opacity: 0.7;
+}
+
 .special-thenks {
   display: flex;
 

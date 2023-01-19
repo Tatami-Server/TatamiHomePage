@@ -3,21 +3,23 @@
   padding-top: 50px;
 }
 
-.product {
+.main-products a{
+  text-decoration: none;
+  color: #000;
   padding-top: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.product:nth-child(even) {
+.main-products a:hover {
+  color: #000;
+}
+
+.main-products a:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.product a {
-  text-decoration: none;
-  color: #000;
-}
 
 .product-img-box, .product-text {
   width: 30vw;

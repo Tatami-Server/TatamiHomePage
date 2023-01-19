@@ -4,7 +4,7 @@ header {
   border-bottom: solid 3px rgb(89, 138, 94);
 }
 
-header .items-container {
+/* header .items-container {
   height: 100%;
   width: 85vw;
   margin: 0 auto;
@@ -12,21 +12,27 @@ header .items-container {
   flex-direction: row;
   align-items: center;
   justify-content: space-between
-}
+} */
 
 header .logo {
+  position: absolute;
+  top:15px;
+  left:50px;
   width: 220px;
   height: auto;
 }
-
+/* 
 header .contents {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 100px;
-}
+} */
 
 header .join-btn {
+  position:absolute;
+  top:25px;
+  right: 150px;
   width: 160px;
   height: 50px;
 	font-weight: bold;

@@ -65,7 +65,7 @@ const Subscription = () => {
         </div>
         <Subtitle subtitle="ご寄付"/>
         <div className='subtitle-content'>
-          <p>こちらをクリック↓</p>
+          <p>ご寄付はこちらをクリック↓</p>
           <img src={doneruLogo} className={Style["doneru-logo"]} alt="doneruのロゴ" width={"400"}></img>
           <p>
             平素より、畳サーバー並びに鯖主:おとたきの活動に関心をお寄せくださり、

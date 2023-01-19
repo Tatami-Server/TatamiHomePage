@@ -22,3 +22,7 @@
   text-decoration: none;
   color: #000;
 }
+
+.newsHlef:hover {
+  color: rgb(48, 133, 48);
+}

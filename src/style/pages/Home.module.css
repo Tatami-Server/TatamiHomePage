@@ -59,3 +59,15 @@ body {
 .arrow-icon svg:hover {
   fill: rgba(147, 211, 166, 0.733);
 }
+
+/* online-player */
+.online-player {
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+
+
