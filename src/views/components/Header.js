@@ -1,10 +1,14 @@
 import React from 'react';
 import FlexLink from 'src/util/FlexLink';
+import Menu from '../components/Menu';
 
 import logo from '../../images/Home.images/logo.png';
 import Style from '../../style/components/Header.module.css';
 
+import '../../style/components/Menu.css';
+
 const Header = () => {
+
   return (
     <header>
       <div className={Style["items-container"]}>
@@ -15,13 +19,9 @@ const Header = () => {
           <FlexLink href={"https://discord.com/invite/t4YAKKxaq9"}>
             <button className={Style["join-btn"]}>参加はこちらから！</button>
           </FlexLink>
-          <div className={Style.hamburger}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
         </div>
       </div>
+      <Menu right />
     </header>
   );
 }

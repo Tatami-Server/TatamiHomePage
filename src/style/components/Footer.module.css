@@ -24,6 +24,15 @@ footer {
   gap: 30px;
 }
 
+.icons li :hover {
+  color: rgb(172, 216, 185);
+}
+
+
 .footerText {
   padding-left: 10vw;
+}
+
+.footerText:hover {
+  color: rgb(172, 216, 185);
 }

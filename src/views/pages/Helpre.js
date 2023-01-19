@@ -70,7 +70,7 @@ const Helper = () => {
             question={question}
             answer={answer}
           />
-        )};
+        )}
         </div>
         <UpArrow/>
       </main>
