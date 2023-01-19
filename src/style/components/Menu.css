@@ -62,7 +62,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-decoration: none;
   outline: none;
   color: black;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .bm-item:hover {
