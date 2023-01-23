@@ -28,7 +28,7 @@ main {
 
 
 .subtitle-content {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -41,6 +41,6 @@ main {
 
 /* subcontent以外の画像のサイズを決める */
 .subtitle-content .subtitle-img{
-  width: 1000px;
+  width: 100%;
   padding-bottom: 20px;
 }

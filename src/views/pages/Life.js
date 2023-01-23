@@ -23,7 +23,7 @@ const Life = () => {
   // 中に定義する必要はない↓　外に定義したらreturnはいらない
   const funPointList=[
     { href: `/map/`, imgTitle: "職業", img: lifeJob, title: "職業機能", description: <>昨年やっていた職業システムが、報酬額調整の上復活！<br/>採掘や建築、冒険など多彩な職業の中から選んで楽しみながら稼ごう！</>},
-    { href: `/map/`, imgTitle: "ガチャ", img: lifeGacha, title: "ガチャ機能", description: <>貯めたお金の使い道、ガチャはいかがですか？<br/>レアなブロックやガチャでしか手に入らないアイテムを手に入れよう！<br/>URを引き当ててSNSで自慢するのもありですね!</>},
+    { href: `/map/`, imgTitle: "ガチャ", img: lifeGacha, title: "ガチャ機能", description: <>貯めたお金の使い道、ガチャはいかがですか？レアなブロックやガチャでしか手に入らないアイテムを手に入れよう！<br/>URを引き当ててSNSで自慢するのもあり!</>},
     { href: `/map/`, imgTitle: "コマンド", img: lifeCommond, title: "コマンド一覧", description: <>生活サーバーで使えるお金や職業に関するコマンドはもちろんのこと、座ったり、寝そべったり、頭にアイテムをかぶったり等のちょっとした楽しいコマンドもまとめています。</> },
     { href: `/map/`, imgTitle: "webマップ", img: lifeMap, title: "Webマップ", description: <>Web上で生活サーバーのマップが確認できる！？<br/>町の発展状況やオンライン状況を確認しよう。</>},
     { href: `/map/`, imgTitle: "お店", img: lifeShop, title: "自動ショップ", description: <>誰でも簡単に無人のお店を作れちゃう!<br/>オフラインでも稼げるし、買うほうも楽々!</>},
