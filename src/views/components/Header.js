@@ -1,5 +1,5 @@
 import React from 'react';
-import FlexLink from 'src/util/FlexLink';
+import FlexLink from '../../util/FlexLink';
 import Menu from '../components/Menu';
 
 import logo from '../../images/Home.images/logo.png';
@@ -10,7 +10,7 @@ import '../../style/components/Menu.css';
 const Header = () => {
 
   return (
-    <header>
+    <header className={Style.header}>
       {/* <div className={Style["items-container"]}> */}
         <FlexLink href={`/`}>
           <img className={Style.logo} src={logo} alt="畳アイコン" />

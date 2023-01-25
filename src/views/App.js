@@ -11,6 +11,7 @@ import Please from '../views/pages/Please';
 import SNS from '../views/pages/SNS';
 import Subscription from '../views/pages/Subscription';
 import Map from '../views/pages/Map';
+import AdminHome from'../admin/AdminHome';
 
 import ScrollToTop from '../util/ScrollToTop';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -34,6 +35,7 @@ function App() {
           <Route path={`/sns/`} element={<SNS />} />
           <Route path={`/sbuscription/`} element={<Subscription />} />
           <Route path={`/map/`} element={<Map />} />
+          <Route path={`/adminhome/`} element={<AdminHome />} />
         </Routes>
     </BrowserRouter>
   );

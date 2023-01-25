@@ -5,7 +5,7 @@ import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import QuestionAccordion from '../components/QuestionAccodion';
 
-import FlexLink from "src/util/FlexLink";
+import FlexLink from "../../util/FlexLink";
 
 
 import HelperStyle from '../../style/pages/Helpre.module.css';

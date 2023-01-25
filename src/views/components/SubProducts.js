@@ -1,6 +1,6 @@
 import Style from '../../style/components/SubProduct.module.css';
 
-import FlexLink from "src/util/FlexLink";
+import FlexLink from "../../util/FlexLink";
 
 const SubProducts = ({products}) => {
   return (

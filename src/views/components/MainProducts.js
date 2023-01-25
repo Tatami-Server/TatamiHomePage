@@ -1,6 +1,6 @@
 import Style from '../../style/components/MainProduct.module.css';
 
-import FlexLink from "src/util/FlexLink";
+import FlexLink from "../../util/FlexLink";
 
 const MainProducts = ({products}) => {
   return (

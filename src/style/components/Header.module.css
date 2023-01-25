@@ -1,5 +1,5 @@
 /* header */
-header {
+.header {
   height: 100px;
   border-bottom: solid 3px rgb(89, 138, 94);
 }
@@ -14,7 +14,7 @@ header {
   justify-content: space-between
 } */
 
-header .logo {
+.header .logo {
   position: absolute;
   top:15px;
   left:50px;
@@ -29,7 +29,7 @@ header .contents {
   gap: 100px;
 } */
 
-header .join-btn {
+.header .join-btn {
   position:absolute;
   top:25px;
   right: 150px;
@@ -43,7 +43,7 @@ header .join-btn {
   border-radius: 10px;
 }
 
-header .join-btn:hover {
+.header .join-btn:hover {
   color: rgb(89, 138, 94);
 	background: #fff;
 }

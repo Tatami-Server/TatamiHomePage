@@ -14,7 +14,7 @@ const Footer = () => {
     { href: "https://discord.gg/t4YAKKxaq9", reactIcon: SiDiscord }
   ]
   return (
-    <footer>
+    <footer className={Style.footer}>
       <div className={Style["footer-contents-container"]}>
         <p>(c)畳サーバー</p>
         <p className={Style.footerText}>JEでもBEでも遊べるマイクラサーバー</p>
