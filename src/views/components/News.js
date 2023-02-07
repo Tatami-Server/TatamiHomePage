@@ -2,6 +2,8 @@ import NewsJson from '../../json/News.json';
 
 import Style from '../../style/components/News.module.css';
 
+import FlexLink from '../../util/FlexLink';
+
 const News = () => {
   const { newsData } = NewsJson
   return (
@@ -13,7 +15,7 @@ const News = () => {
               <div className={Style.news} key={index}>
                 <p className={Style.newsDate}>{ date }</p>
                 <p className={Style.newsContent}>
-                  <a className={Style.newsHlef} href={ href }>{ content } </a>
+                  <FlexLink className={Style.newsHlef} href={ href }>{ content } </FlexLink>
                 </p>
               </div>
             );

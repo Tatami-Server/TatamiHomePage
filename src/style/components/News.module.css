@@ -18,11 +18,11 @@
   width: 55%;
 }
 
-.newsHlef {
+.news a {
   text-decoration: none;
   color: #000;
 }
 
-.newsHlef:hover {
+.news a:hover {
   color: rgb(48, 133, 48);
 }

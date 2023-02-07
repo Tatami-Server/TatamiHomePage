@@ -17,7 +17,6 @@ import join from '../../images/Home.images/join.png';
 import {IoIosArrowDown} from 'react-icons/io'
 import { IconContext } from 'react-icons'
 
-// import Query from'minecraft-query'
 
 // コンポーネントをインポート
 import MainProducts from '../components/MainProducts';
@@ -52,23 +51,6 @@ function Home() {
     });
   };
 
-  // const q = new Query({host: 'mc.tatamiserver.com', port: 12640, timeout: 5000});
-  // q.fullStat()
-  // .then(success => {
-
-  //   console.log(success);
-
-  //   return q.basicStat()
-
-  // })
-
-  // .then(success => {
-
-  //   console.log(success);
-
-  //   q.close();
-
-  // })
   return (
     <>
       <section className={Style["hero-content-warpper"]}>

@@ -22,12 +22,12 @@ import lifeShop from '../../images/Life.images/life-shop.png'
 const Life = () => {
   // 中に定義する必要はない↓　外に定義したらreturnはいらない
   const funPointList=[
-    { href: `/map/`, imgTitle: "職業", img: lifeJob, title: "職業機能", description: <>昨年やっていた職業システムが、報酬額調整の上復活！<br/>採掘や建築、冒険など多彩な職業の中から選んで楽しみながら稼ごう！</>},
-    { href: `/map/`, imgTitle: "ガチャ", img: lifeGacha, title: "ガチャ機能", description: <>貯めたお金の使い道、ガチャはいかがですか？レアなブロックやガチャでしか手に入らないアイテムを手に入れよう！<br/>URを引き当ててSNSで自慢するのもあり!</>},
-    { href: `/map/`, imgTitle: "コマンド", img: lifeCommond, title: "コマンド一覧", description: <>生活サーバーで使えるお金や職業に関するコマンドはもちろんのこと、座ったり、寝そべったり、頭にアイテムをかぶったり等のちょっとした楽しいコマンドもまとめています。</> },
-    { href: `/map/`, imgTitle: "webマップ", img: lifeMap, title: "Webマップ", description: <>Web上で生活サーバーのマップが確認できる！？<br/>町の発展状況やオンライン状況を確認しよう。</>},
-    { href: `/map/`, imgTitle: "お店", img: lifeShop, title: "自動ショップ", description: <>誰でも簡単に無人のお店を作れちゃう!<br/>オフラインでも稼げるし、買うほうも楽々!</>},
-    { href: `/map/`, imgTitle: "イベント", img: lifeEvent, title: "季節イベント", description: <>夏祭りやハロウィンなどの季節系イベントもご用意！<br/>最新情報はここをクリックしてTwitterで確認だ!</>},
+    { href: `https://seesaawiki.jp/tatamiserver/d/%bf%a6%b6%c8%b5%a1%c7%bd`, imgTitle: "職業", img: lifeJob, title: "職業機能", description: <>昨年やっていた職業システムが、報酬額調整の上復活！<br/>採掘や建築、冒険など多彩な職業の中から選んで楽しみながら稼ごう！</>},
+    { href: `https://seesaawiki.jp/tatamiserver/d/%a5%ac%a5%c1%a5%e3%b5%a1%c7%bd`, imgTitle: "ガチャ", img: lifeGacha, title: "ガチャ機能", description: <>貯めたお金の使い道、ガチャはいかがですか？レアなブロックやガチャでしか手に入らないアイテムを手に入れよう！<br/>URを引き当ててSNSで自慢するのもあり!</>},
+    { href: `https://seesaawiki.jp/tatamiserver/d/%a5%b3%a5%de%a5%f3%a5%c9%b0%ec%cd%f7`, imgTitle: "コマンド", img: lifeCommond, title: "コマンド一覧", description: <>生活サーバーで使えるお金や職業に関するコマンドはもちろんのこと、座ったり、寝そべったり、頭にアイテムをかぶったり等のちょっとした楽しいコマンドもまとめています。</> },
+    { href: `https://map.tatamiserver.com/`, imgTitle: "webマップ", img: lifeMap, title: "Webマップ", description: <>Web上で生活サーバーのマップが確認できる！？<br/>町の発展状況やオンライン状況を確認しよう。</>},
+    { href: `https://seesaawiki.jp/tatamiserver/d/%a5%b7%a5%e7%a5%c3%a5%d7%ba%ee%c0%ae%ca%fd%cb%a1`, imgTitle: "お店", img: lifeShop, title: "自動ショップ", description: <>誰でも簡単に無人のお店を作れちゃう!<br/>オフラインでも稼げるし、買うほうも楽々!</>},
+    { href: `https://twitter.com/tatami_mc`, imgTitle: "イベント", img: lifeEvent, title: "季節イベント", description: <>夏祭りやハロウィンなどの季節系イベントもご用意！<br/>最新情報はここをクリックしてTwitterで確認だ!</>},
   ];
   return (
     <div>

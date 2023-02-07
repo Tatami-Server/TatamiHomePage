@@ -12,6 +12,12 @@ import SNS from '../views/pages/SNS';
 import Subscription from '../views/pages/Subscription';
 import Map from '../views/pages/Map';
 import AdminHome from'../admin/AdminHome';
+import AdminChangeLog from '../admin/AdminChangeLog';
+import AdminEvent from '../admin/AdminEvent';
+import AdminHistory from '../admin/AdminHistory';
+import AdminMap from '../admin/AdminMap';
+import AdminSpecialThenks from '../admin/AdminSpecialThenks';
+import AdminTopPage from '../admin/AdminTopPage';
 
 import ScrollToTop from '../util/ScrollToTop';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -31,11 +37,18 @@ function App() {
           <Route path={`/history/`} element={<History />} />
           <Route path={`/join/`} element={<Join />} />
           <Route path={`/life/`} element={<Life />} />
-          <Route path={`/please/`} element={<Please />} />
+          <Route path={`/please/`} element={<Please />}/>
           <Route path={`/sns/`} element={<SNS />} />
-          <Route path={`/sbuscription/`} element={<Subscription />} />
+          <Route path={`/sbuscription/`} element={<Subscription />}/>
           <Route path={`/map/`} element={<Map />} />
-          <Route path={`/adminhome/`} element={<AdminHome />} />
+          <Route path={`/adminhome/`} element={<AdminHome/>}/>
+          <Route path={`/adminchangelog/`} element={<AdminChangeLog/>}/>
+          <Route path={`/adminevent/`} element={<AdminEvent/>}/>
+          <Route path={`/adminhistory/`} element={<AdminHistory/>} />
+          <Route path={`/adminspecialthenks/`} element={<AdminSpecialThenks/>} />
+          <Route path={`/adminmap/`} element={<AdminMap />} />
+          <Route path={`/admintoppage/`} element={<AdminTopPage/>} />
+
         </Routes>
     </BrowserRouter>
   );
