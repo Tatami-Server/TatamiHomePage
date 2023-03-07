@@ -2,6 +2,8 @@ import Style from '../../style/components/SubProduct.module.css';
 
 import FlexLink from "../../util/FlexLink";
 
+import gara from "../../images/SubProduct.images/gara.jpg"
+
 const SubProducts = ({products}) => {
   return (
     <div className={Style["sub-products"]}>
@@ -11,7 +13,13 @@ const SubProducts = ({products}) => {
             <FlexLink href={href}>
               <div className={Style["product-img-box"]}>
                 <div className={Style["text-box"]}>
-                  <h3>{imgTitle}</h3>
+                  <div className={Style.gara}
+                      style={{backgroundImage: `url(${gara})`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize:"cover",
+                    }}>
+                    <h3>{imgTitle}</h3>
+                  </div>
                 </div>
                 <div className={Style.fill}>
                   <img src={img} alt="サーバー参加方法" />

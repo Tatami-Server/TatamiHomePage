@@ -45,7 +45,9 @@ const History = () => {
         {HistoryJson.map((history,i) => {
           return(
             <div ref={historyContentRefs.current[i]} key={i}>
-              <HistoryContent {...history}/>
+              <HistoryContent {...history}>
+              aaaaa
+              </HistoryContent>
             </div>
           );
         })};

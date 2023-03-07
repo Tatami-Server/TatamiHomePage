@@ -1,46 +1,73 @@
 import Dashboard from '../admin/components/dashboard/Dashboard'
+import Box from '@mui/material/Box';
+import {Button} from '@mui/material'
+import Grid from '@mui/material/Grid';
 
-import hero from '../images/Home.images/hero2.png';
-import logo from '../images/Home.images/logo.png';
-
-import {IoIosArrowDown} from 'react-icons/io'
-import { IconContext } from 'react-icons'
-
-import Style from '../style/pages/Home.module.css';
+import{useState} from 'react'
 
 
 export default function AdminTopPage() {
+  const [image,setImage] = useState([]);
+
+  const onFileChange = (e) =>{
+    const files = e.target.files
+    if (files.length > 0) {
+        let file = files[0]
+        let reader = new FileReader()
+        reader.onload = (e) => {
+            setImage( e.target.result )
+        };
+        reader.readAsDataURL(file)
+    } else {
+        setImage(  null )
+    }
+}
+
+let preview = ''
+
+if (image != null) {
+    preview = (
+      <Grid item xs={12}>
+        <Box sx={{width:"100%", height:500}}> 
+          <img style={{width:"100%", height:"100%",objectFit:"cover"}} src={image}/> 
+        </Box>
+      </Grid>
+    )
+}
+
   return (
-    <div>
-      <Dashboard>
-        <section className={Style["hero-content-warpper"]}>
-          <div className={Style.hero}
-            style={{backgroundImage: `url(${hero})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize:"cover",
-          }}>
-          <div className={Style["first-view-header"]}>
-              <div className={Style.spuare}></div>
-              <div className={Style.triangle}></div>
-              <div className={`${Style.triangle} ${Style.line}`}></div>
-              <img className={Style.logo} src={logo} alt="畳アイコン" />
-          </div>
-            <div className={Style["arrow-icon"]} >
-              <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
-                <IoIosArrowDown/>
-              </IconContext.Provider>
-            </div>
-            <div className={Style["online-player"]}>
-              <div className={Style["player-number"]}>
-                <h2>３人オンライン！</h2>
-              </div>
-              <div className={Style["player-face"]}>
-                <img></img>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Dashboard>
-    </div>
+    <Dashboard>
+      <Grid item xs={12} >
+        {preview}
+        <Grid container spacing={2}>
+          <Grid item >
+            <label htmlFor={'upload'}>
+              <Button 
+                variant='contained' 
+                component="span">
+                参照
+              </Button>
+                <input 
+                id={'upload'}
+                type="file"
+                accept='image/*,png,jpeg,jpg'
+                style={{display:"none"}}
+                onChange={
+                  (e) => {
+                    onFileChange(e)
+                  }
+                }/>
+            </label>
+          </Grid>
+          <Grid item >
+            <Button 
+                variant='contained' 
+                component="span">
+                保存
+            </Button>  
+          </Grid>
+        </Grid>
+      </Grid>
+    </Dashboard>
   );
 }

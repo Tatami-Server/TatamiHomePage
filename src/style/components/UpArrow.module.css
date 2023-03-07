@@ -5,9 +5,12 @@
   justify-content: center;
   align-items: center;
   margin-top: 150px;
+}
 
+.arrow-icon svg {
+  fill:rgb(66, 96, 45);
 }
 
 .arrow-icon svg:hover {
-  fill: rgba(117, 175, 91, 0.733);
+  fill: rgb(201,152,51);
 }

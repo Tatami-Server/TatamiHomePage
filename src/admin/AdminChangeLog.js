@@ -4,7 +4,9 @@ export default function AdminChangeLog() {
   return (
     <div>
       {/* <Button variant="contained">Hello World</Button> */}
-      <Dashboard></Dashboard>
+      <Dashboard>
+        <p>ddd</p>
+      </Dashboard>
     </div>
   );
 }
