@@ -21,3 +21,23 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 599px){
+  .heading-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    padding-top: 50px;
+  }
+
+  .heading-line {
+    width: 20%;
+  }
+
+  .heading-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}

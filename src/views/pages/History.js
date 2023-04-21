@@ -30,6 +30,10 @@ const History = () => {
   return (
     <>
       <Header/>
+      <HistoryWarps 
+      contentRef={historyContentRefs.current} 
+      scrollPosition={scrollPosition}
+      />
       <main>
         <div className={Style["history-hero-content-wrapper"]} 
           style={{backgroundImage: `url(${Historyimg})`,
@@ -56,10 +60,6 @@ const History = () => {
 
       {/* {HistoryJson.map((_,i) => {
       })} */}
-      <HistoryWarps 
-      contentRef={historyContentRefs.current} 
-      scrollPosition={scrollPosition}
-      />
       <Footer/>
     </>
   );

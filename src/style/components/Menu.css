@@ -74,3 +74,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   top:0;
   width: 100%;
 }
+
+
+@media screen and (max-width: 599px){
+  .bm-burger-button {
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    right: 30px;
+    top: 20px;
+  }
+}

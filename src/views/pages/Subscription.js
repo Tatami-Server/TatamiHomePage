@@ -72,7 +72,7 @@ const Subscription = () => {
             誠にありがとうございます。<br/>
             この度、サーバー維持の資金として、ご寄付を募ることに致しました。
           </p>
-          <ul>
+          <ul className={Style["subscription-used"]}>
             <li>[使用実績/使用予定]</li>
             <li>Minecraft有料サーバーのレンタル</li>
             <li>配信機材　静音キーボード　オーディオインターフェース等の購入</li>

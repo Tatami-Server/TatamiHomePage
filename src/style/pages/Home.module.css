@@ -48,7 +48,7 @@
 
 .arrow-icon {
   position: absolute;
-  left: 50%;
+  left: 47%;
   transform: translateY( 550px);
 }
 
@@ -68,6 +68,40 @@
 
 }
 
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+  .first-view-header .spuare {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 7px solid rgb(66, 96, 45);
+    box-sizing: content-box;
+    /* display: none; */
+  }
+  
+  .first-view-header .triangle {
+    display: none;
+  }
+
+  .first-view-header .logo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+
+  .hero {
+    z-index: -1;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .arrow-icon {
+    display: none;
+  }
+}
 
 
 

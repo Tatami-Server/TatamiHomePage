@@ -32,3 +32,37 @@
 .sns-discription {
   padding: 20px;
 }
+
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+  .sns-wrapper {
+    justify-content: center;
+  }
+
+  .sns-content {
+    width: 45vw;
+    height: 35vw;
+  }
+  
+  .icon {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .icon svg{
+    width: 30px;
+    height: 30px;
+  }
+
+  .sns-title {
+    font-size: 15px;
+  }
+
+  .sns-discription {
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 8px;
+  }
+
+}

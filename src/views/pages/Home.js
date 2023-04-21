@@ -58,6 +58,7 @@ function Home() {
           style={{backgroundImage: `url(${hero})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize:"cover",
+          backgroundPosition: "center"
         }}>
         <div className={Style["first-view-header"]}>
             <div className={Style.spuare}></div>

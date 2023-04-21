@@ -58,3 +58,36 @@
 .product-text p {
   font-size: 23px;
 }
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+  .main-products a{
+    padding-top: 0px;;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .main-products a:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .product-img-box {
+    width: 220px;
+    height: 150px;
+  }
+
+  .product-text {
+    width: 220px;
+    height: 100px;
+  }
+
+  /* product-text */
+.product-text h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.product-text p {
+  font-size: 10px;
+}
+}

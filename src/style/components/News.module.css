@@ -26,3 +26,29 @@
 .news a:hover {
   color: rgb(48, 133, 48);
 }
+
+@media screen and (max-width: 599px){
+  .newsContainer h2{
+    font-size: 20px;
+  }
+
+  .news {
+    padding-top: 15px;
+    gap: 2vw;
+  }
+
+  .news a {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .news p{
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+  
+  .newsTable {
+    padding-top: 10px;
+    width: 75%;
+  }
+}

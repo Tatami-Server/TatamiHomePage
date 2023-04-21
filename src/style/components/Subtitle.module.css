@@ -19,3 +19,18 @@
   border-bottom: 5px solid rgb(89, 138, 94);
   margin-bottom: -5px;
 }
+
+@media screen and (max-width: 599px){
+  .subtitle-container {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .subtilte {
+    width: 80vw;
+  }
+  
+  .subtilte span {
+    font-size: 15px;
+  }
+}

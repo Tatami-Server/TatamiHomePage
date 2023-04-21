@@ -41,6 +41,10 @@
   opacity: 0.7;
 }
 
+.subscription-used li:first-child{
+  list-style: none;
+}
+
 .special-thenks {
   display: flex;
 
@@ -58,4 +62,57 @@
 
 .special-thenks-content tr {
   border-width: 2px;
+}
+
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+  .LargeCategory-content {
+    padding-bottom: 0px;
+  }
+  
+  .LargeCategory-content img {
+    width: 150px;
+  }
+  
+  .LargeCategory-content p{
+    width: 600px;
+  }
+
+  .LargeCategory-container {
+    padding-top: 10px;
+  }
+
+  .LargeCategory-container h3 {
+    font-size: 15px;
+    margin: 0;
+  }
+
+
+  .doneru-logo {
+    width: 200px;
+    padding-bottom: 10px;
+  }
+
+  .subscription-used {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .subscription-used li{
+    font-size: 12px;
+  }
+  
+  .special-thenks h2 {
+    font-size: 20px;
+  }
+
+  .special-thenks img {
+    width:20px;
+  }
+
+  .special-thenks-name{
+    font-size: 15px;
+  }
+
 }

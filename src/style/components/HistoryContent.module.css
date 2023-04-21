@@ -45,3 +45,57 @@
 .text-box .discription {
   font-size: 18px;
 }
+
+
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+/* historyContent */
+.history-content {
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-content:nth-child(even) {
+  flex-direction: column;
+  align-items: center;
+}
+
+.Carousel {
+  width: 300px;
+}
+
+.history-content img {
+  width: 300px;
+  height: 200px;
+}
+
+/* text */
+.text-box {
+  width: 300px;
+}
+
+.text-box .month {
+  font-size: 15px;
+  font-weight: 700;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.text-box .title {
+  font-size: 15px;
+  text-align: center;
+}
+
+.text-box .discription {
+  font-size: 10px;
+}
+
+  
+}
+

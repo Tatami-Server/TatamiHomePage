@@ -95,3 +95,38 @@
   font-size: 25px;
   padding-left: 10px;
 }
+
+@media screen and (max-width: 599px){
+  .sub-products {
+    justify-content: center;
+  }
+  
+  .sub-products .product-text h2 {
+    font-size: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  
+  .sub-products .product-text p{
+    font-size: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .product-img-box {
+    width: 200px;
+    height: 110px;
+  }
+  
+  .product-text {
+    width: 200px;
+  }
+  
+  .sub-products::after{
+    display: none;
+  }
+
+  .product-img-box .text-box h3 {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+}

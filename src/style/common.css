@@ -44,3 +44,22 @@ main {
   width: 100%;
   padding-bottom: 20px;
 }
+
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+
+  main {
+    background-color: #f8f4ecd3;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  
+  /* subtitle-content サブタイトルの下の要素のｃｓｓ */
+.subtitle-content p{
+  font-size: 10px;
+  margin: 0;
+  line-height: 15px;
+}
+
+}

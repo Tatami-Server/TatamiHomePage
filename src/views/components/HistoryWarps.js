@@ -34,6 +34,7 @@ const HistoryWarps= ({contentRef,scrollPosition}) => {
     })
     }
     return (
+      <div className={Style["warp-container"]}>
       <ul className={Style["warp-content"]}>
         {HistoryJson.map(({year},i) =>
           <AnchorLink href={'#'+year} key={i}>
@@ -41,6 +42,7 @@ const HistoryWarps= ({contentRef,scrollPosition}) => {
           </AnchorLink>
         )}
       </ul>
+      </div>
     );
 }
 export default HistoryWarps;
