@@ -41,16 +41,24 @@
 @media screen and (max-width: 599px){
   .warp-container {
     top: 300px;
-    width: 100%;
-    position: fixed;
+    height: 70px;
+    position: absolute;
     overflow: scroll;
     display: flex;
+    z-index: 999;
+    padding-top: 20px;
+  }
+
+  .is-scrolled {
+    top: 0;
+    position: fixed;
+    background-color: rgb(249,246,239);
   }
 
   .warp-content {
     top: 0;
     position: relative;
-    height: 100px;
+    height: 100%;
     flex-direction: row;
     margin: 0;
     padding: 0;

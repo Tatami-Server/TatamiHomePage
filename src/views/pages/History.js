@@ -50,7 +50,6 @@ const History = () => {
           return(
             <div ref={historyContentRefs.current[i]} key={i}>
               <HistoryContent {...history}>
-              aaaaa
               </HistoryContent>
             </div>
           );
@@ -58,8 +57,6 @@ const History = () => {
         <UpArrow/>
       </main>
 
-      {/* {HistoryJson.map((_,i) => {
-      })} */}
       <Footer/>
     </>
   );
