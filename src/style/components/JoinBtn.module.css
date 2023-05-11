@@ -15,3 +15,13 @@
   color: rgb(89, 138, 94);
 	background: #fff;
 }
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+  .join-btn {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+  
+}

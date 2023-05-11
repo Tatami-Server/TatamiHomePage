@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
+  padding:0 50px;
 }
 
 .header .logo {
@@ -24,7 +24,7 @@
 @media screen and (max-width: 599px){
   .header {
     height: 60px;
-
+    padding: 0 10px;
   }
   
   .header .logo {
@@ -32,6 +32,10 @@
     height: auto;
     top: 15px;
     left: 10px;
+  }
+
+  .header .rightContent {
+    gap: 20px;
   }
 }
 

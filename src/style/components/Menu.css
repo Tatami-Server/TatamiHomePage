@@ -3,8 +3,6 @@
   position: absolute;
   width: 36px;
   height: 30px;
-  /* right: 50px;
-  top: 32px; */
 }
 
 /* Color/shape of burger icon bars */
@@ -100,7 +98,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
     position: absolute;
     width: 25px;
     height: 20px;
-    right: 30px;
-    top: 20px;
+  }
+
+  .burger-container {
+    height: 20px;
+    width: 20px;
   }
 }

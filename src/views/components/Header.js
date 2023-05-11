@@ -16,7 +16,7 @@ const Header = () => {
         </FlexLink>
         <div className={Style.rightContent}>
           <JoinBtn/>
-          <Menu right />
+          <Menu right noOverlay/>
         </div>
     </header>
   );
