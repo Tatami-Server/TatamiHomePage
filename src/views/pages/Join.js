@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
+import JoinBtn from '../components/JoinBtn';
 
 import FlexLink from "../../util/FlexLink";
 
@@ -27,9 +28,7 @@ const Join = () => {
             畳サーバーで遊ぶにはDiscordサーバーへの参加が必須になります。<br/>
             Discordサーバーに参加したら、まず最初に利用規約をご確認ください！
           </p>
-          <FlexLink href={"https://discord.com/invite/t4YAKKxaq9"}>
-            <button className={Style["join-btn"]}>参加はこちらから！</button>
-          </FlexLink>
+          <JoinBtn/>
         </div>
         <Subtitle subtitle="Discordにはいったら..."/>
         <div className='subtitle-content'>

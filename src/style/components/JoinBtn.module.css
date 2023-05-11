@@ -1,0 +1,17 @@
+.join-btn {
+  top:25px;
+  right: 150px;
+  width: 160px;
+  height: 50px;
+	font-weight: bold;
+	border: 2px solid rgb(89, 138, 94);
+	background: rgb(89, 138, 94);
+	color: #fff;
+	transition: 0.5s;
+  border-radius: 10px;
+}
+
+.join-btn:hover {
+  color: rgb(89, 138, 94);
+	background: #fff;
+}

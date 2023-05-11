@@ -1,6 +1,7 @@
 import React from 'react';
 import FlexLink from '../../util/FlexLink';
 import Menu from '../components/Menu';
+import JoinBtn from '../components/JoinBtn';
 
 import logo from '../../images/Home.images/logo.png';
 import Style from '../../style/components/Header.module.css';
@@ -11,17 +12,13 @@ const Header = () => {
 
   return (
     <header className={Style.header}>
-      {/* <div className={Style["items-container"]}> */}
         <FlexLink href={`/`}>
           <img className={Style.logo} src={logo} alt="畳アイコン" />
         </FlexLink>
-        {/* <div className={Style.contents}> */}
-          <FlexLink href={"https://discord.com/invite/t4YAKKxaq9"}>
-            <button className={Style["join-btn"]}>参加はこちらから！</button>
-          </FlexLink>
-        {/* </div> */}
-      {/* </div> */}
-      <Menu right />
+        <div className={Style.rightContent}>
+          <JoinBtn/>
+          <Menu right />
+        </div>
     </header>
   );
 }
