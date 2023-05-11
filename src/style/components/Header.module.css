@@ -17,6 +17,8 @@
 
 .header .rightContent {
   display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 @media screen and (max-width: 599px){

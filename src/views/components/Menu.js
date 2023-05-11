@@ -2,8 +2,9 @@ import { stack as Burger } from 'react-burger-menu';
 
 // import { FlexLink } from "react-router-dom";
 import FlexLink from '../../util/FlexLink';
+import '../../style/components/Menu.css';
 
-export default (props) => {
+const Menu = (props) => {
   const links = [
     { href: "/", text: "Home" },
     { href: "/join/", text: "サーバー参加方法" },
@@ -19,14 +20,18 @@ export default (props) => {
   ];
 
   return (
-    <Burger {...props}>
-      <ul>
-        {links.map((link, index) => (
-          <li key={index}>
-            <FlexLink href={link.href}>{link.text}</FlexLink>
-          </li>
-        ))}
-      </ul>
-    </Burger>
+    <div className='burger-container'>
+      <Burger {...props}>
+        <ul>
+          {links.map((link, index) => (
+            <li key={index}>
+              <FlexLink href={link.href}>{link.text}</FlexLink>
+            </li>
+          ))}
+        </ul>
+      </Burger>
+    </div>
   );
 };
+
+export default Menu;

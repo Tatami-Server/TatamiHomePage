@@ -6,7 +6,6 @@ import JoinBtn from '../components/JoinBtn';
 import logo from '../../images/Home.images/logo.png';
 import Style from '../../style/components/Header.module.css';
 
-import '../../style/components/Menu.css';
 
 const Header = () => {
 
