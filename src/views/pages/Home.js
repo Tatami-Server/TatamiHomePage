@@ -71,14 +71,14 @@ function Home() {
               <IoIosArrowDown/>
             </IconContext.Provider>
           </div>
-          <div className={Style["online-player"]}>
+          {/* <div className={Style["online-player"]}>
             <div className={Style["player-number"]}>
               <h2>３人オンライン！</h2>
             </div>
             <div className={Style["player-face"]}>
               <img></img>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <main>
