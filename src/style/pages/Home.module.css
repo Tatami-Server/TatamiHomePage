@@ -99,7 +99,9 @@
     height: 100vh;
   }
 
-  
+  .arrow-icon {
+    padding-bottom: 50px;
+  }
   .arrow-icon svg {
     height: 70px;
     width: 70px;
