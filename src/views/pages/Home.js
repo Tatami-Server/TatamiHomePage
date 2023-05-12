@@ -13,6 +13,8 @@ import event from '../../images/Home.images/event.png';
 import life from '../../images/Home.images/life.png';
 import join from '../../images/Home.images/join.png';
 
+import { useRef } from "react";
+
 
 import {IoIosArrowDown} from 'react-icons/io'
 import { IconContext } from 'react-icons'
@@ -44,12 +46,11 @@ function Home() {
     { href: `/life/`,  img: life, title: "生活サーバー", description: "半年ぶりに復活した新しい生活サーバーについて紹介しています。" },
     { href: `/event/`,  img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
   ];
-  const goNextPage = () => {
-    window.scrollTo({
-      top: (0,1000),
-      behavior: "smooth",
-    });
-  };
+  
+  function scrollToRef(ref) {
+    window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
+  }
+  const myRef = useRef(null);
 
   return (
     <>
@@ -66,7 +67,7 @@ function Home() {
             <div className={`${Style.triangle} ${Style.line}`}></div>
             <img className={Style.logo} src={logo} alt="畳アイコン" />
         </div>
-          <div className={Style["arrow-icon"]} onClick={goNextPage}>
+          <div className={Style["arrow-icon"]} onClick={() => scrollToRef(myRef)}>
             <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
               <IoIosArrowDown/>
             </IconContext.Provider>
@@ -81,7 +82,7 @@ function Home() {
           </div> */}
         </div>
       </section>
-      <main>
+      <main ref={myRef}>
         <section className={Style.products}>
           <MainProducts products={MainProductsList}/>
           <SeparatorLine/>
