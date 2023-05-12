@@ -60,9 +60,9 @@ main {
   
   /* subtitle-content サブタイトルの下の要素のｃｓｓ */
 .subtitle-content p{
-  font-size: 10px;
+  font-size: 15px;
   margin: 0;
-  line-height: 15px;
+  line-height: 23px;
 }
 
 }
