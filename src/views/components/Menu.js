@@ -11,7 +11,7 @@ const Menu = (props) => {
     { href: "/event/", text: "イベント一覧" },
     { href: "/map/", text: "配布マップ" },
     { href: "/life/", text: "生活サーバー" },
-    { href: "/hishrefry/", text: "畳サーバーの歴史" },
+    { href: "/history/", text: "畳サーバーの歴史" },
     { href: "/please/", text: "運営からのお願い" },
     { href: "/sbuscription/", text: "サブスクライブ・ご寄付" },
     { href: "/sns/", text: "公式SNS等" },

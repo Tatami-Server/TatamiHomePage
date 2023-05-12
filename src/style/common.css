@@ -24,6 +24,9 @@ main {
   background-color: #f8f4ecd3;
   padding-left: 18vw;
   padding-right: 18vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
