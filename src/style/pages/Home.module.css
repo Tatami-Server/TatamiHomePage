@@ -44,12 +44,14 @@
   z-index: -1;
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .arrow-icon {
-  position: absolute;
-  left: 47%;
-  transform: translateY( 550px);
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
 }
 
 .arrow-icon svg:hover  {
@@ -98,8 +100,10 @@
     height: 60vh;
   }
 
-  .arrow-icon {
-    display: none;
+  
+  .arrow-icon svg {
+    height: 40px;
+    width: 40px;
   }
 }
 
