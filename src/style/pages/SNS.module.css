@@ -40,8 +40,7 @@
   }
 
   .sns-content {
-    width: 45vw;
-    height: 35vw;
+    width: 55vw;
   }
   
   .icon {
@@ -55,13 +54,13 @@
   }
 
   .sns-title {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .sns-discription {
     padding: 5px;
     padding-top: 10px;
-    font-size: 8px;
+    font-size: 12px;
   }
 
 }
