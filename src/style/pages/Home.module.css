@@ -75,11 +75,10 @@
 @media screen and (max-width: 599px){
   .first-view-header .spuare {
     width: 100%;
-    height: 60px;
+    height: 80px;
     background-color: white;
     border-bottom: 7px solid rgb(66, 96, 45);
     box-sizing: content-box;
-    /* display: none; */
   }
   
   .first-view-header .triangle {
@@ -87,7 +86,7 @@
   }
 
   .first-view-header .logo {
-    width: 100px;
+    width: 170px;
     height: auto;
     position: absolute;
     top: 20px;
