@@ -87,6 +87,7 @@
 
   .LargeCategory-container {
     padding-bottom: 60px;
+    padding-top: 0;
   }
 
   .LargeCategory-container h3 {
