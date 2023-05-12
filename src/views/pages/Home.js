@@ -29,6 +29,8 @@ import SeparatorLine from '../components/SeparatorLine';
 import UpArrow from '../components/UpArrow';
 
 import Style from '../../style/pages/Home.module.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 function Home() {
   const SubProductsList = [
@@ -52,6 +54,20 @@ function Home() {
   }
   const myRef = useRef(null);
 
+  const [serverData, setServerData] = useState(null);
+
+  useEffect(() => {
+    axios.get('https://api.mcsrvstat.us/2/mc.tatamiserver.com')
+      .then(({data}) => {
+        setServerData(data);
+        console.log(data)
+      })
+      .catch(error => {
+        console.error('Error fetching data: ', error);
+        setServerData(null);
+      });
+  }, []);
+
   return (
     <>
       <section className={Style["hero-content-warpper"]}>
@@ -72,14 +88,14 @@ function Home() {
               <IoIosArrowDown/>
             </IconContext.Provider>
           </div>
-          {/* <div className={Style["online-player"]}>
+          <div className={Style["online-player"]}>
             <div className={Style["player-number"]}>
-              <h2>３人オンライン！</h2>
+              <h2>{ serverData && serverData.players.online ? `${serverData.players.online}オンライン!` : '現在オンラインのプレイヤーはいません。' }</h2>
             </div>
             <div className={Style["player-face"]}>
               <img></img>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
       <main ref={myRef}>
