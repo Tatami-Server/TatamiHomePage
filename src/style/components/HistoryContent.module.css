@@ -79,7 +79,7 @@
 }
 
 .text-box .month {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   padding-right: 20px;
   padding-left: 20px;
@@ -88,12 +88,12 @@
 }
 
 .text-box .title {
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
 }
 
 .text-box .discription {
-  font-size: 10px;
+  font-size: 15px;
 }
 
   
