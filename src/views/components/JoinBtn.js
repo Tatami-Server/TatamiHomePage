@@ -2,12 +2,14 @@ import FlexLink from '../../util/FlexLink';
 
 import Style from '../../style/components/JoinBtn.module.css'
 
-const JoinBtn = () => {
+const JoinBtn = ({ size }) => {
+  const className = `${Style['join-btn']} ${size === 'large' ? Style['join-btn-large'] : Style['join-btn-small']}`;
 
   return (
-          <FlexLink href={"https://discord.com/invite/t4YAKKxaq9"}>
-            <button className={Style["join-btn"]}>参加はこちらから！</button>
-          </FlexLink>
+    <FlexLink href="https://discord.com/invite/t4YAKKxaq9">
+      <button className={className}>参加はこちらから！</button>
+    </FlexLink>
   );
-}
+};
+
 export default JoinBtn;

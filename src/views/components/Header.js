@@ -15,7 +15,7 @@ const Header = () => {
           <img className={Style.logo} src={logo} alt="畳アイコン" />
         </FlexLink>
         <div className={Style.rightContent}>
-          <JoinBtn/>
+          <JoinBtn size="small"/>
           <Menu right noOverlay/>
         </div>
     </header>
