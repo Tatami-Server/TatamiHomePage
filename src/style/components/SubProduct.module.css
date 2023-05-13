@@ -98,6 +98,7 @@
 
 @media screen and (max-width: 599px){
   .sub-products {
+    padding-top: 50px;
     justify-content: center;
   }
   

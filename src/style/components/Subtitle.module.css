@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .subtilte {
@@ -22,8 +22,8 @@
 
 @media screen and (max-width: 599px){
   .subtitle-container {
-    padding-top: 50px;
-    padding-bottom: 15px;
+    padding-top: 100px;
+    padding-bottom: 0px;
   }
 
   .subtilte {
