@@ -6,7 +6,6 @@ import HistoryJson from '../../json/History.json';
 import { useEffect, useState } from "react";
 
 const HistoryWarps= ({contentRef,scrollPosition}) => {
-  // console.log(contentRef)
   const [selected, setSelected] = useState([]);
   
   useEffect(() => {
@@ -16,7 +15,6 @@ const HistoryWarps= ({contentRef,scrollPosition}) => {
   const judgeInsideOrNot= () => {
     HistoryJson.map((_,i) => {
         console.log(contentRef[i])
-      // if(contentRef[i]) {
         const {top,bottom} = contentRef[i].current.getBoundingClientRect()
     
         const offset = 200;
@@ -30,7 +28,6 @@ const HistoryWarps= ({contentRef,scrollPosition}) => {
           return prevSelected
         });
 
-      // }
     })
     }
 

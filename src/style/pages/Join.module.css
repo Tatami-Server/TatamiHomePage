@@ -1,17 +1,6 @@
 /* join */
+.join-js-join-btn {
+	width: 300px !important
 
-.main .join-btn {
-  width: 200px;
-  height: 50px;
-	font-weight: bold;
-	border: 2px solid rgb(89, 138, 94);
-	background: rgb(89, 138, 94);
-	color: #fff;
-	transition: 0.5s;
-  border-radius: 10px;
 }
 
-.main .join-btn:hover {
-  color: rgb(89, 138, 94);
-	background: #fff;
-}
