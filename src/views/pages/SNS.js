@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
-import Tatamin from '../components/tatamin';
+import Tatamin from '../components/Tatamin';
 
 import Style from '../../style/pages/SNS.module.css';
 

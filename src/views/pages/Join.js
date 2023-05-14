@@ -4,7 +4,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import JoinBtn from '../components/JoinBtn';
-import Tatamin from '../components/tatamin';
+import Tatamin from '../components/Tatamin';
 
 import FlexLink from "../../util/FlexLink";
 

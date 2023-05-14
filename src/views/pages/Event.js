@@ -4,7 +4,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import SubProducts from '../components/SubProducts';
 import UpArrow from '../components/UpArrow';
-import Tatamin from '../components/tatamin';
+import Tatamin from '../components/Tatamin';
 
 // imgインポート
 import normalEvent1 from '../../images/event.images/event1-1.png';

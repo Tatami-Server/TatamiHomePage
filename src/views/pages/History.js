@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import UpArrow from '../components/UpArrow';
 import HistoryContent from '../components/HistoryContent';
 import HistoryWarps from '../components/HistoryWarps';
-import Tatamin from '../components/tatamin';
+import Tatamin from '../components/Tatamin';
 
 import Style from '../../style/pages/History.module.css';
 

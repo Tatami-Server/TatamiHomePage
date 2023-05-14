@@ -12,7 +12,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import FlexLink from '../../util/FlexLink';
-import Tatamin from '../components/tatamin';
+import Tatamin from '../components/Tatamin';
 
 import Style from '../../style/pages/Please.module.css';
 

@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
-import Tatamin from '../components/tatamin';
+import Tatamin from '../components/Tatamin';
 
 import FlexLink from "../../util/FlexLink";
 
