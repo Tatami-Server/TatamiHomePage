@@ -8,15 +8,15 @@
 }
 
 .arrow-icon svg {
-  fill:rgb(66, 96, 45);
+  fill: rgb(66, 96, 45);
 }
 
 .arrow-icon svg:hover {
-  fill: rgb(201,152,51);
+  fill: rgb(201, 152, 51);
 }
 
-@media screen and (max-width: 599px){
 
+@media screen and (max-width: 599px) {
   .arrow-icon svg {
     height: 40px;
     width: 40px;

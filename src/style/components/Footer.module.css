@@ -14,7 +14,7 @@
   padding-bottom: 20px;
 }
 
-.footer-contents-container p,  .icons {
+.footer-contents-container p, .icons {
   margin: 0;
 }
 
@@ -28,7 +28,6 @@
   color: rgb(210, 172, 121);
 }
 
-
 .footerText {
   padding-left: 10vw;
 }
@@ -37,7 +36,8 @@
   color: rgb(210, 172, 121);
 }
 
-@media screen and (max-width: 599px){
+
+@media screen and (max-width: 599px) {
   .footer-contents-container {
     display: flex;
     justify-content: space-between;
@@ -48,8 +48,8 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  
-  .footer p{
+
+  .footer p {
     font-size: 10px;
   }
 
@@ -59,7 +59,7 @@
     gap: 15px;
   }
 
-  .icons svg{
+  .icons svg {
     width: 20px;
     height: 20px;
   }

@@ -60,7 +60,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .bm-item li:hover {
-  background-color:  rgba(196, 219, 196, 0.884);
+  background-color: rgba(196, 219, 196, 0.884);
 }
 
 
@@ -72,7 +72,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: black;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left:50px;
+  padding-left: 50px;
   font-weight: 400;
   width: 100%;
 }
@@ -83,7 +83,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-  top:0;
+  top: 0;
   width: 100%;
 }
 
@@ -93,7 +93,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 
-@media screen and (max-width: 599px){
+@media screen and (max-width: 599px) {
   .bm-burger-button {
     position: absolute;
     width: 25px;

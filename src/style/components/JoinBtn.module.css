@@ -1,19 +1,18 @@
 .join-btn {
-  top:25px;
+  top: 25px;
   right: 150px;
-
-	font-weight: bold;
-	border: 2px solid rgb(89, 138, 94);
-	background: rgb(89, 138, 94);
-	color: #fff;
-	transition: 0.5s;
+  font-weight: bold;
+  border: 2px solid rgb(89, 138, 94);
+  background: rgb(89, 138, 94);
+  color: #fff;
+  transition: 0.5s;
   border-radius: 10px;
   white-space: nowrap;
 }
 
 .join-btn:hover {
   color: rgb(89, 138, 94);
-	background: #fff;
+  background: #fff;
 }
 
 .join-btn-large {
@@ -28,8 +27,9 @@
   height: 50px;
 }
 
+
 /* スマホの場合 */
-@media screen and (max-width: 599px){
+@media screen and (max-width: 599px) {
   .join-btn {
     font-size: 10px;
   }
@@ -39,11 +39,9 @@
     height: 40px;
     font-size: 15px;
   }
-  
+
   .join-btn-small {
     width: 100px;
     height: 30px;
   }
-  
-  
 }

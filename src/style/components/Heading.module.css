@@ -22,6 +22,7 @@
   white-space: nowrap;
 }
 
+
 @media screen and (max-width: 599px){
   .heading-container {
     width: 100%;

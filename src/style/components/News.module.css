@@ -28,12 +28,13 @@
   color: rgb(48, 133, 48);
 }
 
-.news p{
+.news p {
   white-space: nowrap;
 }
 
-@media screen and (max-width: 599px){
-  .newsContainer h2{
+
+@media screen and (max-width: 599px) {
+  .newsContainer h2 {
     font-size: 20px;
   }
 
@@ -47,11 +48,11 @@
     margin-bottom: 5px;
   }
 
-  .news p{
+  .news p {
     font-size: 13px;
     margin-bottom: 5px;
   }
-  
+
   .newsTable {
     padding-top: 10px;
     width: 100%;

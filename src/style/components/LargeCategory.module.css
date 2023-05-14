@@ -18,19 +18,17 @@
   white-space: nowrap;
 }
 
-
 .large-catergory-line:nth-child(3n) {
   width: 80%;
 }
 
 
-@media screen and (max-width: 599px){
+@media screen and (max-width: 599px) {
   .large-category-container {
     height: 30px;
   }
-  
+
   .large-catergroy {
     line-height: 20px;
   }
-  
 }
