@@ -4,6 +4,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import JoinBtn from '../components/JoinBtn';
+import Tatamin from '../components/tatamin';
 
 import FlexLink from "../../util/FlexLink";
 
@@ -72,6 +73,7 @@ const Join = () => {
         <UpArrow/>
       </main>
       <Footer/>
+      <Tatamin/>
     </div>
   );
 }

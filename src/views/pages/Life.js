@@ -4,6 +4,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import SubProducts from '../components/SubProducts';
 import UpArrow from '../components/UpArrow';
+import Tatamin from '../components/tatamin';
 
 // cssインポート
 import Style from '../../style/pages/Life.module.css';
@@ -55,6 +56,7 @@ const Life = () => {
           </div>
         <UpArrow/>
       </main>
+      <Tatamin/>
       <Footer/>
     </div>
   );

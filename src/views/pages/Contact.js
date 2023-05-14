@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
+import Tatamin from '../components/tatamin';
 
 import FlexLink from "../../util/FlexLink";
 
@@ -31,6 +32,7 @@ const Contact = () => {
         </div>
         <UpArrow/>
       </main>
+      <Tatamin/>
       <Footer/>
     </div>
   );

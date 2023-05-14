@@ -4,6 +4,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import SubProducts from '../components/SubProducts';
+import Tatamin from '../components/tatamin';
 
 import map1 from '../../images/map.images/map1.png';
 
@@ -35,6 +36,7 @@ const Map = () => {
           </div>
         <UpArrow/>
       </main>
+      <Tatamin/>
       <Footer/>
     </div>
   );

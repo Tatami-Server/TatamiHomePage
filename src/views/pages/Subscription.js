@@ -4,6 +4,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import LargeCategory from '../components/LargeCategory';
+import Tatamin from '../components/tatamin';
 
 import twitchImg from '../../images/Subscription.images/twitchImg.png';
 import sub1 from '../../images/Subscription.images/sub1-1.png';
@@ -101,6 +102,7 @@ const Subscription = () => {
         </div>
         <UpArrow/>
       </main>
+      <Tatamin/>
       <Footer/>
     </div>
   );

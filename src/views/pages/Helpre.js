@@ -4,6 +4,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import QuestionAccordion from '../components/QuestionAccodion';
+import Tatamin from '../components/tatamin';
 
 import FlexLink from "../../util/FlexLink";
 
@@ -74,6 +75,7 @@ const Helper = () => {
         </div>
         <UpArrow/>
       </main>
+      <Tatamin/>
       <Footer/>
     </div>
   );

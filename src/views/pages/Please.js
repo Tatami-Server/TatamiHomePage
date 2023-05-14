@@ -12,6 +12,7 @@ import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import FlexLink from '../../util/FlexLink';
+import Tatamin from '../components/tatamin';
 
 import Style from '../../style/pages/Please.module.css';
 
@@ -85,6 +86,7 @@ const Please = () => {
           </div>
         <UpArrow/>
       </main>
+      <Tatamin/>
       <Footer/>
     </div>
   );

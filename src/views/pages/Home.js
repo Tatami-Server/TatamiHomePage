@@ -27,6 +27,7 @@ import News from '../components/News.js';
 import Footer from '../components/Footer.js';
 import SeparatorLine from '../components/SeparatorLine';
 import UpArrow from '../components/UpArrow';
+import Tatamin from '../components/tatamin';
 
 import Style from '../../style/pages/Home.module.css';
 import axios from 'axios';
@@ -108,6 +109,7 @@ function Home() {
         <News/>
         <UpArrow/>
       </main>
+      <Tatamin/>
       <Footer />
     </>
   );

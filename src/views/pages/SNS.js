@@ -8,6 +8,7 @@ import { IconContext } from 'react-icons'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
+import Tatamin from '../components/tatamin';
 
 import Style from '../../style/pages/SNS.module.css';
 
@@ -43,6 +44,7 @@ const SNS = () => {
           })}
         </div>
       </main>
+      <Tatamin/>
       <Footer/>
     </div>
   );

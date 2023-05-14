@@ -1,0 +1,27 @@
+
+.tatami-maru {
+  position: fixed;
+  left: 30px;
+  bottom: 80px;
+  z-index: 999;
+}
+
+.tatami-maru img{
+
+  width: 100px;
+}
+
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+  .tatami-maru {
+    right: 10px;
+    bottom: 80px;
+  }
+  
+  .tatami-maru img{
+  
+    width: 50px;
+  }
+
+}
