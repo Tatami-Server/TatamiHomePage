@@ -7,9 +7,6 @@ import JoinBtn from '../components/JoinBtn';
 
 import FlexLink from "../../util/FlexLink";
 
-// cssインポート
-import Style from '../../style/pages/Join.module.css';
-
 
 // imgインポート
 import joinDiscord from '../../images/Join.images/join1.png';
