@@ -1,5 +1,6 @@
 // ルーティング設定
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Home from '../views/pages/Home';
 import Event from '../views/pages/Event';
 import Contact from '../views/pages/Contact';

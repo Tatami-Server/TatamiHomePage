@@ -1,11 +1,16 @@
+// json（データ）をインポート
 import NewsJson from '../../json/News.json';
 
-import Style from '../../style/components/News.module.css';
-
+// コンポーネントインポート
 import FlexLink from '../../util/FlexLink';
 
+// cssインポート
+import Style from '../../style/components/News.module.css';
+
 const News = () => {
+
   const { newsData } = NewsJson
+
   return (
     <div className={Style.newsContainer}>
         <h2>お知らせ</h2> 

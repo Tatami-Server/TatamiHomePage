@@ -1,19 +1,23 @@
+// リアクトアイコンインポート
 import {BsDownload} from 'react-icons/bs';
 import { IconContext } from 'react-icons';
 
-import PleaseVote from '../../images/Please.images/please1.png';
-import PleaseProfile1 from '../../images/Please.images/please2-1.png';
-import PleaseProfile2 from '../../images/Please.images/please2-2.png';
-import PleaseJoin from '../../images/Please.images/please3-1.png';
-
+// コンポーネントインポート
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import FlexLink from '../../util/FlexLink';
-import Tatamin from '../components/Tatamin';
+import Igusa from '../components/Igusa';
 
+// 画像インポート
+import PleaseVote from '../../images/Please.images/please1.png';
+import PleaseProfile1 from '../../images/Please.images/please2-1.png';
+import PleaseProfile2 from '../../images/Please.images/please2-2.png';
+import PleaseJoin from '../../images/Please.images/please3-1.png';
+
+// cssインポート
 import Style from '../../style/pages/Please.module.css';
 
 const Please = () => {
@@ -86,7 +90,7 @@ const Please = () => {
           </div>
         <UpArrow/>
       </main>
-      <Tatamin/>
+      <Igusa/>
       <Footer/>
     </div>
   );

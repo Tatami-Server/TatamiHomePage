@@ -1,3 +1,21 @@
+// リアクトアイコンインポート
+import {IoIosArrowDown} from 'react-icons/io'
+import { IconContext } from 'react-icons'
+
+// コンポーネントをインポート
+import MainProducts from '../components/MainProducts';
+import SubProducts from '../components/SubProducts';
+import News from '../components/News.js';
+import Footer from '../components/Footer.js';
+import SeparatorLine from '../components/SeparatorLine';
+import UpArrow from '../components/UpArrow';
+import Igusa from '../components/Igusa';
+
+import axios from 'axios';
+
+// reactの機能をインポート
+import { useEffect, useState, useRef} from 'react';
+
 // 画像をインポート
 import logo from '../../images/Home.images/logo.png';
 import hero from '../../images/Home.images/hero2.png';
@@ -13,27 +31,11 @@ import event from '../../images/Home.images/event.png';
 import life from '../../images/Home.images/life.png';
 import join from '../../images/Home.images/join.png';
 
-import { useRef } from "react";
-
-
-import {IoIosArrowDown} from 'react-icons/io'
-import { IconContext } from 'react-icons'
-
-
-// コンポーネントをインポート
-import MainProducts from '../components/MainProducts';
-import SubProducts from '../components/SubProducts';
-import News from '../components/News.js';
-import Footer from '../components/Footer.js';
-import SeparatorLine from '../components/SeparatorLine';
-import UpArrow from '../components/UpArrow';
-import Tatamin from '../components/Tatamin';
-
+// cssインポート
 import Style from '../../style/pages/Home.module.css';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 
 function Home() {
+
   const SubProductsList = [
     { href: `/map/`, imgTitle: "マップ", img: map, title:"配布マップ", description: "当サーバーが提供している\n配布マップ等を紹介しています。" },
     { href: `/history/`, imgTitle: "歴史", img: history, title: "畳サーバーの歴史", description: "当サーバーの過去を知ることができます。過去にこんな事が...。" },
@@ -109,10 +111,9 @@ function Home() {
         <News/>
         <UpArrow/>
       </main>
-      <Tatamin/>
+      <Igusa/>
       <Footer />
     </>
   );
 }
-
 export default Home;

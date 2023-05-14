@@ -1,3 +1,4 @@
+// cssインポート
 import Style from '../../style/components/Heading.module.css';
 
 const Heading = (props) => {

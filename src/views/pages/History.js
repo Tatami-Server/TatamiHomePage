@@ -1,24 +1,27 @@
-import Historyimg from '../../images/History.images/history.png';
-
+// コンポーネントインポート
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import UpArrow from '../components/UpArrow';
 import HistoryContent from '../components/HistoryContent';
 import HistoryWarps from '../components/HistoryWarps';
-import Tatamin from '../components/Tatamin';
+import Igusa from '../components/Igusa';
 
-import Style from '../../style/pages/History.module.css';
-
+// reactの機能をインポート
 import { useRef ,createRef, useEffect, useState} from 'react';
 
+// json(データ)をインポート
 import HistoryJson from '../../json/History.json';
 
+// 画像インポート
+import Historyimg from '../../images/History.images/history.png';
+
+// cssインポート
+import Style from '../../style/pages/History.module.css';
 
 const History = () => {
-  // 外で定義しているので使える↓
+
   const historyContentRefs = useRef([]);
       {HistoryJson.forEach((_,i) => {
-        // ここで書き換えてる↓？
         historyContentRefs.current[i] = createRef();
       })};
 
@@ -28,6 +31,7 @@ const History = () => {
     window.addEventListener("scroll",onScroll)
     return() => window.removeEventListener("scroll",onScroll)
   });
+
   return (
     <>
       <Header/>
@@ -55,9 +59,10 @@ const History = () => {
             </div>
           );
         })};
+
         <UpArrow/>
       </main>
-      <Tatamin/>
+      <Igusa/>
       <Footer/>
     </>
   );

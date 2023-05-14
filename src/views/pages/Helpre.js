@@ -1,16 +1,18 @@
+// コンポーネントインポート
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import QuestionAccordion from '../components/QuestionAccodion';
-import Tatamin from '../components/Tatamin';
-
+import Igusa from '../components/Igusa';
 import FlexLink from "../../util/FlexLink";
 
-
+// cssインポート
 import HelperStyle from '../../style/pages/Helpre.module.css';
+
 const Helper = () => {
+
   const QuestionList=[
     {
       question:"面接の流れを教えてください。", 
@@ -75,7 +77,7 @@ const Helper = () => {
         </div>
         <UpArrow/>
       </main>
-      <Tatamin/>
+      <Igusa/>
       <Footer/>
     </div>
   );

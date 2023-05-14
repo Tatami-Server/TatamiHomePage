@@ -1,8 +1,11 @@
-import Style from '../../style/components/SubProduct.module.css';
-
+// コンポーネントインポート
 import FlexLink from "../../util/FlexLink";
 
+// 画像インポート
 import gara from "../../images/SubProduct.images/gara.jpg"
+
+// cssインポート
+import Style from '../../style/components/SubProduct.module.css';
 
 const SubProducts = ({products}) => {
   return (

@@ -1,6 +1,8 @@
-import Style from '../../style/components/MainProduct.module.css';
-
+// コンポーネントインポート
 import FlexLink from "../../util/FlexLink";
+
+// cssインポート
+import Style from '../../style/components/MainProduct.module.css';
 
 const MainProducts = ({products}) => {
   return (

@@ -1,18 +1,16 @@
+// コンポーネントインポート
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import JoinBtn from '../components/JoinBtn';
-import Tatamin from '../components/Tatamin';
-
+import Igusa from '../components/Igusa';
 import FlexLink from "../../util/FlexLink";
-
 
 // imgインポート
 import joinDiscord from '../../images/Join.images/join1.png';
 import joinTwichSub from '../../images/Join.images/join2.png';
-
 
 const Join = () => {
   return (
@@ -73,7 +71,7 @@ const Join = () => {
         <UpArrow/>
       </main>
       <Footer/>
-      <Tatamin/>
+      <Igusa/>
     </div>
   );
 }

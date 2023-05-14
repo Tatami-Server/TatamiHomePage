@@ -1,7 +1,11 @@
+// リアクトアイコンをインポート
 import {BsPlusLg} from 'react-icons/bs'
-import React, { useState } from 'react';
 import { IconContext } from 'react-icons';
 
+// reactの機能をインポート
+import React, { useState } from 'react';
+
+// cssインポート
 import Style from '../../style/pages/Helpre.module.css';
   
 const QuestionAccordion = ({question, answer}) => {

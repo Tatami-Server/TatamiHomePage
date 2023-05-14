@@ -1,10 +1,14 @@
+// リアクトバーガーメニューをインポート
 import { stack as Burger } from 'react-burger-menu';
 
-// import { FlexLink } from "react-router-dom";
+// コンポーネントインポート
 import FlexLink from '../../util/FlexLink';
+
+// cssインポート
 import '../../style/components/Menu.css';
 
 const Menu = (props) => {
+
   const links = [
     { href: "/", text: "Home" },
     { href: "/join/", text: "サーバー参加方法" },
@@ -33,5 +37,4 @@ const Menu = (props) => {
     </div>
   );
 };
-
 export default Menu;

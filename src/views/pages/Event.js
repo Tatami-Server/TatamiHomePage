@@ -1,12 +1,13 @@
+// コンポーネントインポート
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import SubProducts from '../components/SubProducts';
 import UpArrow from '../components/UpArrow';
-import Tatamin from '../components/Tatamin';
+import Igusa from '../components/Igusa';
 
-// imgインポート
+// 画像インポート
 import normalEvent1 from '../../images/event.images/event1-1.png';
 import normalEvent2 from '../../images/event.images/event1-2.png';
 import normalEvent3 from '../../images/event.images/event1-3.png';
@@ -27,6 +28,7 @@ import allTimeEvent4 from '../../images/event.images/event3-4.png';
 import lifeSarver1 from '../../images/event.images/event4-1.png';
 
 const Event = () => {
+
   const normalEventList=[
     {href:"https://seesaawiki.jp/tatamiserver/d/%c6%a8%c1%f6%c3%e6", imgTitle:"逃走中", img:normalEvent1, title:"逃走中", description:"オリジナルマップとオリジナルミッションで繰り広げる逃亡劇！"},
     {href:"https://seesaawiki.jp/tatamiserver/d/PvP", imgTitle:"PｖP", img:normalEvent2, title:"PｖP", description:"日々マップとルールが増え続ける2チーム対抗戦"},
@@ -55,6 +57,7 @@ const Event = () => {
     {href:"/life/", imgTitle:"生活鯖", img:lifeSarver1, title:"生活サーバー", description:"半年ぶりに復活！コインを使ったお買い物やガチャ機能を楽しもう!"},
     
   ];
+  
   return (
     <div>
       <Header/>
@@ -78,7 +81,7 @@ const Event = () => {
           </div>
           <UpArrow/>
       </main>
-      <Tatamin/>
+      <Igusa/>
       <Footer/>
     </div>
   );

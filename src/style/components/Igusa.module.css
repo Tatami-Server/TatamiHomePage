@@ -1,5 +1,5 @@
 
-.tatamin-wrapper {
+.igusa-wrapper {
   display: flex;
   width: 100%;
   height: 100%;
@@ -12,27 +12,27 @@
   animation-fill-mode: forwards;
 }
 
-.tatamin-wrapper.show {
+.igusa-wrapper.show {
   animation-name: backgroundFadeIn;
   animation-duration: .5s;
 }
 
-.tatamin-container{
+.igusa-container{
 
 }
 
-.tatamin-maru {
+.igusa-maru {
   width: 100px;
   position: fixed;
   left: 10px;
   bottom: 10px;
 }
 
-.tatamin-container .tatamin-img {
+.igusa-container .igusa-img {
   width: 300px;
 }
 
-.tatamin-text-container {
+.igusa-text-container {
   background-color: rgb(156,190,166);
   border-radius: 5%;
   padding: 20px;
@@ -42,11 +42,11 @@
   font-weight: 500;
 }
 
-.tatamin {
+.igusa {
   display: flex;
 }
 
-.tatamin-wrapper.show .tatamin {
+.igusa-wrapper.show .igusa {
   animation-name: characterFadeIn;
   animation-duration: 1.5s;
 }
@@ -54,16 +54,16 @@
 
 /* スマホの場合 */
 @media screen and (max-width: 599px){
-  .tatamin-container{
+  .igusa-container{
     left:5px;
   }
   
-  .tatamin-container .tatamin-maru{
+  .igusa-container .igusa-maru{
   
     width: 50px;
   }
 
-  .tatamin-container .tatamin-img {
+  .igusa-container .igusa-img {
     width: 200px;
   }
 

@@ -1,14 +1,14 @@
+// コンポーネントインポート
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
-import Tatamin from '../components/Tatamin';
-
+import Igusa from '../components/Igusa';
 import FlexLink from "../../util/FlexLink";
 
+// cssインポート
 import Style from '../../style/pages/Contact.module.css';
-
 
 const Contact = () => {
   return (
@@ -32,7 +32,7 @@ const Contact = () => {
         </div>
         <UpArrow/>
       </main>
-      <Tatamin/>
+      <Igusa/>
       <Footer/>
     </div>
   );

@@ -1,3 +1,4 @@
+// リアクトアイコンインポート
 import { ImTwitter } from 'react-icons/im'
 import { AiFillYoutube } from 'react-icons/ai'
 import { SiTwitch } from 'react-icons/si'
@@ -5,15 +6,17 @@ import { SiDiscord } from 'react-icons/si'
 import {FaWikipediaW} from 'react-icons/fa';
 import { IconContext } from 'react-icons'
 
+// コンポーネントインポート
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
-import Tatamin from '../components/Tatamin';
+import Igusa from '../components/Igusa';
 
+// cssインポート
 import Style from '../../style/pages/SNS.module.css';
 
-
 const SNS = () => {
+
   const SnsContentList1 =[
     {icon:AiFillYoutube, color: '#B13E3E',title:"畳YouTube", discription:"メインの動画も切り抜き名場面もこのチャンネルで投稿しています。"},
     {icon:SiDiscord, color:'#4E649C', title:"畳Discord", discription:"畳サーバーで遊ぶ際に参加が必要となるサーバーです。リンク先の利用規約をご確認の上、お楽しみください！"},
@@ -44,7 +47,7 @@ const SNS = () => {
           })}
         </div>
       </main>
-      <Tatamin/>
+      <Igusa/>
       <Footer/>
     </div>
   );

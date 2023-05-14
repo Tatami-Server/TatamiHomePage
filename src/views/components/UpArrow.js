@@ -1,7 +1,8 @@
+// リアクトアイコンインポート
 import { IconContext } from 'react-icons'
 import {IoIosArrowUp} from 'react-icons/io'
 
-
+// cssインポート
 import Style from '../../style/components/UpArrow.module.css'
 
 const UpArrow = () => {

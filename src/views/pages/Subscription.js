@@ -1,11 +1,13 @@
+// コンポーネントインポート
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Subtitle from '../components/Subtitle';
 import UpArrow from '../components/UpArrow';
 import LargeCategory from '../components/LargeCategory';
-import Tatamin from '../components/Tatamin';
+import Igusa from '../components/Igusa';
 
+// 画像インポート
 import twitchImg from '../../images/Subscription.images/twitchImg.png';
 import sub1 from '../../images/Subscription.images/sub1-1.png';
 import sub2 from '../../images/Subscription.images/sub1-2.png';
@@ -17,10 +19,11 @@ import sub7 from '../../images/Subscription.images/sub1-7.png';
 import doneruLogo from '../../images/Subscription.images/doneru-logo.png';
 import kirakira from '../../images/Subscription.images/kirakira.png';
 
-
+// cssインポート
 import Style from '../../style/pages/Subscription.module.css';
 
 const Subscription = () => {
+
   const LargeCategoryContent=[
     {title:"限定企画に参加できる！", img:sub1, description:"村人防衛戦・スコットランドヤード・人数制限のある配布マップ等の限定企画に参加できます！"},
     {title:"通常イベントも優先参加可能！", img:sub2, description:"人狼のような参加人数制限があるイベントについても、より優先的にゲームに参加できます。"},
@@ -30,7 +33,9 @@ const Subscription = () => {
     {title:"お名前の横にサブスクライバーバッジが付く", img:sub6, description:<>サブスクライバーの証となるバッジが付与され、他の方と違った雰囲気を出すことが可能です。<br/>しかもこのバッジは、サブスク年月によって成長していきます。</>},
     {title:"付近vcMODが使用できる（Java版限定）", img:sub7, description:<>サブスクライバー限定で、付近vcMODでの通話ができるようになりました!<br/>味方との連携をする際や敵の位置を察知する際など、楽しさの幅がぐっと広がります！</>},
   ];
-  const SpecialThenksList=["Yukina様", "S2ns_mash様", "まりゅ🐴様", "虚空教信者様"] 
+
+  const SpecialThenksList=["Yukina様", "S2ns_mash様", "まりゅ🐴様", "虚空教信者様"]; 
+
   return (
     <div>
       <Header/>
@@ -102,7 +107,7 @@ const Subscription = () => {
         </div>
         <UpArrow/>
       </main>
-      <Tatamin/>
+      <Igusa/>
       <Footer/>
     </div>
   );

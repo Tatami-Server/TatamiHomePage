@@ -1,12 +1,14 @@
+// コンポーネントインポート
 import Subtitle from '../components/Subtitle';
 
-
-
+// カルーセルインポート
 import Carousel from 'react-bootstrap/Carousel';
 
+// cssインポート
 import Style from '../../style/components/HistoryContent.module.css';
 
 const Historycontent = ({year,histories}) => {
+
     function slideImage(images) {if(images.length === 1) {
       return(
         <img src={`${process.env.PUBLIC_URL}/HistoryContent.images/${images}`}alt="歴史の写真"></img>
@@ -28,6 +30,7 @@ const Historycontent = ({year,histories}) => {
         )
       }
     }
+
   return (
           <div  id={year}>
             <Subtitle subtitle={year} className={Style["subtitle-year"]}/>

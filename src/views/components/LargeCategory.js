@@ -1,3 +1,4 @@
+// cssインポート
 import Style from '../../style/components/LargeCategory.module.css';
 
 const LargeCategory = (props) =>{
