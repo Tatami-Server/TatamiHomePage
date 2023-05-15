@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 
 // 画像インポート
-import tatami from '../../images/Igusa.images/sister1.png';
-import fusuma from '../../images/Igusa.images/sister2.png';
 import tatamiMaru from '../../images/Igusa.images/tatamimaru.png';
 
 // cssインポート
@@ -34,5 +32,4 @@ const Igusa = (props) => {
     </>
   );
 };
-
 export default Igusa;

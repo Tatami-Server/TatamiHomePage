@@ -29,24 +29,67 @@
   width: 300px;
 }
 
-.igusa-text-container {
+/* .igusa-text-container {
   background-color: rgb(156, 190, 166);
   border-radius: 5%;
   padding: 20px;
-  /* border: solid 3px rgb(59, 83, 59); */
   width: 300px;
   height: 100%;
   font-weight: 500;
-}
+} */
+
+/* .igusa {
+  display: flex;
+} */
 
 .igusa {
   display: flex;
+  align-items: center;
+}
+
+.igusa-img {
+  flex: 0 0 auto;
+  margin-right: 16px;
+}
+
+.igusa-text-container {
+  position: relative;
+  max-width: 240px;
+  padding: 16px;
+  background-color: rgb(156, 190, 166);
+  border-radius: 8px;
+}
+
+.igusa-text-container:before {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 20%;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-left: 16px solid rgb(156, 190, 166);
+  border-bottom: 16px solid transparent;
+}
+
+.igusa-text-container:after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 21%;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-left: 14px solid rgb(156, 190, 166);
+  border-bottom: 14px solid transparent;
 }
 
 .igusa-wrapper.show .igusa {
   animation-name: characterFadeIn;
   animation-duration: 1.5s;
 }
+
+
 
 
 /* スマホの場合 */
