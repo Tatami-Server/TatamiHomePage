@@ -76,6 +76,7 @@ const Join = () => {
         分からないことがあったらDiscordやお問い合わせで聞くといいわ。
         サーバーで待ってるからね。"
         image={tatami}
+        creator="ナミヤ 和 様"
       />
     </div>
   );

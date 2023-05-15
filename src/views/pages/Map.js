@@ -43,6 +43,7 @@ const Map = () => {
         クリックすれば配布先に飛べるはずだわ。
         ぜひDLやハッシュタグで応援をしてね!"
         image={tatami}
+        creator="ナミヤ 和 様"
       />
       <Footer/>
     </div>

@@ -87,6 +87,7 @@ const Event = () => {
         イベントもたくさんあって、目移りしちゃうね！
         誕生日は4/26だよ!お祝いしてね!!"
         image={fusuma}
+        creator="仙人亭 様"
       />
       <Footer/>
     </div>

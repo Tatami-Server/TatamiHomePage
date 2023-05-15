@@ -68,6 +68,7 @@ const History = () => {
         それでも遊んでくださるみなさんのおかげで続けてこれているわ。
         本当にありがとう。"
         image={tatami}
+        creator="ナミヤ 和 様"
       />
       <Footer/>
     </>

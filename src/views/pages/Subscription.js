@@ -112,6 +112,7 @@ const Subscription = () => {
         サーバーの維持って結構金銭的に大変なのよね…。
         いつもご支援いただきありがとうございます。"
         image={tatami}
+        creator="ナミヤ 和 様"
       />
       <Footer/>
     </div>

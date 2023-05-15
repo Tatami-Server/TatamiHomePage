@@ -53,6 +53,7 @@ const SNS = () => {
       <Igusa text="ここでは畳サーバーの関連SNSや関連サイトを掲載しているわ。
         たさん種類があるけど、それぞれよろしくね。"
         image={tatami}
+        creator="ナミヤ 和 様"
       />
       <Footer/>
     </div>

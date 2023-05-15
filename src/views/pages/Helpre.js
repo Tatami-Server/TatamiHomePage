@@ -84,6 +84,7 @@ const Helper = () => {
         開発でも建築でもテクスチャでも動画編集でもなんでもOK!
         是非応募を検討してみてください。"
         image={tatami}
+        creator="ナミヤ 和 様"
       />
       <Footer/>
     </div>

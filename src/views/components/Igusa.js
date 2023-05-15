@@ -26,6 +26,7 @@ const Igusa = (props) => {
             <img className={Style['igusa-img']} src={props.image} alt="Image" />
             <div  className={Style['igusa-text-container']}>
               <p>{props.text}</p>
+              <p>提供：{props.creator}</p>
             </div>
           </div>
         </div>
