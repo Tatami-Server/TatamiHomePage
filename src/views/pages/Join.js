@@ -8,9 +8,10 @@ import JoinBtn from '../components/JoinBtn';
 import Igusa from '../components/Igusa';
 import FlexLink from "../../util/FlexLink";
 
-// imgインポート
+// 画像インポート
 import joinDiscord from '../../images/Join.images/join1.png';
 import joinTwichSub from '../../images/Join.images/join2.png';
+import tatami from '../../images/Igusa.images/sister1.png';
 
 const Join = () => {
   return (
@@ -74,6 +75,7 @@ const Join = () => {
       <Igusa text="サーバーや企画への参加の仕方をまとめてみました。
         分からないことがあったらDiscordやお問い合わせで聞くといいわ。
         サーバーで待ってるからね。"
+        image={tatami}
       />
     </div>
   );

@@ -8,6 +8,9 @@ import QuestionAccordion from '../components/QuestionAccodion';
 import Igusa from '../components/Igusa';
 import FlexLink from "../../util/FlexLink";
 
+// 画像インポート
+import tatami from '../../images/Igusa.images/sister1.png';
+
 // cssインポート
 import HelperStyle from '../../style/pages/Helpre.module.css';
 
@@ -80,6 +83,7 @@ const Helper = () => {
       <Igusa text="ここでは畳サーバーの運営募集とよくある質問について掲載しているわ。
         開発でも建築でもテクスチャでも動画編集でもなんでもOK!
         是非応募を検討してみてください。"
+        image={tatami}
       />
       <Footer/>
     </div>

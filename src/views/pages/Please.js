@@ -16,6 +16,7 @@ import PleaseVote from '../../images/Please.images/please1.png';
 import PleaseProfile1 from '../../images/Please.images/please2-1.png';
 import PleaseProfile2 from '../../images/Please.images/please2-2.png';
 import PleaseJoin from '../../images/Please.images/please3-1.png';
+import tatami from '../../images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '../../style/pages/Please.module.css';
@@ -93,6 +94,7 @@ const Please = () => {
       <Igusa text="運営からのお願いをまとめました。
         皆さんが楽しんでくれて、盛り上げてくれることが、サーバー維持の一番の近道だわ。
         さらなるアップデートのために是非ご協力をお願いします。"
+        image={tatami}
       />
       <Footer/>
     </div>

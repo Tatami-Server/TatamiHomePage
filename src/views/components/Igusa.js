@@ -23,7 +23,7 @@ const Igusa = (props) => {
       <div className={`${Style['igusa-wrapper']} ${showImage ? Style['show']: Style['visible']}`} onClick={handleClick}>
         <div className={Style['igusa-container']}>
           <div className={Style['igusa']}>
-            <img className={Style['igusa-img']} src={tatami} alt="Image" />
+            <img className={Style['igusa-img']} src={props.image} alt="Image" />
             <div  className={Style['igusa-text-container']}>
               <p>{props.text}</p>
             </div>

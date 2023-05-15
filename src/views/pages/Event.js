@@ -26,6 +26,7 @@ import allTimeEvent2 from '../../images/event.images/event3-2.png';
 import allTimeEvent3 from '../../images/event.images/event3-3.png';
 import allTimeEvent4 from '../../images/event.images/event3-4.png';
 import lifeSarver1 from '../../images/event.images/event4-1.png';
+import fusuma from '../../images/Igusa.images/sister2.png';
 
 const Event = () => {
 
@@ -85,6 +86,7 @@ const Event = () => {
         たくさんの人に元気や笑顔を振りまきたいの！
         イベントもたくさんあって、目移りしちゃうね！
         誕生日は4/26だよ!お祝いしてね!!"
+        image={fusuma}
       />
       <Footer/>
     </div>

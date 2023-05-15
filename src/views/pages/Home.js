@@ -30,6 +30,7 @@ import inquery from '../../images/Home.images/inquery.jpg';
 import event from '../../images/Home.images/event.png';
 import life from '../../images/Home.images/life.png';
 import join from '../../images/Home.images/join.png';
+import tatami from '../../images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '../../style/pages/Home.module.css';
@@ -116,6 +117,7 @@ function Home() {
         まずはサーバー参加方法を確認するといいわよ。
         配布が気になるなら、配布マップ等も確認するといいんじゃないかしら。
         ちなみに誕生日は8/23よ。覚えていてね。"
+        image={tatami}
       />
       <Footer />
     </>

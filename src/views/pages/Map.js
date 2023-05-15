@@ -9,6 +9,7 @@ import Igusa from '../components/Igusa';
 
 // 画像インポート
 import map1 from '../../images/map.images/map1.png';
+import tatami from '../../images/Igusa.images/sister1.png';
 
 const Map = () => {
 
@@ -41,6 +42,7 @@ const Map = () => {
       <Igusa text="ここでは畳サーバーが提供している配布マップ等を掲載しているわ。
         クリックすれば配布先に飛べるはずだわ。
         ぜひDLやハッシュタグで応援をしてね!"
+        image={tatami}
       />
       <Footer/>
     </div>

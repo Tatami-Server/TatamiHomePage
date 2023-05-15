@@ -18,6 +18,7 @@ import sub6 from '../../images/Subscription.images/sub1-6.png';
 import sub7 from '../../images/Subscription.images/sub1-7.png';
 import doneruLogo from '../../images/Subscription.images/doneru-logo.png';
 import kirakira from '../../images/Subscription.images/kirakira.png';
+import tatami from '../../images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '../../style/pages/Subscription.module.css';
@@ -110,6 +111,7 @@ const Subscription = () => {
       <Igusa text="ここではサブスクライバーのメリットや支援者への御礼を掲載しているわ。
         サーバーの維持って結構金銭的に大変なのよね…。
         いつもご支援いただきありがとうございます。"
+        image={tatami}
       />
       <Footer/>
     </div>

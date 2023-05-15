@@ -12,6 +12,9 @@ import Footer from '../components/Footer';
 import Heading from '../components/Heading';
 import Igusa from '../components/Igusa';
 
+// 画像インポート
+import tatami from '../../images/Igusa.images/sister1.png';
+
 // cssインポート
 import Style from '../../style/pages/SNS.module.css';
 
@@ -49,6 +52,7 @@ const SNS = () => {
       </main>
       <Igusa text="ここでは畳サーバーの関連SNSや関連サイトを掲載しているわ。
         たさん種類があるけど、それぞれよろしくね。"
+        image={tatami}
       />
       <Footer/>
     </div>

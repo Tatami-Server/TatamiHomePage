@@ -7,6 +7,9 @@ import UpArrow from '../components/UpArrow';
 import Igusa from '../components/Igusa';
 import FlexLink from "../../util/FlexLink";
 
+// 画像インポート
+import tatami from '../../images/Igusa.images/sister1.png';
+
 // cssインポート
 import Style from '../../style/pages/Contact.module.css';
 
@@ -35,6 +38,7 @@ const Contact = () => {
       <Igusa text="ここではお問い合わせについて掲載しているわ。
         うちの鯖主はお問い合わせフォームを作る技術はもっていないみたい…。
         お問い合わせ・意見箱というGoogleフォームがあるからそれを使ってね。"
+        image={tatami}
       />
       <Footer/>
     </div>

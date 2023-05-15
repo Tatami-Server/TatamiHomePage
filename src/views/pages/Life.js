@@ -8,7 +8,7 @@ import UpArrow from '../components/UpArrow';
 import Igusa from '../components/Igusa';
 
 
-// imgインポート
+// 画像インポート
 import life1 from '../../images/Life.images/life1.png'
 import life2 from '../../images/Life.images/life2.png'
 import lifeJob from '../../images/Life.images/life-job.png'
@@ -17,6 +17,7 @@ import lifeCommond from '../../images/Life.images/life-commond.png'
 import lifeGacha from '../../images/Life.images/life-gacha.png'
 import lifeMap from '../../images/Life.images/life-map.png'
 import lifeShop from '../../images/Life.images/life-shop.png'
+import tatami from '../../images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '../../style/pages/Life.module.css';
@@ -60,6 +61,7 @@ const Life = () => {
       </main>
       <Igusa text="今年7月末に復活した生活サーバーに関する情報を掲載しているわ。
         ガチャや職業等のやりこみ要素を楽しもう！"
+        image={tatami}
       />
       <Footer/>
     </div>

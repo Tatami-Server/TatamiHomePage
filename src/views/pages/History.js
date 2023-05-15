@@ -14,6 +14,7 @@ import HistoryJson from '../../json/History.json';
 
 // 画像インポート
 import Historyimg from '../../images/History.images/history.png';
+import tatami from '../../images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '../../style/pages/History.module.css';
@@ -66,6 +67,7 @@ const History = () => {
         決して順調ではなく何度も困難にぶち当たっているんです…。
         それでも遊んでくださるみなさんのおかげで続けてこれているわ。
         本当にありがとう。"
+        image={tatami}
       />
       <Footer/>
     </>
