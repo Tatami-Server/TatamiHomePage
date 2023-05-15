@@ -71,7 +71,10 @@ const Join = () => {
         <UpArrow/>
       </main>
       <Footer/>
-      <Igusa/>
+      <Igusa text="サーバーや企画への参加の仕方をまとめてみました。
+        分からないことがあったらDiscordやお問い合わせで聞くといいわ。
+        サーバーで待ってるからね。"
+      />
     </div>
   );
 }

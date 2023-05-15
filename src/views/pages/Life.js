@@ -58,7 +58,9 @@ const Life = () => {
           </div>
         <UpArrow/>
       </main>
-      <Igusa/>
+      <Igusa text="今年7月末に復活した生活サーバーに関する情報を掲載しているわ。
+        ガチャや職業等のやりこみ要素を楽しもう！"
+      />
       <Footer/>
     </div>
   );

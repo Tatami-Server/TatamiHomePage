@@ -9,7 +9,7 @@ import tatamiMaru from '../../images/Igusa.images/tatamimaru.png';
 // cssインポート
 import Style from '../../style/components/Igusa.module.css';
 
-const Igusa = () => {
+const Igusa = (props) => {
 
   const [showImage, setShowImage] = useState(false);
 
@@ -25,7 +25,7 @@ const Igusa = () => {
           <div className={Style['igusa']}>
             <img className={Style['igusa-img']} src={tatami} alt="Image" />
             <div  className={Style['igusa-text-container']}>
-              <p>こんにちは！私はたたみんです。</p>
+              <p>{props.text}</p>
             </div>
           </div>
         </div>
