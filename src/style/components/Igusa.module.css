@@ -16,7 +16,10 @@
   animation-duration: .5s;
 }
 
-.igusa-container {}
+.igusa-container {
+  height: 600px;
+  display: flex;
+}
 
 .igusa-maru {
   width: 100px;
@@ -25,31 +28,15 @@
   bottom: 10px;
 }
 
-.igusa-container .igusa-img {
-  width: 300px;
-}
-
-/* .igusa-text-container {
-  background-color: rgb(156, 190, 166);
-  border-radius: 5%;
-  padding: 20px;
-  width: 300px;
-  height: 100%;
-  font-weight: 500;
-} */
-
-/* .igusa {
-  display: flex;
-} */
-
 .igusa {
   display: flex;
   align-items: center;
 }
 
 .igusa-img {
+  width: 300px;
   flex: 0 0 auto;
-  margin-right: 16px;
+  align-self: end;
 }
 
 .igusa-text-container {
@@ -58,6 +45,7 @@
   padding: 16px;
   background-color: rgb(156, 190, 166);
   border-radius: 8px;
+  align-self: start;
 }
 
 .igusa-text-container:before {
@@ -72,7 +60,7 @@
   border-bottom: 16px solid transparent;
 }
 
-.igusa-text-container:after {
+/* .igusa-text-container:after {
   content: '';
   position: absolute;
   bottom: -14px;
@@ -82,7 +70,7 @@
   border-top: 14px solid transparent;
   border-left: 14px solid rgb(156, 190, 166);
   border-bottom: 14px solid transparent;
-}
+} */
 
 .igusa-wrapper.show .igusa {
   animation-name: characterFadeIn;
@@ -94,17 +82,36 @@
 
 /* スマホの場合 */
 @media screen and (max-width: 599px) {
-  .igusa-container {
-    left: 5px;
+  .igusa-wrapper{
+    padding: 5px;
+    justify-content: center;
   }
 
-  .igusa-container .igusa-maru {
+  .igusa-container {
+    left: 5px;
+    height: 75%;
+  }
 
+  .igusa-maru {
     width: 50px;
+  }
+
+  .igusa {
+    flex-direction: column-reverse;
+    gap: 40px;
   }
 
   .igusa-container .igusa-img {
     width: 200px;
+
+  }
+
+  .igusa-text-container {
+
+  }
+
+  .igusa-text-container:before{
+    left: 70%;
   }
 }
 
