@@ -21,11 +21,34 @@
   display: flex;
 }
 
-.igusa-maru {
-  width: 100px;
+.igusa-maru{
   position: fixed;
   left: 10px;
   bottom: 10px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kyuusu, .igusa-maru p {
+  position: absolute;
+}
+
+.kyuusu {
+  width: 100px;
+  height: 100px;
+}
+
+.igusa-maru p {
+  font-weight: 1000;
+  font-size: 20px;
+  margin: 0;
+  color: white;
+  top:42%;
 }
 
 .igusa {
@@ -60,24 +83,10 @@
   border-bottom: 16px solid transparent;
 }
 
-/* .igusa-text-container:after {
-  content: '';
-  position: absolute;
-  bottom: -14px;
-  left: 21%;
-  width: 0;
-  height: 0;
-  border-top: 14px solid transparent;
-  border-left: 14px solid rgb(156, 190, 166);
-  border-bottom: 14px solid transparent;
-} */
-
 .igusa-wrapper.show .igusa {
   animation-name: characterFadeIn;
   animation-duration: 1.5s;
 }
-
-
 
 
 /* スマホの場合 */
@@ -93,7 +102,22 @@
   }
 
   .igusa-maru {
-    width: 50px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .kyuusu {
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+  }
+  
+  .igusa-maru p {
+    font-weight: 1000;
+    font-size: 13px;
+    margin: 0;
+    z-index: 2;
+    color: white;
   }
 
   .igusa {
@@ -103,7 +127,6 @@
 
   .igusa-container .igusa-img {
     width: 200px;
-
   }
 
   .igusa-text-container {
