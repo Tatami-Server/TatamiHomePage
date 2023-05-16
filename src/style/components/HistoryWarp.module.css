@@ -30,11 +30,12 @@
 }
 
 .selected {
-  background-color: rgb(114, 148, 116);
+  background-color: rgb(89,138,94);
+  border: 3px solid rgb(89,138,94);  
 }
 
 .warp-year:hover {
-  border: 3px solid rgb(114, 148, 116);
+  border: 3px solid rgb(89,138,94);
 }
 
 

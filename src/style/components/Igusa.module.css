@@ -26,8 +26,8 @@
   left: 10px;
   bottom: 10px;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   background-color: #ffffff3d;
   display: flex;
   align-items: center;
@@ -70,7 +70,7 @@
   position: relative;
   max-width: 240px;
   padding: 16px;
-  background-color: rgb(156, 190, 166);
+  background-color: rgb(156,190,166);
   border-radius: 8px;
   align-self: start;
 }
