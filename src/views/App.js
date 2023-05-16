@@ -12,6 +12,7 @@ import Please from '../views/pages/Please';
 import SNS from '../views/pages/SNS';
 import Subscription from '../views/pages/Subscription';
 import Map from '../views/pages/Map';
+import Omikuzi from '../views/pages/Omikuzi';
 import AdminHome from'../admin/AdminHome';
 import AdminChangeLog from '../admin/AdminChangeLog';
 import AdminEvent from '../admin/AdminEvent';
@@ -42,6 +43,7 @@ function App() {
           <Route path={`/sns/`} element={<SNS />} />
           <Route path={`/sbuscription/`} element={<Subscription />}/>
           <Route path={`/map/`} element={<Map />} />
+          <Route path={`/omikuzi/`} element={<Omikuzi />} />
           <Route path={`/adminhome/`} element={<AdminHome/>}/>
           <Route path={`/adminchangelog/`} element={<AdminChangeLog/>}/>
           <Route path={`/adminevent/`} element={<AdminEvent/>}/>
@@ -49,7 +51,6 @@ function App() {
           <Route path={`/adminspecialthenks/`} element={<AdminSpecialThenks/>} />
           <Route path={`/adminmap/`} element={<AdminMap />} />
           <Route path={`/admintoppage/`} element={<AdminTopPage/>} />
-
         </Routes>
     </BrowserRouter>
   );
