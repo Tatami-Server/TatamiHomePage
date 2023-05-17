@@ -32,9 +32,14 @@ const Omikuzi = () => {
   }
   const [fortune, setFortune] = useState("");
 
+  // おみくじスタートボタンを押したとき
   function handleButtonClick() {
     const randomFortune = getRandomFortune();
     setFortune(randomFortune);
+
+    const randomIndex = Math.floor(Math.random() * questList.length);
+    const randomQuest = questList[randomIndex];
+    setRandomQuest(randomQuest);
   }
 
   const questList = [
@@ -49,10 +54,13 @@ const Omikuzi = () => {
     'ネザライトインゴットを獲得する',
   ];
   
+  // クエストリストをランダムにしている
+  const [randomQuest, setRandomQuest] = useState('');
   const [checkboxes, setCheckboxes] = useState(
     questList.map((label, index) => ({ id: index + 1, label, isChecked: false }))
   );
   
+  // チェックボックスの動き
   const handleCheckboxChange = (id) => {
     setCheckboxes((prevCheckboxes) => {
       return prevCheckboxes.map((checkbox) => {
@@ -92,7 +100,7 @@ const Omikuzi = () => {
               <div className={Style['fortune-line-thin']}>
                 <div className={Style['fortune']}>{fortune}</div>
                 <div className={Style['quest']}>
-                  <p>ここにクエストの内容を記載する</p>
+                  <p>{randomQuest}</p>
                 </div>
               </div>
             </div>
