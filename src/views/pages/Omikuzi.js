@@ -12,12 +12,11 @@ import Style from '../../style/pages/Omikuzi.module.css';
 const Omikuzi = () => {
 
   const fortunes = [
-    { name: "大吉", probability: 0.05 },
-    { name: "大凶", probability: 0.05 },
-    { name: "凶", probability: 0.1 },
-    { name: "小吉", probability: 0.25 },
-    { name: "吉", probability: 0.25 },
-    { name: "中吉", probability: 0.3 }
+    { name: "大吉", probability: 0.05, text: '絶好調!!今日はURが出る予感!!' },
+    { name: "凶", probability: 0.1, text:  'そんな日もあるさ、切り抜きで動画でも見て笑おうよ'},
+    { name: "小吉", probability: 0.25, text: '大体いつも通りの1日だよ!' },
+    { name: "吉", probability: 0.25, text: 'こういう日は配信アーカイブでも見直そう。' },
+    { name: "中吉", probability: 0.3, text: '新たな場所を冒険するといいことあるかも！' }
   ];
   fortunes.sort((a, b) => a.probability - b.probability);
   function getRandomFortune() {
@@ -26,16 +25,18 @@ const Omikuzi = () => {
     for (const fortune of fortunes) {
       cumulativeProbability += fortune.probability;
       if (random <= cumulativeProbability) {
-        return fortune.name;
+        return { name: fortune.name, text: fortune.text };
       }
     }
   }
   const [fortune, setFortune] = useState("");
+  const [questText, setquestText] = useState("");
 
   // おみくじスタートボタンを押したとき
   function handleButtonClick() {
     const randomFortune = getRandomFortune();
-    setFortune(randomFortune);
+    setFortune(randomFortune.name);
+    setquestText(randomFortune.text);
 
     const randomIndex = Math.floor(Math.random() * questList.length);
     const randomQuest = questList[randomIndex];
@@ -43,15 +44,15 @@ const Omikuzi = () => {
   }
 
   const questList = [
-    '鉄道で旅をする',
-    '5000G消費する',
-    'ガチャを５回引く',
-    '10000G稼ぐ',
-    '一部屋以上建築する',
-    '＃畳サーバーでツイートする',
-    '駅周りを開拓する',
-    'ガチャを１０回引く',
-    'ネザライトインゴットを獲得する',
+    '鉄道で旅をしよう',
+    '5000G消費しよう',
+    'ガチャを５回引こう',
+    '10000G稼ごう',
+    '一部屋以上建築しよう',
+    '＃畳サーバーでツイートしよう',
+    '駅周りを開拓しよう',
+    'ガチャを１０回引こう',
+    'ネザライトインゴットを獲得しよう',
   ];
   
   // クエストリストをランダムにしている
@@ -111,7 +112,7 @@ const Omikuzi = () => {
         </div>
         <div className={Style['igusa-container']}>
           <div className={Style['igusa-text-container']}>
-            <p></p>
+            <p className={Style['quest-text']}>{questText}</p>
           </div>
           <img className={Style['fusuma-img']} src={fusuma}></img>
         </div>
