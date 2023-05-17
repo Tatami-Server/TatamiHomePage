@@ -1,0 +1,154 @@
+.omikuzi-page-wapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(249,246,239);
+  height: 100vh;
+}
+
+.omikuzi-title-wapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.omikuzi-content-wapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quest-list-wapper {
+  width: 20%;
+
+}
+
+.omikuzi-wapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quest-list-container {
+  display: flex;
+  flex-direction: column;
+  border: 7px solid #436644;
+  height: 550px;
+  background-color: #fff;
+}
+
+.igusa-container {
+  width: 20%;
+}
+
+.fortune-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 550px;
+  border: 7px solid #436644;
+}
+
+.fortune-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* おみくじの周りの飾りの部分 */
+.fortune-line-thick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid rgb(201, 53, 16);
+  background-color: #fff;
+  width: 244px;
+  height: 444px;
+}
+
+.fortune-line-thin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid rgb(201, 56, 20);
+  background-color: #fff;
+  width: 220px;
+  height: 420px;
+}
+
+/* おみくじの中身 */
+.fortune {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 800;
+  height: 30%;
+}
+
+.quest {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid black;
+  height: 70%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px;
+  width: 70%;
+}
+
+.quest p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ふすまちゃんの吹き出しの部分 */
+.igusa-text-container {
+  position: relative;
+  display: inline-block;
+  padding: 7px 10px;
+  width: 300px;
+  height: 200px;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #436644;
+  box-sizing: border-box;
+  border-radius: 48%;
+}
+
+.igusa-text-container:before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-top: 12px solid #FFF;
+  z-index: 2;
+}
+
+.igusa-text-container:after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -17px;
+  border: 14px solid transparent;
+  border-top: 14px solid #436644;
+  z-index: 1;
+}
+
+.fusuma-img {
+  height: 500px;
+}
+
+.btn{
+  font-size: 20px;
+  background-color: #ccc;
+  cursor: pointer;
+  text-align: center;
+}
+
