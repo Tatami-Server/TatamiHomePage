@@ -1,5 +1,5 @@
 // reactの機能インポート
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 // 画像インポート
 import tatami from '../../images/Igusa.images/sister1.png';
@@ -10,6 +10,18 @@ import fusuma from '../../images/Igusa.images/sister2.png';
 import Style from '../../style/pages/Omikuzi.module.css';
 
 const Omikuzi = () => {
+  
+  const questList = [
+    '鉄道で旅をしよう',
+    '5000G消費しよう',
+    'ガチャを５回引こう',
+    '10000G稼ごう',
+    '1部屋以上建築しよう',
+    '＃畳サーバ―でツイ―トしよう',
+    '駅周りを開拓しよう',
+    'ガチャを１０回引こう',
+    'ネザライトインゴットを獲得しよう',
+  ];
 
   const fortunes = [
     { name: "大吉", probability: 0.05, text: '絶好調!!今日はURが出る予感!!' },
@@ -38,61 +50,64 @@ const Omikuzi = () => {
     setFortune(randomFortune.name);
     setquestText(randomFortune.text);
 
-    const randomIndex = Math.floor(Math.random() * questList.length);
-    const randomQuest = questList[randomIndex];
-    setRandomQuest(randomQuest);
+      // isCheckedがtrueの要素を省いた配列を作成
+      const filteredItems = quests.filter(item => !item.isChecked);
+  
+      // ランダムに要素を選択
+      const randomIndex = Math.floor(Math.random() * filteredItems.length);
+      const selectedRandomQuest = filteredItems[randomIndex];
+      setRandomQuest(selectedRandomQuest.label);
   }
 
-  const questList = [
-    '鉄道で旅をしよう',
-    '5000G消費しよう',
-    'ガチャを５回引こう',
-    '10000G稼ごう',
-    '一部屋以上建築しよう',
-    '＃畳サーバーでツイートしよう',
-    '駅周りを開拓しよう',
-    'ガチャを１０回引こう',
-    'ネザライトインゴットを獲得しよう',
-  ];
-  
+
   // クエストリストをランダムにしている
   const [randomQuest, setRandomQuest] = useState('');
-  const [checkboxes, setCheckboxes] = useState(
+
+  
+  const [quests, setQuests] = useState(
     questList.map((label, index) => ({ id: index + 1, label, isChecked: false }))
   );
-  
+
   // チェックボックスの動き
   const handleCheckboxChange = (id) => {
-    setCheckboxes((prevCheckboxes) => {
-      return prevCheckboxes.map((checkbox) => {
-        if (checkbox.id === id) {
-          return { ...checkbox, isChecked: !checkbox.isChecked };
-        }
-        return checkbox;
-      });
-    });
+    setQuests (quests.map((quest) =>  {
+      if(quest.id == id){
+        quest.isChecked = !quest.isChecked;
+      }
+      return quest;
+    }));
   };
+
+  // 日付,、曜日の取得
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth() + 1;
+  const date = currentDate.getDate();
+  const dayOfWeek = currentDate.getDay();
+  
+  const daysOfWeek = ['日', '月', '火', '水', '木', '金', '土'];
 
   return (
     <div className={Style['omikuzi-page-wapper']}>
       <div className={Style['omikuzi-title-wapper']}>
         <h1>畳おみくじ</h1>
-        <h2>2023年5月20日の運勢とクエスト</h2>
+        <h2>{year}年{month}月{date}日（{daysOfWeek[dayOfWeek]}）の運勢とクエスト</h2>
       </div>
       <div className={Style['omikuzi-content-wapper']}>
         <div className={Style['quest-list-wapper']}>
           <div className={Style['quest-list-container']}>
-            <p>特定のクエストを拒否</p>
-            {checkboxes.map((checkbox) => (
-              <label key={checkbox.id} className={Style['label-wrapper']}>
-                <input
-                  type="checkbox"
-                  checked={checkbox.isChecked}
-                  onChange={() => handleCheckboxChange(checkbox.id)}
-                />
-                {checkbox.label}
-              </label>
-            ))}
+            <div className={Style['quest-list']}>
+              <p>特定のクエストを拒否</p>
+              {quests.map((quest) => (
+                <label key={quest.id} className={Style['label-wrapper']}>
+                  <input
+                    type="checkbox"
+                    onChange={() => handleCheckboxChange(quest.id)}
+                  />
+                  {quest.label}
+                </label>
+              ))}
+            </div>
           </div>
         </div>
         <div className={Style['omikuzi-wapper']}>
