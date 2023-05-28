@@ -4,10 +4,16 @@ import {useState, useEffect} from 'react';
 // 画像インポート
 import tatami from '../../images/Igusa.images/sister1.png';
 import fusuma from '../../images/Igusa.images/sister2.png';
+import daikichi from '../../images/omikuzi.images/daikichi.jpg';
+import tyuukichi from '../../images/omikuzi.images/tyuukichi.png';
+import kichi from '../../images/omikuzi.images/kichi.jpg';
+import syoukichi from '../../images/omikuzi.images/syoukichi.jpg';
+import kyou from '../../images/omikuzi.images/kyou.png';
 
 
 // cssインポート
 import Style from '../../style/pages/Omikuzi.module.css';
+import { red } from '@mui/material/colors';
 
 const Omikuzi = () => {
   
@@ -24,11 +30,11 @@ const Omikuzi = () => {
   ];
 
   const fortunes = [
-    { name: "大吉", probability: 0.05, text: '絶好調!!今日はURが出る予感!!' },
-    { name: "凶", probability: 0.1, text:  'そんな日もあるさ、切り抜きで動画でも見て笑おうよ'},
-    { name: "小吉", probability: 0.25, text: '大体いつも通りの1日だよ!' },
-    { name: "吉", probability: 0.25, text: 'こういう日は配信アーカイブでも見直そう。' },
-    { name: "中吉", probability: 0.3, text: '新たな場所を冒険するといいことあるかも！' }
+    { name: "大吉", probability: 0.05, text: '絶好調!!今日はURが出る予感!!', image: daikichi },
+    { name: "凶", probability: 0.05, text:  'そんな日もあるさ、切り抜きで動画でも見て笑おうよ', image: kyou},
+    { name: "小吉", probability: 0.25, text: '大体いつも通りの1日だよ!', image: syoukichi },
+    { name: "吉", probability: 0.25, text: 'こういう日は配信アーカイブでも見直そう。', image:kichi},
+    { name: "中吉", probability: 0.3, text: '新たな場所を冒険するといいことあるかも！', image: tyuukichi }
   ];
   fortunes.sort((a, b) => a.probability - b.probability);
   function getRandomFortune() {
@@ -37,18 +43,20 @@ const Omikuzi = () => {
     for (const fortune of fortunes) {
       cumulativeProbability += fortune.probability;
       if (random <= cumulativeProbability) {
-        return { name: fortune.name, text: fortune.text };
+        return { name: fortune.name, text: fortune.text, image: fortune.image};
       }
     }
   }
   const [fortune, setFortune] = useState("");
   const [questText, setquestText] = useState("");
+  const [fortuneImage, setFortuneImage] = useState("");
 
   // おみくじスタートボタンを押したとき
   function handleButtonClick() {
     const randomFortune = getRandomFortune();
     setFortune(randomFortune.name);
     setquestText(randomFortune.text);
+    setFortuneImage(randomFortune.image);
 
       // isCheckedがtrueの要素を省いた配列を作成
       const filteredItems = quests.filter(item => !item.isChecked);
@@ -111,7 +119,7 @@ const Omikuzi = () => {
           </div>
         </div>
         <div className={Style['omikuzi-wapper']}>
-          <div className={Style['fortune-container']}>
+          <div className={Style['fortune-container']} style={{backgroundImage: `url(${fortuneImage})`}}>
             <div className={Style['fortune-line-thick']}>
               <div className={Style['fortune-line-thin']}>
                 <div className={Style['fortune']}>{fortune}</div>
