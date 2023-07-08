@@ -9,6 +9,8 @@ import tyuukichi from '../../images/omikuzi.images/tyuukichi.png';
 import kichi from '../../images/omikuzi.images/kichi.jpg';
 import syoukichi from '../../images/omikuzi.images/syoukichi.jpg';
 import kyou from '../../images/omikuzi.images/kyou.png';
+import syouzi1 from '../../images/omikuzi.images/syouzi1.png';
+import syouzi2 from '../../images/omikuzi.images/syouzi2.png';
 
 
 // cssインポート
@@ -48,23 +50,31 @@ const Omikuzi = () => {
     }
   }
   const [fortune, setFortune] = useState("");
-  const [questText, setquestText] = useState("");
+  const [questText, setquestText] = useState("[おみくじスタート]ボタンを押してね！");
   const [fortuneImage, setFortuneImage] = useState("");
+  const [btnText, setBtnText] = useState("おみくじスタート");
+
+  const [isOpen, setisOpen] = useState(false);
+
 
   // おみくじスタートボタンを押したとき
   function handleButtonClick() {
     const randomFortune = getRandomFortune();
+    setisOpen(!isOpen);
+    setBtnText("おみくじスタート")
+    if(isOpen) return; 
+    setBtnText("もう一度引く");
+
     setFortune(randomFortune.name);
     setquestText(randomFortune.text);
     setFortuneImage(randomFortune.image);
 
-      // isCheckedがtrueの要素を省いた配列を作成
-      const filteredItems = quests.filter(item => !item.isChecked);
-  
-      // ランダムに要素を選択
-      const randomIndex = Math.floor(Math.random() * filteredItems.length);
-      const selectedRandomQuest = filteredItems[randomIndex];
-      setRandomQuest(selectedRandomQuest.label);
+    // isCheckedがtrueの要素を省いた配列を作成
+    const filteredItems = quests.filter(item => !item.isChecked);
+    // ランダムに要素を選択
+    const randomIndex = Math.floor(Math.random() * filteredItems.length);
+    const selectedRandomQuest = filteredItems[randomIndex];
+    setRandomQuest(selectedRandomQuest.label);   
   }
 
 
@@ -98,16 +108,17 @@ const Omikuzi = () => {
   return (
     <div className={Style['omikuzi-page-wapper']}>
       <div className={Style['omikuzi-title-wapper']}>
-        <h1>畳おみくじ</h1>
-        <h2>{year}年{month}月{date}日（{daysOfWeek[dayOfWeek]}）の運勢とクエスト</h2>
+        <h1 className={Style['omikuzi-title']}>畳おみくじ</h1>
+        <h2 className={Style['omikuzi-title-text']}>{year}年{month}月{date}日（{daysOfWeek[dayOfWeek]}）の運勢とクエスト</h2>
       </div>
       <div className={Style['omikuzi-content-wapper']}>
         <div className={Style['quest-list-wapper']}>
           <div className={Style['quest-list-container']}>
             <div className={Style['quest-list']}>
               <p>特定のクエストを拒否</p>
+              <div className={Style['label-wrapper']}>
               {quests.map((quest) => (
-                <label key={quest.id} className={Style['label-wrapper']}>
+                <label key={quest.id} >
                   <input
                     type="checkbox"
                     onChange={() => handleCheckboxChange(quest.id)}
@@ -115,11 +126,23 @@ const Omikuzi = () => {
                   {quest.label}
                 </label>
               ))}
+              </div>
             </div>
           </div>
         </div>
         <div className={Style['omikuzi-wapper']}>
           <div className={Style['fortune-container']} style={{backgroundImage: `url(${fortuneImage})`}}>
+            <div className={Style['fortune-door']}>
+              <img 
+                src={syouzi2} 
+                className={`${Style['fortune-door-left']} ${isOpen ? Style.openLeft : ''}`}
+              ></img>
+              <img 
+                src={syouzi1} 
+                className={`${Style['fortune-door-right']} ${isOpen ? Style.openRight : ''}`}
+              ></img>
+            </div>
+              
             <div className={Style['fortune-line-thick']}>
               <div className={Style['fortune-line-thin']}>
                 <div className={Style['fortune']}>{fortune}</div>
@@ -130,7 +153,7 @@ const Omikuzi = () => {
             </div>
           </div>
           <div className={Style['fortune-btn-container']}> 
-            <button className={Style['btn']} onClick={handleButtonClick}>おみくじスタート</button>
+            <button className={Style['btn']} onClick={handleButtonClick}>{btnText}</button>
           </div>
         </div>
         <div className={Style['igusa-container']}>
