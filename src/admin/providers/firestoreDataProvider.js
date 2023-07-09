@@ -9,7 +9,9 @@ const dataProvider = {
 
         if (params.filter) {
             for (let field in params.filter) {
-                dbQuery = query(dbQuery, where(field, "==", params.filter[field]))
+                const [ operator, value ] = params.filter[field]
+                console.log({field, operator, value})
+                dbQuery = query(dbQuery, where(field, operator, value))
             }
         }
 

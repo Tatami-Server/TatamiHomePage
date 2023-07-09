@@ -7,6 +7,7 @@ import FlexLink from '../../util/FlexLink';
 
 // cssインポート
 import Style from '../../style/components/News.module.css';
+import FormatDate from '../../util/FormatDate';
 
 const News = () => {
   const [ newsData, setNewsData ] = useState([])
@@ -21,7 +22,9 @@ const News = () => {
           {newsData.map(({ url, date, title },index) => {
             return(
               <div className={Style.news} key={index}>
-                <p className={Style.newsDate}>{ date }</p>
+                <p className={Style.newsDate}>
+                  <FormatDate date={date} />
+                </p>
                 <p className={Style.newsContent}>
                   <FlexLink className={Style.newsHlef} href={ url }>{ title } </FlexLink>
                 </p>

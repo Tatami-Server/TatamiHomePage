@@ -18,7 +18,8 @@ const RegisterPage = () => {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const uid = userCredential.user.uid;
             await setDoc(doc(db, "admin", uid), {
-                email: userCredential.user.email
+                email: userCredential.user.email,
+                status: false,
             });
 
             setRegistrationComplete(true);

@@ -18,7 +18,7 @@ const ApproveField = props => {
 
 export const AdminList = props => {
     return (
-        <List {...props} filter={{ status: false }}>
+        <List {...props} filter={{ status: ['==', false] }}>
             <Datagrid bulkActionButtons={false}>
                 <TextField source="email" label="メールアドレス" />
                 <ApproveField />
