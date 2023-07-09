@@ -18,9 +18,28 @@ import Style from '../../style/pages/Omikuzi.module.css';
 import { red } from '@mui/material/colors';
 
 // 音インポート
-// import atariSound from '../../music/atari.mp3'
+import useSound from 'use-sound';
+import atariSound from '../../music/atari.mp3';
+import zyakiSound from '../../music/zyaki.mp3';
+import patiSound from '../../music/pati.mp3';
 
 const Omikuzi = () => {
+
+  const [playAtari] = useSound(atariSound);
+  const [playZyaki] = useSound(zyakiSound);
+  const [playPati] = useSound(patiSound);
+
+  const playDelayedAtariSound = () => {
+    setTimeout(() => {
+      playAtari();
+    }, 1000); // 1秒の遅延
+  };
+
+  const playDelayedPatiSound = () => {
+    setTimeout(() => {
+      playPati();
+    }, 2000); // 2秒の遅延
+  };
 
   
   const questList = [
@@ -63,6 +82,7 @@ const Omikuzi = () => {
 
   // おみくじスタートボタンを押したとき
   function handleButtonClick() {
+
     const randomFortune = getRandomFortune();
     setisOpen(!isOpen);
     setBtnText("おみくじスタート")
@@ -72,6 +92,12 @@ const Omikuzi = () => {
     setFortune(randomFortune.name);
     setquestText(randomFortune.text);
     setFortuneImage(randomFortune.image);
+
+    if(randomFortune.name === "大吉") {
+      playZyaki();
+      playDelayedAtariSound ();
+      playDelayedPatiSound();
+    }
 
     // isCheckedがtrueの要素を省いた配列を作成
     const filteredItems = quests.filter(item => !item.isChecked);
