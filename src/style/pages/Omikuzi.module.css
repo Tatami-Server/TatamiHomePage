@@ -52,6 +52,13 @@
   padding-top: 10px;
 }
 
+.label-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+
 .omikuzi-wapper {
   width: 50%;
   display: flex;
@@ -336,6 +343,7 @@ input[type="checkbox"]:checked::after {
   .label-wrapper {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: initial;
   }
   
   .quest-list label {
