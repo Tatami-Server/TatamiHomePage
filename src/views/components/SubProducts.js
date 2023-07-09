@@ -17,10 +17,11 @@ const SubProducts = ({products}) => {
               <div className={Style["product-img-box"]}>
                 <div className={Style["text-box"]}>
                   <div className={Style.gara}
-                      style={{backgroundImage: `url(${gara})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize:"cover",
-                    }}>
+                    //   style={{backgroundImage: `url(${gara})`,
+                    //   backgroundRepeat: 'no-repeat',
+                    //   backgroundSize:"cover",
+                    // }}
+                    >
                     <h3>{imgTitle}</h3>
                   </div>
                 </div>
