@@ -17,7 +17,11 @@ import syouzi2 from '../../images/omikuzi.images/syouzi2.png';
 import Style from '../../style/pages/Omikuzi.module.css';
 import { red } from '@mui/material/colors';
 
+// 音インポート
+// import atariSound from '../../music/atari.mp3'
+
 const Omikuzi = () => {
+
   
   const questList = [
     '鉄道で旅をしよう',
