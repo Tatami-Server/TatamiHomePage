@@ -1,11 +1,19 @@
 import { db } from '../../lib/firebase';
 
-import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch } from 'firebase/firestore';
+import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, where } from 'firebase/firestore';
 
 
 const dataProvider = {
     getList: async (resource, params) => {
-        const querySnapshot = await getDocs(collection(db, resource));
+        let dbQuery = collection(db, resource)
+
+        if (params.filter) {
+            for (let field in params.filter) {
+                dbQuery = query(dbQuery, where(field, "==", params.filter[field]))
+            }
+        }
+
+        const querySnapshot = await getDocs(dbQuery);
         const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         return { data, total: data.length };
     },

@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, getDocs, collection } from 'firebase/firestore'
+import { getFirestore, getDocs, getDoc, doc, collection, query } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -21,4 +21,18 @@ const getAll = async (resource) => {
     return data
 }
 
-export { app, db, auth, getAll }
+const find = async (resource, searchParam) => {
+    const q = query(collection(db, resource), searchParam);
+    
+    const querySnapshot = await getDocs(q);
+    const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    return data
+}
+
+const getOne = async (resource, id) => {
+    const docSnap = await getDoc(doc(db, resource, id));
+    const data = docSnap.data()
+    return {id: docSnap.id, ...data}
+}
+
+export { app, db, auth, getAll, getOne, find }

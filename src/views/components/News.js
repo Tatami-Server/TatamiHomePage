@@ -1,6 +1,3 @@
-// json（データ）をインポート
-import NewsJson from '../../json/News.json';
-
 import { useEffect, useState } from 'react'
 
 import { getAll } from '../../lib/firebase';
@@ -12,9 +9,6 @@ import FlexLink from '../../util/FlexLink';
 import Style from '../../style/components/News.module.css';
 
 const News = () => {
-
-
-  // const { newsData } = NewsJson
   const [ newsData, setNewsData ] = useState([])
   useEffect(() => {
     getAll('notice').then((data) => setNewsData(data))

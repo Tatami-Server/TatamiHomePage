@@ -1,6 +1,6 @@
 import { auth } from '../../lib/firebase'
 import { signInWithEmailAndPassword, signOut,  } from 'firebase/auth'
-
+import dataProvider from "./firestoreDataProvider";
 
 const authProvider = {
     login: async ({ username, password }) => {
@@ -31,12 +31,18 @@ const authProvider = {
 
     checkAuth: async () => {
         return new Promise((resolve, reject) => {
-            const unsubscribe = auth.onAuthStateChanged((user) => {
+            const unsubscribe = auth.onAuthStateChanged(async (user) => {
                 unsubscribe();
                 if (user) {
-                    resolve();
+                    const { data } = await dataProvider.getOne('admin', {id: user.uid})
+                    if(data.status) {
+                        resolve();
+                    }
+                    else {
+                        reject({ message: '管理者の承認を得てから、再度ログインしてください' });
+                    }
                 } else {
-                    reject();
+                    reject({ message: 'ログインしてください' });
                 }
             });
         });

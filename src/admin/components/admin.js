@@ -1,12 +1,28 @@
-// notices.js
 import * as React from "react";
-import { List, Datagrid, TextField, Button } from 'react-admin';
+import { List, Datagrid, TextField, Button, FunctionField } from 'react-admin';
+import dataProvider from "../providers/firestoreDataProvider";
 
-export const AdminList = props => (
-    <List {...props}>
-        <Datagrid>
-            <TextField source="email" label="メールアドレス" />
-            <Button>承認</Button>
-        </Datagrid>
-    </List>
-);
+const ApproveButton = (record) => {
+    const approve = () => {
+        dataProvider.update('admin', { 
+            id: record.id, 
+            data: { status: true } 
+        })
+    }
+    return <Button onClick={approve}><small>承認</small></Button>;
+}
+
+const ApproveField = props => {
+    return <FunctionField {...props} render={ApproveButton} />
+}
+
+export const AdminList = props => {
+    return (
+        <List {...props} filter={{ status: false }}>
+            <Datagrid bulkActionButtons={false}>
+                <TextField source="email" label="メールアドレス" />
+                <ApproveField />
+            </Datagrid>
+        </List>
+    )
+};

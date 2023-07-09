@@ -1,9 +1,10 @@
-import { Admin, Resource, defaultDarkTheme, Login, CustomRoutes } from 'react-admin';
+import { Admin, Resource, defaultDarkTheme } from 'react-admin';
 import dataProvider from './providers/firestoreDataProvider';
 import Dashboard from './Dashboard';
 import authProvider from './providers/firebaseAuthProvider';
 import { NoticeList, NoticeEdit, NoticeCreate, NoticeShow } from './components/notice';
 import { AdminList } from './components/admin';
+import Login from './pages/Login';
 
 const App = () => {
     
