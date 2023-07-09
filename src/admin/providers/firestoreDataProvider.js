@@ -10,7 +10,6 @@ const dataProvider = {
         if (params.filter) {
             for (let field in params.filter) {
                 const [ operator, value ] = params.filter[field]
-                console.log({field, operator, value})
                 dbQuery = query(dbQuery, where(field, operator, value))
             }
         }
