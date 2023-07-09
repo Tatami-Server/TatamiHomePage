@@ -66,3 +66,11 @@ main {
 }
 
 }
+
+main.RaLayout-contentWithSidebar {
+  background-color: initial !important;
+  padding-left: initial !important;
+  padding-right: initial !important;
+  min-height: initial !important;
+  flex-direction: initial !important;
+}
