@@ -1,6 +1,14 @@
 // reactの機能インポート
 import {useState, useEffect} from 'react';
 
+// リアクトアイコンインポート
+import{AiFillHome} from 'react-icons/ai';
+import { IconContext } from 'react-icons'
+
+// コンポーネントインポート
+import FlexLink from "../../util/FlexLink";
+
+
 // 画像インポート
 import tatami from '../../images/Igusa.images/sister1.png';
 import fusuma from '../../images/Igusa.images/sister2.png';
@@ -140,6 +148,13 @@ const Omikuzi = () => {
       <div className={Style['omikuzi-title-wapper']}>
         <h1 className={Style['omikuzi-title']}>畳おみくじ</h1>
         <h2 className={Style['omikuzi-title-text']}>{year}年{month}月{date}日（{daysOfWeek[dayOfWeek]}）の運勢とクエスト</h2>
+      </div>
+      <div className={Style['home-icon']}>
+        <IconContext.Provider value={{ color: '#436644', size: '50px' }} >
+          <FlexLink href="/">
+            <AiFillHome/>
+          </FlexLink>
+        </IconContext.Provider>
       </div>
       <div className={Style['omikuzi-content-wapper']}>
         <div className={Style['quest-list-wapper']}>

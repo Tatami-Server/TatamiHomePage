@@ -7,6 +7,12 @@
   width: 100%;
 }
 
+.home-icon {
+  position: fixed;
+  top: 40px;
+  left: 80px;
+}
+
 .omikuzi-title-wapper {
   display: flex;
   flex-direction: column;
@@ -293,6 +299,15 @@ input[type="checkbox"]:checked::after {
   .omikuzi-page-wapper {
     justify-content: normal;
   }
+
+  .home-icon {
+  top: 10px;
+  left: 10px;
+}
+
+.home-icon svg {
+  height:30px;
+}
 
   .omikuzi-title {
     font-size: 30px;
