@@ -17,4 +17,5 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TATAMI_F2AD1 }}'
           target: 'dev'
+          channelId: 'live'
           projectId: tatami-f2ad1
