@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "tatami-f2ad1"
+    "default": "tatami-f2ad1",
+    "dev": "dev-tatami"
   }
 }
