@@ -12,7 +12,8 @@ import FormatDate from '../../util/FormatDate';
 const News = () => {
   const [ newsData, setNewsData ] = useState([])
   useEffect(() => {
-    getAll('notice').then((data) => setNewsData(data))
+    getAll('notice', { sort: { field: 'date', order: 'desc' } })
+      .then((data) => setNewsData(data))
   }, [])
 
   return (

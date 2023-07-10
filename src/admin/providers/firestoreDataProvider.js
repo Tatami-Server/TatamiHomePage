@@ -1,6 +1,6 @@
 import { db } from '../../lib/firebase';
 
-import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, where } from 'firebase/firestore';
+import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, where, orderBy } from 'firebase/firestore';
 
 
 const dataProvider = {
@@ -12,6 +12,11 @@ const dataProvider = {
                 const [ operator, value ] = params.filter[field]
                 dbQuery = query(dbQuery, where(field, operator, value))
             }
+        }
+
+        if(params.sort) {
+            const { field, order } = params.sort
+            dbQuery = query(dbQuery, orderBy(field, order.toLowerCase()))
         }
 
         const querySnapshot = await getDocs(dbQuery);

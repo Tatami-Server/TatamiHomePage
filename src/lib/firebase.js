@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, getDocs, getDoc, doc, collection, query } from 'firebase/firestore'
+import { getFirestore, getDocs, getDoc, doc, collection, query, orderBy } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -15,8 +15,14 @@ const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 const auth = getAuth(app);
 
-const getAll = async (resource) => {
-    const querySnapshot = await getDocs(collection(db, resource));
+const getAll = async (resource, params) => {
+    let dbQuery = collection(db, resource)
+
+    if(params?.sort) {
+        const { field, order } = params.sort
+        dbQuery = query(dbQuery, orderBy(field, order))
+    }
+    const querySnapshot = await getDocs(dbQuery);
     const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     return data
 }
