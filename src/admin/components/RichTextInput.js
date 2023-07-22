@@ -6,7 +6,7 @@ const MyRichTextInput = (props) => {
 
     return (
     <RichTextInput
-    {...propes}
+    {...props}
     fullWidth
     sx={{
         ' .ProseMirror': {
