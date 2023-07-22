@@ -7,7 +7,7 @@ import { Show, SimpleShowLayout } from 'react-admin';
 
 
 export const NoticeList = props => (
-    <List {...props}>
+    <List {...props} sort={{ field: 'date', order: 'desc' }}>
         <Datagrid>
             <TextField source="title" label="タイトル" />
             <TextField source="url" label="URL" />
