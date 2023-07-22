@@ -5,6 +5,7 @@ import { Edit, SimpleForm, TextInput, DateInput, ReferenceInput, SelectInput } f
 import { Create } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
 
+
 export const NoticeList = props => (
     <List {...props}>
         <Datagrid>
@@ -20,8 +21,8 @@ export const NoticeList = props => (
 export const NoticeEdit = props => (
     <Edit {...props}>
         <SimpleForm>
-            <TextInput source="title" label="タイトル" />
-            <TextInput source="url" label="URL" />
+            <TextInput fullWidth source="title" label="タイトル" />
+            <TextInput fullWidth source="url" label="URL" />
             <DateInput source="date" label="日付" />
         </SimpleForm>
     </Edit>
@@ -30,8 +31,8 @@ export const NoticeEdit = props => (
 export const NoticeCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="title" label="タイトル" />
-            <TextInput source="url" label="URL" />
+            <TextInput fullWidth source="title" label="タイトル" />
+            <TextInput fullWidth source="url" label="URL" />
             <DateInput source="date" label="日付" />        
         </SimpleForm>
     </Create>
@@ -46,3 +47,4 @@ export const NoticeShow = props => (
         </SimpleShowLayout>
     </Show>
 );
+

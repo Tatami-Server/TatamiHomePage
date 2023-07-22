@@ -2,8 +2,9 @@ import { Admin, Resource, defaultDarkTheme } from 'react-admin';
 import dataProvider from './providers/firestoreDataProvider';
 import Dashboard from './Dashboard';
 import authProvider from './providers/firebaseAuthProvider';
-import { NoticeList, NoticeEdit, NoticeCreate, NoticeShow } from './components/notice';
-import { AdminList } from './components/admin';
+import { NoticeList, NoticeEdit, NoticeCreate, NoticeShow } from './resources/notice';
+import { AdminList } from './resources/admin';
+import { EventList, EventEdit, EventCreate, EventShow } from './resources/event';
 import Login from './pages/Login';
 
 const App = () => {
@@ -28,6 +29,18 @@ const App = () => {
                     label: 'お知らせ',
                 }}
             />
+
+            <Resource 
+                name="event"
+                list={EventList}
+                edit={EventEdit}
+                create={EventCreate}
+                show={EventShow} 
+                options={{
+                    label: 'イベント',
+                }}
+            />
+
             <Resource 
                 name="admin"
                 list={AdminList}
