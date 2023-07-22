@@ -22,6 +22,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // 共通CSSインポート
 import '../style/common.css';
+import EventDetail from './pages/EventDetail';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path={`/`} element={<Home />} />
           <Route path={`/event/`} element={<Event />} />
+          <Route path={`/event/:id`} element={<EventDetail />} />
           <Route path={`/contact/`} element={<Contact />} />
           <Route path={`/helpre/`} element={<Helpre />} />
           <Route path={`/history/`} element={<History />} />

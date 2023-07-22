@@ -28,7 +28,16 @@ import allTimeEvent4 from '../../images/event.images/event3-4.png';
 import lifeSarver1 from '../../images/event.images/event4-1.png';
 import fusuma from '../../images/Igusa.images/sister2.png';
 
+import { getAll } from '../../lib/firebase';
+import { useEffect, useState } from 'react';
+import FlexLink from '../../util/FlexLink';
+
 const Event = () => {
+
+  const [ eventDatas, setEventDatas ] = useState([])
+  useEffect(() => {
+    getAll('event').then((data) => setEventDatas(data))
+  }, [])
 
   const normalEventList=[
     {href:"https://seesaawiki.jp/tatamiserver/d/%c6%a8%c1%f6%c3%e6", imgTitle:"逃走中", img:normalEvent1, title:"逃走中", description:"オリジナルマップとオリジナルミッションで繰り広げる逃亡劇！"},
@@ -79,6 +88,16 @@ const Event = () => {
           <Subtitle subtitle="生活サーバー"/>
           <div className="Products">
             <SubProducts products={lifeSarver}/>
+          </div>
+          <Subtitle subtitle="管理画面イベント"/>
+          <div className="Products">
+            {eventDatas.map(event => {
+              return (
+                <div>
+                  <FlexLink href={`/event/${event.id}`}>{ event.title }</FlexLink>
+                </div>
+              )
+            })}
           </div>
           <UpArrow/>
       </main>
