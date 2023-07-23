@@ -44,6 +44,7 @@ const dataProvider = {
     create: async (resource, params) => {
         const docRef = await addDoc(collection(db, resource), params.data);
         const data = { id: docRef.id, ...params.data };
+        await updateDoc(doc(db, resource, data.id), data);
         return { data };
     },
     update: async (resource, params) => {
