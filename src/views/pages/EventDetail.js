@@ -5,7 +5,10 @@ import Footer from '../components/Footer';
 import { getOne } from '../../lib/firebase';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import DOMPurify from 'dompurify';
+
+import Heading from '../components/Heading';
+
+import Style from '../../style/pages/EventDetail.module.css'
 
 
 const EventDetail = () => {
@@ -20,8 +23,8 @@ const EventDetail = () => {
     <div>
       <Header/>
       <main>
-        <h2>{ eventData.title }</h2>
-        <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(eventData.body) }}></div>
+        <Heading heading={ eventData.title }/>
+        <div className={Style["event-body"]} dangerouslySetInnerHTML={{ __html: eventData.body}}></div>
       </main>
       <Footer/>
     </div>

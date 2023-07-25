@@ -1,0 +1,39 @@
+.event-body {
+    padding-bottom:200px ;
+}
+
+.event-body h2 {
+border-bottom: 5px solid #43612e ;
+border-image: linear-gradient(to right,
+    #43612e 30%,
+    #bbbbbb 30%);
+border-image-slice: 1;
+margin-top: 100px;
+margin-bottom: 50px;
+
+}
+
+.event-body h3 {
+    padding-top: 50px;
+}
+
+.event-body h5 {
+    color: #053d18;
+}
+
+.event-body p {
+    font-size: 20px;
+    margin: 0;
+    line-height: 35px;
+}
+
+.event-body li {
+    font-size: 20px;
+}
+
+.event-body img {
+    width: 70%;
+    height: auto;
+    padding-bottom: 20px;
+
+}

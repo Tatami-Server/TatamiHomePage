@@ -3,7 +3,7 @@ import * as React from "react";
 import { List, Datagrid, TextField, ReferenceField, EditButton, DeleteButton } from 'react-admin';
 import { Edit, SimpleForm, TextInput, DateInput, ReferenceInput, SelectInput, Create, required  } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
-import MyRichTextInput from "../components/RichTextInput";
+import { MyRichTextInput, MyEditorOptions } from '../components/CustomRichTextInput';
 
 const eventTypes = [
     { id: 'normal', name: '通常イベント（イベントサーバー）' },
@@ -28,7 +28,7 @@ export const EventEdit = props => (
         <SimpleForm>
             <SelectInput fullWidth required  source="eventType" label="イベントの種類" choices={eventTypes} />
             <TextInput fullWidth required source="title" label="タイトル" />
-            <MyRichTextInput source="body"/>
+            <MyRichTextInput editorOptions={MyEditorOptions} source="body" />
         </SimpleForm>
     </Edit>
 );
@@ -38,7 +38,7 @@ export const EventCreate = props => (
         <SimpleForm>
             <SelectInput fullWidth required  source="eventType" label="イベントの種類" choices={eventTypes} /> 
             <TextInput fullWidth required  source="title" label="タイトル" />
-            <MyRichTextInput source="body"/>     
+            <MyRichTextInput editorOptions={MyEditorOptions} source="body" />  
         </SimpleForm>
     </Create>
 );
