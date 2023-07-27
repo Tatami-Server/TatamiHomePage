@@ -20,6 +20,7 @@ import Table from '@tiptap/extension-table'
 import TableRow from '@tiptap/extension-table-row'
 import TableHeader from '@tiptap/extension-table-header'
 import TableCell from '@tiptap/extension-table-cell'
+import Style from '../../style/pages/EventDetail.module.css'
 
 
 const CustomRichTextInputToolbar = ({ size, ...props }) => {
@@ -44,6 +45,7 @@ const CustomRichTextInputToolbar = ({ size, ...props }) => {
             <ClearButtons size={size} />
             {/* テーブルタグを挿入するButton */}
             <Button onClick={handleInsertTable}>テーブル</Button>
+            <Button onClick={() => editor.chain().focus().deleteTable().run()}>テーブルの削除</Button>
             <Button onClick={() => editor.chain().focus().deleteColumn().run()}>列の削除</Button>
             <Button onClick={() => editor.chain().focus().addColumnAfter().run()}>列の追加</Button>
             <Button onClick={() => editor.chain().focus().deleteRow().run()}>行の削除</Button>
@@ -67,6 +69,7 @@ const CustomEditorOptions = {
 
 const CustomRichTextInput = ({ size, ...props }) => (
     <RichTextInput
+        className={Style["event-body"]}
         editorOptions={CustomEditorOptions}
         toolbar={<CustomRichTextInputToolbar size={size} />}
         label="Body"
@@ -75,17 +78,18 @@ const CustomRichTextInput = ({ size, ...props }) => (
         fullWidth
         sx={{
             ' .ProseMirror': {
-                minHeight: '300px'
-            },
-            'tr, td, th': {
-                borderWidth: '1px',
+                minHeight: '300px',
+                maxHeight: '90vh',
+                overflow: 'scroll',
+                backgroundColor:'rgb(249,246,239) !important',
+                color:'black',
             },
             '.resize-cursor': {
                 cursor: 'col-resize'
             },
             '.selectedCell': {
                 backgroundColor: '#3b83ff9d'
-            }
+            },
         }}
     />
 );

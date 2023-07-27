@@ -10,6 +10,7 @@ import Heading from '../components/Heading';
 
 import Style from '../../style/pages/EventDetail.module.css'
 
+import parse from 'html-react-parser';
 
 const EventDetail = () => {
   const [ eventData, setEventData ] = useState([])
@@ -24,7 +25,7 @@ const EventDetail = () => {
       <Header/>
       <main>
         <Heading heading={ eventData.title }/>
-        <div className={Style["event-body"]} dangerouslySetInnerHTML={{ __html: eventData.body}}></div>
+        <div className={Style["event-body"]}>{ parse(`${eventData.body}`) }</div>
       </main>
       <Footer/>
     </div>

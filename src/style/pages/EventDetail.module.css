@@ -1,5 +1,5 @@
 .event-body {
-    padding-bottom:200px ;
+    /* padding-bottom:200px ; */
 }
 
 .event-body h2 {
@@ -23,8 +23,9 @@ margin-bottom: 50px;
 
 .event-body p {
     font-size: 20px;
-    margin: 0;
-    line-height: 35px;
+    margin: 0 !important;
+    line-height: 30px;
+    min-height: 30px;
 }
 
 .event-body li {
@@ -32,8 +33,11 @@ margin-bottom: 50px;
 }
 
 .event-body img {
-    width: 70%;
+    width: 100%;
     height: auto;
-    padding-bottom: 20px;
-
 }
+
+.event-body tr,.event-body td {
+    border: 1px solid;
+}
+
