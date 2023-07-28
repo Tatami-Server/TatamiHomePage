@@ -17,7 +17,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 939px
+  max-width: 939px;
+  margin: 0 auto;
 }
 
 .sub-products::after {
