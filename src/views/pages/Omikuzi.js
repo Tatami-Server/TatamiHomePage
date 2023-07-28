@@ -1,6 +1,9 @@
 // reactの機能インポート
 import {useState, useEffect} from 'react';
 
+//コンポーネントインポート
+import Menu from '../components/Menu';
+
 // 画像インポート
 import tatami from '../../images/Igusa.images/sister1.png';
 import fusuma from '../../images/Igusa.images/sister2.png';
@@ -140,6 +143,9 @@ const Omikuzi = () => {
       <div className={Style['omikuzi-title-wapper']}>
         <h1 className={Style['omikuzi-title']}>畳おみくじ</h1>
         <h2 className={Style['omikuzi-title-text']}>{year}年{month}月{date}日（{daysOfWeek[dayOfWeek]}）の運勢とクエスト</h2>
+        <div  className={Style['omikuzi-menu']}>
+          <Menu right noOverlay/>
+        </div>
       </div>
       <div className={Style['omikuzi-content-wapper']}>
         <div className={Style['quest-list-wapper']}>
