@@ -1,0 +1,136 @@
+/* products */
+.products {
+  padding-bottom: 50px;
+}
+
+.product a {
+  text-decoration: none;
+  color: #000;
+}
+
+.product a:hover {
+  color: #000;
+}
+
+/* sub-products */
+.sub-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 939px;
+  margin: 0 auto;
+}
+
+.sub-products::after {
+  content: "";
+  display: block;
+  width: 30%;
+}
+
+.sub-products .product-img-box .text-box {
+  font-size: 150%;
+}
+
+.sub-products .product h2 {
+  text-align: center;
+}
+
+.sub-products .product-text h2 {
+  font-family: 'Yuji Syuku', serif;
+  font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.sub-products .product-text p {
+  font-size: 20px;
+  padding-bottom: 40px;
+}
+
+.product-img-box {
+  width: 330px;
+  height: 210px;
+}
+
+.product-text {
+  width: 330px;
+}
+
+/* .product-img-box */
+.product-img-box {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.product-img-box .fill {
+  width: 60%;
+  background-color: rgb(187, 166, 121);
+  display: inline-block;
+}
+
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-img-box .text-box .gara {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(89,138,94);
+}
+
+.product-img-box .text-box {
+  width: 40%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-img-box .text-box h3 {
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+
+@media screen and (max-width: 599px) {
+  .sub-products {
+    padding-top: 50px;
+    justify-content: center;
+  }
+
+  .sub-products .product-text h2 {
+    font-size: 20px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+  }
+
+  .sub-products .product-text p {
+    font-size: 15px;
+  }
+
+  .product-img-box {
+    width: 300px;
+    height: 170px;
+  }
+
+  .product-text {
+    width: 300px;
+  }
+
+  .sub-products::after {
+    display: none;
+  }
+
+  .product-img-box .text-box h3 {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+}

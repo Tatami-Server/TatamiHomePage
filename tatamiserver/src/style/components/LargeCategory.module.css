@@ -1,0 +1,34 @@
+/* LargeCategory */
+.large-category-container {
+  height: 100px;
+  display: flex;
+  justify-content: center
+}
+
+.large-catergory-line {
+  width: 20%;
+  height: 30%;
+  border-bottom: 1px solid #000;
+}
+
+.large-catergroy {
+  line-height: 60px;
+  text-align: center;
+  font-size: 25px;
+  white-space: nowrap;
+}
+
+.large-catergory-line:nth-child(3n) {
+  width: 80%;
+}
+
+
+@media screen and (max-width: 599px) {
+  .large-category-container {
+    height: 30px;
+  }
+
+  .large-catergroy {
+    line-height: 20px;
+  }
+}

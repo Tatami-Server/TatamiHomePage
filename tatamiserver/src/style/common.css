@@ -1,0 +1,79 @@
+/* 共通CSS */
+
+
+/* body */
+body {
+  margin: 0;
+  background-color: #f8f4ecd3;
+}
+
+/* span 文字の色や太さを変える */
+.green {
+  color: rgb(40, 94, 44);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.light-blue {
+  color: rgb(40, 177, 187);
+}
+
+/* main */
+main {
+  background-color: #f8f4ecd3;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+  position: relative;
+}
+
+
+.subtitle-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* subtitle-content サブタイトルの下の要素のｃｓｓ */
+.subtitle-content p{
+  font-size: 20px;
+  margin: 0;
+  line-height: 30px;
+}
+
+/* subcontent以外の画像のサイズを決める */
+.subtitle-content .subtitle-img{
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+
+/* スマホの場合 */
+@media screen and (max-width: 599px){
+
+  main {
+    background-color: #f8f4ecd3;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  
+  /* subtitle-content サブタイトルの下の要素のｃｓｓ */
+.subtitle-content p{
+  font-size: 15px;
+  margin: 0;
+  line-height: 23px;
+}
+
+}
+
+main.RaLayout-contentWithSidebar {
+  background-color: initial !important;
+  padding-left: initial !important;
+  padding-right: initial !important;
+  min-height: initial !important;
+  flex-direction: initial !important;
+}
