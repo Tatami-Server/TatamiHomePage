@@ -10,10 +10,8 @@ import SeparatorLine from '@components/SeparatorLine';
 import UpArrow from '@components/UpArrow';
 import Igusa from '@components/Igusa';
 
-import axios from 'axios';
-
 // reactの機能をインポート
-import { useEffect, useState, useRef} from 'react';
+import { useRef} from 'react';
 
 // 画像をインポート
 import logo from '@images/Home.images/logo.png';
@@ -37,8 +35,10 @@ import Style from '@style/pages/Home.module.css';
 import Image from "next/image";
 import TopLayout from '@layouts/TopLayout';
 
+import { getAll } from '@lib/firebase';
 
-function Home() {
+
+function Home({news}) {
 
   const SubProductsList = [
     { href: `/map/`, imgTitle: "マップ", img: map, title:"配布マップ", description: "当サーバーが提供している\n配布マップ等を紹介しています。" },
@@ -61,19 +61,6 @@ function Home() {
   }
   const myRef = useRef(null);
 
-  const [serverData, setServerData] = useState(null);
-
-  useEffect(() => {
-    axios.get('https://api.mcsrvstat.us/2/mc.tatamiserver.com')
-      .then(({data}) => {
-        setServerData(data);
-      })
-      .catch(error => {
-        console.error('Error fetching data: ', error);
-        setServerData(null);
-      });
-  }, []);
-
   return (
     <>
       <section className={Style["hero-content-warpper"]}>
@@ -89,14 +76,6 @@ function Home() {
               <IoIosArrowDown/>
             </IconContext.Provider>
           </div>
-          {/* <div className={Style["online-player"]}>
-            <div className={Style["player-number"]}>
-              <h2>{ serverData && serverData.players.online ? `${serverData.players.online}オンライン!` : '現在オンラインのプレイヤーはいません。' }</h2>
-            </div>
-            <div className={Style["player-face"]}>
-              <Image />
-            </div>
-          </div> */}
         </div>
       </section>
       <main ref={myRef}>
@@ -106,7 +85,7 @@ function Home() {
           <SubProducts products={SubProductsList}/>
         </section>
         <SeparatorLine/>
-        <News/>
+        <News news={news} />
         <UpArrow/>
       </main>
       <Igusa text="はじめまして、伊草 タタミです。よろしくお願いするわ。
@@ -119,6 +98,15 @@ function Home() {
       />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const news = await getAll('notice', { sort: { field: 'date', order: 'desc' } })
+
+  return {
+    props: { news },
+    revalidate: 60,
+  }
 }
 
 Home.Layout = TopLayout
