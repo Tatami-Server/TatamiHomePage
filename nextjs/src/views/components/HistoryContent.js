@@ -1,5 +1,5 @@
 // コンポーネントインポート
-import Subtitle from '../components/Subtitle';
+import Subtitle from './Subtitle';
 
 // カルーセルインポート
 import Carousel from 'react-bootstrap/Carousel';

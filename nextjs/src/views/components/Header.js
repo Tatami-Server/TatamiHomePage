@@ -1,7 +1,7 @@
 // コンポーネントインポート
 import Link from '../../util/Link';
-import Menu from '../components/Menu';
-import JoinBtn from '../components/JoinBtn';
+import Menu from './Menu';
+import JoinBtn from './JoinBtn';
 
 // 画像インポート
 import logo from '../../images/Home.images/logo.png';
