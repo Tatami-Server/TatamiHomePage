@@ -66,6 +66,7 @@
   width: 300px;
   flex: 0 0 auto;
   align-self: end;
+  height: auto;
 }
 
 .igusa-text-container {
