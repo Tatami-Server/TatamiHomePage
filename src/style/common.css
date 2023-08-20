@@ -4,6 +4,7 @@
 /* body */
 body {
   margin: 0;
+  background-color: #f8f4ecd3;
 }
 
 /* span 文字の色や太さを変える */
@@ -22,11 +23,13 @@ body {
 /* main */
 main {
   background-color: #f8f4ecd3;
-  padding-left: 18vw;
-  padding-right: 18vw;
+  max-width: 1100px;
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-bottom: 200px;
+  position: relative;
 }
 
 
@@ -39,7 +42,7 @@ main {
 .subtitle-content p{
   font-size: 20px;
   margin: 0;
-  line-height: 35px;
+  line-height: 30px;
 }
 
 /* subcontent以外の画像のサイズを決める */
@@ -65,4 +68,12 @@ main {
   line-height: 23px;
 }
 
+}
+
+main.RaLayout-contentWithSidebar {
+  background-color: initial !important;
+  padding-left: initial !important;
+  padding-right: initial !important;
+  min-height: initial !important;
+  flex-direction: initial !important;
 }

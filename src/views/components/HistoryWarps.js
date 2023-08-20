@@ -20,7 +20,6 @@ const HistoryWarps= ({contentRef,scrollPosition}) => {
 
   const judgeInsideOrNot= () => {
     HistoryJson.map((_,i) => {
-        console.log(contentRef[i])
         const {top,bottom} = contentRef[i].current.getBoundingClientRect()
     
         const offset = 200;

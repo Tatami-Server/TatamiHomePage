@@ -64,7 +64,6 @@ function Home() {
     axios.get('https://api.mcsrvstat.us/2/mc.tatamiserver.com')
       .then(({data}) => {
         setServerData(data);
-        console.log(data)
       })
       .catch(error => {
         console.error('Error fetching data: ', error);

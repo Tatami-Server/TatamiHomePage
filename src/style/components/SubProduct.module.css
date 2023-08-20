@@ -21,6 +21,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 939px;
+  margin: 0 auto;
 }
 
 .sub-products::after {
@@ -86,6 +88,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(89,138,94);
 }
 
 .product-img-box .text-box {

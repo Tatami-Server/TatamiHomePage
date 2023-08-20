@@ -8,6 +8,8 @@ import { IconContext } from 'react-icons'
 // コンポーネントインポート
 import FlexLink from "../../util/FlexLink";
 
+//コンポーネントインポート
+import Menu from '../components/Menu';
 
 // 画像インポート
 import tatami from '../../images/Igusa.images/sister1.png';
@@ -148,6 +150,9 @@ const Omikuzi = () => {
       <div className={Style['omikuzi-title-wapper']}>
         <h1 className={Style['omikuzi-title']}>畳おみくじ</h1>
         <h2 className={Style['omikuzi-title-text']}>{year}年{month}月{date}日（{daysOfWeek[dayOfWeek]}）の運勢とクエスト</h2>
+        <div  className={Style['omikuzi-menu']}>
+          <Menu right noOverlay/>
+        </div>
       </div>
       <div className={Style['home-icon']}>
         <IconContext.Provider value={{ color: '#436644', size: '50px' }} >

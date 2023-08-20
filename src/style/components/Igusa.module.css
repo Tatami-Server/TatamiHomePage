@@ -45,6 +45,7 @@
 .kyuusu {
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 
 .igusa-maru p {
@@ -53,6 +54,7 @@
   margin: 0;
   color: white;
   top:42%;
+  cursor: pointer;
 }
 
 .igusa {

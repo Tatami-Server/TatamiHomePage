@@ -13,19 +13,16 @@ import SNS from '../views/pages/SNS';
 import Subscription from '../views/pages/Subscription';
 import Map from '../views/pages/Map';
 import Omikuzi from '../views/pages/Omikuzi';
-import AdminHome from'../admin/AdminHome';
-import AdminChangeLog from '../admin/AdminChangeLog';
-import AdminEvent from '../admin/AdminEvent';
-import AdminHistory from '../admin/AdminHistory';
-import AdminMap from '../admin/AdminMap';
-import AdminSpecialThenks from '../admin/AdminSpecialThenks';
-import AdminTopPage from '../admin/AdminTopPage';
+
+import AdminApp from '../admin/App'
+import RegisterPage from '../admin/pages/Register'
 
 import ScrollToTop from '../util/ScrollToTop';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // 共通CSSインポート
 import '../style/common.css';
+import EventDetail from './pages/EventDetail';
 
 function App() {
   return (
@@ -34,6 +31,7 @@ function App() {
         <Routes>
           <Route path={`/`} element={<Home />} />
           <Route path={`/event/`} element={<Event />} />
+          <Route path={`/event/:id`} element={<EventDetail />} />
           <Route path={`/contact/`} element={<Contact />} />
           <Route path={`/helpre/`} element={<Helpre />} />
           <Route path={`/history/`} element={<History />} />
@@ -44,13 +42,9 @@ function App() {
           <Route path={`/sbuscription/`} element={<Subscription />}/>
           <Route path={`/map/`} element={<Map />} />
           <Route path={`/omikuzi/`} element={<Omikuzi />} />
-          <Route path={`/adminhome/`} element={<AdminHome/>}/>
-          <Route path={`/adminchangelog/`} element={<AdminChangeLog/>}/>
-          <Route path={`/adminevent/`} element={<AdminEvent/>}/>
-          <Route path={`/adminhistory/`} element={<AdminHistory/>} />
-          <Route path={`/adminspecialthenks/`} element={<AdminSpecialThenks/>} />
-          <Route path={`/adminmap/`} element={<AdminMap />} />
-          <Route path={`/admintoppage/`} element={<AdminTopPage/>} />
+
+          <Route path={`/admin/*`} element={<AdminApp />} />
+          <Route path={`/admin/register`} element={<RegisterPage />} />
         </Routes>
     </BrowserRouter>
   );
