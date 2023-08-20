@@ -6,7 +6,6 @@ import { IconContext } from 'react-icons'
 import MainProducts from '@components/MainProducts';
 import SubProducts from '@components/SubProducts';
 import News from '@components/News.js';
-import Footer from '@components/Footer.js';
 import SeparatorLine from '@components/SeparatorLine';
 import UpArrow from '@components/UpArrow';
 import Igusa from '@components/Igusa';
