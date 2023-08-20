@@ -1,6 +1,13 @@
 // reactの機能インポート
 import {useState, useEffect} from 'react';
 
+// リアクトアイコンインポート
+import{AiFillHome} from 'react-icons/ai';
+import { IconContext } from 'react-icons'
+
+// コンポーネントインポート
+import FlexLink from "../../util/FlexLink";
+
 //コンポーネントインポート
 import Menu from '../components/Menu';
 
@@ -146,6 +153,13 @@ const Omikuzi = () => {
         <div  className={Style['omikuzi-menu']}>
           <Menu right noOverlay/>
         </div>
+      </div>
+      <div className={Style['home-icon']}>
+        <IconContext.Provider value={{ color: '#436644', size: '50px' }} >
+          <FlexLink href="/">
+            <AiFillHome/>
+          </FlexLink>
+        </IconContext.Provider>
       </div>
       <div className={Style['omikuzi-content-wapper']}>
         <div className={Style['quest-list-wapper']}>
