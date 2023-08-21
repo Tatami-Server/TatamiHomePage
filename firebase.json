@@ -16,7 +16,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "source": ".",
+    "source": "nextjs",
     "ignore": [
       "firebase.json",
       "**/.*",
