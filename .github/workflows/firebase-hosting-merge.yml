@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Install Packages
         uses: actions/checkout@v3
-        run: CI=false && npm ci && npm run build
+      - run: CI=false && npm ci && npm run build
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
