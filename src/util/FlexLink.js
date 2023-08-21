@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
-
-const FlexLink = ({children, href, color}) =>{
+const Link = ({children, href, color}) => {
   if(href.indexOf("http") === 0 ){
-    return <a target="_blank" rel="noreferrer"  href ={href} style ={{color:{color}}}>{children}</a>
-  }else{
-    return <Link to ={href} style ={{color:{color}}}>{children}</Link>
+    return <a target="_blank" rel="noreferrer" href={href} style={{color}}>{children}</a>
+  } else {
+    return <Link href={href} style={{color}}>{children}</Link>
   }
 }
-export default FlexLink;
+
+export default Link;
