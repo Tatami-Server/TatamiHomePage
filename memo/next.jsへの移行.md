@@ -19,8 +19,8 @@
 
 6. imgタグの置換
     - 既存の`img`や`Image`タグに関しては全て`Image`で統一し、`import Image next/image`で統一する
-    - 画像サイズが決まっている場合はwidthとｈeightを入れる
-    - 画像サイズが分からない（場合によって変わる）場合
+    - ローカルの画像を使う場合は`import`を使う
+    - リモートの画像を使う場合
         -`fill`と`objectFit='contain'`属性をを入れる
         - Imageタグをdivでラップする
         - Imageにクラスを適用してた場合はdivのほうに適用する
