@@ -1,5 +1,4 @@
 import { db } from '../../lib/firebase';
-
 import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, where, orderBy } from 'firebase/firestore';
 
 
@@ -48,8 +47,11 @@ const dataProvider = {
         return { data };
     },
     update: async (resource, params) => {
+        beforeUpdate(resource, params)
+        console.log('update')
         await updateDoc(doc(db, resource, params.id), params.data);
         const data = { id: params.id, ...params.data };
+        // console.log(data.body || '')
         return { data };
     },
     updateMany: async (resource, params) => {
@@ -75,5 +77,13 @@ const dataProvider = {
         return { data: params.ids };
     },
 };
+
+const beforeUpdate = (resource, params) => {
+    return console.log('beforeUpdate')
+}
+
+const beforeCreate = (resource, params) => {
+    return console.log('beforeCreate')
+}
 
 export default dataProvider;
