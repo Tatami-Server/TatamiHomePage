@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"admin.js -> @admin/App\":{\"id\":\"admin.js -> @admin/App\",\"files\":[\"static/chunks/src_admin_App_js.js\"]}}"
