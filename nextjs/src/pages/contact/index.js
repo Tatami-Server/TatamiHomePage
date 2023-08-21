@@ -4,6 +4,7 @@ import Subtitle from '@components/Subtitle';
 import UpArrow from '@components/UpArrow';
 import Igusa from '@components/Igusa';
 import Link from 'next/link';
+import Sister1 from '@images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/Contact.module.css';
@@ -32,7 +33,7 @@ const Contact = () => {
       <Igusa text="ここではお問い合わせについて掲載しているわ。
         うちの鯖主はお問い合わせフォームを作る技術はもっていないみたい…。
         お問い合わせ・意見箱というGoogleフォームがあるからそれを使ってね。"
-        image={'/images/Igusa.images/sister1.png'}
+        image={Sister1}
         creator="ナミヤ 和 様"
       />
     </div>
