@@ -14,7 +14,7 @@ import {
     ImageButtons,
     useTiptapEditor,
 } from 'ra-input-rich-text';
-import { Button } from '@mui/material';
+import { Button, IconButton, Select, MenuItem } from '@mui/material';
 import Table from '@tiptap/extension-table'
 import TableRow from '@tiptap/extension-table-row'
 import TableHeader from '@tiptap/extension-table-header'
@@ -22,6 +22,7 @@ import TableCell from '@tiptap/extension-table-cell'
 import Style from '../../style/pages/EventDetail.module.css'
 import ImageExtension from '@tiptap/extension-image'
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import GridOnIcon from '@mui/icons-material/GridOn';
 
 
 const CustomRichTextInputToolbar = ({ size, ...props }) => {
@@ -45,20 +46,34 @@ const CustomRichTextInputToolbar = ({ size, ...props }) => {
             <AlignmentButtons size={size} />
             <ListButtons size={size} />
             <LinkButtons size={size} />
-            <ImageButtons size={size} />
             <QuoteButtons size={size} />
             <ClearButtons size={size} />
+
+            <ImageButtons size={size} />
             {/* 画像アップロードボタン */}
-            <Button startIcon={<AddPhotoAlternateIcon />} onClick={handleUploadImage}>画像アップロード</Button>
+            <IconButton onClick={handleUploadImage}>
+                <AddPhotoAlternateIcon />
+            </IconButton>
+
             {/* テーブルタグを挿入するButton */}
-            <Button onClick={handleInsertTable}>テーブル</Button>
-            <Button onClick={() => editor.chain().focus().deleteTable().run()}>テーブルの削除</Button>
-            <Button onClick={() => editor.chain().focus().deleteColumn().run()}>列の削除</Button>
-            <Button onClick={() => editor.chain().focus().addColumnAfter().run()}>列の追加</Button>
-            <Button onClick={() => editor.chain().focus().deleteRow().run()}>行の削除</Button>
-            <Button onClick={() => editor.chain().focus().addRowAfter().run()}>行の追加</Button>
-            <Button onClick={() => editor.chain().focus().mergeCells().run()}>セルの結合</Button>
-            <Button onClick={() => editor.chain().focus().splitCell().run()}>セルの分割</Button>
+            <IconButton onClick={handleInsertTable}>
+                <GridOnIcon />
+            </IconButton>
+            <Select 
+                sx={{
+                    marginLeft: '-13px',
+                    outline: 'none',
+                    '.MuiSelect-select' :{ maxWidth: '20px', outline: 'none', padding: '5px' }
+                }}
+            >
+                <MenuItem onClick={() => editor.chain().focus().deleteColumn().run()}>列の削除</MenuItem>
+                <MenuItem onClick={() => editor.chain().focus().addColumnAfter().run()}>列の追加</MenuItem>
+                <MenuItem onClick={() => editor.chain().focus().deleteRow().run()}>行の削除</MenuItem>
+                <MenuItem onClick={() => editor.chain().focus().addRowAfter().run()}>行の追加</MenuItem>
+                <MenuItem onClick={() => editor.chain().focus().mergeCells().run()}>セルの結合</MenuItem>
+                <MenuItem onClick={() => editor.chain().focus().splitCell().run()}>セルの分割</MenuItem>
+                <MenuItem onClick={() => editor.chain().focus().deleteTable().run()}>テーブルの削除</MenuItem>
+            </Select>
         </RichTextInputToolbar>
     );
 };
