@@ -4,6 +4,7 @@ import { List, Datagrid, TextField, EditButton, DeleteButton } from 'react-admin
 import { Edit, SimpleForm, TextInput, SelectInput, Create } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
+import CustomImageInput from "@admin/components/CustomImageInput";
 
 const eventTypes = [
     { id: 'normal', name: '通常イベント（イベントサーバー）' },
@@ -28,6 +29,7 @@ export const EventEdit = props => (
         <SimpleForm>
             <SelectInput fullWidth required  source="eventType" label="イベントの種類" choices={eventTypes} />
             <TextInput fullWidth required source="title" label="タイトル" />
+            <CustomImageInput />
             <CustomRichTextInput source="body" />
         </SimpleForm>
     </Edit>
@@ -38,6 +40,7 @@ export const EventCreate = props => (
         <SimpleForm>
             <SelectInput fullWidth required  source="eventType" label="イベントの種類" choices={eventTypes} /> 
             <TextInput fullWidth required  source="title" label="タイトル" />
+            <CustomImageInput />
             <CustomRichTextInput source="body" />
         </SimpleForm>
     </Create>
