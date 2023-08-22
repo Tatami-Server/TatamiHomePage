@@ -1,6 +1,7 @@
-import { db } from '../../lib/firebase';
+import { db, storage } from '@lib/firebase';
 import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, where, orderBy } from 'firebase/firestore';
-
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
+import { v4 as uuidv4 } from "uuid";
 
 const dataProvider = {
     getList: async (resource, params) => {
@@ -40,19 +41,18 @@ const dataProvider = {
         const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         return { data, total: data.length };
     },
-    create: async (resource, params) => {
-        const docRef = await addDoc(collection(db, resource), params.data);
-        const data = { id: docRef.id, ...params.data };
-        await updateDoc(doc(db, resource, data.id), data);
-        return { data };
+    create: async (resource, { id, data }) => {
+        data = await uploadImages(resource, data)
+        const docRef = await addDoc(collection(db, resource), data);
+        const docData = { id: docRef.id, ...data };
+        await updateDoc(doc(db, resource, id), docData);
+        return { data: docData };
     },
-    update: async (resource, params) => {
-        beforeUpdate(resource, params)
-        console.log('update')
-        await updateDoc(doc(db, resource, params.id), params.data);
-        const data = { id: params.id, ...params.data };
-        // console.log(data.body || '')
-        return { data };
+    update: async (resource, { id, data }) => {
+        data = await uploadImages(resource, data)
+        await updateDoc(doc(db, resource, id), data);
+        const docData = { id, ...data };
+        return { data: docData };
     },
     updateMany: async (resource, params) => {
         const batch = writeBatch(db);
@@ -76,14 +76,23 @@ const dataProvider = {
         await batch.commit();
         return { data: params.ids };
     },
+    uploadToStorage: async (resource, file) => {
+        const id = uuidv4()
+        const storageRef = ref(storage, `${resource}/${id}`)
+        await uploadBytes(storageRef, file)
+        return getDownloadURL(storageRef)
+    } 
 };
 
-const beforeUpdate = (resource, params) => {
-    return console.log('beforeUpdate')
-}
 
-const beforeCreate = (resource, params) => {
-    return console.log('beforeCreate')
+const uploadImages = async (resource, data) => {
+    await Promise.all(Object.keys(data).map(async key => {
+        if (data[key].hasOwnProperty('rawFile')) {
+            data[key].src = await dataProvider.uploadToStorage(resource, data[key].rawFile)
+            delete data[key].rawFile
+        }
+    }))
+    return data
 }
 
 export default dataProvider;

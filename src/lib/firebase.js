@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, getDocs, getDoc, doc, collection, query, orderBy } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
+import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
     apiKey: "AIzaSyCSSIgM_OdbDqXt_Zl_uwBPNIjye5KE_dk",
@@ -13,6 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
+const storage = getStorage(app)
 const auth = getAuth(app);
 
 const getAll = async (resource, params) => {
@@ -41,4 +43,4 @@ const getOne = async (resource, id) => {
     return {id: docSnap.id, ...data}
 }
 
-export { app, db, auth, getAll, getOne, find }
+export { app, db, auth, storage, getAll, getOne, find }
