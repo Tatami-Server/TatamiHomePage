@@ -37,6 +37,11 @@ margin-bottom: 50px;
     height: auto;
 }
 
+.event-body table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
 .event-body tr,.event-body td {
     border: 1px solid;
 }
