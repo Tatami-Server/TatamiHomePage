@@ -1,40 +1,41 @@
 // notices.js
+import CustomDateField from "@admin/components/CustomDateField";
 import * as React from "react";
-import { List, Datagrid, TextField, ReferenceField, EditButton, DeleteButton } from 'react-admin';
-import { Edit, SimpleForm, TextInput, DateInput, ReferenceInput, SelectInput } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DeleteButton, UrlField } from 'react-admin';
+import { Edit, SimpleForm, TextInput, DateInput } from 'react-admin';
 import { Create } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
 
-
 export const NoticeList = props => (
     <List {...props} sort={{ field: 'date', order: 'desc' }}>
-        <Datagrid>
+        <Datagrid rowClick="edit" sx={{ '& .RaDatagrid-root': { width: '20%' } }}>
             <TextField source="title" label="タイトル" />
-            <TextField source="url" label="URL" />
+            <UrlField source="url" label="URL" />
             <TextField source="date" label="日付" />
+            <CustomDateField source='updatedAt' label='更新日時' />
             <EditButton />
             <DeleteButton />
         </Datagrid>
     </List>
 );
 
+const EditForm = () => (
+    <SimpleForm>
+        <TextInput required fullWidth source="title" label="タイトル" />
+        <TextInput required fullWidth source="url" label="URL" />
+        <DateInput required source="date" label="日付" />
+    </SimpleForm>
+)
+
 export const NoticeEdit = props => (
     <Edit {...props}>
-        <SimpleForm>
-            <TextInput fullWidth source="title" label="タイトル" />
-            <TextInput fullWidth source="url" label="URL" />
-            <DateInput source="date" label="日付" />
-        </SimpleForm>
+        <EditForm />
     </Edit>
 );
 
 export const NoticeCreate = props => (
     <Create {...props}>
-        <SimpleForm>
-            <TextInput fullWidth source="title" label="タイトル" />
-            <TextInput fullWidth source="url" label="URL" />
-            <DateInput source="date" label="日付" />        
-        </SimpleForm>
+        <EditForm />
     </Create>
 );
 
@@ -43,7 +44,8 @@ export const NoticeShow = props => (
         <SimpleShowLayout>
             <TextField source="title" label="タイトル" />
             <TextField source="url" label="URL" />
-            <TextField source="date" label="日付" />        
+            <TextField source="date" label="日付" />
+            <CustomDateField source='updatedAt' label='更新日時' />
         </SimpleShowLayout>
     </Show>
 );

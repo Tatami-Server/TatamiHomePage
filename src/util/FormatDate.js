@@ -1,13 +1,13 @@
 import React from 'react';
 import moment from 'moment';
 
-const formatDate = (dateString) => {
+const formatDate = (dateString, format) => {
   const date = moment(dateString);
-  return date.format("YYYY年MM月DD日");
+  return date.format(format || "YYYY年MM月DD日");
 };
 
-const FormatDate = ({date}) => {
-  const formattedDate = formatDate(date);
+const FormatDate = ({date, format}) => {
+  const formattedDate = formatDate(date, format);
   
   return <>{formattedDate}</>;
 };

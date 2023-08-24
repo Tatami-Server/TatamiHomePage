@@ -28,7 +28,7 @@ const SubProducts = ({products}) => {
                   </div>
                 </div>
                 <div className={Style.fill}>
-                  <Image src={img} alt="サーバー参加方法" />
+                  <Image src={img} width={600} height={300} />
                 </div>
               </div>
               <div className={Style["product-text"]}>

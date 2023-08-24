@@ -27,9 +27,13 @@ import lifeSarver1 from '@images/event.images/event4-1.png';
 import fusuma from '@images/Igusa.images/sister2.png';
 
 import { getAll } from '@lib/firebase';
-import Link from 'next/link'
+import groupBy from '@util/groupBy';
 
 const Event = ({events}) => {
+
+  const eventsGroup = groupBy(events, 'eventType')
+
+  console.log(eventsGroup.normal)
 
   const normalEventList=[
     {href:"https://seesaawiki.jp/tatamiserver/d/%c6%a8%c1%f6%c3%e6", imgTitle:"逃走中", img:normalEvent1, title:"逃走中", description:"オリジナルマップとオリジナルミッションで繰り広げる逃亡劇！"},
@@ -82,13 +86,7 @@ const Event = ({events}) => {
           </div>
           <Subtitle subtitle="管理画面イベント"/>
           <div className="Products">
-            {events.map(event => {
-              return (
-                <div>
-                  <Link href={`/event/${event.id}`}>{ event.title }</Link>
-                </div>
-              )
-            })}
+            <SubProducts products={events}/>
           </div>
           <UpArrow/>
       </main>
@@ -106,8 +104,9 @@ const Event = ({events}) => {
 export async function getStaticProps() {
     const events = (await getAll('event')).map(event => {
       return {
-        href: `/event/${event.id}`,
+        href: event.url || `/event/${event.id}`,
         img: event.mainImg?.src || '',
+        imgTitle: event.title,
         ...event
       }
     })

@@ -5,12 +5,12 @@ import Style from '@style/pages/EventDetail.module.css'
 
 import parse from 'html-react-parser';
 
-const EventDetail = ({event}) => {
-    const body = event.body.replace(/colwidth="([0-9]+)"/g, `style="width: $1px"`)
+const EventDetail = ({event: { title, body, mainImg } }) => {
+    body = body.replace(/colwidth="([0-9]+)"/g, `style="width: $1px"`)
 
     return (
         <>
-            <Heading heading={event.title} />
+            <Heading heading={title} />
             <div className={Style["event-body"]}>{ parse(`${body}`) }</div>
         </>
     );
