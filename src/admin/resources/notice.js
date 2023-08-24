@@ -10,7 +10,7 @@ export const NoticeList = props => (
     <List {...props} sort={{ field: 'date', order: 'desc' }}>
         <Datagrid rowClick="edit" sx={{ '& .RaDatagrid-root': { width: '20%' } }}>
             <TextField source="title" label="タイトル" />
-            <UrlField source="url" label="URL" />
+            {/* <UrlField source="url" label="URL" /> */}
             <TextField source="date" label="日付" />
             <CustomDateField source='updatedAt' label='更新日時' />
             <EditButton />
