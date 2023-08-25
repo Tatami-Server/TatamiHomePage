@@ -2,6 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, getDocs, getDoc, doc, collection, query, orderBy } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { getStorage } from 'firebase/storage'
+import { firestoreTimestampFormat, formatDate } from '@util/DateFormatter';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCSSIgM_OdbDqXt_Zl_uwBPNIjye5KE_dk",
@@ -25,7 +26,11 @@ const getAll = async (resource, params) => {
         dbQuery = query(dbQuery, orderBy(field, order))
     }
     const querySnapshot = await getDocs(dbQuery);
-    const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    const data = querySnapshot.docs.map(doc => {
+        let docData = doc.data()
+        docData = firestoreTimestampFormat(docData, true)
+        return { id: doc.id, ...docData }
+    })
     return data
 }
 
@@ -39,7 +44,8 @@ const find = async (resource, searchParam) => {
 
 const getOne = async (resource, id) => {
     const docSnap = await getDoc(doc(db, resource, id));
-    const data = docSnap.data()
+    let data = docSnap.data()
+    data = firestoreTimestampFormat(data, true)
     return {id: docSnap.id, ...data}
 }
 

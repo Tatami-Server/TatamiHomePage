@@ -1,7 +1,6 @@
 // notices.js
-import CustomDateField from "@admin/components/CustomDateField";
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DeleteButton, UrlField } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DeleteButton, UrlField, DateField } from 'react-admin';
 import { Edit, SimpleForm, TextInput, DateInput } from 'react-admin';
 import { Create } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
@@ -11,8 +10,8 @@ export const NoticeList = props => (
         <Datagrid rowClick="edit" sx={{ '& .RaDatagrid-root': { width: '20%' } }}>
             <TextField source="title" label="タイトル" />
             {/* <UrlField source="url" label="URL" /> */}
-            <TextField source="date" label="日付" />
-            <CustomDateField source='updatedAt' label='更新日時' />
+            <DateField source="date" label="日付" />
+            <DateField source='updatedAt' label='更新日時' showTime />
             <EditButton />
             <DeleteButton />
         </Datagrid>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 // cssインポート
 import Style from '@style/components/News.module.css';
-import FormatDate from '@util/FormatDate';
+import { FormatDate } from '@util/DateFormatter';
 
 const News = ({news}) => {
 
@@ -18,7 +18,7 @@ const News = ({news}) => {
                   <FormatDate date={date} />
                 </p>
                 <p className={Style.newsContent}>
-                  <Link className={Style.newsHlef} href={ url }>{ title } </Link>
+                  <Link className={Style.newsHlef} href={ url || '/' }>{ title } </Link>
                 </p>
               </div>
             );

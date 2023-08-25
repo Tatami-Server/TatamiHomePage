@@ -1,11 +1,10 @@
 //event.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DeleteButton, DateField, RichTextField } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DeleteButton, DateField } from 'react-admin';
 import { Edit, SimpleForm, TextInput, SelectInput, Create } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
-import CustomDateField from "@admin/components/CustomDateField";
 
 const eventTypes = [
     { id: 'normal', name: '通常イベント（イベントサーバー）' },
@@ -18,7 +17,7 @@ export const EventList = props => (
     <List {...props}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="タイトル" />
-            <CustomDateField source='updatedAt' label='更新日時' />
+            <DateField source='updatedAt' label='更新日時' showTime />
             <EditButton />
             <DeleteButton />
         </Datagrid>

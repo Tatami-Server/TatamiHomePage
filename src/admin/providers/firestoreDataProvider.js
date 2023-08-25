@@ -1,5 +1,6 @@
 import { db, storage } from '@lib/firebase';
-import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, where, orderBy, serverTimestamp, startAt, endAt } from 'firebase/firestore';
+import { firestoreTimestampFormat } from '@util/DateFormatter';
+import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, where, orderBy, serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { v4 as uuidv4 } from "uuid";
 
@@ -23,7 +24,11 @@ const dataProvider = {
         }
         
         const querySnapshot = await getDocs(dbQuery);
-        const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        const data = querySnapshot.docs.map(doc => {
+            let docData = doc.data()
+            docData = firestoreTimestampFormat(docData)
+            return { id: doc.id, ...docData }
+        })
         const { perPage, page } = params.pagination
         const start = (page - 1) * perPage
         const end = (page * perPage) - 1
@@ -33,7 +38,8 @@ const dataProvider = {
     },
     getOne: async (resource, params) => {
         const docSnap = await getDoc(doc(db, resource, params.id));
-        const data = { id: docSnap.id, ...docSnap.data() };
+        let data = { id: docSnap.id, ...docSnap.data() };
+        data = firestoreTimestampFormat(data)
         return { data };
     },
     getMany: async (resource, params) => {
