@@ -102,8 +102,7 @@ function Home({news}) {
 
 export async function getStaticProps() {
   const news = await getAll('notice', { sort: { field: 'date', order: 'desc' } })
-
-  console.log(news)
+  
   return {
     props: { news },
     revalidate: 60,
