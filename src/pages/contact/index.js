@@ -12,7 +12,7 @@ import Style from '@style/pages/Contact.module.css';
 const Contact = () => {
   return (
     <div>
-      <main>
+
         <Heading heading="お問い合わせ・意見箱"/>
         <Subtitle subtitle="お気軽にお問い合わせください"/>
         <div className='subtitle-content'>
@@ -29,8 +29,7 @@ const Contact = () => {
           </p>
         </div>
         <UpArrow/>
-      </main>
-      <Igusa text="ここではお問い合わせについて掲載しているわ。
+        <Igusa text="ここではお問い合わせについて掲載しているわ。
         うちの鯖主はお問い合わせフォームを作る技術はもっていないみたい…。
         お問い合わせ・意見箱というGoogleフォームがあるからそれを使ってね。"
         image={Sister1}

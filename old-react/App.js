@@ -43,6 +43,7 @@ function App() {
           <Route path={`/sbuscription/`} element={<Subscription />}/>
           <Route path={`/map/`} element={<Map />} />
           <Route path={`/omikuzi/`} element={<Omikuzi />} />
+          
 
           <Route path={`/admin/*`} element={<AdminApp />} />
           <Route path={`/admin/register`} element={<RegisterPage />} />
