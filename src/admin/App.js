@@ -60,7 +60,7 @@ const App = () => {
                     name="admin"
                     list={AdminList}
                     options={{
-                        label: '承認待ちアカウント',
+                        label: '管理ユーザー',
                     }}
                 />
 

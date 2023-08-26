@@ -1,15 +1,30 @@
 import * as React from "react";
-import { List, Datagrid, TextField, Button, FunctionField } from 'react-admin';
+import { List, Datagrid, TextField, Button, FunctionField, DateField, BooleanField } from 'react-admin';
 import dataProvider from "../providers/firestoreDataProvider";
 
 const ApproveButton = (record) => {
+    if(record.status)  return
     const approve = () => {
         dataProvider.update('admin', { 
             id: record.id, 
             data: { status: true } 
         })
     }
-    return <Button onClick={approve}><small>承認</small></Button>;
+    return (
+        <Button
+            variant="contained"
+            color="success"
+            size="medium"
+            sx={{
+                '.MuiButton-startIcon': {
+                    margin: 0,
+                }
+            }}
+            onClick={approve}
+        >
+            承認
+        </Button>
+    )
 }
 
 const ApproveField = props => {
@@ -18,10 +33,13 @@ const ApproveField = props => {
 
 export const AdminList = props => {
     return (
-        <List {...props} filter={{ status: ['==', false] }}>
+        <List {...props} sort={ { field: 'status', order: 'asc' }}>
             <Datagrid bulkActionButtons={false}>
-                <TextField source="email" label="メールアドレス" />
                 <ApproveField />
+                <TextField source="email" label="メールアドレス" />
+                <BooleanField source="status" label="承認ステータス" />
+                <DateField source='createdAt' label='作成日時' showTime />
+                <DateField source='updatedAt' label='更新日時' showTime />
             </Datagrid>
         </List>
     )
