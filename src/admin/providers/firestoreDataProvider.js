@@ -1,6 +1,6 @@
 import { db, storage } from '@lib/firebase';
 import { firestoreTimestampFormat } from '@util/DateFormatter';
-import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, where, orderBy, serverTimestamp } from 'firebase/firestore';
+import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, DocumentReference, orderBy, serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { v4 as uuidv4 } from "uuid";
 
@@ -17,11 +17,11 @@ const dataProvider = {
         }
         
         const querySnapshot = await getDocs(dbQuery);
-        let data = querySnapshot.docs.map(doc => {
-            let docData = doc.data()
-            docData = firestoreTimestampFormat(docData)
+        const data = await Promise.all(querySnapshot.docs.map(async doc => {
+            const docData = await dataFormatForFirestore(doc.data())
             return { id: doc.id, ...docData }
-        })
+        }))
+
         if (filter !== {}) {
             for (const field of Object.values(filter)) {
                 const { key, operator, value } = field
@@ -38,7 +38,7 @@ const dataProvider = {
     getOne: async (resource, params) => {
         const docSnap = await getDoc(doc(db, resource, params.id));
         let data = { id: docSnap.id, ...docSnap.data() };
-        data = firestoreTimestampFormat(data)
+        data = await dataFormatForFirestore(data)
         return { data };
     },
     getMany: async (resource, params) => {
@@ -55,24 +55,13 @@ const dataProvider = {
         return { data, total: data.length };
     },
     create: async (resource, { data }) => {
-        data = await uploadImages(resource, data)
-        data = {
-            ...data, 
-            createdAt: serverTimestamp(),
-            updatedAt: serverTimestamp(),
-        }
-        data = filterForDoc(data)
+        data = await dataCreateForFirestore(resource, data)
         const { id } = await addDoc(collection(db, resource), data);
         await updateDoc(doc(db, resource, id), { id });
         return { data: { id, ...data} };
     },
     update: async (resource, { id, data }) => {
-        data = await uploadImages(resource, data)
-        data = {
-            ...data, 
-            updatedAt: serverTimestamp(),
-        }
-        data = filterForDoc(data)
+        data = await dataCreateForFirestore(resource, data)
         await updateDoc(doc(db, resource, id), data);
         const docData = { id, ...data };
         return { data: docData };
@@ -108,6 +97,26 @@ const dataProvider = {
 };
 
 
+const dataCreateForFirestore = async (resource, data) => {
+    data = filterForDoc(data)
+    data = await uploadImages(resource, data)
+    data = makeReference(resource, data)
+    data = {
+        createdAt: serverTimestamp(),
+        ...data, 
+        updatedAt: serverTimestamp(),
+    }
+
+    return data
+}
+
+const dataFormatForFirestore = async (data) => {
+    data = firestoreTimestampFormat(data)
+    data = refToId(data)
+    return data
+}
+
+
 const uploadImages = async (resource, data) => {
     await Promise.all(Object.keys(data).map(async key => {
         if (data[key]?.hasOwnProperty('rawFile')) {
@@ -141,13 +150,35 @@ const  getImageDimensions = (file) => {
     });
 }
 
-const filterForDoc = (obj) => {
-    for (const v in obj) {
-        if (obj[v] === undefined) {
-            delete obj[v];
+const filterForDoc = (data) => {
+    for (const v in data) {
+        if (data[v] === undefined) {
+            delete data[v];
         }
     }
-    return obj
+    return data
+}
+
+const makeReference = (resource, data) => {
+    for (const key in data) {
+        if (key.includes('Ref')) {
+            const id = data[key]
+            const ref = doc(db, resource, id)
+            data[key] = ref
+        }
+    }
+
+    return data
+}
+
+const refToId = (data) => {
+    for (const key in data) {
+        const field = data[key]
+        if (field instanceof DocumentReference) {
+            data[key] = field.id
+        }
+    }
+    return data
 }
 
 export default dataProvider;

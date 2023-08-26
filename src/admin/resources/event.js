@@ -1,17 +1,10 @@
 //event.js
 import * as React from "react";
 import { List, Datagrid, TextField, EditButton, DeleteButton, DateField } from 'react-admin';
-import { Edit, SimpleForm, TextInput, SelectInput, Create } from 'react-admin';
+import { Edit, SimpleForm, TextInput, Create, ReferenceInput, AutocompleteInput } from 'react-admin';
 import { Show, SimpleShowLayout } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
-
-const eventTypes = [
-    { id: 'normal', name: '通常イベント（イベントサーバー）' },
-    { id: 'exclusive', name: 'サブスクライバー限定イベント（イベントサーバー）' },
-    { id: 'alltime', name: '常時イベント（常時サーバー）' },
-    { id: 'life', name: '生活サーバー' },
-    ];
 
 export const EventList = props => (
     <List {...props}>
@@ -26,7 +19,14 @@ export const EventList = props => (
 
 const EditForm = () => (
     <SimpleForm>
-        <SelectInput fullWidth required  source="eventType" label="イベントの種類" choices={eventTypes} />
+        <ReferenceInput 
+            source="eventTypeRef"
+            reference="eventType"
+            sort={{ field: 'sortNum', order: 'ASC' }}
+            perPage={100}
+        >
+            <AutocompleteInput label="イベント種別" fullWidth />
+        </ReferenceInput>
         <TextInput fullWidth required source="title" label="タイトル" />
         <TextInput  fullWidth source="url" label="URL" placeholder="本文を入力せず、特定のページに飛ばしたいときのみ入力" />
         <CustomImageInput />
