@@ -58,9 +58,9 @@ const dataProvider = {
     create: async (resource, { data }) => {
         data = await uploadImages(resource, data)
         data = {
+            ...data, 
             createdAt: serverTimestamp(),
             updatedAt: serverTimestamp(),
-            ...data, 
         }
         data = filterForDoc(data)
         const { id } = await addDoc(collection(db, resource), data);
@@ -70,8 +70,8 @@ const dataProvider = {
     update: async (resource, { id, data }) => {
         data = await uploadImages(resource, data)
         data = {
-            updatedAt: serverTimestamp(),
             ...data, 
+            updatedAt: serverTimestamp(),
         }
         data = filterForDoc(data)
         await updateDoc(doc(db, resource, id), data);
