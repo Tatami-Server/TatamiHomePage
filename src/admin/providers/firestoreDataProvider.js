@@ -1,4 +1,4 @@
-import { db, storage } from '@lib/firebase';
+import { db, filterForDoc, storage } from '@lib/firebase';
 import { firestoreTimestampFormat } from '@util/DateFormatter';
 import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, DocumentReference, orderBy, serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
@@ -30,7 +30,7 @@ const dataProvider = {
         }
         const { perPage, page } = params.pagination
         const start = (page - 1) * perPage
-        const end = (page * perPage) - 1
+        const end = page * perPage
         const pagination = data.slice(start, end)
 
         return { data: pagination, total: data.length };
@@ -150,20 +150,12 @@ const  getImageDimensions = (file) => {
     });
 }
 
-const filterForDoc = (data) => {
-    for (const v in data) {
-        if (data[v] === undefined) {
-            delete data[v];
-        }
-    }
-    return data
-}
-
 const makeReference = (resource, data) => {
     for (const key in data) {
         if (key.includes('Ref')) {
             const id = data[key]
-            const ref = doc(db, resource, id)
+            const refResource = key.replace('Ref', '')
+            const ref = doc(db, refResource, id)
             data[key] = ref
         }
     }

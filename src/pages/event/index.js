@@ -29,11 +29,8 @@ import fusuma from '@images/Igusa.images/sister2.png';
 import { getAll } from '@lib/firebase';
 import groupBy from '@util/groupBy';
 
-const Event = ({events}) => {
-
-  const eventsGroup = groupBy(events, 'eventType')
-
-  console.log(eventsGroup.normal)
+const Event = ({eventsGroupByType}) => {
+  const eventsWithGroup = Object.entries(eventsGroupByType)
 
   const normalEventList=[
     {href:"https://seesaawiki.jp/tatamiserver/d/%c6%a8%c1%f6%c3%e6", imgTitle:"逃走中", img:normalEvent1, title:"逃走中", description:"オリジナルマップとオリジナルミッションで繰り広げる逃亡劇！"},
@@ -66,28 +63,17 @@ const Event = ({events}) => {
   
   return (
     <div>
-          <Heading heading="イベント一覧"/>
-          <Subtitle subtitle="通常イベント（イベントサーバー）"/>
-          <div className="Products">
-            <SubProducts products={normalEventList}/>
-          </div>
-          <Subtitle subtitle="サブスクライバー限定イベント（イベントサーバー）"/>
-          <div className="Products">
-            <SubProducts products={subEventList}/>
-          </div>
-          <Subtitle subtitle="常時イベント（常時サーバー）"/>
-          <div className="Products">
-            <SubProducts products={allTimeEventList}/>
-          </div>
-          <Subtitle subtitle="生活サーバー"/>
-          <div className="Products">
-            <SubProducts products={lifeSarver}/>
-          </div>
-          <Subtitle subtitle="管理画面イベント"/>
+      <Heading heading="イベント一覧"/>
+      
+      {eventsWithGroup.map(([groupName, events]) => (
+        <div key={groupName}>
+          <Subtitle subtitle={groupName} />
           <div className="Products">
             <SubProducts products={events}/>
           </div>
-          <UpArrow/>
+        </div>
+      ))}
+      <UpArrow/>
       <Igusa text="初めまして！私は「井草フスマ」って言います！
         たくさんの人に元気や笑顔を振りまきたいの！
         イベントもたくさんあって、目移りしちゃうね！
@@ -100,17 +86,18 @@ const Event = ({events}) => {
 }
 
 export async function getStaticProps() {
-    const events = (await getAll('event')).map(event => {
+    const events = (await getAll('event', { sort: { field: 'updatedAt', order: 'desc' }})).map(event => {
       return {
         ...event,
         href: event.url || `/event/${event.id}`,
         img: event.mainImg?.src || '',
         imgTitle: event.title,
+        eventTypeName: event.eventType.title || ''
       }
     })
 
     return {
-        props: { events },
+        props: { eventsGroupByType: groupBy(events, 'eventTypeName', ['eventType.sortNum', 'asc']) },
         revalidate: 60,
     }
 }

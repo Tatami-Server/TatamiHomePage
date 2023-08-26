@@ -21,7 +21,7 @@ const Igusa = (props) => {
   return (
     <>
       <div className={`${Style['igusa-maru']} ${!showImage ? Style['show']: Style['visible'] }`} src={tatamiMaru} alt="Image" onClick={handleClick}>
-        <Image className={Style['kyuusu']} src={kyuusu}/>
+        <Image className={Style['kyuusu']} src={kyuusu} alt='急須' />
         <p>？？？</p>
       </div>
       <div className={`${Style['igusa-wrapper']} ${showImage ? Style['show']: Style['visible']}`} onClick={handleClick}>
