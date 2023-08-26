@@ -102,10 +102,10 @@ const Event = ({events}) => {
 export async function getStaticProps() {
     const events = (await getAll('event')).map(event => {
       return {
+        ...event,
         href: event.url || `/event/${event.id}`,
         img: event.mainImg?.src || '',
         imgTitle: event.title,
-        ...event
       }
     })
 
