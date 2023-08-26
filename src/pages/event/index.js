@@ -66,7 +66,6 @@ const Event = ({events}) => {
   
   return (
     <div>
-      <main>
           <Heading heading="イベント一覧"/>
           <Subtitle subtitle="通常イベント（イベントサーバー）"/>
           <div className="Products">
@@ -89,7 +88,6 @@ const Event = ({events}) => {
             <SubProducts products={events}/>
           </div>
           <UpArrow/>
-      </main>
       <Igusa text="初めまして！私は「井草フスマ」って言います！
         たくさんの人に元気や笑顔を振りまきたいの！
         イベントもたくさんあって、目移りしちゃうね！
