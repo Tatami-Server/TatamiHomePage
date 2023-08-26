@@ -30,7 +30,7 @@ const EditForm = () => (
         <TextInput fullWidth required source="title" label="タイトル" />
         <TextInput  fullWidth source="url" label="URL" placeholder="本文を入力せず、特定のページに飛ばしたいときのみ入力" />
         <CustomImageInput />
-        <CustomRichTextInput label="本文" source="body" />
+        <CustomRichTextInput label="本文" source="body" resource="event" />
     </SimpleForm>
 )
 

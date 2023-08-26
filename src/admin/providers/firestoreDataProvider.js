@@ -1,8 +1,6 @@
-import { db, filterForDoc, storage } from '@lib/firebase';
+import { db, filterForDoc, storage, uploadToStorage } from '@lib/firebase';
 import { firestoreTimestampFormat } from '@util/DateFormatter';
 import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, DocumentReference, orderBy, serverTimestamp } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { v4 as uuidv4 } from "uuid";
 
 const dataProvider = {
     getList: async (resource, { filter, sort, ...params }) => {
@@ -88,12 +86,6 @@ const dataProvider = {
         await batch.commit();
         return { data: params.ids };
     },
-    uploadToStorage: async (resource, file) => {
-        const id = uuidv4()
-        const storageRef = ref(storage, `${resource}/${id}`)
-        await uploadBytes(storageRef, file)
-        return getDownloadURL(storageRef)
-    } 
 };
 
 
@@ -123,7 +115,7 @@ const uploadImages = async (resource, data) => {
             const file = data[key].rawFile
 
             data[key] = {
-                src: await dataProvider.uploadToStorage(resource, file) || '',
+                src: await uploadToStorage(resource, file) || '',
                 ...await getImageDimensions(file)
             }
         }

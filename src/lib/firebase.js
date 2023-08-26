@@ -3,6 +3,8 @@ import { getFirestore, getDocs, getDoc, doc, collection, query, orderBy, Documen
 import { getAuth } from 'firebase/auth'
 import { getStorage } from 'firebase/storage'
 import { firestoreTimestampFormat } from '@util/DateFormatter';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
+import { v4 as uuidv4 } from "uuid";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCSSIgM_OdbDqXt_Zl_uwBPNIjye5KE_dk",
@@ -47,6 +49,13 @@ export const getOne = async (resource, id) => {
     data = await dataFormatForEnd(data)
     return {id: docSnap.id, ...data}
 }
+
+export const uploadToStorage = async (resource, file) => {
+    const id = uuidv4()
+    const storageRef = ref(storage, `${resource}/${id}`)
+    await uploadBytes(storageRef, file)
+    return getDownloadURL(storageRef)
+} 
 
 export const filterForDoc = (data) => {
     for (const v in data) {
