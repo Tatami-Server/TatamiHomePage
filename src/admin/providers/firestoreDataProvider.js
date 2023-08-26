@@ -5,18 +5,11 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { v4 as uuidv4 } from "uuid";
 
 const dataProvider = {
-    getList: async (resource, params) => {
+    getList: async (resource, { filter, sort, ...params }) => {
         let dbQuery = collection(db, resource)
 
-        if (params.filter && !params.filter === {}) {
-            for (let field in params.filter) {
-                const [ operator, value ] = params.filter[field]
-                dbQuery = query(dbQuery, where(field, operator, value))
-            }
-        }
-
-        if(params.sort.field !== 'id') {
-            const { field, order } = params.sort
+        if(sort.field !== 'id') {
+            const { field, order } = sort
             dbQuery = query(dbQuery, orderBy(field, order.toLowerCase()))
         }
         else {
@@ -24,11 +17,17 @@ const dataProvider = {
         }
         
         const querySnapshot = await getDocs(dbQuery);
-        const data = querySnapshot.docs.map(doc => {
+        let data = querySnapshot.docs.map(doc => {
             let docData = doc.data()
             docData = firestoreTimestampFormat(docData)
             return { id: doc.id, ...docData }
         })
+        if (filter !== {}) {
+            for (const field of Object.values(filter)) {
+                const { key, operator, value } = field
+                // TOOD filterロジック実装
+            }
+        }
         const { perPage, page } = params.pagination
         const start = (page - 1) * perPage
         const end = (page * perPage) - 1
