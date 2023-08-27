@@ -111,3 +111,15 @@
 
 
 
+.skin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+.skin-container p {
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}

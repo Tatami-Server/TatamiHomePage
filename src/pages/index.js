@@ -12,6 +12,8 @@ import Igusa from '@components/Igusa';
 
 // reactの機能をインポート
 import { useRef} from 'react';
+import useSWR from 'swr'
+
 
 // 画像をインポート
 import logo from '@images/Home.images/logo.png';
@@ -61,16 +63,29 @@ function Home({news}) {
   }
   const myRef = useRef(null);
 
+
+  const { data: serverStat } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json()));
+
   return (
     <>
       <section className={Style["hero-content-warpper"]}>
         <div className={Style.hero}>
-        <div className={Style["first-view-header"]}>
-            <div className={Style.spuare}></div>
-            <div className={Style.triangle}></div>
-            <div className={`${Style.triangle} ${Style.line}`}></div>
-            <Image className={Style.logo} src='/images/Home.images/logo.png' width={300} height={300} alt="畳アイコン" />
-        </div>
+          <div className={Style["first-view-header"]}>
+              <div className={Style.spuare}></div>
+              <div className={Style.triangle}></div>
+              <div className={`${Style.triangle} ${Style.line}`}></div>
+              <Image className={Style.logo} src='/images/Home.images/logo.png' width={300} height={300} alt="畳アイコン" />
+          </div>
+          <div className={Style["skin-container"]}>
+            {serverStat && serverStat.players.map(player => {
+              return (
+                <div>
+                  <Image key={player} src={`https://mineskin.eu/helm/${player}`} width={70} height={70} alt="skin" />
+                  <p>{player}</p>
+                </div>
+              )
+            })}
+          </div>
           <div className={Style["arrow-icon"]} onClick={() => scrollToRef(myRef)}>
             <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
               <IoIosArrowDown/>
