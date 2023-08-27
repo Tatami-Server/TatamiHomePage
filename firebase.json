@@ -26,8 +26,7 @@
   "functions": {
     "source": "functions",
     "predeploy": [
-      "npm install",
-      "npm run build"
+      "npm install"
     ],
     "runtime": "nodejs16",
     "codebase": "default"

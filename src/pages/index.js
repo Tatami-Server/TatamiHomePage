@@ -77,11 +77,11 @@ function Home({news}) {
               <Image className={Style.logo} src='/images/Home.images/logo.png' width={300} height={300} alt="畳アイコン" />
           </div>
           <div className={Style["skin-container"]}>
-            {serverStat && serverStat.players.map(player => {
+            {serverStat && serverStat.players.sample.map(({name}) => {
               return (
                 <div>
-                  <Image key={player} src={`https://mineskin.eu/helm/${player}`} width={70} height={70} alt="skin" />
-                  <p>{player}</p>
+                  <Image key={name} src={`https://mineskin.eu/helm/${name}`} width={70} height={70} alt="skin" />
+                  <p>{name}</p>
                 </div>
               )
             })}

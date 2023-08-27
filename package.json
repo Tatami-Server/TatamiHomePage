@@ -28,7 +28,7 @@
     "eslint-config-next": "13.4.12",
     "firebase": "^9.0.0",
     "html-react-parser": "^4.2.0",
-    "minecraft-query": "^1.0.13",
+    "minecraft-server-util": "^5.4.4",
     "moment": "^2.29.4",
     "next": "13.0.0",
     "ra-data-firebase-client": "^3.0.0",
