@@ -30,6 +30,7 @@ import event from '@images/Home.images/event.png';
 import life from '@images/Home.images/life.png';
 import join from '@images/Home.images/join.png';
 import tatami from '@images/Igusa.images/sister1.png';
+import { Rings } from 'react-loader-spinner'
 
 // cssインポート
 import Style from '@style/pages/Home.module.css';
@@ -63,7 +64,6 @@ function Home({news}) {
   }
   const myRef = useRef(null);
 
-
   const { data: serverStat } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json()));
 
   return (
@@ -85,6 +85,7 @@ function Home({news}) {
                 </div>
               )
             })}
+            { !serverStat && <Rings height={150} width={150} />}
           </div>
           <div className={Style["arrow-icon"]} onClick={() => scrollToRef(myRef)}>
             <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
