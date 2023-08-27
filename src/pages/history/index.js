@@ -24,18 +24,18 @@ const History = () => {
         historyContentRefs.current[i] = createRef();
       })};
 
-  const[scrollPosition, setScrollPosition]= useState(window.scrollY);
-  const onScroll= () => setScrollPosition(window.scrollY);
+  // const[scrollPosition, setScrollPosition]= useState(window.scrollY);
+  // const onScroll= () => setScrollPosition(window.scrollY);
   useEffect(() => {
-    window.addEventListener("scroll",onScroll)
-    return() => window.removeEventListener("scroll",onScroll)
+    // window.addEventListener("scroll",onScroll)
+    // return() => window.removeEventListener("scroll",onScroll)
   });
 
   return (
     <>
       <HistoryWarps 
       contentRef={historyContentRefs.current} 
-      scrollPosition={scrollPosition}
+      // scrollPosition={scrollPosition}
       />
         <div className={Style["history-hero-content-wrapper"]} 
           style={{backgroundImage: `url(${Historyimg})`,

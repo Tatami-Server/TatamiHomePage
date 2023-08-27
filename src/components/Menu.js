@@ -4,8 +4,6 @@ import { stack as Burger } from 'react-burger-menu';
 // コンポーネントインポート
 import Link from 'next/link';
 
-// cssインポート
-import '@style/components/Menu.css';
 
 const Menu = (props) => {
 

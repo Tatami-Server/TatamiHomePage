@@ -30,15 +30,15 @@ import { red } from '@mui/material/colors';
 
 // 音インポート
 import useSound from 'use-sound';
-import atariSound from '@music/atari.mp3';
-import zyakiSound from '@music/zyaki.mp3';
-import patiSound from '@music/pati.mp3';
+// import atariSound from '@music/atari.mp3';
+// import zyakiSound from '@music/zyaki.mp3';
+// import patiSound from '@music/pati.mp3';
 
 const Omikuzi = () => {
 
-  const [playAtari] = useSound(atariSound);
-  const [playZyaki] = useSound(zyakiSound);
-  const [playPati] = useSound(patiSound);
+  const [playAtari] = useSound('/music/atari.mp3');
+  const [playZyaki] = useSound('/music/zyaki.mp3');
+  const [playPati] = useSound('/music/pati.mp3');
 
   const playDelayedAtariSound = () => {
     setTimeout(() => {
