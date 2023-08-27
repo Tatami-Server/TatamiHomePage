@@ -27,3 +27,4 @@ yarn-error.log*
 .firebase/*
 .next/*
 firebase-debug.log
+*.log

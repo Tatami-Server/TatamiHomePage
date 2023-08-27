@@ -1,22 +1,9 @@
 {
-  "functions": [
-    {
-      "source": "functions",
-      "codebase": "default",
-      "ignore": [
-        "node_modules",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log",
-        "old-react"
-      ]
-    }
-  ],
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
-  "storage" :{
+  "storage": {
     "rules": "storage.rules"
   },
   "hosting": {
@@ -24,11 +11,25 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "**/old-react**"
+      "**/node_modules/**"
     ],
     "frameworksBackend": {
       "region": "us-central1"
-    }
+    },
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "nextApp"
+      }
+    ]
+  },
+  "functions": {
+    "source": ".",
+    "predeploy": [
+      "npm install",
+      "npm run build"
+    ],
+    "runtime": "nodejs16",
+    "codebase": "default"
   }
 }
