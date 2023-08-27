@@ -5,7 +5,9 @@
     "serve": "firebase emulators:start --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
+    "build": "cd ../ && npm run build && cd functions",
+    "deploy": "npm run cp:dist && firebase deploy --only functions",
+    "cp:dist": "npm run build && rm -rf .next && rsync -a ../.next ./ --exclude '.next/cache'",
     "logs": "firebase functions:log"
   },
   "engines": {
@@ -15,7 +17,8 @@
   "dependencies": {
     "firebase-admin": "^11.8.0",
     "firebase-functions": "^4.4.1",
-    "minecraft-query": "^1.0.13"
+    "minecraft-server-util": "^5.4.4",
+    "next": "13.0.0"
   },
   "devDependencies": {
     "firebase-functions-test": "^3.1.0"

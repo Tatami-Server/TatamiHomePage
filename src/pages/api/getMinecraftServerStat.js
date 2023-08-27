@@ -1,8 +1,16 @@
-const Query = require("minecraft-query");
-const q = new Query({host: 'rusian0.com', port: 25565, timeout: 7500});
-// const q = new Query({host: 'mc.tatamiserver.com', port: 9630, timeout: 7500});
+const util = require('minecraft-server-util');
+
+const serverAddress = 'rusian0.com';
+const port = 25565;
+// const serverAddress = 'mc.tatamiserver.com';
+// const port = 49160;
 
 export default async function handler(req, res) {
-    const fullStat = await q.fullStat()
-    res.status(200).json(fullStat)
+    util.status(serverAddress, port)
+        .then((response) => {
+            res.status(200).json(response)
+        })
+        .catch((error) => {
+            console.error('エラーが発生しました:', error);
+        });
 };

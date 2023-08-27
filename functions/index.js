@@ -1,4 +1,4 @@
-const { https } = require('firebase-functions');
+const { https } = require('firebase-functions/v2');
 const { default: next } = require('next');
 
 const dev = process.env.NODE_ENV !== 'production';
