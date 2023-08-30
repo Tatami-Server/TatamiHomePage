@@ -7,7 +7,8 @@
 }
 
 .LargeCategory-content img {
-  width: 400px;
+  width: 40%;
+  height: auto;
 }
 
 .LargeCategory-content p{
@@ -44,6 +45,18 @@
 .subscription-used li:first-child{
   list-style: none;
 }
+
+.subscription-subtitle-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-subtitle-content p {
+  font-size: 20px;
+  margin: 0;
+  line-height: 30px;
+}
+
 
 .special-thenks {
   display: flex;

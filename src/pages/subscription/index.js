@@ -68,7 +68,7 @@ const Subscription = () => {
           </div>
         </div>
         <Subtitle subtitle="ご寄付"/>
-        <div className='subtitle-content'>
+        <div className={Style["subscription-subtitle-content"]}>
           <p>ご寄付はこちらをクリック↓</p>
           <Image src={doneruLogo} className={Style["doneru-logo"]} alt="doneruのロゴ" width={"400"}></Image>
           <p>

@@ -65,7 +65,7 @@ const Join = () => {
             <span className='green'>サブスクライバーロール</span>
             が付与されますと、限定企画の募集やイベントの優先参加枠を獲得することができます。<br/>
             ほかにもメリットはたくさんあります。詳しくは
-            <Link href={`/sbuscription/`}>
+            <Link href={`/subscription/`}>
             こちら
             </Link>
             からご確認ください。

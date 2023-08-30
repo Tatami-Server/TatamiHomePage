@@ -74,7 +74,7 @@
   position: relative;
   max-width: 240px;
   padding: 16px;
-  background-color: rgb(156,190,166);
+  background-color: rgb(27 66 38);
   border-radius: 8px;
   align-self: start;
 }
@@ -87,8 +87,12 @@
   width: 0;
   height: 0;
   border-top: 16px solid transparent;
-  border-left: 16px solid rgb(156, 190, 166);
+  border-left: 16px solid rgb(27 66 38);
   border-bottom: 16px solid transparent;
+}
+
+.igusa-text-container p {
+  color: #fcf9f0;
 }
 
 .igusa-wrapper.show .igusa {
