@@ -19,23 +19,21 @@
 .warp-year {
   list-style: none;
   background-color: rgb(156, 190, 166);
-  border: 3px solid rgb(156, 190, 166);
   text-align: center;
   line-height: 46px;
   color: white;
   font-size: 25px;
   font-weight: 600;
   border-radius: 5px 0 0 5px;
+  padding: 3px 0;
 }
 
 .selected {
-  background-color: rgb(89,138,94);
-  border: 5px solid rgb(89,138,94);  
+  background-color: rgb(56, 126, 63);
 }
 
 .warp-year:hover {
-  border: 4px solid rgb(89,138,94);
-  border-right: initial;
+  outline: 4px solid rgb(89,138,94);
 }
 
 
