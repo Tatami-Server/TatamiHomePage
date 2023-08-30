@@ -11,7 +11,7 @@ import { useRef ,createRef, useEffect, useState} from 'react';
 import HistoryJson from '@json/History.json';
 
 // 画像インポート
-import Historyimg from '/public/images/History.images/history.png';
+import Historyimg from '/public/images/HistoryContent.images/history.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
@@ -38,7 +38,7 @@ const History = () => {
       // scrollPosition={scrollPosition}
       />
         <div className={Style["history-hero-content-wrapper"]} 
-          style={{backgroundImage: `url(${Historyimg})`,
+          style={{backgroundImage: `url('/images/HistoryContent.images/history.png')`,
           backgroundRepeat: 'no-repeat',
           backgroundSize:"cover",
           }}>

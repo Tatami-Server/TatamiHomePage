@@ -13,7 +13,7 @@ const Historycontent = ({year,histories}) => {
 
     function slideImage(images) {if(images.length === 1) {
       return(
-        <Image src={`${process.env.PUBLIC_URL}/HistoryContent.images/${images}`}alt="歴史の写真" />
+        <Image width={600} height={340} src={`/images/HistoryContent.images/${images}`}alt="歴史の写真" />
       )
       } else {
         return(
@@ -23,8 +23,9 @@ const Historycontent = ({year,histories}) => {
               <Carousel.Item interval={2000} key={index}> 
               <Image
                 className="d-block w-100"
-                src={`${process.env.PUBLIC_URL}/HistoryContent.images/${img}`}
+                src={`/images/HistoryContent.images/${img}`}
                 alt="First slide"
+                width={600} height={340}
               /> 
               </Carousel.Item>
             )}
