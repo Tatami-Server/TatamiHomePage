@@ -10,11 +10,11 @@
 }
 
 .icons li :hover {
-  color: rgb(210, 172, 121);
+  color: #687832;
 }
 
 .icons svg path {
-  color: #1a6631;
+  color: #42602D;
 }
 
 @media screen and (max-width: 599px) {

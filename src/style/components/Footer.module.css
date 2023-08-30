@@ -25,7 +25,7 @@
 }
 
 .icons li :hover {
-  color: rgb(210, 172, 121);
+  color: #c5c990;
 }
 
 .footerText {
@@ -33,7 +33,7 @@
 }
 
 .footerText:hover {
-  color: rgb(210, 172, 121);
+  color: #c5c990;
 }
 
 

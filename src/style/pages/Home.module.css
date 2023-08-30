@@ -60,11 +60,11 @@
 }
 
 .arrow-icon svg:hover  {
-  fill: rgb(201,152,51);
+  fill:#6E6C2E;
 }
 
 .arrow-icon svg {
-  fill:rgb(66, 96, 45);
+  fill: #42602D;
 }
 
 /* online-player */
