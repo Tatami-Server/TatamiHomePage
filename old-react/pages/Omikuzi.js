@@ -12,15 +12,15 @@ import FlexLink from "../../util/FlexLink";
 import Menu from '../components/Menu';
 
 // 画像インポート
-import tatami from '../../images/Igusa.images/sister1.png';
-import fusuma from '../../images/Igusa.images/sister2.png';
-import daikichi from '../../images/omikuzi.images/daikichi.jpg';
-import tyuukichi from '../../images/omikuzi.images/tyuukichi.png';
-import kichi from '../../images/omikuzi.images/kichi.jpg';
-import syoukichi from '../../images/omikuzi.images/syoukichi.jpg';
-import kyou from '../../images/omikuzi.images/kyou.png';
-import syouzi1 from '../../images/omikuzi.images/syouzi1.png';
-import syouzi2 from '../../images/omikuzi.images/syouzi2.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
+import fusuma from '/public/images/Igusa.images/sister2.png';
+import daikichi from '/public/images/omikuzi.images/daikichi.jpg';
+import tyuukichi from '/public/images/omikuzi.images/tyuukichi.png';
+import kichi from '/public/images/omikuzi.images/kichi.jpg';
+import syoukichi from '/public/images/omikuzi.images/syoukichi.jpg';
+import kyou from '/public/images/omikuzi.images/kyou.png';
+import syouzi1 from '/public/images/omikuzi.images/syouzi1.png';
+import syouzi2 from '/public/images/omikuzi.images/syouzi2.png';
 
 
 // cssインポート
