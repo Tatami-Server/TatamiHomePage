@@ -1,18 +1,13 @@
 /* please */
 .download {
-  font-size: 15px;
+  font-size: 25px;
   text-decoration: none;
-  color: rgb(121, 121, 121);
-  position:absolute;
+  color: #525a49;
   
-
-}
-
-.download-container img {
-  position: absolute;
 }
 
 .download-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 

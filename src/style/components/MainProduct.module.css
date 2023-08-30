@@ -7,10 +7,10 @@
   text-decoration: none;
   color: rgb(13, 32, 13);
   display: flex;
-  gap: 70px;
   align-items: center;
   padding-top: 150px;
   padding-bottom: 20px;
+  justify-content: space-between;
 }
 
 .main-products a:hover {
@@ -21,9 +21,12 @@
   flex-direction: row-reverse;
 }
 
-.product-img-box, .product-text {
-  width: 30vw;
-  height: 19vw;
+.product-img-box{
+  width: 50%;
+}
+
+.product-text  {
+  width: 45%;
 }
 
 /* .product-img-box */
