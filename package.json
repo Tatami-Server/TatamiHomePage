@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npm run dev",
+    "default:start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
