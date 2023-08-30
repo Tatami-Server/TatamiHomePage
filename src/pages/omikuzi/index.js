@@ -26,7 +26,6 @@ import syouzi2 from '/public/images/omikuzi.images/syouzi2.png';
 
 // cssインポート
 import Style from '@style/pages/Omikuzi.module.css';
-import { red } from '@mui/material/colors';
 
 // 音インポート
 import useSound from 'use-sound';

@@ -296,6 +296,12 @@
   opacity: 1;/*チェック後表示*/
 }
 
+.home-icon {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
 
 @media screen and (max-width: 599px) {
   .omikuzi-page-wapper {
