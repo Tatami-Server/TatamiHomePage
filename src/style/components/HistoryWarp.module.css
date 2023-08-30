@@ -1,7 +1,7 @@
 /* warp */
 
 .warp-content {
-  width: 180px;
+  width: 170px;
   position: fixed;
   top: 100px;
   right: 0;
@@ -19,23 +19,21 @@
 .warp-year {
   list-style: none;
   background-color: rgb(156, 190, 166);
-  border: 3px solid rgb(156, 190, 166);
-  height: 50px;
   text-align: center;
   line-height: 46px;
   color: white;
   font-size: 25px;
   font-weight: 600;
-  border-radius: 20px 0 0 20px;
+  border-radius: 5px 0 0 5px;
+  padding: 3px 0;
 }
 
 .selected {
-  background-color: rgb(89,138,94);
-  border: 3px solid rgb(89,138,94);  
+  background-color: rgb(56, 126, 63);
 }
 
 .warp-year:hover {
-  border: 3px solid rgb(89,138,94);
+  outline: 4px solid rgb(89,138,94);
 }
 
 

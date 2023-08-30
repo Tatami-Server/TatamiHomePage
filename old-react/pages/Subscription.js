@@ -8,17 +8,17 @@ import LargeCategory from '../components/LargeCategory';
 import Igusa from '../components/Igusa';
 
 // 画像インポート
-import twitchImg from '../../images/Subscription.images/twitchImg.png';
-import sub1 from '../../images/Subscription.images/sub1-1.png';
-import sub2 from '../../images/Subscription.images/sub1-2.png';
-import sub3 from '../../images/Subscription.images/sub1-3.png';
-import sub4 from '../../images/Subscription.images/sub1-4.png';
-import sub5 from '../../images/Subscription.images/sub1-5.png';
-import sub6 from '../../images/Subscription.images/sub1-6.png';
-import sub7 from '../../images/Subscription.images/sub1-7.png';
-import doneruLogo from '../../images/Subscription.images/doneru-logo.png';
-import kirakira from '../../images/Subscription.images/kirakira.png';
-import tatami from '../../images/Igusa.images/sister1.png';
+import twitchImg from '/public/images/Subscription.images/twitchImg.png';
+import sub1 from '/public/images/Subscription.images/sub1-1.png';
+import sub2 from '/public/images/Subscription.images/sub1-2.png';
+import sub3 from '/public/images/Subscription.images/sub1-3.png';
+import sub4 from '/public/images/Subscription.images/sub1-4.png';
+import sub5 from '/public/images/Subscription.images/sub1-5.png';
+import sub6 from '/public/images/Subscription.images/sub1-6.png';
+import sub7 from '/public/images/Subscription.images/sub1-7.png';
+import doneruLogo from '/public/images/Subscription.images/doneru-logo.png';
+import kirakira from '/public/images/Subscription.images/kirakira.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '../../style/pages/Subscription.module.css';

@@ -8,8 +8,8 @@ import SubProducts from '../components/SubProducts';
 import Igusa from '../components/Igusa';
 
 // 画像インポート
-import map1 from '../../images/map.images/map1.png';
-import tatami from '../../images/Igusa.images/sister1.png';
+import map1 from '/public/images/map.images/map1.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
 
 const Map = () => {
 
