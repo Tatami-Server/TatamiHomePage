@@ -30,6 +30,8 @@ import { red } from '@mui/material/colors';
 
 // 音インポート
 import useSound from 'use-sound';
+import NoLayout from '@layouts/NoLayout';
+// import NoLayout from '@layouts/NoLayout';
 // import atariSound from '@music/atari.mp3';
 // import zyakiSound from '@music/zyaki.mp3';
 // import patiSound from '@music/pati.mp3';
@@ -217,4 +219,7 @@ const Omikuzi = () => {
     </div>
   );
 }
+
+Omikuzi.Layout = NoLayout;
+
 export default Omikuzi;
