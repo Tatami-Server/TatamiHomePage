@@ -15,11 +15,11 @@ import Menu from '@components/Menu';
 // 画像インポート
 import tatami from '/public/images/Igusa.images/sister1.png';
 import fusuma from '/public/images/Igusa.images/sister2.png';
-import daikichi from '/public/images/omikuzi.images/daikichi.jpg';
-import tyuukichi from '/public/images/omikuzi.images/tyuukichi.png';
-import kichi from '/public/images/omikuzi.images/kichi.jpg';
-import syoukichi from '/public/images/omikuzi.images/syoukichi.jpg';
-import kyou from '/public/images/omikuzi.images/kyou.png';
+// import daikichi from '/public/images/omikuzi.images/daikichi.jpg';
+// import tyuukichi from '/public/images/omikuzi.images/tyuukichi.png';
+// import kichi from '/public/images/omikuzi.images/kichi.jpg';
+// import syoukichi from '/public/images/omikuzi.images/syoukichi.jpg';
+// import kyou from '/public/images/omikuzi.images/kyou.png';
 import syouzi1 from '/public/images/omikuzi.images/syouzi1.png';
 import syouzi2 from '/public/images/omikuzi.images/syouzi2.png';
 
@@ -30,10 +30,6 @@ import Style from '@style/pages/Omikuzi.module.css';
 // 音インポート
 import useSound from 'use-sound';
 import NoLayout from '@layouts/NoLayout';
-// import NoLayout from '@layouts/NoLayout';
-// import atariSound from '@music/atari.mp3';
-// import zyakiSound from '@music/zyaki.mp3';
-// import patiSound from '@music/pati.mp3';
 
 const Omikuzi = () => {
 
@@ -67,11 +63,11 @@ const Omikuzi = () => {
   ];
 
   const fortunes = [
-    { name: "大吉", probability: 0.05, text: '絶好調!!今日はURが出る予感!!', image: daikichi },
-    { name: "凶", probability: 0.05, text:  'そんな日もあるさ、切り抜きで動画でも見て笑おうよ', image: kyou},
-    { name: "小吉", probability: 0.25, text: '大体いつも通りの1日だよ!', image: syoukichi },
-    { name: "吉", probability: 0.25, text: 'こういう日は配信アーカイブでも見直そう。', image:kichi},
-    { name: "中吉", probability: 0.3, text: '新たな場所を冒険するといいことあるかも！', image: tyuukichi }
+    { name: "大吉", probability: 0.05, text: '絶好調!!今日はURが出る予感!!', image: '/images/omikuzi.images/daikichi.jpg' },
+    { name: "凶", probability: 0.05, text:  'そんな日もあるさ、切り抜きで動画でも見て笑おうよ', image: '/images/omikuzi.images/kyou.png'},
+    { name: "小吉", probability: 0.25, text: '大体いつも通りの1日だよ!', image: '/images/omikuzi.images/syoukichi.jpg' },
+    { name: "吉", probability: 0.25, text: 'こういう日は配信アーカイブでも見直そう。', image:'/images/omikuzi.images/kichi.jpg'},
+    { name: "中吉", probability: 0.3, text: '新たな場所を冒険するといいことあるかも！', image: '/images/omikuzi.images/tyuukichi.png'}
   ];
   fortunes.sort((a, b) => a.probability - b.probability);
   function getRandomFortune() {
