@@ -8,15 +8,15 @@ import Image from "next/image";
 
 
 // 画像インポート
-import life1 from '@images/Life.images/life1.png'
-import life2 from '@images/Life.images/life2.png'
-import lifeJob from '@images/Life.images/life-job.png'
-import lifeEvent from '@images/Life.images/life-event.png'
-import lifeCommond from '@images/Life.images/life-commond.png'
-import lifeGacha from '@images/Life.images/life-gacha.png'
-import lifeMap from '@images/Life.images/life-map.png'
-import lifeShop from '@images/Life.images/life-shop.png'
-import tatami from '@images/Igusa.images/sister1.png';
+import life1 from '/public/images/Life.images/life1.png'
+import life2 from '/public/images/Life.images/life2.png'
+import lifeJob from '/public/images/Life.images/life-job.png'
+import lifeEvent from '/public/images/Life.images/life-event.png'
+import lifeCommond from '/public/images/Life.images/life-commond.png'
+import lifeGacha from '/public/images/Life.images/life-gacha.png'
+import lifeMap from '/public/images/Life.images/life-map.png'
+import lifeShop from '/public/images/Life.images/life-shop.png'
+import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/Life.module.css';

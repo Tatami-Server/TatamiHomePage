@@ -11,8 +11,8 @@ import { useRef ,createRef, useEffect, useState} from 'react';
 import HistoryJson from '@json/History.json';
 
 // 画像インポート
-import Historyimg from '@images/History.images/history.png';
-import tatami from '@images/Igusa.images/sister1.png';
+import Historyimg from '/public/images/History.images/history.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/History.module.css';

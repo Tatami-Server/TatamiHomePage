@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // 画像インポート
-import gara from "@images/SubProduct.images/gara.jpg"
+import gara from "/public/images/SubProduct.images/gara.jpg"
 
 // cssインポート
 import Style from '@style/components/SubProduct.module.css';

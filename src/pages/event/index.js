@@ -6,7 +6,7 @@ import UpArrow from '@components/UpArrow';
 import Igusa from '@components/Igusa';
 
 // 画像インポート
-import fusuma from '@images/Igusa.images/sister2.png';
+import fusuma from '/public/images/Igusa.images/sister2.png';
 
 import { getAll } from '@lib/firebase';
 import groupBy from '@util/groupBy';

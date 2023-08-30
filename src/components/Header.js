@@ -5,7 +5,7 @@ import JoinBtn from '@components/JoinBtn';
 import Image from "next/image";
 
 // 画像インポート
-import logo from '@images/Home.images/logo.png';
+import logo from '/public/images/Home.images/logo.png';
 
 // cssインポート
 import Style from '@style/components/Header.module.css';

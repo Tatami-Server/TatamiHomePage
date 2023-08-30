@@ -8,9 +8,9 @@ import Link from 'next/link';
 import Image from "next/image";
 
 // 画像インポート
-import joinDiscord from '@images/Join.images/join1.png';
-import joinTwichSub from '@images/Join.images/join2.png';
-import tatami from '@images/Igusa.images/sister1.png';
+import joinDiscord from '/public/images/Join.images/join1.png';
+import joinTwichSub from '/public/images/Join.images/join2.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
 
 const Join = () => {
   return (

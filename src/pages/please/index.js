@@ -10,11 +10,11 @@ import Link from 'next/link';
 import Igusa from '@components/Igusa';
 import Image from "next/image";
 // 画像インポート
-import PleaseVote from '@images/Please.images/please1.png';
-import PleaseProfile1 from '@images/Please.images/please2-1.png';
-import PleaseProfile2 from '@images/Please.images/please2-2.png';
-import PleaseJoin from '@images/Please.images/please3-1.png';
-import tatami from '@images/Igusa.images/sister1.png';
+import PleaseVote from '/public/images/Please.images/please1.png';
+import PleaseProfile1 from '/public/images/Please.images/please2-1.png';
+import PleaseProfile2 from '/public/images/Please.images/please2-2.png';
+import PleaseJoin from '/public/images/Please.images/please3-1.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/Please.module.css';

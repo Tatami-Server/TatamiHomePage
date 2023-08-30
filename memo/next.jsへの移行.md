@@ -17,6 +17,7 @@
     - importを廃止して画像パスを`src`に直接入力
         - 絶対パスを入れる（例: /images/logo.png）
         - widthとheightを入れる（小さすぎず大きすぎず、アスペクト比が保たれていればOK）
+        /pablic/imagesにするとwidth指定しなくていい　importでいい
 
 　〇7. mainタグも消す
 

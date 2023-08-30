@@ -11,7 +11,7 @@ import Heading from '@components/Heading';
 import Igusa from '@components/Igusa';
 
 // 画像インポート
-import tatami from '@images/Igusa.images/sister1.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/SNS.module.css';

@@ -7,7 +7,7 @@ import Igusa from '@components/Igusa';
 import Link from 'next/link';
 
 // 画像インポート
-import tatami from '@images/Igusa.images/sister1.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import HelperStyle from '@style/pages/Helpre.module.css';

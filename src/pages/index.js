@@ -16,20 +16,20 @@ import useSWR from 'swr'
 
 
 // 画像をインポート
-import logo from '@images/Home.images/logo.png';
-import hero from '@images/Home.images/hero2.png';
-import donation from '@images/Home.images/donation.jpg';
-import map from '@images/Home.images/map.png';
-import omikuzi from '@images/Home.images/omikuzi.jpg';
-import please from '@images/Home.images/please.jpg';
-import application from '@images/Home.images/application.jpg';
-import history from '@images/Home.images/history.jpg';
-import sns from '@images/Home.images/sns.jpg';
-import inquery from '@images/Home.images/inquery.jpg';
-import event from '@images/Home.images/event.png';
-import life from '@images/Home.images/life.png';
-import join from '@images/Home.images/join.png';
-import tatami from '@images/Igusa.images/sister1.png';
+import logo from '/public/images/Home.images/logo.png';
+import hero from '/public/images/Home.images/hero2.png';
+import donation from '/public/images/Home.images/donation.jpg';
+import map from '/public/images/Home.images/map.png';
+import omikuzi from '/public/images/Home.images/omikuzi.jpg';
+import please from '/public/images/Home.images/please.jpg';
+import application from '/public/images/Home.images/application.jpg';
+import history from '/public/images/Home.images/history.jpg';
+import sns from '/public/images/Home.images/sns.jpg';
+import inquery from '/public/images/Home.images/inquery.jpg';
+import event from '/public/images/Home.images/event.png';
+import life from '/public/images/Home.images/life.png';
+import join from '/public/images/Home.images/join.png';
+import tatami from '/public/images/Igusa.images/sister1.png';
 import { Rings } from 'react-loader-spinner'
 
 // cssインポート

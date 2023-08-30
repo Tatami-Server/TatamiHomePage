@@ -4,7 +4,7 @@ import Subtitle from '@components/Subtitle';
 import UpArrow from '@components/UpArrow';
 import Igusa from '@components/Igusa';
 import Link from 'next/link';
-import Sister1 from '@images/Igusa.images/sister1.png';
+import Sister1 from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/Contact.module.css';
