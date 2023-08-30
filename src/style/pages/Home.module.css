@@ -1,5 +1,9 @@
 
 /* first view header */
+.first-view-header {
+  position: relative;
+}
+
 .first-view-header .spuare {
   width: 100%;
   height: 80px;

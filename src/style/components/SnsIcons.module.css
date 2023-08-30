@@ -1,0 +1,32 @@
+
+.icons {
+  margin: 0;
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.icons li :hover {
+  color: rgb(210, 172, 121);
+}
+
+.icons svg path {
+  color: #1a6631;
+}
+
+@media screen and (max-width: 599px) {
+
+  .icons {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  .icons svg {
+    width: 20px;
+    height: 20px;
+  }
+}
