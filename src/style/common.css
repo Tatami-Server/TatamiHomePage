@@ -5,6 +5,8 @@
 body {
   margin: 0;
   background-color: #f8f4ecd3;
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+  color: rgb(13, 32, 13);
 }
 
 /* span 文字の色や太さを変える */

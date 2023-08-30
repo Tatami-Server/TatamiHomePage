@@ -5,7 +5,7 @@
 
 .product a {
   text-decoration: none;
-  color: #000;
+  color: rgb(13, 32, 13);
 }
 
 .product a:hover {
@@ -33,18 +33,19 @@
 
 .sub-products .product h2 {
   text-align: center;
+  margin: 15px 0;
 }
 
 .sub-products .product-text h2 {
   font-family: 'Yuji Syuku', serif;
   font-size: 30px;
-  padding-top: 15px;
-  padding-bottom: 10px;
 }
 
 .sub-products .product-text p {
   font-size: 20px;
-  padding-bottom: 40px;
+  margin-bottom: 100px;
+  margin-top: 0;
+  text-align: center;
 }
 
 .product-img-box {
@@ -59,7 +60,7 @@
 /* .product-img-box */
 .product-img-box {
   display: flex;
-  border-radius: 20px;
+  border-radius: 5px;
   overflow: hidden;
 }
 

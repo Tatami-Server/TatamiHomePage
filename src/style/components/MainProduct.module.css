@@ -5,9 +5,9 @@
 
 .main-products a {
   text-decoration: none;
-  color: #000;
+  color: rgb(13, 32, 13);
   display: flex;
-  justify-content: space-between;
+  gap: 70px;
   align-items: center;
   padding-top: 150px;
   padding-bottom: 20px;
@@ -46,7 +46,7 @@
 }
 
 .product-img-box img, .product-img-box .fill {
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 /* product-text */
