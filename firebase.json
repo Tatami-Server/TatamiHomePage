@@ -39,7 +39,7 @@
     "predeploy": [
       "npm install"
     ],
-    "runtime": "nodejs16",
+    "runtime": "nodejs18",
     "codebase": "default"
   }
 }
