@@ -2,7 +2,7 @@ const { logger, storage } = require("firebase-functions/v2");
 const { getStorage } = require("firebase-admin/storage");
 const sharp = require("sharp");
 
-exports.OptimizeImage = storage.onObjectFinalized(async ({data}) => {
+module.exports = storage.onObjectFinalized(async ({data}) => {
 
     const fileBucket = data.bucket; // Storage bucket containing the file.
     const filePath = data.name; // File path in the bucket.
