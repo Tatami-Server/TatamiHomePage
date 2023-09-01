@@ -18,7 +18,9 @@ const Header = () => {
         </Link>
         <div className={Style.rightContent}>
           <JoinBtn size="small"/>
-          <Menu right noOverlay/>
+          <div className={Style.menu}>
+            <Menu right noOverlay/>
+          </div>
         </div>
     </header>
   );

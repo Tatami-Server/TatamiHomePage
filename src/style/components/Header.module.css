@@ -18,8 +18,12 @@
 
 .header .rightContent {
   display: flex;
-  gap: 30px;
+  gap: 70px;
   align-items: center;
+}
+
+.header .rightContent .menu {
+  width: 36px;
 }
 
 

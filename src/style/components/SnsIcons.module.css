@@ -1,9 +1,6 @@
 
 .icons {
   margin: 0;
-  position: absolute;
-  top: 25px;
-  right: 50px;
   list-style: none;
   display: flex;
   gap: 40px;

@@ -10,6 +10,7 @@ import SeparatorLine from '@components/SeparatorLine';
 import UpArrow from '@components/UpArrow';
 import Igusa from '@components/Igusa';
 import SnsIcons from '@components/snsIcons';
+import Menu from '@components/Menu';
 
 // reactの機能をインポート
 import { useRef} from 'react';
@@ -76,7 +77,12 @@ function Home({news}) {
               <div className={Style.triangle}></div>
               <div className={`${Style.triangle} ${Style.line}`}></div>
               <Image className={Style.logo} src='/images/Home.images/logo.png' width={300} height={300} alt="畳アイコン" />
-            <SnsIcons/>
+              <div className={Style["first-view-content"]}>
+                <SnsIcons/>
+                <div className={Style["first-view-menu"]}>
+                  <Menu right noOverlay/>
+                </div>
+              </div>
           </div>
           <div className={Style["skin-container"]}>
             {serverStat?.players?.sample?.map(({name}) => {

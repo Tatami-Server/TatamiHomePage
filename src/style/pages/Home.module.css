@@ -35,6 +35,29 @@
   top: 78px;
 }
 
+.first-view-header .first-view-content {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  display: flex;
+  width: 400px;
+  gap: 50px;
+  justify-content: flex-end;
+}
+
+.first-view-header .first-view-menu {
+  width: 36px;
+  margin-right: 30px;
+}
+
+.icons li :hover {
+  color: #687832;
+}
+
+.icons svg path {
+  color: #42602D;
+}
+
 .first-view-header .logo {
   width: 270px;
   height: auto;
@@ -55,8 +78,15 @@
 
 .arrow-icon {
   display: flex;
+  align-items: center;
   justify-content: center;
+  background-color: #ffffff3d;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
   margin-top: auto;
+  margin-bottom: 10px;
 }
 
 .arrow-icon svg:hover  {
