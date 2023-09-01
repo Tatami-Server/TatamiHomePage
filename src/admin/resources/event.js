@@ -10,6 +10,7 @@ export const EventList = props => (
     <List {...props}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="タイトル" />
+            <TextField source="eventType.shortTitle" label="イベント種別" />
             <DateField source='updatedAt' label='更新日時' showTime />
             <EditButton />
             <DeleteButton />

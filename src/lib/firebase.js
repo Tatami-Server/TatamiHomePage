@@ -73,7 +73,7 @@ const dataFormatForEnd = async (data) => {
     return data
 }
 
-const refToData = async (data) => {
+export const refToData = async (data) => {
     for (const key in data) {
         const field = data[key]
         if (field instanceof DocumentReference) {

@@ -1,4 +1,4 @@
-import { db, filterForDoc, storage, uploadToStorage } from '@lib/firebase';
+import { db, filterForDoc, refToData, uploadToStorage } from '@lib/firebase';
 import { firestoreTimestampFormat } from '@util/DateFormatter';
 import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, DocumentReference, orderBy, serverTimestamp } from 'firebase/firestore';
 
@@ -16,7 +16,7 @@ const dataProvider = {
         
         const querySnapshot = await getDocs(dbQuery);
         const data = await Promise.all(querySnapshot.docs.map(async doc => {
-            const docData = await dataFormatForFirestore(doc.data())
+            const docData = await dataFormatForFirestore(doc.data(), true)
             return { id: doc.id, ...docData }
         }))
 
@@ -102,9 +102,9 @@ const dataCreateForFirestore = async (resource, data) => {
     return data
 }
 
-const dataFormatForFirestore = async (data) => {
+const dataFormatForFirestore = async (data, isList) => {
     data = firestoreTimestampFormat(data)
-    data = refToId(data)
+    data = isList ? await refToData(data) : refToId(data)
     return data
 }
 
