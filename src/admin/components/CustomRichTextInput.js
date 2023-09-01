@@ -38,8 +38,8 @@ const CustomRichTextInput = ({ size, resource, ...props }) => {
         const handleUploadImage = async ({ target }) => {
             for await (const file of target.files) {
                 const url = await uploadToStorage(resource, file)
-                editor.chain().focus('start').setImage({ src: url }).run()
-                editor.chain().focus('end')
+                editor.chain().focus().setImage({ src: url }).run()
+                editor.chain().focus('end').run()
             }
     
             target.value = ''
