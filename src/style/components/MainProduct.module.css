@@ -7,10 +7,12 @@
   text-decoration: none;
   color: rgb(13, 32, 13);
   display: flex;
-  align-items: center;
-  padding-top: 150px;
-  padding-bottom: 20px;
-  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 180px;
+  justify-content: flex-start;
+  gap: 20px;
+  border-radius: 5px;
+
 }
 
 .main-products a:hover {
@@ -31,8 +33,10 @@
 
 /* .product-img-box */
 .product-img-box {
+  border-radius: 5px;
   display: flex;
   overflow: hidden;
+  box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
 }
 
 .product-img-box .fill {
@@ -56,7 +60,8 @@
 .product-text h2 {
   font-family: 'Yuji Syuku', serif;
   font-size: 45px;
-  padding-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .product-text p {
