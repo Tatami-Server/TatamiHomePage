@@ -10,6 +10,10 @@ import Login from './pages/Login';
 import styles from "@admin/styles/Admin.module.css"
 import RegisterPage from './pages/Register';
 import { Route } from 'react-router-dom';
+import PeopleIcon from '@mui/icons-material/People';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 const App = () => {
     
@@ -26,6 +30,7 @@ const App = () => {
             >
                 <Resource 
                     name="notice"
+                    icon={NotificationsActiveIcon}
                     list={NoticeList}
                     edit={NoticeEdit}
                     create={NoticeCreate}
@@ -37,6 +42,7 @@ const App = () => {
 
                 <Resource 
                     name="event"
+                    icon={InsertInvitationIcon}
                     list={EventList}
                     edit={EventEdit}
                     create={EventCreate}
@@ -47,6 +53,7 @@ const App = () => {
                 />
                 <Resource 
                     name="eventType"
+                    icon={CalendarTodayIcon}
                     list={EventTypeList}
                     edit={EventTypeEdit}
                     create={EventTypeCreate}
@@ -58,6 +65,7 @@ const App = () => {
 
                 <Resource 
                     name="admin"
+                    icon={PeopleIcon}
                     list={AdminList}
                     options={{
                         label: '管理ユーザー',
