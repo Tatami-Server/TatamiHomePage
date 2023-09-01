@@ -22,7 +22,7 @@ body {
   color: rgb(40, 177, 187);
 }
 
-h2, p  {
+h2, p, h5,h3 {
   margin: 0;
 }
 /* main */
