@@ -1,6 +1,7 @@
 import { db, filterForDoc, refToData, uploadToStorage } from '@lib/firebase';
 import { firestoreTimestampFormat } from '@util/DateFormatter';
 import { collection, getDocs, doc, getDoc, addDoc, updateDoc, deleteDoc, writeBatch, query, DocumentReference, orderBy, serverTimestamp } from 'firebase/firestore';
+const maxWidth = 1000
 
 const dataProvider = {
     getList: async (resource, { filter, sort, ...params }) => {
@@ -111,6 +112,10 @@ const dataFormatForFirestore = async (data, isList) => {
 
 const uploadImages = async (resource, data) => {
     await Promise.all(Object.keys(data).map(async key => {
+        if (Array.isArray(data[key])) {
+            return data[key] = await uploadImages(resource, data[key])
+        }
+
         if (data[key]?.hasOwnProperty('rawFile')) {
             const file = data[key].rawFile
 
@@ -130,8 +135,19 @@ const  getImageDimensions = (file) => {
     img.onload = function() {
         const width = this.width;
         const height = this.height;
+
+        const aspectRatio = height / width;
+
+        let newWidth = width;
+        let newHeight = height;    
+
+        if (width > maxWidth) {
+            newWidth = 1000;
+            newHeight = newWidth * aspectRatio;
+        }
+
         URL.revokeObjectURL(img.src);  // 一時的なURLを解放
-        resolve({ width, height });
+        resolve({ width: newWidth, height: newHeight });
     };
 
     img.onerror = function() {

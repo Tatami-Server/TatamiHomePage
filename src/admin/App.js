@@ -14,6 +14,8 @@ import PeopleIcon from '@mui/icons-material/People';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import HistoryIcon from '@mui/icons-material/History';
+import { HistoryCreate, HistoryEdit, HistoryList } from './resources/history';
 
 const App = () => {
     
@@ -51,6 +53,7 @@ const App = () => {
                         label: 'イベント',
                     }}
                 />
+
                 <Resource 
                     name="eventType"
                     icon={CalendarTodayIcon}
@@ -60,6 +63,17 @@ const App = () => {
                     recordRepresentation="title"
                     options={{
                         label: 'イベント種別',
+                    }}
+                />
+
+                <Resource 
+                    name="history"
+                    icon={HistoryIcon}
+                    list={HistoryList}
+                    edit={HistoryEdit}
+                    create={HistoryCreate}
+                    options={{
+                        label: '歴史',
                     }}
                 />
 

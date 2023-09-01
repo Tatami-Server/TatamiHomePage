@@ -1,7 +1,7 @@
 import { ImageInput, ImageField } from 'react-admin'
 
 const CustomImageInput = ({ source, label, multiple, ...props }) => (
-    <ImageInput 
+    <ImageInput
         source={ source || 'mainImg' } 
         label={ label || "メイン画像"} 
         accept="image/*" 
