@@ -3,12 +3,8 @@ dns.setDefaultResultOrder("ipv4first")
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    webp: {
-        preset: "default",
-        
-    },
     images: {
-        unoptimized: true,
+        unoptimized: false,
         remotePatterns: [
             { protocol: 'https', hostname: 'firebasestorage.googleapis.com' },
             { protocol: 'https', hostname: 'mineskin.eu' },
