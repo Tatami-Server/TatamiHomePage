@@ -8,11 +8,5 @@ const handle = app.getRequestHandler();
 
 initializeApp()
 
-const { OptimizeImage } = require("./src/OptimizeImage")
-
-exports.OptimizeImage = OptimizeImage
-
-exports.nextApp = https.onRequest((req, res) => {
-  console.log('File: ' + req.originalUrl);
-  return app.prepare().then(() => handle(req, res));
-});
+exports.OptimizeImage = require("./src/OptimizeImage"),
+exports.nextApp = https.onRequest((req, res) => app.prepare().then(() => handle(req, res)))
