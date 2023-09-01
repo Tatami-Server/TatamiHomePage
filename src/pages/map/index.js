@@ -9,6 +9,9 @@ import Igusa from '@components/Igusa';
 import map1 from '/public/images/map.images/map1.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
+// cssインポート
+import Style from '@style/pages/map.module.css';
+
 const Map = () => {
 
   const pluginList=[
@@ -19,12 +22,10 @@ const Map = () => {
     <div>
         <Heading heading="配布マップ等"/>
         <Subtitle subtitle="配布イベント（プラグイン）"/>
-          <p>※プライグインの動作確認にはpaperまたはspigot環境が必要です。</p>
-          <div className='subtitle-content'>
+          <p className={Style["note"]}>※プライグインの動作確認にはpaperまたはspigot環境が必要です。</p>
             <div className="Products">
               <SubProducts products={pluginList}/>
             </div>
-          </div>
         <Subtitle subtitle="配布イベント（データパック）"/>
           <div className='subtitle-content'>
             <p>現在ありません。</p>

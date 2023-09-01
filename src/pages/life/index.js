@@ -37,6 +37,7 @@ const Life = () => {
         <Heading heading="畳生活サーバー"/>
         <Subtitle subtitle="生活サーバーで遊ぼう！"/>
           <div className='subtitle-content'>
+            <div className={Style["life-subtitle-content"]}>
             <div className={Style["life-img-container"]}>
               <Image className='subtitle-img'  src={life1} alt="生活鯖写真"></Image>
               <Image className='subtitle-img'  src={life2} alt="生活鯖写真"></Image>
@@ -47,13 +48,12 @@ const Life = () => {
               以下では生活サーバーを楽しむポイントを紹介します。<br/>
               ガチャの中身が新しくなりました！
             </p>
+            </div>
           </div>
         <Subtitle subtitle="生活サーバーを楽しむポイント"/>
-          <div className='subtitle-content'>
             <div className="Products">
               <SubProducts products={funPointList}/>
             </div>
-          </div>
         <UpArrow/>
       <Igusa text="今年7月末に復活した生活サーバーに関する情報を掲載しているわ。
         ガチャや職業等のやりこみ要素を楽しもう！"

@@ -18,7 +18,7 @@ const Menu = (props) => {
     { href: "/subscription/", text: "サブスクライブ・ご寄付" },
     { href: "/sns/", text: "公式SNS等" },
     { href: "/contact/", text: "お問い合わせ・意見箱" },
-    { href: "/helpre/", text: "運営への応募" },
+    { href: "/help/", text: "運営への応募" },
   ];
 
   return (
