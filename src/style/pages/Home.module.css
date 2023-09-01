@@ -80,7 +80,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff3d;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -95,6 +94,8 @@
 
 .arrow-icon svg {
   fill: #42602D;
+  stroke: #8b9788;
+  stroke-width: 10px;
 }
 
 /* online-player */

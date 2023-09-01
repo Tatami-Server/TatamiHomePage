@@ -43,7 +43,7 @@ margin-bottom: 50px;
     border-collapse: collapse;
 }
 
-.event-body tr,.event-body td {
+.event-body tr,.event-body td,.event-body th {
     border: 1px solid;
 }
 
