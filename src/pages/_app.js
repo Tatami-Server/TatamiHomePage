@@ -1,6 +1,7 @@
 import MainLayout from "@layouts/MainLayout";
 import NoLayout from "@layouts/NoLayout";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '@style/common.css'
 import '@style/components/Menu.css';
 

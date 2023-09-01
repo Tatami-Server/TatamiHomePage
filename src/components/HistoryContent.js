@@ -2,7 +2,7 @@
 import Subtitle from '@components/Subtitle';
 
 // カルーセルインポート
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from 'react-bootstrap/Carousel'
 
 // cssインポート
 import Style from '@style/components/HistoryContent.module.css';
