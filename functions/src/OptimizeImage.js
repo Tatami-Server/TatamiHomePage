@@ -2,6 +2,8 @@ const { logger, storage } = require("firebase-functions/v2");
 const { getStorage } = require("firebase-admin/storage");
 const sharp = require("sharp");
 
+const maxWidth = 1000
+
 module.exports = storage.onObjectFinalized(async ({data}) => {
 
     const fileBucket = data.bucket; // Storage bucket containing the file.
@@ -23,9 +25,19 @@ module.exports = storage.onObjectFinalized(async ({data}) => {
     const imageBuffer = downloadResponse[0];
     logger.log("Image downloaded!");
 
+    let sharpImage = sharp(imageBuffer)
+
+    const imageInfo = await sharpImage.metadata()
+    if(imageInfo.width > maxWidth) {
+        sharpImage = sharpImage.resize(maxWidth)
+        logger.log("resized");
+    }
+
     // Generate webp using sharp.
-    const convertedBuffer = await sharp(imageBuffer).webp({quality: 100 }).toBuffer();
+    sharpImage = sharpImage.webp({quality: 80 })
     logger.log("converted");
+
+    const convertedBuffer = await sharpImage.toBuffer()
 
     // Upload the webp.
     const metadata = { contentType: 'image/webp' };
