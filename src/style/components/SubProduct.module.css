@@ -67,7 +67,7 @@
 
 .product-img-box .fill {
   width: 60%;
-  background-color: rgb(216, 176, 91);
+  filter: grayscale(0.6);
   display: inline-block;
 }
 
