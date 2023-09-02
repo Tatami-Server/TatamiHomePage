@@ -1,6 +1,6 @@
 //event.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DateField } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField, Toolbar } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create, ReferenceInput, AutocompleteInput } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
@@ -18,8 +18,8 @@ export const EventList = props => (
     </List>
 );
 
-const EditForm = () => (
-    <SimpleForm toolbar={<CustomFormActions />}>
+const EditForm = ({toolbar}) => (
+    <SimpleForm toolbar={toolbar}>
         <ReferenceInput 
             source="eventTypeRef"
             reference="eventType"
@@ -37,12 +37,12 @@ const EditForm = () => (
 
 export const EventEdit = props => (
     <Edit {...props} actions={<CustomToolbar />}>
-        <EditForm />
+        <EditForm toolbar={<CustomFormActions />} />
     </Edit>
 );
 
 export const EventCreate = props => (
     <Create {...props}>
-        <EditForm />
+        <EditForm toolbar={<Toolbar />} />
     </Create>
 );

@@ -2,7 +2,7 @@
 import CustomFormActions from "@admin/components/CustomFormActions";
 import CustomToolbar from "@admin/components/CustomToolbar";
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DateField } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField, Toolbar } from 'react-admin';
 import { Edit, SimpleForm, TextInput, DateInput } from 'react-admin';
 import { Create } from 'react-admin';
 
@@ -17,8 +17,8 @@ export const NoticeList = props => (
     </List>
 );
 
-const EditForm = () => (
-    <SimpleForm toolbar={<CustomFormActions />}>
+const EditForm = ({toolbar}) => (
+    <SimpleForm toolbar={toolbar}>
         <TextInput required fullWidth source="title" label="タイトル" />
         <TextInput required fullWidth source="url" label="URL" />
         <DateInput required source="date" label="日付" />
@@ -27,13 +27,13 @@ const EditForm = () => (
 
 export const NoticeEdit = props => (
     <Edit {...props} actions={<CustomToolbar />}>
-        <EditForm />
+        <EditForm toolbar={<CustomFormActions />} />
     </Edit>
 );
 
 export const NoticeCreate = props => (
     <Create {...props}>
-        <EditForm />
+        <EditForm toolbar={<Toolbar />} />
     </Create>
 );
 

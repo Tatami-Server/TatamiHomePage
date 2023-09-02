@@ -1,6 +1,6 @@
 //history.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DeleteButton, DateField, DateInput, NumberInput, NumberField, SelectInput } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DeleteButton, DateField, DateInput, NumberInput, NumberField, SelectInput, Toolbar } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create } from 'react-admin';
 import CustomImageInput from "@admin/components/CustomImageInput";
 import { nowMonth, months, nowYear, years } from "@util/DateFormatter";
@@ -19,8 +19,8 @@ export const HistoryList = props => (
     </List>
 );
 
-const EditForm = () => (
-    <SimpleForm toolbar={<CustomFormActions />}>
+const EditForm = ({toolbar}) => (
+    <SimpleForm toolbar={toolbar}>
         <TextInput fullWidth required source="title" label="タイトル" />
         <TextInput fullWidth required source="description" label="説明" multiline rows={5} />
         <SelectInput required source="year" label="年" choices={years} defaultValue={nowYear} />
@@ -31,12 +31,12 @@ const EditForm = () => (
 
 export const HistoryEdit = props => (
     <Edit {...props} actions={<CustomToolbar />}>
-        <EditForm />
+        <EditForm toolbar={<CustomFormActions />} />
     </Edit>
 );
 
 export const HistoryCreate = props => (
     <Create {...props}>
-        <EditForm />
+        <EditForm toolbar={<Toolbar />} />
     </Create>
 );
