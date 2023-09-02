@@ -8,7 +8,6 @@ import Igusa from '@components/Igusa';
 import { useRef ,createRef, useEffect, useState} from 'react';
 
 // 画像インポート
-import Historyimg from '/public/images/HistoryContent.images/history.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
@@ -54,7 +53,7 @@ const History = ({histories}) => {
               </HistoryContent>
             </div>
           );
-        })};
+        })}
 
         <UpArrow/>
       <Igusa text="ここでは畳サーバーの歴史を知ることができるわ。
