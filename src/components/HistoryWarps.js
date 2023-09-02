@@ -1,16 +1,13 @@
 // アンカーリンクインポート
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-// json（データ）をインポート
-import HistoryJson from '@json/History.json';
-
 // reactの機能をインポート
 import { useEffect, useState } from "react";
 
 // cssインポート
 import Style from '@style/components/HistoryWarp.module.css';
 
-const HistoryWarps= ({contentRef,scrollPosition}) => {
+const HistoryWarps= ({contentRef, scrollPosition, histories}) => {
 
   const [selected, setSelected] = useState([]);
   
@@ -19,7 +16,7 @@ const HistoryWarps= ({contentRef,scrollPosition}) => {
   });
 
   const judgeInsideOrNot= () => {
-    HistoryJson.map((_,i) => {
+    histories.map((_,i) => {
         const {top,bottom} = contentRef[i].current.getBoundingClientRect()
     
         const offset = 200;
@@ -55,7 +52,7 @@ const HistoryWarps= ({contentRef,scrollPosition}) => {
     return (
       <div className={`${Style["warp-container"]} ${isScrolled ? Style['is-scrolled'] : ''}`}>
       <ul className={Style["warp-content"]}>
-        {HistoryJson.map(({year},i) =>
+        {histories.map(([year],i) =>
           <AnchorLink href={'#'+year} key={i}>
             <li className={`${Style["warp-year"]} ${selected[i]} `}>{year}</li>
           </AnchorLink>

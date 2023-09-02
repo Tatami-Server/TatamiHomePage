@@ -11,10 +11,12 @@ import Image from "next/image";
 
 const Historycontent = ({year,histories}) => {
 
-    function slideImage(images) {if(images.length === 1) {
-      return(
-        <Image width={600} height={340} src={`/images/HistoryContent.images/${images}`}alt="歴史の写真" />
-      )
+    function slideImage(images) {
+      if(images.length === 1) {
+        const [image] = images
+        return (
+          <Image width={600} height={340} src={image.src}alt="歴史の写真" />
+        ) 
       } else {
         return(
           <Carousel className={Style.Carousel} >
@@ -23,8 +25,8 @@ const Historycontent = ({year,histories}) => {
               <Carousel.Item interval={2000} key={index}> 
               <Image
                 className="d-block w-100"
-                src={`/images/HistoryContent.images/${img}`}
-                alt="First slide"
+                src={img.src}
+                alt="slide"
                 width={600} height={340}
               /> 
               </Carousel.Item>
@@ -37,16 +39,16 @@ const Historycontent = ({year,histories}) => {
   return (
           <div  id={year}>
             <Subtitle subtitle={year} className={Style["subtitle-year"]}/>
-            {histories.map(({month,images,title,discription},index) => {
+            {histories.map(({month,images,title,description},index) => {
               return (
                 <div className={Style["history-content"]} key={index}>
                     <div className={Style["img-box"]}>
                     {slideImage(images)}
                     </div>
                     <div className={Style["text-box"]}>
-                      <p className={Style.month}>{month}</p>
+                      <p className={Style.month}>{month}月</p>
                       <p className={Style.title}>{title}</p>
-                      <p className={Style.discription}>{discription}</p>
+                      <p className={Style.discription}>{description}</p>
                     </div>
                   </div>
                 );

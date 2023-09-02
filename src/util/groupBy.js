@@ -1,5 +1,7 @@
 const groupBy = function(xs, key, sort) {
-    xs = orderBy(xs, sort)
+    if(sort) {
+        xs = orderBy(xs, sort)
+    }
     // xs.sort((a, b))
 
     const grouped =  xs.reduce(function(rv, x) {
@@ -8,7 +10,7 @@ const groupBy = function(xs, key, sort) {
         return rv;
     }, {});
 
-    return grouped
+    return Object.entries(grouped)
 };
 
 const  orderBy = (obj, sort) => {

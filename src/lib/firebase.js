@@ -24,8 +24,12 @@ export const getAll = async (resource, params) => {
     let dbQuery = collection(db, resource)
 
     if(params?.sort) {
-        const { field, order } = params.sort
-        dbQuery = query(dbQuery, orderBy(field, order))
+        if (Array.isArray(params.sort)) {
+            for (const sort of params.sort) {
+                const { field, order } = sort
+                dbQuery = query(dbQuery, orderBy(field, order))
+            }
+        }
     }
     const querySnapshot = await getDocs(dbQuery);
     const data = Promise.all(querySnapshot.docs.map(async doc => {

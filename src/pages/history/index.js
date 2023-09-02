@@ -7,20 +7,18 @@ import Igusa from '@components/Igusa';
 // reactの機能をインポート
 import { useRef ,createRef, useEffect, useState} from 'react';
 
-// json(データ)をインポート
-import HistoryJson from '@json/History.json';
-
 // 画像インポート
 import Historyimg from '/public/images/HistoryContent.images/history.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/History.module.css';
+import { getAll } from '@lib/firebase';
+import groupBy from '@util/groupBy';
 
-const History = () => {
-
+const History = ({histories}) => {
   const historyContentRefs = useRef([]);
-      {HistoryJson.forEach((_,i) => {
+      {histories.forEach((_,i) => {
         historyContentRefs.current[i] = createRef();
       })};
 
@@ -36,6 +34,7 @@ const History = () => {
       <HistoryWarps 
       contentRef={historyContentRefs.current} 
       // scrollPosition={scrollPosition}
+      histories={histories}
       />
         <div className={Style["history-hero-content-wrapper"]} 
           style={{backgroundImage: `url('/images/HistoryContent.images/history.png')`,
@@ -48,10 +47,10 @@ const History = () => {
           </div>
         </div>
 
-        {HistoryJson.map((history,i) => {
+        {histories.map(([year, historyData], i) => {
           return(
             <div ref={historyContentRefs.current[i]} key={i}>
-              <HistoryContent {...history}>
+              <HistoryContent year={year} histories={historyData}>
               </HistoryContent>
             </div>
           );
@@ -68,4 +67,21 @@ const History = () => {
     </>
   );
 }
+
+export async function getStaticProps() {
+  const historyData = (await getAll(
+      'history', { sort: [{ field: 'year', order: 'asc' }, { field: 'month', order: 'asc' }]}
+    ))
+    .map(history => ({
+        ...history,
+        year: `${history.year}年`
+      }
+    ))
+
+  return {
+      props: { histories: groupBy(historyData, 'year') },
+      revalidate: 60,
+  }
+}
+
 export default History;

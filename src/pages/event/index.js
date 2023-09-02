@@ -11,14 +11,11 @@ import fusuma from '/public/images/Igusa.images/sister2.png';
 import { getAll } from '@lib/firebase';
 import groupBy from '@util/groupBy';
 
-const Event = ({eventsGroupByType}) => {
-  const eventsWithGroup = Object.entries(eventsGroupByType)
-  
-  return (
+const Event = ({events}) => (
     <div>
       <Heading heading="イベント一覧"/>
       
-      {eventsWithGroup.map(([groupName, events]) => (
+      {events.map(([groupName, events]) => (
         <div key={groupName}>
           <Subtitle subtitle={groupName} />
           <div className="Products">
@@ -36,10 +33,9 @@ const Event = ({eventsGroupByType}) => {
       />
     </div>
   );
-}
 
 export async function getStaticProps() {
-    const events = (await getAll('event', { sort: { field: 'updatedAt', order: 'desc' }})).map(event => {
+    const eventData = (await getAll('event', { sort: [{ field: 'updatedAt', order: 'desc' }]})).map(event => {
       return {
         ...event,
         href: event.url || `/event/${event.id}`,
@@ -50,7 +46,7 @@ export async function getStaticProps() {
     })
 
     return {
-        props: { eventsGroupByType: groupBy(events, 'eventTypeName', ['eventType.sortNum', 'asc']) },
+        props: { events: groupBy(eventData, 'eventTypeName', ['eventType.sortNum', 'asc']) },
         revalidate: 60,
     }
 }
