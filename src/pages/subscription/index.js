@@ -34,7 +34,12 @@ const Subscription = () => {
     {title:"付近vcMODが使用できる（Java版限定）", img:sub7, description:<>サブスクライバー限定で、付近vcMODでの通話ができるようになりました!<br/>味方との連携をする際や敵の位置を察知する際など、楽しさの幅がぐっと広がります！</>},
   ];
 
-  const SpecialThenksList=["Yukina様", "S2ns_mash様", "まりゅ🐴様", "虚空教信者様"]; 
+  const SpecialThenksList = [
+    "Yukina様",
+    "S2ns_mash様",
+    "まりゅ🐴様",
+    "虚空教信者様",
+  ]; 
 
   return (
     <>
