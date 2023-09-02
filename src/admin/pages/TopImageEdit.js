@@ -9,11 +9,11 @@ const TopImageEditActions = () => {
     )
 }
 
-const TopImageEdit = (props) => {
+const TopImageEdit = () => {
     return  (
-        <Edit>
+        <Edit id='image' redirect="/top/image">
             <SimpleForm toolbar={<TopImageEditActions />}>
-                <CustomImageInput />
+                <CustomImageInput source='img' />
             </SimpleForm>
         </Edit>
     )
