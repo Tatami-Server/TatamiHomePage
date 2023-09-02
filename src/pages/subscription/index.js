@@ -37,7 +37,7 @@ const Subscription = () => {
   const SpecialThenksList=["Yukina様", "S2ns_mash様", "まりゅ🐴様", "虚空教信者様"]; 
 
   return (
-    <div>
+    <>
         <Heading heading="サブスクライブ・ご寄付について"/>
         <Subtitle subtitle="サブスクライバーとは？"/>
         <div className='subtitle-content'>
@@ -56,7 +56,7 @@ const Subscription = () => {
           <div className={Style["LargeCategory-wrapper"]}>
             {LargeCategoryContent.map(( {title, img, description }) => {
               return (
-                <div className={Style["LargeCategory-container"]}>
+                <div key={title} className={Style["LargeCategory-container"]}>
                   <LargeCategory LargeCategory={title}/>
                   <div className={Style["LargeCategory-content"]}>
                     <Image src={img} alt="サブスクライブイメージ画像"></Image>
@@ -88,18 +88,20 @@ const Subscription = () => {
           </p>
           <div className={Style["special-thenks-content"]}>
             <div className={Style["special-thenks"]}>
-              <Image src={kirakira} width={"50"}></Image>
+              <Image src={kirakira} alt="" width={"50"}></Image>
               <h2 >Special Thenks</h2>
-              <Image src={kirakira} width={"50"}></Image>
+              <Image src={kirakira} alt="" width={"50"}></Image>
             </div>
             <table>
-              {SpecialThenksList.map((name) => {
-                return (
-                  <tr>
-                    <td className={Style["special-thenks-name"]}>{name}</td>
-                  </tr>
-                  );
-                })}
+              <tbody>
+                {SpecialThenksList.map((name) => {
+                  return (
+                    <tr key={name}>
+                      <td className={Style["special-thenks-name"]}>{name}</td>
+                    </tr>
+                    );
+                  })}
+              </tbody>
             </table>
           </div>
         </div>
@@ -110,7 +112,7 @@ const Subscription = () => {
         image={tatami}
         creator="ナミヤ 和 様"
       />
-    </div>
+    </>
   );
 }
 export default Subscription;
