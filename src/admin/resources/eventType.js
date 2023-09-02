@@ -1,6 +1,8 @@
 //event.js
+import CustomFormActions from "@admin/components/CustomFormActions";
+import CustomToolbar from "@admin/components/CustomToolbar";
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DeleteButton, DateField, NumberField, NumberInput } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField, NumberField, NumberInput } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create } from 'react-admin';
 
 export const EventTypeList = props => (
@@ -11,13 +13,12 @@ export const EventTypeList = props => (
             <NumberField source="sortNum" label="並び順" />
             <DateField source='updatedAt' label='更新日時' showTime />
             <EditButton />
-            <DeleteButton />
         </Datagrid>
     </List>
 );
 
 const EditForm = () => (
-    <SimpleForm>
+    <SimpleForm toolbar={<CustomFormActions />}>
         <TextInput fullWidth required source="title" label="イベント名（フル）" placeholder="常時イベント(24時間イベントサーバー)" />
         <TextInput fullWidth required source="shortTitle" label="イベント名（ショート）" placeholder="常時" />
         <NumberInput fullWidth required source="sortNum" label="並び順" />
@@ -25,7 +26,7 @@ const EditForm = () => (
 )
 
 export const EventTypeEdit = props => (
-    <Edit {...props}>
+    <Edit {...props} actions={<CustomToolbar />}>
         <EditForm />
     </Edit>
 );

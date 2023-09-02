@@ -1,10 +1,11 @@
 //event.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DeleteButton, DateField } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create, ReferenceInput, AutocompleteInput } from 'react-admin';
-import { Show, SimpleShowLayout } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
+import CustomToolbar from "@admin/components/CustomToolbar";
+import CustomFormActions from "@admin/components/CustomFormActions";
 
 export const EventList = props => (
     <List {...props}>
@@ -13,13 +14,12 @@ export const EventList = props => (
             <TextField source="eventType.shortTitle" label="イベント種別" />
             <DateField source='updatedAt' label='更新日時' showTime />
             <EditButton />
-            <DeleteButton />
         </Datagrid>
     </List>
 );
 
 const EditForm = () => (
-    <SimpleForm>
+    <SimpleForm toolbar={<CustomFormActions />}>
         <ReferenceInput 
             source="eventTypeRef"
             reference="eventType"
@@ -36,7 +36,7 @@ const EditForm = () => (
 )
 
 export const EventEdit = props => (
-    <Edit {...props}>
+    <Edit {...props} actions={<CustomToolbar />}>
         <EditForm />
     </Edit>
 );
@@ -45,14 +45,4 @@ export const EventCreate = props => (
     <Create {...props}>
         <EditForm />
     </Create>
-);
-
-export const EventShow = props => (
-    <Show {...props}>
-        <SimpleShowLayout>
-            <TextField source="eventType" label="イベントの種類" />
-            <TextField source="title" label="タイトル" />
-            <CustomDateField source='updatedAt' label='更新日時' />
-        </SimpleShowLayout>
-    </Show>
 );
