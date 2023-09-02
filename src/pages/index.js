@@ -40,10 +40,10 @@ import Style from '@style/pages/Home.module.css';
 import Image from "next/image";
 import TopLayout from '@layouts/TopLayout';
 
-import { getAll } from '@lib/firebase';
+import { getAll, getOne } from '@lib/firebase';
 
 
-function Home({news}) {
+function Home({news, topImage}) {
 
   const SubProductsList = [
     { href: `/map/`, imgTitle: "マップ", img: map, title:"配布マップ", description: "当サーバーが提供している\n配布マップ等を紹介しています。" },
@@ -71,7 +71,7 @@ function Home({news}) {
   return (
     <>
       <section className={Style["hero-content-warpper"]}>
-        <div className={Style.hero}>
+        <div className={Style.hero} style={{ backgroundImage: `url(${topImage.src})` }}>
           <div className={Style["first-view-header"]}>
               <div className={Style.spuare}></div>
               <div className={Style.triangle}></div>
@@ -126,9 +126,13 @@ function Home({news}) {
 
 export async function getStaticProps() {
   const news = await getAll('notice', { sort: { field: 'date', order: 'desc' } })
+  const { img } = await getOne('top', 'image')
   
   return {
-    props: { news },
+    props: { 
+      news,
+      topImage : img,
+    },
     revalidate: 60,
   }
 }

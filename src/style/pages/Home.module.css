@@ -73,7 +73,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url(/images/Home.images/hero2.png) no-repeat center / cover;
+  background: no-repeat center / cover;
 }
 
 .arrow-icon {
