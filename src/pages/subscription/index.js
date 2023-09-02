@@ -89,7 +89,7 @@ const Subscription = () => {
           <div className={Style["special-thenks-content"]}>
             <div className={Style["special-thenks"]}>
               <Image src={kirakira} alt="" width={"50"}></Image>
-              <h2 >Special Thenks</h2>
+              <h2 >Special Thanks</h2>
               <Image src={kirakira} alt="" width={"50"}></Image>
             </div>
             <table>
