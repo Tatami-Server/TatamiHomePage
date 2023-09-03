@@ -1,12 +1,11 @@
 const { logger, firestore } = require("firebase-functions/v2");
-const { config } = require("firebase-functions");
 const got = require('got');
 
 const topCollections = ['top', 'notice']
 
 module.exports = firestore.onDocumentWritten('{collection}/{docId}', async (event) => {
     const { collection, docId } = event.params
-    const baseUrl = config().base.url
+    const baseUrl = process.env.BASE_URL
 
     const isTop = topCollections.some(colName => collection.includes(colName));
 
