@@ -1,13 +1,11 @@
 // コンポーネントインポート
 import Link from "next/link";
 
-// 画像インポート
-import gara from "/public/images/SubProduct.images/gara.jpg"
-
 // cssインポート
 import Style from '@style/components/SubProduct.module.css';
 
 import Image from "next/image";
+import MultiLineText from "./MultiLineText";
 
 const SubProducts = ({products}) => {
   return (
@@ -33,7 +31,7 @@ const SubProducts = ({products}) => {
               </div>
               <div className={Style["product-text"]}>
                 <h2>{title}</h2>
-                <p>{description}</p>
+                <MultiLineText text={description} />
               </div>
             </Link>
           </div>
