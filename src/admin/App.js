@@ -16,13 +16,17 @@ import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import HistoryIcon from '@mui/icons-material/History';
 import PersonalVideoIcon from '@mui/icons-material/PersonalVideo';
+import LayersIcon from '@mui/icons-material/Layers';
+import MapIcon from '@mui/icons-material/Map';
 
-import { NoticeList, NoticeEdit, NoticeCreate, NoticeShow } from './resources/notice';
+import { NoticeList, NoticeEdit, NoticeCreate } from './resources/notice';
 import { AdminList } from './resources/admin';
-import { EventList, EventEdit, EventCreate, EventShow } from './resources/event';
+import { EventList, EventEdit, EventCreate } from './resources/event';
 import { EventTypeList, EventTypeEdit, EventTypeCreate } from './resources/eventType';
 import { HistoryCreate, HistoryEdit, HistoryList } from './resources/history';
 import TopImageEdit from './pages/TopImageEdit';
+import { MapTypeCreate, MapTypeEdit, MapTypeList } from './resources/mapType';
+import { MapCreate, MapEdit, MapList } from './resources/map';
 
 const App = () => {
     
@@ -81,6 +85,30 @@ const App = () => {
                     recordRepresentation="title"
                     options={{
                         label: 'イベント種別',
+                    }}
+                />
+
+
+                <Resource 
+                    name="map"
+                    icon={MapIcon}
+                    list={MapList}
+                    edit={MapEdit}
+                    create={MapCreate}
+                    options={{
+                        label: '配布マップ等',
+                    }}
+                />
+
+                <Resource 
+                    name="mapType"
+                    icon={LayersIcon}
+                    list={MapTypeList}
+                    edit={MapTypeEdit}
+                    create={MapTypeCreate}
+                    recordRepresentation="title"
+                    options={{
+                        label: '配布マップ種別',
                     }}
                 />
 

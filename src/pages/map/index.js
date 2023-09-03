@@ -6,34 +6,26 @@ import SubProducts from '@components/SubProducts';
 import Igusa from '@components/Igusa';
 
 // 画像インポート
-import map1 from '/public/images/map.images/map1.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/map.module.css';
+import groupBy from '@util/groupBy';
+import { getAll } from '@lib/firebase';
 
-const Map = () => {
-
-  const pluginList=[
-    {href: "https://www.youtube.com/watch?v=C6j53vGcVAk", imgTitle: <>スコットランドヤード</>, img: map1, title: "マイクラスコットランドヤード", description:<>ボードゲーム「スコットランドヤード」をマイクラで再現！<br/>最大6名。4~5人プレイ推奨。<br/>1試合1時間~2時間想定。</>},
-  ]
-
+const Map = ({maps}) => {
   return (
     <div>
         <Heading heading="配布マップ等"/>
-        <Subtitle subtitle="配布イベント（プラグイン）"/>
-          <p className={Style["note"]}>※プライグインの動作確認にはpaperまたはspigot環境が必要です。</p>
-            <div className="Products">
-              <SubProducts products={pluginList}/>
+          {maps.map(([groupName, maps]) => (
+            <div key={groupName}>
+              <Subtitle subtitle={groupName} />
+              {groupName.includes('プラグイン') && <p className={Style["note"]}>※プライグインの動作確認にはpaperまたはspigot環境が必要です。</p>}
+              <div className="Products">
+                <SubProducts products={maps}/>
+              </div>
             </div>
-        <Subtitle subtitle="配布イベント（データパック）"/>
-          <div className='subtitle-content'>
-            <p>現在ありません。</p>
-          </div>
-        <Subtitle subtitle="配布マップ"/>
-          <div className='subtitle-content'>
-            <p>現在ありません。</p>
-          </div>
+          ))}
         <UpArrow/>
       <Igusa text="ここでは畳サーバーが提供している配布マップ等を掲載しているわ。
         クリックすれば配布先に飛べるはずだわ。
@@ -44,4 +36,22 @@ const Map = () => {
     </div>
   );
 }
+
+export async function getStaticProps() {
+  const mapData = (await getAll('map', { sort: [{ field: 'updatedAt', order: 'desc' }]})).map(map => {
+    return {
+      ...map,
+      href: map.url || `/map/${map.id}`,
+      img: map.mainImg?.src || '',
+      imgTitle: map.title,
+      mapTypeName: map.mapType.title || ''
+    }
+  })
+
+  return {
+      props: { maps: groupBy(mapData, 'mapTypeName', ['mapType.sortNum', 'asc']) },
+      revalidate: 60,
+  }
+}
+
 export default Map;
