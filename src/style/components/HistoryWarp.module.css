@@ -48,7 +48,6 @@
 
 .warp-container {
   overflow-x: scroll;
-  width: initial;
 }
 
 .is-scrolled {

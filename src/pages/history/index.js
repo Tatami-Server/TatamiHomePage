@@ -6,6 +6,7 @@ import Igusa from '@components/Igusa';
 
 // reactの機能をインポート
 import { useRef ,createRef, useEffect, useState} from 'react';
+import Image from "next/image";
 
 // 画像インポート
 import tatami from '/public/images/Igusa.images/sister1.png';
@@ -30,22 +31,18 @@ const History = ({histories}) => {
 
   return (
     <>
-      <HistoryWarps 
-      contentRef={historyContentRefs.current} 
-      // scrollPosition={scrollPosition}
-      histories={histories}
-      />
-        <div className={Style["history-hero-content-wrapper"]} 
-          style={{backgroundImage: `url('/images/HistoryContent.images/history.png')`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize:"cover",
-          }}>
+        <div className={Style["history-hero"]}>
+        <Image src={'/images/HistoryContent.images/history.png'} width={1920} height={1057}  className={Style['history-hero-img']}/>
           <div className={Style["history-hero-content-title"]}>
             <h3>畳サーバーの</h3>
             <h3>歴史</h3>
           </div>
         </div>
-
+      <HistoryWarps 
+      contentRef={historyContentRefs.current} 
+      // scrollPosition={scrollPosition}
+      histories={histories}
+      />
         {histories.map(([year, historyData], i) => {
           return(
             <div ref={historyContentRefs.current[i]} key={i}>

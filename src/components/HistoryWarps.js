@@ -50,7 +50,6 @@ const HistoryWarps= ({contentRef, scrollPosition, histories}) => {
     }, []);
 
     return (
-      <div className={Style["warp-box"]}>
         <div className={`${Style["warp-container"]} ${isScrolled ? Style['is-scrolled'] : ''}`}>
           <ul className={Style["warp-content"]}>
             {histories.map(([year],i) =>
@@ -60,7 +59,6 @@ const HistoryWarps= ({contentRef, scrollPosition, histories}) => {
             )}
           </ul>
         </div>
-      </div>
     );
 }
 export default HistoryWarps;

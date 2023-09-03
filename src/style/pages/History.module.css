@@ -1,13 +1,18 @@
 /* history */
-.history-hero-content-wrapper {
-  height: 500px;
-  object-fit: cover;
-  display: flex;
-  justify-content: flex-end;
+.history-hero {
+position: relative;
+}
+
+.history-hero-img {
+  width: 100%;
+  height: auto;
 }
 
 .history-hero-content-title {
-  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* padding-top: 30px; */
   color: white;
   writing-mode: vertical-rl;
   letter-spacing: 25px;
@@ -19,6 +24,10 @@
 
 .history-hero-content-title {
   z-index: 100;
+  text-align: end;
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
 }
 
 .history-hero-content-title h3 {
@@ -26,13 +35,13 @@
 }
 
 .history-hero-content-title h3:nth-child(1) {
-  padding-right: 100px;
-  padding-top: 20px;
+  /* padding-right: 100px; */
+  /* padding-top: 20px; */
 }
 
 .history-hero-content-title h3:nth-child(2) {
   margin: 0;
-  padding-top: 320px;
+  /* padding-top: 320px; */
 }
 
 
@@ -46,8 +55,8 @@
   }
 
   .history-hero-content-title {
-    padding-top: 0px;
-    letter-spacing: 15px;
+    /* padding-top: 0px; */
+    letter-spacing: 12px;
   }
 
   .history-hero-content-title h3 {
@@ -55,13 +64,13 @@
   }
   
   .history-hero-content-title h3:nth-child(1) {
-    padding-right: 10px;
-    padding-top: 10px;
+    /* padding-right: 10px; */
+    /* padding-top: 10px; */
   }
   
   .history-hero-content-title h3:nth-child(2) {
     margin: 0;
-    padding-top: 130px;
+    /* padding-top: 130px; */
   }
   
 }
