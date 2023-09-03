@@ -1,7 +1,7 @@
 import { SaveButton, Toolbar, DeleteWithConfirmButton } from "react-admin"
 
 const CustomFormActions = () => (
-    <Toolbar >
+    <Toolbar sx={[{ justifyContent: 'space-between' }]}>
         <SaveButton label="保存" />
         <DeleteWithConfirmButton 
             label="削除"
