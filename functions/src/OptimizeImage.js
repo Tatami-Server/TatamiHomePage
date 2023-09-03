@@ -28,13 +28,13 @@ module.exports = storage.onObjectFinalized(async ({data}) => {
     let sharpImage = sharp(imageBuffer)
 
     const imageInfo = await sharpImage.metadata()
-    if(imageInfo.width > maxWidth) {
+    if(imageInfo.width > maxWidth && !filePath.startsWith("top/")) {
         sharpImage = sharpImage.resize(maxWidth)
         logger.log("resized");
     }
 
     // Generate webp using sharp.
-    sharpImage = sharpImage.webp({quality: 80 })
+    sharpImage = sharpImage.webp({quality: 100 })
     logger.log("converted");
 
     const convertedBuffer = await sharpImage.toBuffer()
