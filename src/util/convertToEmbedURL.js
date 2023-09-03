@@ -1,5 +1,5 @@
 const convertToEmbedURL = (url) => {
-    if (url.includes('embed')) return url
+    if (url.includes('embed') || !url.includes('youtu')) return url
 
     let videoId;
     let embedURL;
