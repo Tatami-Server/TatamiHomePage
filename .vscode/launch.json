@@ -33,8 +33,10 @@
             "runtimeArgs": [
                 "emulators:start",
                 "--inspect-functions",
-                "--only",
-                "functions,storage"
+                "--import",
+                "emulatorData",
+                "--export-on-exit",
+                "emulatorData"
             ],
             "port": 9229,
             "skipFiles": [
