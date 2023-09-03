@@ -47,3 +47,7 @@ margin-bottom: 50px;
     border: 1px solid;
 }
 
+.event-body table img {
+    width: 100%;
+}
+
