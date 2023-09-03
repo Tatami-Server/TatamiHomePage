@@ -12,7 +12,6 @@ position: relative;
   position: absolute;
   top: 0;
   right: 0;
-  /* padding-top: 30px; */
   color: white;
   writing-mode: vertical-rl;
   letter-spacing: 25px;
@@ -26,8 +25,9 @@ position: relative;
   z-index: 100;
   text-align: end;
   display: flex;
-  gap: 10px;
-  margin-right: 20px;
+  gap: 30px;
+  margin-right: 100px;
+  margin-top: 70px;
 }
 
 .history-hero-content-title h3 {
@@ -35,13 +35,10 @@ position: relative;
 }
 
 .history-hero-content-title h3:nth-child(1) {
-  /* padding-right: 100px; */
-  /* padding-top: 20px; */
 }
 
 .history-hero-content-title h3:nth-child(2) {
   margin: 0;
-  /* padding-top: 320px; */
 }
 
 
@@ -55,8 +52,10 @@ position: relative;
   }
 
   .history-hero-content-title {
-    /* padding-top: 0px; */
     letter-spacing: 12px;
+    margin-right: 20px;
+    gap: 10px;
+    margin-top: 0.7vw;
   }
 
   .history-hero-content-title h3 {
@@ -64,13 +63,11 @@ position: relative;
   }
   
   .history-hero-content-title h3:nth-child(1) {
-    /* padding-right: 10px; */
-    /* padding-top: 10px; */
+
   }
   
   .history-hero-content-title h3:nth-child(2) {
     margin: 0;
-    /* padding-top: 130px; */
   }
   
 }
