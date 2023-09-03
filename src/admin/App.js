@@ -128,7 +128,7 @@ const App = () => {
                     icon={PeopleIcon}
                     list={AdminList}
                     options={{
-                        label: '管理ユーザー',
+                        label: '管理アカウント',
                     }}
                 />
 
