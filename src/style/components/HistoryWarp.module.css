@@ -1,7 +1,7 @@
 /* warp */
 
 .warp-content {
-  width: 170px;
+  width: 190px;
   position: fixed;
   top: 100px;
   right: 0;
@@ -40,31 +40,33 @@
 
 /* スマホの場合 */
 @media screen and (max-width: 599px) {
-  .warp-container {
-    top: 300px;
-    height: 70px;
-    position: relative;
-    overflow: scroll;
-    display: flex;
-    z-index: 999;
-    padding-top: 20px;
-  }
+.warp-box {
+  position: absolute;
+  top: 250px;
+  right: 0;
+}
 
-  .is-scrolled {
-    top: 0;
-    position: fixed;
-    background-color: rgb(249, 246, 239);
-  }
+.warp-container {
+  overflow-x: scroll;
+  width: initial;
+}
 
-  .warp-content {
-    top: 0;
-    position: relative;
-    height: 100%;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    width: initial;
+.is-scrolled {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 70px;
+  background-color: #f8f4ec;
+  display: flex;
+  align-items: center;
+}
+
+.warp-content {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  position: initial;
+  width: 100vw;
   }
 
   .warp-content a {

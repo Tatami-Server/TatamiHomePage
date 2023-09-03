@@ -50,14 +50,16 @@ const HistoryWarps= ({contentRef, scrollPosition, histories}) => {
     }, []);
 
     return (
-      <div className={`${Style["warp-container"]} ${isScrolled ? Style['is-scrolled'] : ''}`}>
-      <ul className={Style["warp-content"]}>
-        {histories.map(([year],i) =>
-          <AnchorLink href={'#'+year} key={i}>
-            <li className={`${Style["warp-year"]} ${selected[i]} `}>{year}</li>
-          </AnchorLink>
-        )}
-      </ul>
+      <div className={Style["warp-box"]}>
+        <div className={`${Style["warp-container"]} ${isScrolled ? Style['is-scrolled'] : ''}`}>
+          <ul className={Style["warp-content"]}>
+            {histories.map(([year],i) =>
+              <AnchorLink href={'#'+year} key={i}>
+                <li className={`${Style["warp-year"]} ${selected[i]} `}>{year}</li>
+              </AnchorLink>
+            )}
+          </ul>
+        </div>
       </div>
     );
 }
