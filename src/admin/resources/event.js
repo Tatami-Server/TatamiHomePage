@@ -29,7 +29,8 @@ const EditForm = ({toolbar}) => (
             <AutocompleteInput label="イベント種別" fullWidth />
         </ReferenceInput>
         <TextInput fullWidth required source="title" label="タイトル" />
-        <TextInput  fullWidth source="url" label="URL" placeholder="本文を入力せず、特定のページに飛ばしたいときのみ入力" />
+        <TextInput fullWidth source="url" label="URL" placeholder="本文を入力せず、特定のページに飛ばしたいときのみ入力" />
+        <TextInput fullWidth source="description" label="説明" placeholder="サムネイル下の説明文" multiline rows={3} />
         <CustomImageInput />
         <CustomRichTextInput label="本文" source="body" resource="event" />
     </SimpleForm>

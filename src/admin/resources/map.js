@@ -28,7 +28,7 @@ const EditForm = ({toolbar}) => (
             <AutocompleteInput label="配布マップ種別" fullWidth />
         </ReferenceInput>
         <TextInput fullWidth required source="title" label="タイトル" />
-        <TextInput fullWidth required source="description" label="説明" multiline rows={5} />
+        <TextInput fullWidth source="description" label="説明" multiline rows={5} />
         <TextInput  fullWidth source="url" label="URL" />
         <CustomImageInput />
     </SimpleForm>
