@@ -313,7 +313,6 @@
   }
 }
 
-/* チェックボックスデザイン */
 .home-icon {
   position: absolute;
   top: 30px;
@@ -336,6 +335,16 @@
   .omikuzi-content-wapper {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .home-icon {
+    top: 2vw;
+    left: 2vw;
+    svg {
+      width: 10vw;
+      height: 10vw;
+
+    }
   }
 
   .omikuzi-menu {
