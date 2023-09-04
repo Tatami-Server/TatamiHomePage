@@ -28,7 +28,7 @@ const Help = () => {
     },
     {
       question:"コマンドに興味はあるけど、やったことはないので不安です。", 
-      answer:<>ご安心ください。当サーバーにはコマンドの練習ができる"データパック研修"という制度がございます。3週間に分けて無理なく楽しみながら進めることができるので、初学者でも安心です!</>,
+      answer:<>ご安心ください。当サーバーにはコマンドの練習ができる&quot;データパック研修&quot;という制度がございます。3週間に分けて無理なく楽しみながら進めることができるので、初学者でも安心です!</>,
     },
     {
       question:"絶対に参加しなければならない日はありますか？", 
@@ -66,9 +66,9 @@ const Help = () => {
           </div>
         <Subtitle subtitle="よくある質問"/>
         <div className={HelperStyle["Question-wrapper"]}>
-        {QuestionList.map(({question, answer}) =>
+        {QuestionList.map(({question, answer}, index) =>
           <QuestionAccordion
-            key={question.answer}
+            key={index}
             question={question}
             answer={answer}
           />

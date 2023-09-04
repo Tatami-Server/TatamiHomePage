@@ -32,7 +32,7 @@ const History = ({histories}) => {
   return (
     <>
         <div className={Style["history-hero"]}>
-        <Image src={'/images/HistoryContent.images/history.png'} width={1920} height={1057}  className={Style['history-hero-img']}/>
+        <Image src={'/images/HistoryContent.images/history.png'} width={1920} height={1057}  className={Style['history-hero-img']} alt="" />
           <div className={Style["history-hero-content-title"]}>
             <h3>畳サーバーの</h3>
             <h3>歴史</h3>

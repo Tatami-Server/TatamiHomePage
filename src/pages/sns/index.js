@@ -33,7 +33,7 @@ const SNS = () => {
         <div className={Style["sns-wrapper"]}>
           {SnsContentList1.map((item) => {
             return(
-              <div className={Style["sns-content"]}>
+              <div key={item.title} className={Style["sns-content"]}>
                 <div className={Style.icon}>
                   <IconContext.Provider value={{ color: item.color, size: '60px' }}>
                     <item.icon />

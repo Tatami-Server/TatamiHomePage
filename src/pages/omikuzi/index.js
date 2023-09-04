@@ -184,10 +184,12 @@ const Omikuzi = () => {
               <Image 
                 src={syouzi2} 
                 className={`${Style['fortune-door-left']} ${isOpen ? Style.openLeft : ''}`}
+                alt=""
               ></Image>
               <Image 
                 src={syouzi1} 
                 className={`${Style['fortune-door-right']} ${isOpen ? Style.openRight : ''}`}
+                alt=''
               ></Image>
             </div>
               
@@ -208,7 +210,7 @@ const Omikuzi = () => {
           <div className={Style['igusa-text-container']}>
             <p className={Style['quest-text']}>{questText}</p>
           </div>
-          <Image className={Style['fusuma-img']} src={fusuma}></Image>
+          <Image className={Style['fusuma-img']} src={fusuma} alt=''></Image>
         </div>
       </div>
     </div>
