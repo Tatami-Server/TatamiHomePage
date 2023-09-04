@@ -1,7 +1,7 @@
 /* products */
 
 .products {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .product a {
@@ -101,21 +101,19 @@
 
     h3 {
       font-size: 25px;
-      padding-left: 10px;
+      margin-left: 10px;
     }
   }
 }
 
 @media screen and (max-width: 599px) {
   .sub-products {
-    padding-top: 50px;
     justify-content: center;
 
     .product-text {
       h2 {
         font-size: 20px;
-        padding-top: 7px;
-        padding-bottom: 5px;
+        margin: 3vw 0 2vw 0;
       }
 
       p {
@@ -139,6 +137,5 @@
 
   .product-img-box .text-box h3 {
     font-size: 20px;
-    padding-left: 10px;
   }
 }

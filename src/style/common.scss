@@ -55,7 +55,7 @@ main {
   .subtitle-img {
     width: 45%;
     height: auto;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -69,15 +69,27 @@ main {
     background-color: #f8f4ecd3;
     padding-left: 10vw;
     padding-right: 10vw;
+    padding-bottom: 30vw;
   }
 
   /* subtitle-content サブタイトルの下の要素のｃｓｓ */
+  .subtitle-content {
+    flex-direction: column;
+    gap: 0;
+    p {
+      font-size: 15px;
+      line-height: 23px;
+      margin:  0 0 4vw 0;
+    }
 
-  .subtitle-content p {
-    font-size: 15px;
-    margin: 0;
-    line-height: 23px;
+    .subtitle-img {
+      width: 100%;
+      height: auto;
+      margin: 3vw 0 8vw 0;
+    }
+
   }
+
 }
 
 main.RaLayout-contentWithSidebar {

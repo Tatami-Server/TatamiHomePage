@@ -1,7 +1,7 @@
 /* products */
 
 .main-products {
-  padding-top: 50px;
+  margin-top: 50px;
 
   a {
     text-decoration: none;
@@ -76,10 +76,13 @@
 /* スマホの場合 */
 @media screen and (max-width: 599px) {
   .main-products {
+    padding: initial;
+    margin-bottom: 30vw;
     a {
-      padding-top: 0px;
+      margin-top: 25vw;
       justify-content: center;
       flex-direction: column;
+      gap: 2vw;
 
       &:nth-child(even) {
         flex-direction: column;
@@ -104,8 +107,8 @@
 
   .product-text {
     h2 {
-      font-size: 25px;
-      padding-bottom: 10px;
+      font-size: 7vw;
+      margin:3vw 0 4vw 0;
     }
 
     p {

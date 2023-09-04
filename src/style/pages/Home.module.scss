@@ -50,15 +50,15 @@
   }
 }
 
-.icons {
-  li :hover {
-    color: #687832;
-  }
+// .icons {
+//   li :hover {
+//     color: #687832;
+//   }
 
-  svg path {
-    color: #42602D;
-  }
-}
+//   svg path {
+//     color: #42602D;
+//   }
+// }
 
 .first-view-header .logo {
   width: 270px;
@@ -122,6 +122,11 @@
 
     .triangle {
       display: none;
+    }
+
+    .first-view-menu  {
+      margin-top: 6vw;
+      margin-right: 3vw;
     }
 
     .logo {
