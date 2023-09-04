@@ -8,7 +8,7 @@ import CustomToolbar from "@admin/components/CustomToolbar";
 import CustomFormActions from "@admin/components/CustomFormActions";
 
 export const EventList = props => (
-    <List {...props}>
+    <List {...props} perPage={50}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="タイトル" />
             <TextField source="eventType.shortTitle" label="イベント種別" />

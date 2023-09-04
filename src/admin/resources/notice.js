@@ -7,7 +7,7 @@ import { Edit, SimpleForm, TextInput, DateInput } from 'react-admin';
 import { Create } from 'react-admin';
 
 export const NoticeList = props => (
-    <List {...props} sort={{ field: 'date', order: 'desc' }}>
+    <List {...props} sort={{ field: 'date', order: 'desc' }} perPage={50}>
         <Datagrid rowClick="edit" sx={{ '& .RaDatagrid-root': { width: '20%' } }}>
             <TextField source="title" label="タイトル" />
             <DateField source="date" label="日付" />

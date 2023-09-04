@@ -33,7 +33,7 @@ const ApproveField = props => {
 
 export const AdminList = props => {
     return (
-        <List {...props} sort={ { field: 'status', order: 'asc' }}>
+        <List {...props} sort={ { field: 'status', order: 'asc' }} perPage={50}>
             <Datagrid bulkActionButtons={false}>
                 <ApproveField />
                 <TextField source="email" label="メールアドレス" />

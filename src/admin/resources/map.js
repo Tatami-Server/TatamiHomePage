@@ -7,7 +7,7 @@ import CustomToolbar from "@admin/components/CustomToolbar";
 import CustomFormActions from "@admin/components/CustomFormActions";
 
 export const MapList = props => (
-    <List {...props}>
+    <List {...props} perPage={50}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="タイトル" />
             <TextField source="mapType.shortTitle" label="配布マップ種別" />

@@ -8,7 +8,7 @@ import CustomFormActions from "@admin/components/CustomFormActions";
 import CustomToolbar from "@admin/components/CustomToolbar";
 
 export const HistoryList = props => (
-    <List {...props}>
+    <List {...props} perPage={50}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="タイトル" />
             <TextField source="year" label="年" />

@@ -6,7 +6,7 @@ import { List, Datagrid, TextField, EditButton, DateField, NumberField, NumberIn
 import { Edit, SimpleForm, TextInput, Create } from 'react-admin';
 
 export const EventTypeList = props => (
-    <List {...props} sort={{ field: 'sortNum', order: 'asc' }}>
+    <List {...props} sort={{ field: 'sortNum', order: 'asc' }} perPage={50}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="イベント名（フル）" />
             <TextField source="shortTitle" label="イベント名（ショート）" />
