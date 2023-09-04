@@ -24,6 +24,11 @@ import ImageExtension from '@tiptap/extension-image'
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import GridOnIcon from '@mui/icons-material/GridOn';
 import { uploadToStorage } from '@lib/firebase';
+import Iframe from './Iframe';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import isUrl from 'is-url';
+import convertToEmbedURL from '@util/convertToEmbedURL';
+
 
 const CustomRichTextInput = ({ size, resource, ...props }) => {
     const CustomRichTextInputToolbar = ({ size, ...props }) => {
@@ -44,6 +49,19 @@ const CustomRichTextInput = ({ size, resource, ...props }) => {
     
             target.value = ''
         }
+        
+
+        const handleInsertIframe = () => {
+            const input = prompt('URLまたは埋め込みコードを入力してください:', '');
+            if(isUrl(input)) {
+
+                editor.chain().focus().setIframe({ src: convertToEmbedURL(input) }).run();
+            }
+            else {
+                console.log('insert')
+                editor.chain().focus().insertContent(input).run()
+            }
+        };
     
         return (
             <RichTextInputToolbar {...props}>
@@ -64,6 +82,11 @@ const CustomRichTextInput = ({ size, resource, ...props }) => {
                         <AddPhotoAlternateIcon />
                     </IconButton>
                 </label>
+
+                {/* iframeを挿入するボタン */}
+                <IconButton onClick={handleInsertIframe}>
+                    <IntegrationInstructionsIcon />
+                </IconButton>
     
                 {/* テーブルタグを挿入するButton */}
                 <IconButton onClick={handleInsertTable}>
@@ -97,6 +120,7 @@ const CustomRichTextInput = ({ size, resource, ...props }) => {
             TableHeader,
             TableCell,
             ImageExtension,
+            Iframe
         ],
         editorProps: {
             handleDrop: async function (view, event, slice, moved) {
