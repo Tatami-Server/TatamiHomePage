@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   background-color: #00000000;
-  align-items: end;
+  align-items: flex-end;
   padding: 30px;
   animation-fill-mode: forwards;
 }
@@ -65,7 +65,7 @@
 .igusa-img {
   width: 300px;
   flex: 0 0 auto;
-  align-self: end;
+  align-self: flex-end;
   height: auto;
   position: relative;
 }
