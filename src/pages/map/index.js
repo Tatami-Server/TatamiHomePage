@@ -9,7 +9,7 @@ import Igusa from '@components/Igusa';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
-import Style from '@style/pages/map.module.css';
+import Style from '@style/pages/map.module.scss';
 import groupBy from '@util/groupBy';
 import { getAll } from '@lib/firebase';
 

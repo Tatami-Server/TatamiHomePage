@@ -1,37 +1,36 @@
 /* subscription */
+
 .LargeCategory-content {
   display: flex;
   justify-content: space-between;
   gap: 2vh;
   padding-bottom: 50px;
-}
 
-.LargeCategory-content img {
-  width: 40%;
-  height: auto;
-}
+  img {
+    width: 40%;
+    height: auto;
+  }
 
-.LargeCategory-content p{
-  width: 600px;
-}
-
-.LargeCategory-container:nth-child(even) .LargeCategory-content {
-  flex-direction: row-reverse;
-}
-
-.LargeCategory-container:nth-child(4) img,
-.LargeCategory-container:nth-child(5) img,
-.LargeCategory-container:nth-child(6) img{
-  width: 100px;
-  margin-left: 50px;
-  margin-right: 50px;
+  p {
+    width: 600px;
+  }
 }
 
 .LargeCategory-container {
+  &:nth-child(even) .LargeCategory-content {
+    flex-direction: row-reverse;
+  }
+
+  &:nth-child(4) img, &:nth-child(5) img, &:nth-child(6) img {
+    width: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
   padding-top: 50px;
 }
 
-.special-thenks-content{
+.special-thenks-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +41,7 @@
   opacity: 0.7;
 }
 
-.subscription-used li:first-child{
+.subscription-used li:first-child {
   list-style: none;
 }
 
@@ -50,22 +49,20 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
 
-.subscription-subtitle-content p {
-  font-size: 20px;
-  margin: 0;
-  line-height: 30px;
+  p {
+    font-size: 20px;
+    margin: 0;
+    line-height: 30px;
+  }
 }
-
 
 .special-thenks {
   display: flex;
 
-}
-
-.special-thenks h2 {
-  font-size: 30px;
+  h2 {
+    font-size: 30px;
+  }
 }
 
 .special-thenks-name {
@@ -78,9 +75,8 @@
   border-width: 2px;
 }
 
-
 /* スマホの場合 */
-@media screen and (max-width: 599px){
+@media screen and (max-width: 599px) {
   .LargeCategory-content {
     padding-bottom: 0px;
     flex-direction: column;
@@ -90,25 +86,26 @@
   .LargeCategory-container:nth-child(even) .LargeCategory-content {
     flex-direction: column;
   }
-  
-  .LargeCategory-content img {
-    max-width: 300px;
-  }
-  
-  .LargeCategory-content p{
-    width: 300px;
+
+  .LargeCategory-content {
+    img {
+      max-width: 300px;
+    }
+
+    p {
+      width: 300px;
+    }
   }
 
   .LargeCategory-container {
     padding-bottom: 60px;
     padding-top: 0;
-  }
 
-  .LargeCategory-container h3 {
-    font-size: 15px;
-    margin: 0;
+    h3 {
+      font-size: 15px;
+      margin: 0;
+    }
   }
-
 
   .doneru-logo {
     width: 200px;
@@ -118,22 +115,23 @@
   .subscription-used {
     padding-bottom: 10px;
     padding-top: 10px;
+
+    li {
+      font-size: 12px;
+    }
   }
 
-  .subscription-used li{
-    font-size: 12px;
-  }
-  
-  .special-thenks h2 {
-    font-size: 20px;
+  .special-thenks {
+    h2 {
+      font-size: 20px;
+    }
+
+    img {
+      width: 20px;
+    }
   }
 
-  .special-thenks img {
-    width:20px;
-  }
-
-  .special-thenks-name{
+  .special-thenks-name {
     font-size: 15px;
   }
-
 }

@@ -1,5 +1,5 @@
 // cssインポート
-import Style from '@style/components/LargeCategory.module.css';
+import Style from '@style/components/LargeCategory.module.scss';
 
 const LargeCategory = (props) =>{
   return(

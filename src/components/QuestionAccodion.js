@@ -6,7 +6,7 @@ import { IconContext } from 'react-icons';
 import React, { useState } from 'react';
 
 // cssインポート
-import Style from '@style/pages/Helpre.module.css';
+import Style from '@style/pages/Helpre.module.scss';
   
 const QuestionAccordion = ({question, answer}) => {
   

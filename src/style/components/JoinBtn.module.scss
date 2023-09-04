@@ -8,13 +8,13 @@
   transition: 0.5s;
   border-radius: 3px;
   white-space: nowrap;
-  box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
-}
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
 
-.join-btn:hover {
-  color: rgb(89, 138, 94);
-  background: #fff;
-  box-shadow: initial;
+  &:hover {
+    color: rgb(89, 138, 94);
+    background: #fff;
+    box-shadow: initial;
+  }
 }
 
 .join-btn-large {
@@ -27,7 +27,6 @@
   width: 180px;
   height: 50px;
 }
-
 
 /* スマホの場合 */
 @media screen and (max-width: 599px) {

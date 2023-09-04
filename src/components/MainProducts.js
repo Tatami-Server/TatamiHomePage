@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // cssインポート
-import Style from '@style/components/MainProduct.module.css';
+import Style from '@style/components/MainProduct.module.scss';
 
 const MainProducts = ({products}) => {
   return (

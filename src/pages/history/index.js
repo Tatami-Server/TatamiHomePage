@@ -12,7 +12,7 @@ import Image from "next/image";
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
-import Style from '@style/pages/History.module.css';
+import Style from '@style/pages/History.module.scss';
 import { getAll } from '@lib/firebase';
 import groupBy from '@util/groupBy';
 

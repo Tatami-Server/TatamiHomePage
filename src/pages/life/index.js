@@ -19,7 +19,7 @@ import lifeShop from '/public/images/Life.images/life-shop.png'
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
-import Style from '@style/pages/Life.module.css';
+import Style from '@style/pages/Life.module.scss';
 
 const Life = () => {
 

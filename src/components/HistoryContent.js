@@ -5,7 +5,7 @@ import Subtitle from '@components/Subtitle';
 import Carousel from 'react-bootstrap/Carousel'
 
 // cssインポート
-import Style from '@style/components/HistoryContent.module.css';
+import Style from '@style/components/HistoryContent.module.scss';
 
 import Image from "next/image";
 

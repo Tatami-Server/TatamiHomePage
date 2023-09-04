@@ -5,7 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useEffect, useState } from "react";
 
 // cssインポート
-import Style from '@style/components/HistoryWarp.module.css';
+import Style from '@style/components/HistoryWarp.module.scss';
 
 const HistoryWarps= ({contentRef, scrollPosition, histories}) => {
 

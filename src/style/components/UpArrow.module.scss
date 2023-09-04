@@ -13,12 +13,11 @@
 
 .arrow-icon svg {
   fill: #42602D;
-}
 
-.arrow-icon svg:hover {
-  fill: #6E6C2E;
+  &:hover {
+    fill: #6E6C2E;
+  }
 }
-
 
 @media screen and (max-width: 599px) {
   .arrow-icon svg {

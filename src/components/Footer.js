@@ -6,7 +6,7 @@ import { SiDiscord } from 'react-icons/si'
 import { IconContext } from 'react-icons'
 
 // cssインポート
-import Style from '@style/components/Footer.module.css';
+import Style from '@style/components/Footer.module.scss';
 
 const Footer = () => {
 

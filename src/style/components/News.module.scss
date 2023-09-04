@@ -1,4 +1,5 @@
 /* news */
+
 .newsContainer {
   display: flex;
   flex-direction: column;
@@ -22,20 +23,21 @@
   overflow-y: scroll;
 }
 
-.news a {
-  text-decoration: none;
-  color: #000;
-  white-space: normal;
-}
+.news {
+  a {
+    text-decoration: none;
+    color: #000;
+    white-space: normal;
 
-.news a:hover {
-  color: rgb(48, 133, 48);
-}
+    &:hover {
+      color: rgb(48, 133, 48);
+    }
+  }
 
-.news p {
-  white-space: nowrap;
+  p {
+    white-space: nowrap;
+  }
 }
-
 
 @media screen and (max-width: 599px) {
   .newsContainer h2 {
@@ -45,21 +47,16 @@
   .news {
     padding-top: 15px;
     gap: 2vw;
-  }
 
-  .news a {
-    font-size: 13px;
-    margin-bottom: 5px;
-  }
-
-  .news p {
-    font-size: 13px;
-    margin-bottom: 5px;
+    a, p {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
   }
 
   .newsTable {
     padding-top: 10px;
     width: 100%;
-    height: 400px;;
+    height: 400px;
   }
 }

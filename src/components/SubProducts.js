@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // cssインポート
-import Style from '@style/components/SubProduct.module.css';
+import Style from '@style/components/SubProduct.module.scss';
 
 import Image from "next/image";
 import MultiLineText from "./MultiLineText";

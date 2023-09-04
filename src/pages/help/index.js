@@ -10,7 +10,7 @@ import Link from 'next/link';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
-import HelperStyle from '@style/pages/Helpre.module.css';
+import HelperStyle from '@style/pages/Helpre.module.scss';
 
 const Help = () => {
 

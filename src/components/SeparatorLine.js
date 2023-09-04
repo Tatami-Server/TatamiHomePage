@@ -1,5 +1,5 @@
 // cssインポート
-import Style from '@style/components/SeparatorLine.module.css'
+import Style from '@style/components/SeparatorLine.module.scss'
 
 const SeparatorLine = () =>{
   return(

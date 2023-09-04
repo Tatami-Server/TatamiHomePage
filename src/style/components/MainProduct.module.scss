@@ -1,0 +1,115 @@
+/* products */
+
+.main-products {
+  padding-top: 50px;
+
+  a {
+    text-decoration: none;
+    color: rgb(13, 32, 13);
+    display: flex;
+    align-items: flex-start;
+    margin-top: 180px;
+    justify-content: flex-start;
+    gap: 20px;
+    border-radius: 5px;
+
+    &:hover {
+      color: #000;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.product-img-box {
+  width: 50%;
+}
+
+.product-text {
+  width: 45%;
+}
+
+/* .product-img-box */
+
+.product-img-box {
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+
+  .fill {
+    background-color: rgb(164, 221, 231);
+    display: inline-block;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    display: block;
+    border-radius: 5px;
+  }
+
+  .fill {
+    border-radius: 5px;
+  }
+}
+
+/* product-text */
+
+.product-text {
+  h2 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 23px;
+  }
+}
+
+/* スマホの場合 */
+@media screen and (max-width: 599px) {
+  .main-products {
+    a {
+      padding-top: 0px;
+      justify-content: center;
+      flex-direction: column;
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+
+    .product-img-box {
+      width: 300px;
+      height: 170px;
+    }
+
+    .product-text {
+      width: 300px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* product-text */
+
+  .product-text {
+    h2 {
+      font-size: 25px;
+      padding-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+const path = require('path')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
@@ -5,7 +7,10 @@ const nextConfig = {
             { protocol: 'https', hostname: 'firebasestorage.googleapis.com' },
             { protocol: 'https', hostname: 'mineskin.eu' },
         ]
-    }
+    },
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'styles')],
+    },
 }
 
 module.exports = nextConfig

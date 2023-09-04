@@ -19,7 +19,7 @@ import Table from '@tiptap/extension-table'
 import TableRow from '@tiptap/extension-table-row'
 import TableHeader from '@tiptap/extension-table-header'
 import TableCell from '@tiptap/extension-table-cell'
-import Style from '../../style/pages/EventDetail.module.css'
+import Style from '../../style/pages/EventDetail.module.scss'
 import ImageExtension from '@tiptap/extension-image'
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import GridOnIcon from '@mui/icons-material/GridOn';

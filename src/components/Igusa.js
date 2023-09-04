@@ -8,7 +8,7 @@ import tatamiMaru from '/public/images/Igusa.images/tatamimaru.png';
 import kyuusu from '/public/images/Igusa.images/kyuusu.svg'
 
 // cssインポート
-import Style from '@style/components/Igusa.module.css';
+import Style from '@style/components/Igusa.module.scss';
 
 const Igusa = (props) => {
 

@@ -1,5 +1,5 @@
 // cssインポート
-import Style from  '@style/components/Subtitle.module.css';
+import Style from  '@style/components/Subtitle.module.scss';
 
 const SubTitle = (props) => {
   return (

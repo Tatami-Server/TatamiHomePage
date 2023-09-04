@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 // 画像インポート
-import Style from '@style/components/JoinBtn.module.css'
+import Style from '@style/components/JoinBtn.module.scss'
 
 const JoinBtn = ({ size }) => {
 

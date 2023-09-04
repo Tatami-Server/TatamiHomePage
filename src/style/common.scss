@@ -1,7 +1,7 @@
 /* 共通CSS */
 
-
 /* body */
+
 body {
   margin: 0;
   background-color: #f8f4ecd3;
@@ -10,6 +10,7 @@ body {
 }
 
 /* span 文字の色や太さを変える */
+
 .green {
   color: rgb(40, 94, 44);
 }
@@ -22,10 +23,12 @@ body {
   color: rgb(40, 177, 187);
 }
 
-h2, p, h5,h3 {
+h2, p, h5, h3 {
   margin: 0;
 }
+
 /* main */
+
 main {
   background-color: #f8f4ecd3;
   max-width: 1100px;
@@ -37,45 +40,44 @@ main {
   position: relative;
 }
 
-
 .subtitle-content {
   width: 100%;
   margin: 0 auto;
   display: flex;
   gap: 30px;
+
+  p {
+    font-size: 20px;
+    margin: 0;
+    line-height: 30px;
+  }
+
+  .subtitle-img {
+    width: 45%;
+    height: auto;
+    padding-bottom: 20px;
+  }
 }
 
 /* subtitle-content サブタイトルの下の要素のｃｓｓ */
-.subtitle-content p{
-  font-size: 20px;
-  margin: 0;
-  line-height: 30px;
-}
 
 /* subcontent以外の画像のサイズを決める */
-.subtitle-content .subtitle-img{
-  width: 45%;
-  height: auto;
-  padding-bottom: 20px;
-}
-
 
 /* スマホの場合 */
-@media screen and (max-width: 599px){
-
+@media screen and (max-width: 599px) {
   main {
     background-color: #f8f4ecd3;
     padding-left: 10vw;
     padding-right: 10vw;
   }
-  
-  /* subtitle-content サブタイトルの下の要素のｃｓｓ */
-.subtitle-content p{
-  font-size: 15px;
-  margin: 0;
-  line-height: 23px;
-}
 
+  /* subtitle-content サブタイトルの下の要素のｃｓｓ */
+
+  .subtitle-content p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 23px;
+  }
 }
 
 main.RaLayout-contentWithSidebar {

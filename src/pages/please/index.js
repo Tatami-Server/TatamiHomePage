@@ -17,7 +17,7 @@ import PleaseJoin from '/public/images/Please.images/please3-1.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
-import Style from '@style/pages/Please.module.css';
+import Style from '@style/pages/Please.module.scss';
 
 const Please = () => {
   return (

@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Sister1 from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
-import Style from '@style/pages/Contact.module.css';
+import Style from '@style/pages/Contact.module.scss';
 
 const Contact = () => {
   return (

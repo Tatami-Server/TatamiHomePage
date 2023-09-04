@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 // cssインポート
-import Style from '@style/components/News.module.css';
+import Style from '@style/components/News.module.scss';
 import { FormatDate } from '@util/DateFormatter';
 
 const News = ({news}) => {

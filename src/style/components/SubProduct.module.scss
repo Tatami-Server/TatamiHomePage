@@ -1,0 +1,144 @@
+/* products */
+
+.products {
+  padding-bottom: 50px;
+}
+
+.product a {
+  text-decoration: none;
+  color: rgb(13, 32, 13);
+
+  &:hover {
+    color: #000;
+  }
+}
+
+/* sub-products */
+
+.sub-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 939px;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 30%;
+  }
+
+  .product-img-box .text-box {
+    font-size: 150%;
+  }
+
+  .product h2 {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .product-text {
+    h2 {
+      font-family: 'Yuji Syuku', serif;
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 100px;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+}
+
+.product-img-box {
+  width: 330px;
+  height: 210px;
+}
+
+.product-text {
+  width: 330px;
+}
+
+/* .product-img-box */
+
+.product-img-box {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+
+  .fill {
+    width: 60%;
+    filter: grayscale(0.6);
+    display: inline-block;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .text-box {
+    .gara {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #42602D;
+    }
+
+    width: 40%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      font-size: 25px;
+      padding-left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .sub-products {
+    padding-top: 50px;
+    justify-content: center;
+
+    .product-text {
+      h2 {
+        font-size: 20px;
+        padding-top: 7px;
+        padding-bottom: 5px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .product-img-box {
+    width: 300px;
+    height: 170px;
+  }
+
+  .product-text {
+    width: 300px;
+  }
+
+  .sub-products::after {
+    display: none;
+  }
+
+  .product-img-box .text-box h3 {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+}

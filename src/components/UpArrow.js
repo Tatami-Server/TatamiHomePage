@@ -3,7 +3,7 @@ import { IconContext } from 'react-icons'
 import {IoIosArrowUp} from 'react-icons/io'
 
 // cssインポート
-import Style from '@style/components/UpArrow.module.css'
+import Style from '@style/components/UpArrow.module.scss'
 
 const UpArrow = () => {
   const returnTop = () => {

@@ -1,4 +1,5 @@
 /* footer */
+
 .footer {
   background-color: rgb(66, 96, 45);
 }
@@ -12,30 +13,30 @@
   padding-right: 10vw;
   padding-top: 20px;
   padding-bottom: 20px;
-}
 
-.footer-contents-container p, .icons {
-  margin: 0;
+  p {
+    margin: 0;
+  }
 }
 
 .icons {
+  margin: 0;
   list-style: none;
   display: flex;
   gap: 30px;
-}
 
-.icons li :hover {
-  color: #c5c990;
+  li :hover {
+    color: #c5c990;
+  }
 }
 
 .footerText {
   padding-left: 10vw;
-}
 
-.footerText:hover {
-  color: #c5c990;
+  &:hover {
+    color: #c5c990;
+  }
 }
-
 
 @media screen and (max-width: 599px) {
   .footer-contents-container {
@@ -57,11 +58,11 @@
     list-style: none;
     display: flex;
     gap: 15px;
-  }
 
-  .icons svg {
-    width: 20px;
-    height: 20px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .footerText {

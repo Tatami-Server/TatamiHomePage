@@ -1,29 +1,27 @@
-
 .icons {
   margin: 0;
   list-style: none;
   display: flex;
   gap: 40px;
-}
 
-.icons li :hover {
-  color: #687832;
-}
+  li :hover {
+    color: #687832;
+  }
 
-.icons svg path {
-  color: #42602D;
+  svg path {
+    color: #42602D;
+  }
 }
 
 @media screen and (max-width: 599px) {
-
   .icons {
     list-style: none;
     display: flex;
     gap: 15px;
-  }
 
-  .icons svg {
-    width: 20px;
-    height: 20px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 }

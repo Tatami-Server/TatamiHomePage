@@ -1,4 +1,5 @@
 /* heading */
+
 .heading-container {
   width: 100%;
   display: flex;
@@ -12,8 +13,8 @@
 .heading-line {
   height: 3px;
   width: 30%;
-  border-bottom: solid 2px rgb(66,96,45);
-  border-top: solid 2px rgb(66,96,45);
+  border-bottom: solid 2px rgb(66, 96, 45);
+  border-top: solid 2px rgb(66, 96, 45);
 }
 
 .heading-text {
@@ -22,8 +23,7 @@
   white-space: nowrap;
 }
 
-
-@media screen and (max-width: 599px){
+@media screen and (max-width: 599px) {
   .heading-container {
     width: 100%;
     display: flex;

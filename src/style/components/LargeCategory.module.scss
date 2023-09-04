@@ -1,8 +1,9 @@
 /* LargeCategory */
+
 .large-category-container {
   height: 100px;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .large-catergory-line {
@@ -21,7 +22,6 @@
 .large-catergory-line:nth-child(3n) {
   width: 80%;
 }
-
 
 @media screen and (max-width: 599px) {
   .large-category-container {

@@ -6,7 +6,7 @@ import authProvider from './providers/firebaseAuthProvider';
 import Dashboard from './Dashboard';
 import Login from './pages/Login';
 import RegisterPage from './pages/Register';
-import styles from "@admin/styles/Admin.module.css"
+import styles from "@admin/styles/Admin.module.scss"
 import { CustomLayout } from './layout/CustomLayout';
 
 

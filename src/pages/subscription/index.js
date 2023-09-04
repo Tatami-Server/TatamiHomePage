@@ -20,7 +20,7 @@ import kirakira from '/public/images/Subscription.images/kirakira.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
-import Style from '@style/pages/Subscription.module.css';
+import Style from '@style/pages/Subscription.module.scss';
 
 const Subscription = () => {
 

@@ -35,7 +35,7 @@ import tatami from '/public/images/Igusa.images/sister1.png';
 import { Rings } from 'react-loader-spinner'
 
 // cssインポート
-import Style from '@style/pages/Home.module.css';
+import Style from '@style/pages/Home.module.scss';
 
 import Image from "next/image";
 import TopLayout from '@layouts/TopLayout';

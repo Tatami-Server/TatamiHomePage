@@ -8,7 +8,7 @@ import Image from "next/image";
 import logo from '/public/images/Home.images/logo.png';
 
 // cssインポート
-import Style from '@style/components/Header.module.css';
+import Style from '@style/components/Header.module.scss';
 
 const Header = () => {
   return (

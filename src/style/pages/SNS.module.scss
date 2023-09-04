@@ -1,14 +1,15 @@
 /* SNS */
+
 .sns-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap:30px;
+  gap: 30px;
   padding-bottom: 100px;
 }
 
 .sns-content {
-  box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
   background-color: #ffffffb7;
   outline: 2px solid rgb(192, 216, 192);
   border-radius: 8px;
@@ -16,10 +17,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.sns-content:hover {
-  outline: 3px solid #377832;
+  &:hover {
+    outline: 3px solid #377832;
+  }
 }
 
 .icon {
@@ -35,9 +36,8 @@
   padding: 20px;
 }
 
-
 /* スマホの場合 */
-@media screen and (max-width: 599px){
+@media screen and (max-width: 599px) {
   .sns-wrapper {
     justify-content: center;
   }
@@ -45,15 +45,15 @@
   .sns-content {
     width: 55vw;
   }
-  
+
   .icon {
     padding-top: 5px;
     padding-bottom: 5px;
-  }
 
-  .icon svg{
-    width: 30px;
-    height: 30px;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   .sns-title {
@@ -65,5 +65,4 @@
     padding-top: 10px;
     font-size: 12px;
   }
-
 }

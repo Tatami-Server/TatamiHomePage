@@ -1,0 +1,46 @@
+/* header */
+
+.header {
+  height: 100px;
+  border-bottom: solid 3px rgb(66, 96, 45);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: white;
+
+  .logo {
+    top: 15px;
+    left: 50px;
+    width: 220px;
+    height: auto;
+  }
+
+  .rightContent {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+
+    .menu {
+      width: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .header {
+    height: 60px;
+    padding: 0 10px;
+
+    .logo {
+      width: 100px;
+      height: auto;
+      top: 15px;
+      left: 10px;
+    }
+
+    .rightContent {
+      gap: 20px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 // cssインポート
-import Style from '@style/components/Heading.module.css';
+import Style from '@style/components/Heading.module.scss';
 
 const Heading = (props) => {
   return (

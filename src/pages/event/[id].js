@@ -1,7 +1,7 @@
 
 import { getOne, getAll } from '@lib/firebase';
 import Heading from '@components/Heading';
-import Style from '@style/pages/EventDetail.module.css'
+import Style from '@style/pages/EventDetail.module.scss'
 
 import parse from 'html-react-parser';
 
