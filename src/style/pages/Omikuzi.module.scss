@@ -13,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .omikuzi-menu {
@@ -23,6 +24,7 @@
 
 .omikuzi-title {
   font-size: 55px;
+  margin:10px 0 20px 0;
 }
 
 .omikuzi-content-wapper {
@@ -290,38 +292,28 @@
 
   &::after {
     border-bottom: 3px solid #666464;
-
     /*チェックの太さ*/
     border-left: 3px solid #666464;
-
     /*チェックの太さ*/
     opacity: 0;
-
     /*チェック前は非表示*/
     height: 6px;
-
     /*チェックの高さ*/
     width: 11px;
-
     /*チェックの横幅*/
     transform: rotate(-45deg);
     top: -7px;
-
     /*チェック時の位置調整*/
     left: 10px;
 
-    /*チェック時の位置調整*/
   }
 
   &:checked::after {
     opacity: 1;
-
-    /*チェック後表示*/
   }
 }
 
 /* チェックボックスデザイン */
-
 .home-icon {
   position: absolute;
   top: 30px;
@@ -399,36 +391,27 @@
 
   .omikuzi-page-wapper input[type="checkbox"] {
     padding-left: 20px;
-
     /*label手前にチェックボックス用の余白を開ける*/
 
     &::before {
       width: 10px;
-
       /*チェックボックスの横幅*/
       height: 10px;
-
-      /*チェックボックスの縦幅*/
     }
 
     &::after {
       height: 5px;
-
       /*チェックの高さ*/
       width: 10px;
-
       /*チェックの横幅*/
       top: -5px;
-
       /*チェック時の位置調整*/
       left: 5px;
-
       /*チェック時の位置調整*/
     }
   }
 
   /* ふすまちゃんの吹き出しの部分 */
-
   .igusa-text-container {
     width: 130px;
     height: 100px;
@@ -445,7 +428,6 @@
   }
 
   /* おみくじスタートボタンの装飾 */
-
   .btn {
     width: 200px;
     height: 50px;
@@ -458,7 +440,6 @@
   }
 
   /* おみくじの周りの飾りの部分 */
-
   .fortune-line-thick {
     border: 6px solid rgb(201, 53, 16);
     width: 150px;
@@ -472,7 +453,6 @@
   }
 
   /* おみくじの中身 */
-
   .fortune {
     font-size: 25px;
     font-weight: 800;
