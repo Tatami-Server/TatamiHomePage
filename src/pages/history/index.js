@@ -22,11 +22,11 @@ const History = ({histories}) => {
         historyContentRefs.current[i] = createRef();
       })};
 
-  // const[scrollPosition, setScrollPosition]= useState(window.scrollY);
-  // const onScroll= () => setScrollPosition(window.scrollY);
-  useEffect(() => {
-    // window.addEventListener("scroll",onScroll)
-    // return() => window.removeEventListener("scroll",onScroll)
+    const[scrollPosition, setScrollPosition]= useState(0);
+    useEffect(() => {
+        const onScroll= () => setScrollPosition(window.scrollY);
+    window.addEventListener("scroll",onScroll)
+    return() => window.removeEventListener("scroll",onScroll)
   });
 
   return (
@@ -40,7 +40,7 @@ const History = ({histories}) => {
         </div>
       <HistoryWarps 
       contentRef={historyContentRefs.current} 
-      // scrollPosition={scrollPosition}
+      scrollPosition={scrollPosition}
       histories={histories}
       />
         {histories.map(([year, historyData], i) => {
