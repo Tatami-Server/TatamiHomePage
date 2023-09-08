@@ -76,7 +76,7 @@ const Omikuzi = () => {
     for (const fortune of fortunes) {
       cumulativeProbability += fortune.probability;
       if (random <= cumulativeProbability) {
-        return { name: fortune.name, text: fortune.text, image: fortune.image};
+        return fortune;
       }
     }
   }
@@ -92,6 +92,7 @@ const Omikuzi = () => {
   function handleButtonClick() {
 
     const randomFortune = getRandomFortune();
+    if(!randomFortune) return;
     setisOpen(!isOpen);
     setBtnText("おみくじスタート")
     if(isOpen) return; 
