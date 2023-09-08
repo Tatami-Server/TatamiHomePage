@@ -76,7 +76,6 @@ function Home({ news, topImages }) {
       <section className={Style["hero-content-warpper"]}>
         <div>
           <div className={Style["first-view-header"]}>
-            <div className={Style.spuare}></div>
             <div className={Style.triangle}></div>
             <div className={`${Style.triangle} ${Style.line}`}></div>
             <Image className={Style.logo} src='/images/Home.images/logo.png' width={300} height={300} alt="畳アイコン" />
