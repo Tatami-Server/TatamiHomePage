@@ -1,5 +1,5 @@
 // リアクトアイコンインポート
-import {IoIosArrowDown} from 'react-icons/io'
+import { IoIosArrowDown } from 'react-icons/io'
 import { IconContext } from 'react-icons'
 
 // コンポーネントをインポート
@@ -13,9 +13,11 @@ import SnsIcons from '@components/snsIcons';
 import Menu from '@components/Menu';
 
 // reactの機能をインポート
-import { useRef} from 'react';
+import { useRef } from 'react';
 import useSWR from 'swr'
 
+// カルーセルインポート
+import Carousel from 'react-bootstrap/Carousel'
 
 // 画像をインポート
 import logo from '/public/images/Home.images/logo.png';
@@ -43,10 +45,10 @@ import TopLayout from '@layouts/TopLayout';
 import { getAll, getOne } from '@lib/firebase';
 
 
-function Home({news, topImage}) {
+function Home({ news, topImages }) {
 
   const SubProductsList = [
-    { href: `/map/`, imgTitle: "マップ", img: map, title:"配布マップ", description: "当サーバーが提供している\n配布マップ等を紹介しています。" },
+    { href: `/map/`, imgTitle: "マップ", img: map, title: "配布マップ", description: "当サーバーが提供している\n配布マップ等を紹介しています。" },
     { href: `/history/`, imgTitle: "歴史", img: history, title: "畳サーバーの歴史", description: "当サーバーの過去を知ることができます。過去にこんな事が...。" },
     { href: `/sns/`, imgTitle: "SNS", img: sns, title: "公式SNS", description: "Twitch・YouTube・Twitter等のURLを記載しています。" },
     { href: `/subscription/`, imgTitle: "ご寄付", img: donation, title: "サブスクライブ・ご寄付", description: "平素よりご支援いただきありがとうございます！" },
@@ -56,11 +58,11 @@ function Home({news, topImage}) {
     { href: `/omikuzi/`, imgTitle: "おみくじ", img: omikuzi, title: "畳おみくじ", description: "今日の運勢とクエストを占おう！ちょっとした遊び心で用意したコンテンツです。" }
   ];
   const MainProductsList = [
-    { href: `/join/`,  img: join, title: "サーバー参加方法", description: "Discordやマイクラサーバーへの参加方法を紹介しています。" },
-    { href: `/life/`,  img: life, title: "生活サーバー", description: "半年ぶりに復活した新しい生活サーバーについて紹介しています。" },
-    { href: `/event/`,  img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
+    { href: `/join/`, img: join, title: "サーバー参加方法", description: "Discordやマイクラサーバーへの参加方法を紹介しています。" },
+    { href: `/life/`, img: life, title: "生活サーバー", description: "半年ぶりに復活した新しい生活サーバーについて紹介しています。" },
+    { href: `/event/`, img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
   ];
-  
+
   function scrollToRef(ref) {
     window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
   }
@@ -68,23 +70,37 @@ function Home({news, topImage}) {
 
   const { data: serverStat } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json()));
 
+
   return (
     <>
       <section className={Style["hero-content-warpper"]}>
-        <div className={Style.hero} style={{ backgroundImage: `url(${topImage.src})` }}>
+        <div>
           <div className={Style["first-view-header"]}>
-              <div className={Style.spuare}></div>
-              <div className={Style.triangle}></div>
-              <div className={`${Style.triangle} ${Style.line}`}></div>
-              <Image className={Style.logo} src='/images/Home.images/logo.png' width={300} height={300} alt="畳アイコン" />
-              <div className={Style["first-view-content"]}>
-                <SnsIcons/>
-                <div className={Style["first-view-menu"]}>
-                  <Menu right noOverlay/>
-                </div>
+            <div className={Style.spuare}></div>
+            <div className={Style.triangle}></div>
+            <div className={`${Style.triangle} ${Style.line}`}></div>
+            <Image className={Style.logo} src='/images/Home.images/logo.png' width={300} height={300} alt="畳アイコン" />
+            <div className={Style["first-view-content"]}>
+              <SnsIcons />
+              <div className={Style["first-view-menu"]}>
+                <Menu right noOverlay />
               </div>
+            </div>
           </div>
-          <div className={Style["skin-container"]}>
+          <Carousel className={Style.Carousel} >
+            {/* returnなしでも書ける↓例　他のも統一する。 */}
+            {topImages.map((img, index) =>
+              <Carousel.Item className={Style["carousel-item"]} interval={2000} key={index}>
+                <Image
+                  className={`d-block w-100 ${Style["carousel-img"]}`}
+                  src={img.src}
+                  alt="slide"
+                  layout='fill'
+                />
+              </Carousel.Item>
+            )}
+          </Carousel>
+          {/* <div className={Style["skin-container"]}>
             {serverStat?.players?.sample?.map(({name}) => {
               return (
                 <div key={name}>
@@ -94,23 +110,23 @@ function Home({news, topImage}) {
               )
             })}
             { !serverStat && <Rings height={150} width={150} />}
-          </div>
-          <div className={Style["arrow-icon"]} onClick={() => scrollToRef(myRef)}>
+          </div> */}
+          {/* <div className={Style["arrow-icon"]} onClick={() => scrollToRef(myRef)}>
             <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
               <IoIosArrowDown/>
             </IconContext.Provider>
-          </div>
+          </div> */}
         </div>
       </section>
       <main ref={myRef}>
         <section className={Style.products}>
-          <MainProducts products={MainProductsList}/>
-          <SeparatorLine/>
-          <SubProducts products={SubProductsList}/>
+          <MainProducts products={MainProductsList} />
+          <SeparatorLine />
+          <SubProducts products={SubProductsList} />
         </section>
-        <SeparatorLine/>
+        <SeparatorLine />
         <News news={news} />
-        <UpArrow/>
+        <UpArrow />
       </main>
       <Igusa text="はじめまして、伊草 タタミです。よろしくお願いするわ。
         いつかすごい畳職人になって、みんなに最高の畳を提供するのが夢なの。
@@ -127,11 +143,11 @@ function Home({news, topImage}) {
 export async function getStaticProps() {
   const news = await getAll('notice', { sort: { field: 'date', order: 'desc' } })
   const { img } = await getOne('top', 'image')
-  
+
   return {
-    props: { 
+    props: {
       news,
-      topImage : img,
+      topImages: img,
     },
     revalidate: 60,
   }

@@ -18,7 +18,8 @@
     border-left: 200px solid rgb(66, 96, 45);
     border-right: 200px solid transparent;
     border-bottom: 100px solid transparent;
-    position: relative;
+    position: absolute;
+    z-index: 800;
   }
 
   .line {
@@ -50,15 +51,16 @@
   }
 }
 
-// .icons {
-//   li :hover {
-//     color: #687832;
-//   }
+.Carousel {
+  height: 100%;
+  .carousel-item {
+    height: calc(100vh - 87px);
+    .carousel-img {
+      object-fit: cover;
+    }
+  }
+}
 
-//   svg path {
-//     color: #42602D;
-//   }
-// }
 
 .first-view-header .logo {
   width: 270px;
@@ -66,18 +68,9 @@
   position: absolute;
   top: 60px;
   left: 30px;
+  z-index: 1000;
 }
 
-/* hero */
-
-.hero {
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: no-repeat center / cover;
-}
 
 .arrow-icon {
   display: flex;
@@ -92,10 +85,10 @@
 
   svg {
     &:hover {
-      fill: #6E6C2E;
+      fill: #6e6c2e;
     }
 
-    fill: #42602D;
+    fill: #42602d;
     stroke: #8b9788;
     stroke-width: 10px;
   }
@@ -124,7 +117,7 @@
       display: none;
     }
 
-    .first-view-menu  {
+    .first-view-menu {
       margin-top: 6vw;
       margin-right: 3vw;
     }

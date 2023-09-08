@@ -13,7 +13,7 @@ const TopImageEdit = () => {
     return  (
         <Edit id='image' redirect="/top/image">
             <SimpleForm toolbar={<TopImageEditActions />}>
-                <CustomImageInput source='img' />
+                <CustomImageInput source='img'  multiple={true}/>
             </SimpleForm>
         </Edit>
     )
