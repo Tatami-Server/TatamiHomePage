@@ -2,7 +2,7 @@ import MainLayout from "@layouts/MainLayout";
 import NoLayout from "@layouts/NoLayout";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@style/common.scss'
+import '@style/app.scss';
 import '@style/components/Menu.scss';
 
 function MyApp({ Component, pageProps, router }) {
