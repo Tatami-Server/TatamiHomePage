@@ -9,6 +9,13 @@
   height: auto;
 }
 
+.history-hero-content-wrapper {
+  @include mq(tab) {
+    height: 10vw;
+    margin-bottom: 5vw;
+  }
+}
+
 .history-hero-content-title {
   position: absolute;
   top: 0;
@@ -26,10 +33,18 @@
   gap: 30px;
   margin-right: 100px;
   margin-top: 70px;
+  @include mq(tab) {
+    letter-spacing: 3.5vw;
+    margin-right: 6vw;
+    gap: 3vw;
+    margin-top: 1vw;
+  }
 
   h3 {
     font-size: 40px;
-
+    @include mq(tab) {
+      font-size: 3.6vw;
+    }
     &:nth-child(1) {}
 
     &:nth-child(2) {
@@ -38,27 +53,3 @@
   }
 }
 
-/* スマホの場合 */
-@media screen and (max-width: 599px) {
-  .history-hero-content-wrapper {
-    height: 200px;
-    margin-bottom: 100px;
-  }
-
-  .history-hero-content-title {
-    letter-spacing: 12px;
-    margin-right: 20px;
-    gap: 10px;
-    margin-top: 0.7vw;
-
-    h3 {
-      font-size: 15px;
-
-      &:nth-child(1) {}
-
-      &:nth-child(2) {
-        margin: 0;
-      }
-    }
-  }
-}

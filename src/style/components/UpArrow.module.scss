@@ -9,19 +9,19 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.arrow-icon svg {
-  fill: #42602D;
-
-  &:hover {
-    fill: #6E6C2E;
+  @include mq(tab) {
+    height: 15vw;
   }
-}
-
-@media screen and (max-width: 599px) {
   .arrow-icon svg {
-    height: 40px;
-    width: 40px;
+    fill: #42602D;
+    @include mq(tab) {
+      height: 15vw;
+      width: 15vw;
+    }
+  
+    &:hover {
+      fill: #6E6C2E;
+    }
   }
 }
+

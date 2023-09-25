@@ -57,12 +57,11 @@ const Contact = () => {
   const CheckboxTopic = () => {
     return (
       topicCheckboxes.map((topicCheckbox,i) => {
-        console.log(i)
         return (
           <div className={Style["topicCheckboxes"]}>
-            <input className={Style["Input-chackbox"]} id={"checbox" + {i}} type="checkbox" name={topicCheckbox.name}
-              value=" "></input>
-            <label for={"checbox" + {i}}  className={Style["Input-chackbox-label"]}>
+            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" name={topicCheckbox.name}
+              value=" "/>
+            <label for={"checbox" + i}  className={Style["Input-chackbox-label"]}>
               {topicCheckbox.value}
             </label>
           </div>

@@ -8,16 +8,18 @@
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    @include mq(sp) {
-
+    padding: 20px 10vw;
+    @include mq(tab) {
+      padding: 3vw 10vw;
+      justify-content: start;
+      gap: 7vw;
     }
   
     p {
-
+      font-size: 20px;
+      @include mq(tab) {
+        font-size: 2.5vw;
+      }
     }
   }
   
@@ -26,7 +28,10 @@
     list-style: none;
     display: flex;
     gap: 30px;
-  
+    @include mq(tab) {
+      display: none;
+      gap: 0;
+    }
     li :hover {
       color: #c5c990;
     }
@@ -34,6 +39,10 @@
   
   .footerText {
     padding-left: 10vw;
+    text-align: center;
+    @include mq(tab) {
+      padding-left: 0;
+    }
   
     &:hover {
       color: #c5c990;
@@ -42,34 +51,3 @@
 }
 
 
-@media screen and (max-width: 599px) {
-  .footer-contents-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .footer p {
-    font-size: 10px;
-  }
-
-  .icons {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  .footerText {
-    display: none;
-  }
-}

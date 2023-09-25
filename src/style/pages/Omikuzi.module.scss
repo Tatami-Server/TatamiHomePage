@@ -3,6 +3,9 @@
   flex-direction: column;
   justify-content: space-around;
   background-color: rgb(249, 246, 239);
+  @include mq(tab) {
+    justify-content: normal;
+  }
 
   /* height: 100vh; */
   width: 100%;
@@ -20,21 +23,41 @@
   position: absolute;
   top: 20px;
   right: 70px;
+  @include mq(tab) {
+    top: 4vw;
+    right: 5vw;
+  }
 }
 
 .omikuzi-title {
   font-size: 55px;
   margin:10px 0 20px 0;
+  @include mq(tab) {
+    font-size: 8vw;
+  }
+}
+
+.omikuzi-title-text {
+  @include mq(tab) {
+    font-size: 5vw;
+  }
 }
 
 .omikuzi-content-wapper {
   display: flex;
   justify-content: center;
   gap: 3%;
+  @include mq(tab) {
+    flex-direction: column;
+    gap: 3vw;
+  }
 }
 
 .quest-list-wapper {
   width: 20%;
+  @include mq(tab) {
+    width: 100%;
+  }
 }
 
 .quest-list-container {
@@ -44,21 +67,39 @@
   border: 7px solid #436644;
   height: 550px;
   background-color: #fff;
+  @include mq(tab) {
+    height: 57vw;
+    border: 1.5vw solid #436644;
+  }
 }
 
 .quest-list {
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  @include mq(tab) {
+    display: flex;
+    font-size: 3.7vw;
+  }
 
   p {
     font-weight: 500;
     font-size: 23px;
     padding-top: 10px;
+    @include mq(tab) {
+      font-size: 4vw;
+      padding-bottom: 1vw;
+      padding-top: 3vw;
+      margin: 0 auto;
+    }
   }
 
   label {
     padding-top: 10px;
+    @include mq(tab) {
+      padding-top: 1vw;
+      width: 50%;
+    }
   }
 }
 
@@ -66,6 +107,11 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  @include mq(tab) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: initial;
+  }
 }
 
 .omikuzi-wapper {
@@ -75,10 +121,21 @@
   align-items: center;
   gap: 50px;
   max-width: 800px;
+  @include mq(tab) {
+    width: 100%;
+    height: 90vw;
+    gap: 2vw;
+  }
 }
 
 .igusa-container {
   width: 20%;
+  @include mq(tab) {
+    width: initial;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .fortune-container {
@@ -91,6 +148,10 @@
   border: 7px solid #436644;
   background-size: cover;
   overflow: hidden;
+  @include mq(tab) {
+    height: 100vw;
+    border: 1.5vw solid #436644;
+  }
 }
 
 .fortune-door-left, .fortune-door-right {
@@ -134,6 +195,11 @@
   background-color: #fff;
   width: 244px;
   height: 444px;
+  @include mq(tab) {
+    border: 2vw solid rgb(201, 53, 16);
+    width: 35vw;
+    height: 55vw;
+  }
 }
 
 .fortune-line-thin {
@@ -145,6 +211,11 @@
   background-color: #fff;
   width: 220px;
   height: 420px;
+  @include mq(tab) {
+    border: 1vw solid rgb(201, 56, 20);
+    width: 30vw;
+    height: 50vw;
+  }
 }
 
 /* おみくじの中身 */
@@ -155,6 +226,10 @@
   font-size: 40px;
   font-weight: 800;
   height: 30%;
+  @include mq(tab) {
+    font-size: 5vw;
+
+  }
 }
 
 .quest {
@@ -168,11 +243,19 @@
   font-weight: 600;
   padding: 10px;
   width: 70%;
+  @include mq(tab) {
+    font-size: 7vw;
+    padding: 2vw;
+    width: 70%;
+  }
 
   p {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mq(tab) {
+      font-size: 4vw;
+    }
   }
 }
 
@@ -191,6 +274,12 @@
   border: solid 3px #436644;
   box-sizing: border-box;
   border-radius: 48%;
+  @include mq(tab) {
+    padding:  4vw;
+    width: 36vw;
+    height: 29vw;
+    font-size: 4vw;
+  }
 
   &:before {
     content: "";
@@ -218,11 +307,19 @@
 .quest-text {
   padding: 10px;
   font-size: 20px;
+  @include mq(tab) {
+    font-size: 3.3vw;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .fusuma-img {
   height: 460px;
   width: auto;
+  @include mq(tab) {
+    height: 45vw;
+  }
 }
 
 /* おみくじスタートボタンの装飾 */
@@ -243,10 +340,19 @@
   font-weight: 600;
   font-size: 22px;
   transition: .2s ease;
+  @include mq(tab) {
+    width: 60vw;
+    height: 15vw;
+    font-size: 5vw;
+  }
 
   &:hover {
     transform: translateY(3px);
     border-bottom-width: 2px;
+    @include mq(tab) {
+      transform: translateY(1vw);
+      border-bottom-width: 0.7vw;
+    }
   }
 }
 
@@ -264,6 +370,9 @@
   appearance: none;
   cursor: pointer;
   padding-left: 30px;
+  @include mq(tab) {
+    padding-left: 6vw;
+  }
 
   /*label手前にチェックボックス用の余白を開ける*/
   vertical-align: middle;
@@ -280,6 +389,10 @@
     border-radius: 0%;
     border: 1px solid #666464;
     width: 20px;
+    @include mq(tab) {
+      width: 4vw;
+      height: 4vw;
+    }
 
     /*チェックボックスの横幅*/
     height: 20px;
@@ -305,7 +418,14 @@
     top: -5px;
     /*チェック時の位置調整*/
     left: 10px;
-
+    @include mq(tab) {
+      border-left: 1vw solid #666464;
+      border-bottom: 1vw solid #666464;
+      height: 1.3vw;
+      width: 2.3vw;
+      top: -1vw;
+      left: 2vw;
+    }
   }
 
   &:checked::after {
@@ -317,160 +437,14 @@
   position: absolute;
   top: 30px;
   left: 40px;
-}
-
-@media screen and (max-width: 599px) {
-  .omikuzi-page-wapper {
-    justify-content: normal;
-  }
-
-  .omikuzi-title {
-    font-size: 30px;
-  }
-
-  .omikuzi-title-text {
-    font-size: 17px;
-  }
-
-  .omikuzi-content-wapper {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .home-icon {
+  @include mq(tab) {
     top: 2vw;
-    left: 2vw;
-    svg {
+    left: 3vw;
+  }
+  svg {
+    @include mq(tab) {
       width: 10vw;
       height: 10vw;
-
     }
-  }
-
-  .omikuzi-menu {
-    top: 10px;
-    right: 30px;
-  }
-
-  .quest-list-wapper {
-    width: 100%;
-  }
-
-  .omikuzi-wapper {
-    width: 100%;
-    height: 400px;
-    gap: 5%;
-  }
-
-  .igusa-container {
-    width: initial;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-  }
-
-  .quest-list-container {
-    height: 200px;
-  }
-
-  .quest-list {
-    display: flex;
-    font-size: 13px;
-
-    p {
-      font-weight: 500;
-      font-size: 17px;
-      padding-bottom: 5px;
-      margin: 0 auto;
-    }
-  }
-
-  .label-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: initial;
-  }
-
-  .quest-list label {
-    padding-top: 5px;
-    width: 50%;
-  }
-
-  /* チェックボックスデザイン */
-
-  .omikuzi-page-wapper input[type="checkbox"] {
-    padding-left: 20px;
-    /*label手前にチェックボックス用の余白を開ける*/
-
-    &::before {
-      width: 10px;
-      /*チェックボックスの横幅*/
-      height: 10px;
-    }
-
-    &::after {
-      height: 5px;
-      /*チェックの高さ*/
-      width: 10px;
-      /*チェックの横幅*/
-      top: -5px;
-      /*チェック時の位置調整*/
-      left: 5px;
-      /*チェック時の位置調整*/
-    }
-  }
-
-  /* ふすまちゃんの吹き出しの部分 */
-  .igusa-text-container {
-    width: 130px;
-    height: 100px;
-  }
-
-  .quest-text {
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .fusuma-img {
-    height: 200px;
-  }
-
-  /* おみくじスタートボタンの装飾 */
-  .btn {
-    width: 200px;
-    height: 50px;
-    font-size: 15px;
-
-    &:hover {
-      transform: translateY(3px);
-      border-bottom-width: 2px;
-    }
-  }
-
-  /* おみくじの周りの飾りの部分 */
-  .fortune-line-thick {
-    border: 6px solid rgb(201, 53, 16);
-    width: 150px;
-    height: 290px;
-  }
-
-  .fortune-line-thin {
-    border: 3px solid rgb(201, 56, 20);
-    width: 130px;
-    height: 270px;
-  }
-
-  /* おみくじの中身 */
-  .fortune {
-    font-size: 25px;
-    font-weight: 800;
-  }
-
-  .quest {
-    font-size: 20px;
-    font-weight: 600;
-    padding: 10px;
-    width: 70%;
   }
 }

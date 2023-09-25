@@ -8,39 +8,35 @@
   justify-content: space-between;
   padding: 0 50px;
   background-color: white;
+  @include mq(tab) {
+    height: 15vw;
+    padding: 0 3vw;
+  }
 
   .logo {
     top: 15px;
     left: 50px;
     width: 220px;
     height: auto;
+    @include mq(tab) {
+      width: 30vw;
+    }
   }
 
   .rightContent {
     display: flex;
     gap: 70px;
     align-items: center;
+    @include mq(tab) {
+      gap: 5vw;
+    }
 
     .menu {
       width: 36px;
+      @include mq(tab) {
+        width: 10vw;
+      }
     }
   }
 }
 
-@media screen and (max-width: 599px) {
-  .header {
-    height: 60px;
-    padding: 0 10px;
-
-    .logo {
-      width: 100px;
-      height: auto;
-      top: 15px;
-      left: 10px;
-    }
-
-    .rightContent {
-      gap: 20px;
-    }
-  }
-}

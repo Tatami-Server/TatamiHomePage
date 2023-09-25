@@ -5,6 +5,11 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
+  h2 {
+    @include mq(tab) {
+      font-size: 5vw;
+    }
+  }
 }
 
 .news {
@@ -13,6 +18,10 @@
   border-bottom: solid 1px rgba(67, 102, 68, 0.432);
   padding-top: 25px;
   padding-bottom: 8px;
+  @include mq(tab) {
+    padding-top: 4vw;
+    gap: 2vw;
+  }
 }
 
 .newsTable {
@@ -21,9 +30,20 @@
   width: 70%;
   height: 560px;
   overflow-y: scroll;
+  @include mq(tab) {
+    padding-top: 3vw;
+    width: 100%;
+    height: 90vw;
+  }
 }
 
 .news {
+  a,p {
+    @include mq(tab) {
+      font-size: 3.5vw;
+      margin-bottom: 1vw;
+    }
+  }
   a {
     text-decoration: none;
     color: #000;
@@ -36,27 +56,5 @@
 
   p {
     white-space: nowrap;
-  }
-}
-
-@media screen and (max-width: 599px) {
-  .newsContainer h2 {
-    font-size: 20px;
-  }
-
-  .news {
-    padding-top: 15px;
-    gap: 2vw;
-
-    a, p {
-      font-size: 13px;
-      margin-bottom: 5px;
-    }
-  }
-
-  .newsTable {
-    padding-top: 10px;
-    width: 100%;
-    height: 400px;
   }
 }

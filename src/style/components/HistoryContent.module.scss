@@ -9,26 +9,45 @@
 
   /* jsonの文字列が改行できるようになる */
   white-space: pre-wrap;
+  @include mq(tab) {
+    gap: 2vw;
+    padding: 5vw 0;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &:nth-child(even) {
     flex-direction: row-reverse;
+    @include mq(tab) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
 .Carousel {
   width: 600px;
+  @include mq(tab) {
+    width: 80vw;
+  }
 }
 
 .history-content img {
   width: 600px;
-  height: 340px;
   object-fit: cover;
+  @include mq(tab) {
+    width: 80vw;
+    height: 50vw;
+  }
 }
 
 /* text */
 
 .text-box {
   width: 500px;
+  @include mq(tab) {
+    width: 80vw;
+  }
 
   .month {
     font-size: 30px;
@@ -36,6 +55,13 @@
     margin-bottom: 20px;
     text-align: center;
     color: #244d0a;
+    @include mq(tab) {
+      font-size: 5vw;
+      margin-bottom: 2vw;
+    }
+    @include mq(sp) {
+      font-size: 6vw;
+    }
   }
 
   .title {
@@ -43,60 +69,23 @@
     text-align: center;
     margin-bottom: 30px;
     font-weight: bold;
+    @include mq(tab) {
+      font-size: 4vw;
+      margin-bottom: 2vw;
+    }
+    @include mq(sp) {
+      font-size: 4.5vw;
+      margin-bottom: 3.5vw;
+    }
   }
 
   .discription {
     font-size: 18px;
-  }
-}
-
-/* スマホの場合 */
-@media screen and (max-width: 599px) {
-  /* historyContent */
-
-  .history-content {
-    gap: 20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    flex-direction: column;
-    align-items: center;
-
-    &:nth-child(even) {
-      flex-direction: column;
-      align-items: center;
+    @include mq(tab) {
+      font-size: 3vw;
     }
-  }
-
-  .Carousel {
-    width: 300px;
-  }
-
-  .history-content img {
-    width: 300px;
-    height: 200px;
-  }
-
-  /* text */
-
-  .text-box {
-    width: 300px;
-
-    .month {
-      font-size: 20px;
-      font-weight: 700;
-      padding-right: 20px;
-      padding-left: 20px;
-      padding-bottom: 10px;
-      margin: 0;
-    }
-
-    .title {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    .discription {
-      font-size: 15px;
+    @include mq(sp) {
+      font-size: 4vw;
     }
   }
 }

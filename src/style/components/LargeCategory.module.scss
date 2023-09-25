@@ -4,31 +4,36 @@
   height: 100px;
   display: flex;
   justify-content: center;
+  @include mq(tab) {
+    height: 10vw;
+  }
 }
 
-.large-catergory-line {
+.large-category-line {
   width: 20%;
   height: 30%;
   border-bottom: 1px solid #000;
+  @include mq(tab) {
+    height: 38%;
+    width: 68%;
+  }
 }
 
-.large-catergroy {
+.large-category {
   line-height: 60px;
   text-align: center;
   font-size: 25px;
   white-space: nowrap;
+  @include mq(tab) {
+    line-height: 7vw;
+    font-size: 7vw;
+  }
 }
 
-.large-catergory-line:nth-child(3n) {
+.large-category-line:nth-child(3n) {
   width: 80%;
-}
-
-@media screen and (max-width: 599px) {
-  .large-category-container {
-    height: 30px;
-  }
-
-  .large-catergroy {
-    line-height: 20px;
+  @include mq(tab) {
+    width: 85%;
   }
 }
+

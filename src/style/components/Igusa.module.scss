@@ -9,6 +9,11 @@
   align-items: flex-end;
   padding: 30px;
   animation-fill-mode: forwards;
+  z-index: 1000;
+  @include mq(tab) {
+    padding: 3vw;
+    justify-content: center;
+  }
 
   &.show {
     animation-name: backgroundFadeIn;
@@ -19,6 +24,10 @@
 .igusa-container {
   height: 600px;
   display: flex;
+  @include mq(tab) {
+    left: 2vw;
+    height: 75%;
+  }
 }
 
 .igusa-maru {
@@ -32,6 +41,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include mq(tab) {
+    width: 20vw;
+    height: 20vw;
+  }
 
   p {
     position: absolute;
@@ -46,6 +59,10 @@
   width: 100px;
   height: 100px;
   cursor: pointer;
+  @include mq(tab) {
+    width: 15vw;
+    height: 15vw;
+  }
 }
 
 .igusa-maru p {
@@ -55,11 +72,18 @@
   color: white;
   top: 42%;
   cursor: pointer;
+  @include mq(tab) {
+    font-size: 3vw;
+  }
 }
 
 .igusa {
   display: flex;
   align-items: center;
+  @include mq(tab) {
+    flex-direction: column-reverse;
+    gap: 5vw;
+  }
 }
 
 .igusa-img {
@@ -68,6 +92,9 @@
   align-self: flex-end;
   height: auto;
   position: relative;
+  @include mq(tab) {
+    width: 50vw;
+  }
 }
 
 .igusa-text-container {
@@ -88,6 +115,9 @@
     border-top: 16px solid transparent;
     border-left: 16px solid rgb(27 66 38);
     border-bottom: 16px solid transparent;
+    @include mq(tab) {
+      left: 70%;
+    }
   }
 
   p {
@@ -100,50 +130,6 @@
   animation-duration: 1.5s;
 }
 
-/* スマホの場合 */
-@media screen and (max-width: 599px) {
-  .igusa-wrapper {
-    padding: 5px;
-    justify-content: center;
-  }
-
-  .igusa-container {
-    left: 5px;
-    height: 75%;
-  }
-
-  .igusa-maru {
-    width: 70px;
-    height: 70px;
-  }
-
-  .kyuusu {
-    width: 60px;
-    height: 60px;
-    z-index: 1;
-  }
-
-  .igusa-maru p {
-    font-weight: 1000;
-    font-size: 13px;
-    margin: 0;
-    z-index: 2;
-    color: white;
-  }
-
-  .igusa {
-    flex-direction: column-reverse;
-    gap: 40px;
-  }
-
-  .igusa-container .igusa-img {
-    width: 200px;
-  }
-
-  .igusa-text-container:before {
-    left: 70%;
-  }
-}
 
 @keyframes characterFadeIn {
   0% {

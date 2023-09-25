@@ -4,6 +4,15 @@
   position: absolute;
   width: 36px;
   height: 30px;
+  @include mq(tab) {
+    width: 5vw;
+    height: 4vw;
+  }
+  @include mq(sp) {
+    width: 7vw;
+    height: 6vw;
+    
+  }
 }
 
 /* Color/shape of burger icon bars */
@@ -100,17 +109,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .burger-container {
   position: relative;
   height: 30px;
-}
-
-@media screen and (max-width: 599px) {
-  .bm-burger-button {
-    position: absolute;
-    width: 25px;
-    height: 20px;
+  @include mq(tab) {
+    width: 5vw;
+    height: 4vw;
   }
-
-  .burger-container {
-    height: 20px;
-    width: 20px;
+  @include mq(sp) {
+    width: 7vw;
+    height: 6vw;
+    
   }
 }
+

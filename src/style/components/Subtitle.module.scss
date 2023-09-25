@@ -5,31 +5,27 @@
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 50px;
+  @include mq(tab) {
+    margin: 5vw 0;
+  }
 }
 
 .subtilte {
   position: relative;
   border-bottom: 5px solid rgb(187, 187, 187);
   width: 80vw;
+  @include mq(tab) {
+    width: 100%;
+  }
 
   span {
     display: inline-block;
     padding: 5px 10px;
     border-bottom: 5px solid rgb(66, 96, 45);
     margin-bottom: -5px;
-  }
-}
-
-@media screen and (max-width: 599px) {
-  .subtitle-container {
-    margin: 5vw 0;
-  }
-
-  .subtilte {
-    width: 80vw;
-
-    span {
+    @include mq(tab) {
       font-size: 5vw;
     }
   }
 }
+

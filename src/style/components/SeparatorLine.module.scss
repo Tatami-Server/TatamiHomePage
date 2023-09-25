@@ -6,14 +6,9 @@
   background-color: rgba(66, 96, 45, 0.712);
   margin-bottom: 150px;
   margin-top: 150px;
-}
-
-@media screen and (max-width: 599px) {
-  .separator-line {
+  @include mq(tab) {
     width: 100%;
-    height: 2px;
     background-color: rgba(66, 96, 45, 0.712);
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin: 15vw 0;
   }
 }
