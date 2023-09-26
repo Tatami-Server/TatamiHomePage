@@ -1,14 +1,24 @@
 //event.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DateField, Toolbar } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField, Toolbar, CreateButton, ExportButton, Link, TopToolbar } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create, ReferenceInput, AutocompleteInput } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
 import CustomToolbar from "@admin/components/CustomToolbar";
 import CustomFormActions from "@admin/components/CustomFormActions";
+import { Button } from "@mui/material";
+
+
+const EventListActions = props => (
+    <TopToolbar>
+        <Button to='/event/sort' variant="outlined" LinkComponent={Link}>並び順変更</Button>
+        <CreateButton />
+        <ExportButton />
+    </TopToolbar>
+)
 
 export const EventList = props => (
-    <List {...props} perPage={50}>
+    <List {...props} perPage={50} actions={<EventListActions/>}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="タイトル" />
             <TextField source="eventType.shortTitle" label="イベント種別" />

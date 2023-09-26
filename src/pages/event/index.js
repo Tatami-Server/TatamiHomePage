@@ -35,7 +35,7 @@ const Event = ({events}) => (
   );
 
 export async function getStaticProps() {
-    const eventData = (await getAll('event', { sort: [{ field: 'updatedAt', order: 'desc' }]})).map(event => {
+    const eventData = (await getAll('event', { sort: [{ field: 'sortNum', order: 'asc' }]})).map(event => {
       return {
         ...event,
         href: event.url || `/event/${event.id}`,
