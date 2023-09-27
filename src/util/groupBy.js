@@ -1,6 +1,7 @@
-const groupBy = function(xs, key, sort) {
-    if(sort) {
-        xs = orderBy(xs, sort)
+const groupBy = function(xs, key, sort = {}) {
+
+    if(sort.groupSort) {
+        xs = orderBy(xs, sort.groupSort)
     }
     // xs.sort((a, b))
 
@@ -9,6 +10,12 @@ const groupBy = function(xs, key, sort) {
 
         return rv;
     }, {});
+
+    if(sort.itemSort) {
+        for(const [key, items] of Object.entries(grouped)) {
+            grouped[key] = orderBy(items, sort.itemSort)
+        }
+    }
 
     return Object.entries(grouped)
 };

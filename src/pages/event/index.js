@@ -45,8 +45,17 @@ export async function getStaticProps() {
       }
     })
 
+    const events = groupBy(
+      eventData,
+      'eventTypeName',
+      {
+          groupSort:['eventType.sortNum', 'asc'],
+          itemSort: ['sortNum', 'asc']
+      }
+    )
+
     return {
-        props: { events: groupBy(eventData, 'eventTypeName', ['eventType.sortNum', 'asc']) },
+        props: { events },
         revalidate: 60,
     }
 }

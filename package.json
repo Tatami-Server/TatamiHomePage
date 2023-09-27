@@ -11,6 +11,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/sortable": "^7.0.2",
     "@mui/icons-material": "^5.13.7",
     "@mui/material": "^5.13.7",
     "@tiptap/extension-image": "^2.1.6",

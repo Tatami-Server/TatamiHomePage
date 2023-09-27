@@ -1,22 +1,35 @@
-import SubProduct from "@components/SubProcut";
 import SubTitle from "@components/Subtitle";
 import { getAll } from "@lib/firebase";
 import groupBy from "@util/groupBy";
 import { useEffect, useState } from "react";
-import { useNotify } from "react-admin"
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { Title, useNotify } from "react-admin"
 import Style from '@style/components/SubProduct.module.scss';
-import EventSortStyle from '@admin/styles/EventSort.module.scss'
-import Heading from "@components/Heading";
 import dataProvider from "@admin/providers/firestoreDataProvider";
+import { DndContext, PointerSensor, useSensor, useSensors } from "@dnd-kit/core";
+import { SortableContext, arrayMove } from "@dnd-kit/sortable";
+import { SortableItem } from "@admin/components/SortableItem";
+import AdminSubProduct from "@admin/components/AdminSubProduct";
+import { CardContent } from "@mui/material";
+
+const merge = (oldData, newData) => {
+    return oldData.map(item => {
+        const newItem = newData.find(n => n.id === item.id);
+        if (newItem) {
+            return { ...item, sortNum: newItem.sortNum };
+        }
+        return item;
+    });
+}
 
 const EventSort = () => {
     const [events, setEvents] = useState([])
+    const [eventsGroups, setEventsGroup] = useState([])
+
 
     const notify = useNotify();
 
     useEffect(() => {
-        getAll('event').then(eventData => {
+        getAll('event', { sort: [{ field: 'sortNum', order: 'asc' }] }).then(eventData => {
             eventData = eventData.map(event => {
                 return {
                     ...event,
@@ -26,71 +39,93 @@ const EventSort = () => {
                     eventTypeName: event.eventType.title || ''
                 }
             })
-
-            eventData = groupBy(eventData, 'eventTypeName', ['sortNum', 'asc'])
             setEvents(eventData)
+            setEventsGroup(groupBy(
+                eventData,
+                'eventTypeName',
+                {
+                    groupSort:['eventType.sortNum', 'asc'],
+                    itemSort: ['sortNum', 'asc']
+                }
+            ))
         })
     }, [])
 
-    const onDragEndHandle = ({source, destination, draggableId}) => {
-        reorder(source.index, destination.index, draggableId)
+    const onDragEndHandle = async ({ active, over, ...data }) => {
+        if (!active || !over || active.id === over.id) return
+
+        const { eventTypeName } = events.find(({id}) => id === active.id)
+        const [_, eventData ] = eventsGroups.find(([groupName]) => groupName === eventTypeName)
+
+        const oldIndex = eventData.findIndex(event => event.id === active.id);
+        const newIndex = eventData.findIndex(event => event.id === over.id)
+        const newEvents = arrayMove(eventData, oldIndex, newIndex).map((event, index) => ({ ...event, sortNum: index }))
+
+        const mergedEvents = merge(events, newEvents)
+
+
+        setEvents(mergedEvents);
+        setEventsGroup(groupBy(
+            mergedEvents,
+            'eventTypeName',
+            {
+                groupSort:['eventType.sortNum', 'asc'],
+                itemSort: ['sortNum', 'asc']
+            }
+        ))
+
+        const changedItems = [];
+
+        for (let i = Math.min(oldIndex, newIndex); i <= Math.max(oldIndex, newIndex); i++) {
+            if (eventData[i].id !== newEvents[i].id) {
+                changedItems.push({
+                    id: events[i].id,
+                    sortNum: newEvents.findIndex(event => event.id === events[i].id)
+                });
+
+                changedItems.push({
+                    id: newEvents[i].id,
+                    sortNum: i
+                });
+            }
+        }
+
+        // Remove duplicates
+        const uniqueChangedIds = changedItems.filter((item, index, self) =>
+            index === self.findIndex(t => t.id === item.id)
+        );
+
+        for await (const { id, sortNum } of uniqueChangedIds) {
+            await dataProvider.update('event', { id, data: { sortNum } })
+        }
+        notify("並び順の保存完了", { type: 'success' })
     }
 
-    const reorder = (startIndex, endIndex, id) => {
-        if (!events) return;
-    
-        const eventData = Object.fromEntries(events);
-        const groupName = Object.keys(eventData).find(key => eventData[key].some(item => item.id === id));
-    
-        if (!groupName) return;
-    
-        const result = [...eventData[groupName]];
-        const [removed] = result.splice(startIndex, 1);
-        result.splice(endIndex, 0, removed);
-        eventData[groupName] = result;
-    
-        result.forEach((event, index) => {
-            dataProvider.update('event', { id: event.id, data: { ...event, sortNum: index } });
-        });
-    
-        notify("並び順の保存完了", { type: 'success' })
-        setEvents(Object.entries(eventData));
-    };
-    
+    const sensors = useSensors(useSensor(PointerSensor));
+
 
     return (
         <>
-            <Heading heading="イベント並び替え" />
-            {events.map(([groupName, events]) => (
-                <div key={groupName}>
-                    <SubTitle subtitle={groupName} />
-                    <DragDropContext onDragEnd={onDragEndHandle}>
-                        <Droppable droppableId="droppable">
-                            {(provided) => (
-                                <div {...provided.droppableProps} ref={provided.innerRef}>
-                                    <div className={`${Style["sub-products"]} ${EventSortStyle["event-sort-products"]}`}>
-                                        {events.map((event, index) => (
-                                            <Draggable key={event.id} draggableId={event.id} index={index}>
-                                                {(provided) => (
-                                                    <div
-                                                        ref={provided.innerRef}
-                                                        {...provided.draggableProps}
-                                                        {...provided.dragHandleProps}
-                                                    >
-                                                        <SubProduct product={event} />
-                                                        {/* <p>{event.title}</p> */}
-                                                    </div>
-                                                )}
-                                            </Draggable>
-                                        ))}
-                                    </div>
-                                    {provided.placeholder}
-                                </div>
-                            )}
-                        </Droppable>
-                    </DragDropContext>
-                </div>
-            ))}
+            <Title title="イベント順並び替え" />
+            <CardContent>
+                <DndContext
+                    sensors={sensors}
+                    onDragEnd={onDragEndHandle}
+                >
+                    {eventsGroups.map(([groupName, eventsGroup]) => (
+                    <SortableContext items={eventsGroup} key={groupName}>
+                        <SubTitle subtitle={groupName} />
+                        <div className={Style['sub-products']}>
+                            {eventsGroup.map((event) => (
+                                <SortableItem key={event.id} id={event.id}>
+                                    <AdminSubProduct product={event} key={event.id} />
+                                </SortableItem>
+                            ))}
+                        </div>
+                    </SortableContext>
+                    ))}
+                </DndContext>
+            </CardContent>
         </ >
     )
 }

@@ -48,8 +48,16 @@ export async function getStaticProps() {
     }
   })
 
+  const maps = groupBy(
+    mapData,
+    'mapTypeName',
+    {
+        groupSort: ['mapType.sortNum', 'asc']
+    }
+  )
+
   return {
-      props: { maps: groupBy(mapData, 'mapTypeName', ['mapType.sortNum', 'asc']) },
+      props: { maps },
       revalidate: 60,
   }
 }
