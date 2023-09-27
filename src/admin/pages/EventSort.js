@@ -51,7 +51,7 @@ const EventSort = () => {
         })
     }, [])
 
-    const onDragEndHandle = async ({ active, over, ...data }) => {
+    const onDragEndHandle = async ({ active, over }) => {
         if (!active || !over || active.id === over.id) return
 
         const { eventTypeName } = events.find(({id}) => id === active.id)
