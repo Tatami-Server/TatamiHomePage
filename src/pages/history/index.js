@@ -14,7 +14,7 @@ import tatami from '/public/images/Igusa.images/sister1.png';
 // cssインポート
 import Style from '@style/pages/History.module.scss';
 import { getAll } from '@lib/firebase';
-import groupBy from '@util/groupBy';
+import { groupBy } from '@util/Query';
 
 const History = ({histories}) => {
   const historyContentRefs = useRef([]);

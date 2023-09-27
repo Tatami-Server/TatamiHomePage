@@ -1,6 +1,6 @@
 import SubTitle from "@components/Subtitle";
 import { getAll } from "@lib/firebase";
-import groupBy from "@util/groupBy";
+import { groupBy } from "@util/Query";
 import { useEffect, useState } from "react";
 import { Title, useNotify } from "react-admin"
 import Style from '@style/components/SubProduct.module.scss';

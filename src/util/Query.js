@@ -1,4 +1,4 @@
-const groupBy = function(xs, key, sort = {}) {
+export const groupBy = function(xs, key, sort = {}) {
 
     if(sort.groupSort) {
         xs = orderBy(xs, sort.groupSort)
@@ -20,7 +20,7 @@ const groupBy = function(xs, key, sort = {}) {
     return Object.entries(grouped)
 };
 
-const  orderBy = (obj, sort) => {
+export const  orderBy = (obj, sort) => {
     const [ field, order ] = sort
     obj.sort((a, b) => {
         const aData = field.split('.').reduce((o, p) => {

@@ -1,6 +1,6 @@
 //event.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DateField, Toolbar, CreateButton, ExportButton, Link, TopToolbar, NumberInput } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField, Toolbar, CreateButton, ExportButton, TopToolbar, NumberInput, DateInput, DateTimeInput } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create, ReferenceInput, AutocompleteInput } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
@@ -11,7 +11,7 @@ import { Button } from "@mui/material";
 
 const EventListActions = props => (
     <TopToolbar>
-        <Button to='/event/sort' variant="outlined" LinkComponent={Link}>並び順変更</Button>
+        <Button to='/event/sort' variant="outlined">並び順変更</Button>
         <CreateButton />
         <ExportButton />
     </TopToolbar>
@@ -42,8 +42,9 @@ const EditForm = ({toolbar}) => (
         <TextInput fullWidth source="url" label="URL" placeholder="本文を入力せず、特定のページに飛ばしたいときのみ入力" />
         <TextInput fullWidth source="description" label="説明" placeholder="サムネイル下の説明文" multiline rows={3} />
         <CustomImageInput />
+        <NumberInput hidden fullWidth required source="sortNum" label="並び順" defaultValue={0} />
         <CustomRichTextInput label="本文" source="body" resource="event" />
-        <NumberInput fullWidth required source="sortNum" label="並び順" defaultValue={0} />
+        <DateTimeInput source='publishAt' required label="公開日時" defaultValue={new Date()} />
     </SimpleForm>
 )
 
