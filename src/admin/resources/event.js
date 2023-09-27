@@ -1,6 +1,6 @@
 //event.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DateField, Toolbar, CreateButton, ExportButton, Link, TopToolbar } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField, Toolbar, CreateButton, ExportButton, Link, TopToolbar, NumberInput } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create, ReferenceInput, AutocompleteInput } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
@@ -43,6 +43,7 @@ const EditForm = ({toolbar}) => (
         <TextInput fullWidth source="description" label="説明" placeholder="サムネイル下の説明文" multiline rows={3} />
         <CustomImageInput />
         <CustomRichTextInput label="本文" source="body" resource="event" />
+        <NumberInput fullWidth required source="sortNum" label="並び順" defaultValue={0} />
     </SimpleForm>
 )
 

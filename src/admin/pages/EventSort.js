@@ -29,7 +29,7 @@ const EventSort = () => {
     const notify = useNotify();
 
     useEffect(() => {
-        getAll('event', { sort: [{ field: 'sortNum', order: 'asc' }] }).then(eventData => {
+        getAll('event').then(eventData => {
             eventData = eventData.map(event => {
                 return {
                     ...event,
