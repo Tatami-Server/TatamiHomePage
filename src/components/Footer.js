@@ -7,6 +7,7 @@ import { IconContext } from 'react-icons'
 
 // cssインポート
 import Style from '@style/components/Footer.module.scss';
+import Link from 'next/link'
 
 const Footer = () => {
 
@@ -27,9 +28,9 @@ const Footer = () => {
               return (
                 <IconContext.Provider value={{ color: '#fff', size: '30px' }} key={index}>
                   <li>
-                    <a href={iconItem.href} target="_blank" rel="noopener noreferrer">
+                    <Link href={iconItem.href} target="_blank" rel="noopener noreferrer">
                       <iconItem.reactIcon />
-                    </a>
+                    </Link>
                   </li>
                 </IconContext.Provider>
               );

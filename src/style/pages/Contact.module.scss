@@ -216,55 +216,55 @@
       }
     }
   }
-  .thanks-card{
-    width: 70%;
-    height: 300px;
-    background-color: #fff;
-    border: 2px solid rgb(66, 96, 45);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 50px;
+}
+.thanks-card{
+  width: 70%;
+  height: 300px;
+  background-color: #fff;
+  border: 2px solid rgb(66, 96, 45);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  @include mq(tab) {
+    width: 100%;
+    height: 50vw;
+    margin-top: 5vw;
+  }
+  p {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
     @include mq(tab) {
-      width: 100%;
-      height: 50vw;
+      font-size: 4vw;
+    }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 30px;
+    @include mq(tab) {
       margin-top: 5vw;
     }
-    p {
-      font-size: 22px;
-      font-weight: bold;
-      text-align: center;
-      @include mq(tab) {
-        font-size: 4vw;
-      }
-    }
-    a {
-      display: flex;
-      justify-content: center;
-      text-decoration: none;
-      margin-top: 30px;
-      @include mq(tab) {
-        margin-top: 5vw;
-      }
-      button {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-          appearance: none;
-          background-color:rgb(89, 138, 94);
-          color: #fff;
-          border: 0;
-          font-size: 20px;
-          border-radius: 5px;
-          width: 250px;
-          height: 50px;
-          @include mq(tab) {
-            font-size: 4vw;
-            width: 70%;
-            height: 10vw;
-          }
-      }
+    button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+        appearance: none;
+        background-color:rgb(89, 138, 94);
+        color: #fff;
+        border: 0;
+        font-size: 20px;
+        border-radius: 5px;
+        width: 250px;
+        height: 50px;
+        @include mq(tab) {
+          font-size: 4vw;
+          width: 70%;
+          height: 10vw;
+        }
     }
   }
 }

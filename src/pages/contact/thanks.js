@@ -4,11 +4,9 @@ import Heading from '@components/Heading';
 
 // cssインポート
 import Style from '@style/pages/Contact.module.scss';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Thanks = () => {
-
-
   return (
     <div>
       <Heading heading="お問い合わせ・意見箱" />

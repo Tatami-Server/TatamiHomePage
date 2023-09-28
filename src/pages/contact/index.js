@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
-
 // コンポーネントインポート
 import Heading from '@components/Heading';
 import Subtitle from '@components/Subtitle';
 import UpArrow from '@components/UpArrow';
 import Igusa from '@components/Igusa';
-import Link from 'next/link';
 import Sister1 from '/public/images/Igusa.images/sister1.png';
+import { useForm } from "react-hook-form";
 
 // cssインポート
 import Style from '@style/pages/Contact.module.scss';
 
+import { useRouter } from 'next/router';
+
 const Contact = () => {
+  const router = useRouter();
+  const {
+    register,
+    handleSubmit,
+  } = useForm();
 
   const topicCheckboxes = [
     'Minecraft畳サーバーそのものに対して',
@@ -30,25 +35,40 @@ const Contact = () => {
       topicCheckboxes.map((topicCheckbox, i) => {
         return (
           <div className={Style["topicCheckboxes"]} key={topicCheckbox}>
-            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" name="entry.1515577470"
+            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" {...register('entry-1515577470')}
               value={topicCheckbox} />
-            <label for={"checbox" + i} className={Style["Input-chackbox-label"]}>
+            <label htmlFor={"checbox" + i} className={Style["Input-chackbox-label"]}>
               {topicCheckbox}
             </label>
           </div>
-
         );
       })
     );
   }
 
-    const [submitted, setSubmitted] = useState(false);
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      setSubmitted(true);
-      // フォームの送信処理を追加する場合、ここに追加します。
-    };
+  const onSubmit = async (data) => {
+    let formData = {}
+    for(const [key, value] of Object.entries(data)) {
+      const newKey = key.replace('-', '.')
+      formData[newKey] = value
+    }
+
+    const res = await fetch('/api/sendContactFormData', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(formData)
+    })
+
+    console.log(res)
+
+    if(res.status === 200) {
+      console.log('success')
+      router.push({pathname: '/contact/thanks'})
+    }
+    else {
+      console.log('error')
+    }
+  }
 
   return (
     <div>
@@ -64,42 +84,36 @@ const Contact = () => {
             <span className={Style["bold"]}>＃チケット作成</span>
             をご利用ください。
           </p>
-          {!submitted ? (
-          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrfFjwolk-AVfgHLMVatXeJlK1XuzAn8MgF-aVYDl5a4HL2A/formResponse" 
-            target="hidden_iframe" 
-            onSubmit={handleSubmit} 
-            method="POST" 
-            id="mG61Hd"
-            >
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className={Style["Input-item"]}>
               <div className={Style["item"]}>
                 <p className={Style["Norequired-tag"]}>任意</p>
-                <label for="name" className={Style["item-name"]}>ニックネームをお書きください。(匿名での送信も可能です)</label>
+                <label htmlFor="name" className={Style["item-name"]}>ニックネームをお書きください。(匿名での送信も可能です)</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" id="name" placeholder="ニックネームをお書きください。" name="entry.1337207535" ></input>
+                <input type="text" id="name" placeholder="ニックネームをお書きください。" {...register('entry-1337207535')} ></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
               <div className={Style["item"]}>
                 <p className={Style["Norequired-tag"]}>任意</p>
-                <label for="name" className={Style["item-name"]}>返信をご希望の方は、連絡のつくアカウントやメールアドレスをお書きください。</label>
+                <label htmlFor="name" className={Style["item-name"]}>返信をご希望の方は、連絡のつくアカウントやメールアドレスをお書きください。</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" name="entry.638518570" id="mail" placeholder="example@example.com"></input>
+                <input type="text" {...register('entry-638518570')} id="mail" placeholder="example@example.com"></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
               <div className={Style["item"]}>
                 <p className={Style["required-tag"]}>必須</p>
-                <label for="name" className={Style["item-name"]}>お問い合わせの内容を選択してください。(複数選択可能)</label>
+                <label htmlFor="name" className={Style["item-name"]}>お問い合わせの内容を選択してください。(複数選択可能)</label>
               </div>
               <div className={Style["Input-screen"]}>
                 <CheckboxTopic />
                 <div className={Style["topicCheckboxes"]}>
-                  <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" name="entry.1515577470"
+                  <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" {...register('entry-1515577470')}
                     value="__other_option__"  />
-                  <label for="other-option" className={Style["Input-chackbox-label"]}>その他:</label>
+                  <label htmlFor="other-option" className={Style["Input-chackbox-label"]}>その他:</label>
                   <input type="text" className={Style["other-option"]} name="entry.1515577470.other_option_response" />
                 </div>
               </div>
@@ -107,19 +121,19 @@ const Contact = () => {
             <div className={Style["Input-item"]}>
               <div className={Style["item"]}>
                 <p className={Style["required-tag"]}>必須</p>
-                <label for="name" className={Style["item-name"]}>お問い合わせのタイトルを入力してください</label>
+                <label htmlFor="name" className={Style["item-name"]}>お問い合わせのタイトルを入力してください</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" name="entry.1958689868" id="title" placeholder="お問い合わせのタイトル"></input>
+                <input type="text" {...register('entry-1958689868')} id="title" placeholder="お問い合わせのタイトル"></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
               <div className={Style["item"]}>
                 <p className={Style["required-tag"]}>必須</p>
-                <label for="name" className={Style["item-name"]}>お問い合わせの内容をご記入ください</label>
+                <label htmlFor="name" className={Style["item-name"]}>お問い合わせの内容をご記入ください</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <textarea name="entry.1518817003" id="inquiry-details"
+                <textarea {...register('entry-1518817003')} id="inquiry-details"
                   placeholder="お問い合わせの内容" ></textarea>
                   <p>※画像や動画のアップロードを希望される場合は、discordの #チケット作成 チャンネルまでお願いします。</p>
               </div>
@@ -130,16 +144,6 @@ const Contact = () => {
               </button>
             </div>
           </form>
-          ) : (
-            <div className={Style["thanks-card"]}>
-              <div className={Style["card-text"]}>
-                <p>お問い合わせありがとうございます。<br/>送信完了しました。</p>
-                <a href='/'>
-                <button>ホームに戻る</button>
-                </a>
-              </div>
-            </div>
-            )}
         </div>
       </div>
       <UpArrow />

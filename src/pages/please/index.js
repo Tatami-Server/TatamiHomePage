@@ -63,9 +63,9 @@ const Please = () => {
           </div>
           <div className={Style["download-container"]}>
               <IconContext.Provider value={{ color: '#525a49', size: '25px' }}>
-                <a  className={Style.download} href='/images/Please.images/please2-1.png' width={495} height={298.45} download="">
+                <Link  className={Style.download} href='/images/Please.images/please2-1.png' width={495} height={298.45} download="">
                   <BsDownload />フォーマットのダウンロードはこちらから
-                </a>
+                </Link>
               </IconContext.Provider>
             </div>
         <Subtitle subtitle="サーバー維持の為いろんな方と交流してみてください！"/>
