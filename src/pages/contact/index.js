@@ -12,57 +12,26 @@ import Style from '@style/pages/Contact.module.scss';
 const Contact = () => {
 
   const topicCheckboxes = [
-    {
-      name: 'Minecraft畳サーバーそのものに対して',
-      value: 'Minecraft畳サーバーそのものに対して',
-    },
-    {
-      name: '生活サーバーについて',
-      value: '生活サーバーについて',
-    },
-    {
-      name: 'イベントサーバーについて',
-      value: 'イベントサーバーについて',
-    },
-    {
-      name: '24時間イベントサーバーについて',
-      value: '24時間イベントサーバーについて',
-    },
-    {
-      name: '配信について',
-      value: '配信について',
-    },
-    {
-      name: '畳サーバーの認証について',
-      value: '畳サーバーの認証について',
-    },
-    {
-      name: '配布データ「マイクラスコットランドヤード」について',
-      value: '配布データ「マイクラスコットランドヤード」について',
-    },
-    {
-      name: '配布データ「マイクラバカ人狼」について',
-      value: '配布データ「マイクラバカ人狼」について',
-    },
-    {
-      name: '畳サーバー 運営へのご希望について',
-      value: '畳サーバー 運営へのご希望について',
-    },
-    {
-      name: 'その他',
-      value: 'その他',
-    },
+    'Minecraft畳サーバーそのものに対して',
+    '生活サーバーについて',
+    'イベントサーバーについて',
+    '24時間イベントサーバーについて',
+    '配信について',
+    '畳サーバーの認証について',
+    '配布データ「マイクラスコットランドヤード」について',
+    '配布データ「マイクラバカ人狼」について',
+    '畳サーバー 運営へのご希望について',
   ]
 
   const CheckboxTopic = () => {
     return (
-      topicCheckboxes.map((topicCheckbox,i) => {
+      topicCheckboxes.map((topicCheckbox, i) => {
         return (
           <div className={Style["topicCheckboxes"]}>
-            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" name={topicCheckbox.name}
-              value=" "/>
-            <label for={"checbox" + i}  className={Style["Input-chackbox-label"]}>
-              {topicCheckbox.value}
+            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" name="entry.1515577470"
+              value={topicCheckbox} />
+            <label for={"checbox" + i} className={Style["Input-chackbox-label"]}>
+              {topicCheckbox}
             </label>
           </div>
 
@@ -89,14 +58,14 @@ const Contact = () => {
             <span className={Style["bold"]}>＃チケット作成</span>
             をご利用ください。
           </p>
-          <form id='form' onsubmit="return false;">
+          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrfFjwolk-AVfgHLMVatXeJlK1XuzAn8MgF-aVYDl5a4HL2A/formResponse" target="_self" method="POST" id="mG61Hd">
             <div className={Style["Input-item"]}>
               <div className={Style["item"]}>
                 <p className={Style["Norequired-tag"]}>任意</p>
                 <label for="name" className={Style["item-name"]}>ニックネームをお書きください。(匿名での送信も可能です)</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" name="お名前" id="name" placeholder="ニックネームをお書きください。"></input>
+                <input type="text" id="name" placeholder="ニックネームをお書きください。" name="entry.1337207535" ></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
@@ -105,7 +74,7 @@ const Contact = () => {
                 <label for="name" className={Style["item-name"]}>返信をご希望の方は、連絡のつくアカウントやメールアドレスをお書きください。</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" name="メールアドレス" id="mail" placeholder="example@example.com"></input>
+                <input type="text" name="entry.638518570" id="mail" placeholder="example@example.com"></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
@@ -115,6 +84,12 @@ const Contact = () => {
               </div>
               <div className={Style["Input-screen"]}>
                 <CheckboxTopic />
+                <div className={Style["topicCheckboxes"]}>
+                  <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" name="entry.1515577470"
+                    value="__other_option__" />
+                  <label for="other-option" className={Style["Input-chackbox-label"]}>その他:</label>
+                  <input type="text" className={Style["other-option"]} name="entry.1515577470.other_option_response" />
+                </div>
               </div>
             </div>
             <div className={Style["Input-item"]}>
@@ -123,7 +98,7 @@ const Contact = () => {
                 <label for="name" className={Style["item-name"]}>お問い合わせのタイトルを入力してください</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" name="タイトル" id="title" placeholder="お問い合わせのタイトル"></input>
+                <input type="text" name="entry.1958689868" id="title" placeholder="お問い合わせのタイトル"></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
@@ -132,21 +107,12 @@ const Contact = () => {
                 <label for="name" className={Style["item-name"]}>お問い合わせの内容をご記入ください</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <textarea name="お問い合わせの内容" id="inquiry-details"
+                <textarea name="entry.1518817003" id="inquiry-details"
                   placeholder="お問い合わせの内容"></textarea>
               </div>
             </div>
-            <div className={Style["Input-item"]}>
-              <div className={Style["item"]}>
-                <p className={Style["Norequired-tag"]}>任意</p>
-                <label for="name" className={Style["item-name"]}>ファイルや画像を貼り付けてください</label>
-              </div>
-              <div className={Style["Input-screen"]}>
-                <input type="file" name="ファイルのアップロード" id="file" ></input>
-              </div>
-            </div>
             <div className={Style["Reserv-btn"]}>
-              <button id="form-submit-button" type="button" onclick="submit();">
+              <button id="form-submit-button" type="submit">
                 <p>上記の内容で送信する</p>
               </button>
             </div>

@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   form {
     margin-top: 50px;
+    width: 70%;
     @include mq(tab) {
       margin-top: 5vw;
+      width: 100%;
     }
     .Input-item {
       border-bottom: 1px solid rgb(66, 96, 45);
@@ -52,6 +55,11 @@
         }
       }
       .Input-screen {
+        margin-bottom: 30px;
+        align-self: flex-start;
+        @include mq(tab) {
+          margin-bottom: 5vw;
+        }
         input,
         textarea {
           width: 95%;
@@ -93,6 +101,18 @@
           display: flex;
           @include mq(tab) {
             margin: 5vw 0;
+          }
+          .other-option {
+            width: 70%;
+            margin-left: 1vw;
+            border: none;
+            border-bottom: 1px solid gray;
+            background-color: #F8F4EC;
+            height: 30px;
+            align-self: flex-end;
+            @include mq(tab) {
+              height: 5vw;
+            }
           }
         }
 
@@ -155,11 +175,11 @@
             width: 11px;
             /*チェックの横幅*/
             transform: rotate(-45deg);
-            top: -5px;
+            top: 10px;
             /*チェック時の位置調整*/
             left: 10px;
             @include mq(tab) {
-              top: -1vw;
+              top: 2vw;
               left: 2vw;
             }
           }
