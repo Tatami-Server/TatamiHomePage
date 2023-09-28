@@ -27,7 +27,7 @@ const Contact = () => {
     return (
       topicCheckboxes.map((topicCheckbox, i) => {
         return (
-          <div className={Style["topicCheckboxes"]}>
+          <div className={Style["topicCheckboxes"]} key={topicCheckbox}>
             <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" name="entry.1515577470"
               value={topicCheckbox} />
             <label for={"checbox" + i} className={Style["Input-chackbox-label"]}>
@@ -49,11 +49,7 @@ const Contact = () => {
         <div className={Style["Contact-contents-wrapper"]}>
           <p>
             畳サーバーに関するご質問・ご提案・ご要望等を受け付けております。匿名での送信も可能です。<br />
-            お気軽に
-            <Link href={"https://forms.gle/4v4KK23h1i6UTCae9"}>
-              お問い合わせ・意見箱
-            </Link>
-            までお問い合わせください。※基本的に返信をすることはございません。<br />
+            お気軽にお問い合わせください。※基本的に返信をすることはございません。<br />
             返信を希望される場合は、Discordの
             <span className={Style["bold"]}>＃チケット作成</span>
             をご利用ください。
@@ -109,6 +105,7 @@ const Contact = () => {
               <div className={Style["Input-screen"]}>
                 <textarea name="entry.1518817003" id="inquiry-details"
                   placeholder="お問い合わせの内容"></textarea>
+                  <p>※画像や動画のアップロードを希望される場合は、discordの #チケット作成 チャンネルまでお願いします。</p>
               </div>
             </div>
             <div className={Style["Reserv-btn"]}>
