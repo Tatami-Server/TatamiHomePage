@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 // コンポーネントインポート
 import Heading from '@components/Heading';
 import Subtitle from '@components/Subtitle';
@@ -40,6 +42,14 @@ const Contact = () => {
     );
   }
 
+    const [submitted, setSubmitted] = useState(false);
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setSubmitted(true);
+      // フォームの送信処理を追加する場合、ここに追加します。
+    };
+
   return (
     <div>
 
@@ -54,7 +64,13 @@ const Contact = () => {
             <span className={Style["bold"]}>＃チケット作成</span>
             をご利用ください。
           </p>
-          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrfFjwolk-AVfgHLMVatXeJlK1XuzAn8MgF-aVYDl5a4HL2A/formResponse" target="_self" method="POST" id="mG61Hd">
+          {!submitted ? (
+          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrfFjwolk-AVfgHLMVatXeJlK1XuzAn8MgF-aVYDl5a4HL2A/formResponse" 
+            target="hidden_iframe" 
+            onSubmit={handleSubmit} 
+            method="POST" 
+            id="mG61Hd"
+            >
             <div className={Style["Input-item"]}>
               <div className={Style["item"]}>
                 <p className={Style["Norequired-tag"]}>任意</p>
@@ -82,7 +98,7 @@ const Contact = () => {
                 <CheckboxTopic />
                 <div className={Style["topicCheckboxes"]}>
                   <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" name="entry.1515577470"
-                    value="__other_option__" />
+                    value="__other_option__"  />
                   <label for="other-option" className={Style["Input-chackbox-label"]}>その他:</label>
                   <input type="text" className={Style["other-option"]} name="entry.1515577470.other_option_response" />
                 </div>
@@ -104,7 +120,7 @@ const Contact = () => {
               </div>
               <div className={Style["Input-screen"]}>
                 <textarea name="entry.1518817003" id="inquiry-details"
-                  placeholder="お問い合わせの内容"></textarea>
+                  placeholder="お問い合わせの内容" ></textarea>
                   <p>※画像や動画のアップロードを希望される場合は、discordの #チケット作成 チャンネルまでお願いします。</p>
               </div>
             </div>
@@ -114,6 +130,16 @@ const Contact = () => {
               </button>
             </div>
           </form>
+          ) : (
+            <div className={Style["thanks-card"]}>
+              <div className={Style["card-text"]}>
+                <p>お問い合わせありがとうございます。<br/>送信完了しました。</p>
+                <a href='/'>
+                <button>ホームに戻る</button>
+                </a>
+              </div>
+            </div>
+            )}
         </div>
       </div>
       <UpArrow />
