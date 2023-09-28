@@ -1,6 +1,6 @@
 //event.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DateField, Toolbar, CreateButton, ExportButton, TopToolbar, NumberInput, DateInput, DateTimeInput } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField, Toolbar, CreateButton, ExportButton, TopToolbar, NumberInput, DateInput, DateTimeInput, Link } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create, ReferenceInput, AutocompleteInput } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
@@ -11,7 +11,7 @@ import { Button } from "@mui/material";
 
 const EventListActions = props => (
     <TopToolbar>
-        <Button to='/event/sort' variant="outlined">並び順変更</Button>
+        <Link to='/event/sort' variant="outlined">並び順変更</Link>
         <CreateButton />
         <ExportButton />
     </TopToolbar>
