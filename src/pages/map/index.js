@@ -10,7 +10,7 @@ import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/map.module.scss';
-import groupBy from '@util/groupBy';
+import { groupBy } from '@util/Query';
 import { getAll } from '@lib/firebase';
 
 const Map = ({maps}) => {
@@ -48,8 +48,16 @@ export async function getStaticProps() {
     }
   })
 
+  const maps = groupBy(
+    mapData,
+    'mapTypeName',
+    {
+        groupSort: ['mapType.sortNum', 'asc']
+    }
+  )
+
   return {
-      props: { maps: groupBy(mapData, 'mapTypeName', ['mapType.sortNum', 'asc']) },
+      props: { maps },
       revalidate: 60,
   }
 }

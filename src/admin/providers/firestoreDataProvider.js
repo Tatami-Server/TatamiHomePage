@@ -93,7 +93,7 @@ const dataProvider = {
 const dataCreateForFirestore = async (resource, data) => {
     data = filterForDoc(data)
     data = await uploadImages(resource, data)
-    data = makeReference(resource, data)
+    data = idToRef(data)
     data = {
         createdAt: serverTimestamp(),
         ...data, 
@@ -158,7 +158,7 @@ const  getImageDimensions = (file) => {
     });
 }
 
-const makeReference = (resource, data) => {
+const idToRef = (data) => {
     for (const key in data) {
         if (key.includes('Ref')) {
             const id = data[key]

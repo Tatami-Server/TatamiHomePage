@@ -1,14 +1,24 @@
 //event.js
 import * as React from "react";
-import { List, Datagrid, TextField, EditButton, DateField, Toolbar } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DateField, Toolbar, CreateButton, ExportButton, TopToolbar, NumberInput, DateInput, DateTimeInput } from 'react-admin';
 import { Edit, SimpleForm, TextInput, Create, ReferenceInput, AutocompleteInput } from 'react-admin';
 import CustomRichTextInput from '../components/CustomRichTextInput';
 import CustomImageInput from "@admin/components/CustomImageInput";
 import CustomToolbar from "@admin/components/CustomToolbar";
 import CustomFormActions from "@admin/components/CustomFormActions";
+import { Button } from "@mui/material";
+
+
+const EventListActions = props => (
+    <TopToolbar>
+        <Button to='/event/sort' variant="outlined">並び順変更</Button>
+        <CreateButton />
+        <ExportButton />
+    </TopToolbar>
+)
 
 export const EventList = props => (
-    <List {...props} perPage={50}>
+    <List {...props} perPage={50} actions={<EventListActions/>}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="タイトル" />
             <TextField source="eventType.shortTitle" label="イベント種別" />
@@ -32,7 +42,9 @@ const EditForm = ({toolbar}) => (
         <TextInput fullWidth source="url" label="URL" placeholder="本文を入力せず、特定のページに飛ばしたいときのみ入力" />
         <TextInput fullWidth source="description" label="説明" placeholder="サムネイル下の説明文" multiline rows={3} />
         <CustomImageInput />
+        <NumberInput hidden fullWidth required source="sortNum" label="並び順" defaultValue={0} />
         <CustomRichTextInput label="本文" source="body" resource="event" />
+        <DateTimeInput source='publishAt' required label="公開日時" defaultValue={new Date()} />
     </SimpleForm>
 )
 

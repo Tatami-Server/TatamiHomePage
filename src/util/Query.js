@@ -1,6 +1,7 @@
-const groupBy = function(xs, key, sort) {
-    if(sort) {
-        xs = orderBy(xs, sort)
+export const groupBy = function(xs, key, sort = {}) {
+
+    if(sort.groupSort) {
+        xs = orderBy(xs, sort.groupSort)
     }
     // xs.sort((a, b))
 
@@ -10,10 +11,16 @@ const groupBy = function(xs, key, sort) {
         return rv;
     }, {});
 
+    if(sort.itemSort) {
+        for(const [key, items] of Object.entries(grouped)) {
+            grouped[key] = orderBy(items, sort.itemSort)
+        }
+    }
+
     return Object.entries(grouped)
 };
 
-const  orderBy = (obj, sort) => {
+export const  orderBy = (obj, sort) => {
     const [ field, order ] = sort
     obj.sort((a, b) => {
         const aData = field.split('.').reduce((o, p) => {

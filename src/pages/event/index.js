@@ -9,7 +9,7 @@ import Igusa from '@components/Igusa';
 import fusuma from '/public/images/Igusa.images/sister2.png';
 
 import { getAll } from '@lib/firebase';
-import groupBy from '@util/groupBy';
+import { groupBy } from '@util/Query';
 
 const Event = ({events}) => (
     <div>
@@ -35,18 +35,32 @@ const Event = ({events}) => (
   );
 
 export async function getStaticProps() {
-    const eventData = (await getAll('event', { sort: [{ field: 'updatedAt', order: 'desc' }]})).map(event => {
+    let events = (await getAll('event', { sort: [{ field: 'sortNum', order: 'asc' }]})).map(event => {
       return {
         ...event,
         href: event.url || `/event/${event.id}`,
         img: event.mainImg?.src || '',
         imgTitle: event.title,
-        eventTypeName: event.eventType.title || ''
+        eventTypeName: event.eventType.title || '',
+        // publishAt: event.publishAt.toDate()
       }
     })
 
+    // events = events.filter(({publishAt}) => !publishAt || publishAt < new Date())
+    events = events.filter(({publishAt}) => !publishAt || publishAt < new Date())
+
+    events = groupBy(
+      events,
+      'eventTypeName',
+      {
+          groupSort:['eventType.sortNum', 'asc'],
+          itemSort: ['sortNum', 'asc']
+      }
+    )
+
+
     return {
-        props: { events: groupBy(eventData, 'eventTypeName', ['eventType.sortNum', 'asc']) },
+        props: { events },
         revalidate: 60,
     }
 }

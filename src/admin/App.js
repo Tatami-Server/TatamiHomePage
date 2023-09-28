@@ -27,6 +27,7 @@ import { HistoryCreate, HistoryEdit, HistoryList } from './resources/history';
 import TopImageEdit from './pages/TopImageEdit';
 import { MapTypeCreate, MapTypeEdit, MapTypeList } from './resources/mapType';
 import { MapCreate, MapEdit, MapList } from './resources/map';
+import EventSort from './pages/EventSort';
 
 const App = () => {
     
@@ -74,7 +75,9 @@ const App = () => {
                     options={{
                         label: 'イベント',
                     }}
-                />
+                >
+                    <Route path="sort" element={<EventSort />} />
+                </Resource>
 
                 <Resource 
                     name="eventType"

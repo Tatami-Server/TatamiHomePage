@@ -72,7 +72,7 @@ export const filterForDoc = (data) => {
 
 const dataFormatForEnd = async (data) => {
     data = filterForDoc(data)
-    data = firestoreTimestampFormat(data, true)
+    data = firestoreTimestampFormat(data)
     data = await refToData(data)
     return data
 }
