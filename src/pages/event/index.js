@@ -42,11 +42,9 @@ export async function getStaticProps() {
         img: event.mainImg?.src || '',
         imgTitle: event.title,
         eventTypeName: event.eventType.title || '',
-        // publishAt: event.publishAt.toDate()
       }
     })
 
-    // events = events.filter(({publishAt}) => !publishAt || publishAt < new Date())
     events = events.filter(({publishAt}) => !publishAt || publishAt < new Date())
 
     events = groupBy(
