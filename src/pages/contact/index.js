@@ -59,14 +59,11 @@ const Contact = () => {
       body: JSON.stringify(formData)
     })
 
-    console.log(res)
-
     if(res.status === 200) {
-      console.log('success')
       router.push({pathname: '/contact/thanks'})
     }
     else {
-      console.log('error')
+      // console.log('error')
     }
   }
 
