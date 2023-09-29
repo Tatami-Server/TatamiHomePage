@@ -1,7 +1,3 @@
-// リアクトアイコンインポート
-import { IoIosArrowDown } from 'react-icons/io'
-import { IconContext } from 'react-icons'
-
 // コンポーネントをインポート
 import MainProducts from '@components/MainProducts';
 import SubProducts from '@components/SubProducts';
@@ -63,13 +59,9 @@ function Home({ news, topImages }) {
     { href: `/event/`, img: event, title: "イベント一覧", description: "当サーバーが提供しているイベント一覧とルールを紹介しています。" }
   ];
 
-  function scrollToRef(ref) {
-    window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
-  }
   const myRef = useRef(null);
 
-  const { data: serverStat } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json()));
-
+  const { data: serverStats } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json()));
 
   return (
     <>
@@ -99,22 +91,21 @@ function Home({ news, topImages }) {
               </Carousel.Item>
             )}
           </Carousel>
-          {/* <div className={Style["skin-container"]}>
-            {serverStat?.players?.sample?.map(({name}) => {
-              return (
-                <div key={name}>
-                  <Image src={`https://mineskin.eu/helm/${name}`} width={70} height={70} alt="skin" />
-                  <p>{name}</p>
-                </div>
-              )
-            })}
-            { !serverStat && <Rings height={150} width={150} />}
-          </div> */}
-          {/* <div className={Style["arrow-icon"]} onClick={() => scrollToRef(myRef)}>
-            <IconContext.Provider value={{ color: '#67966a', size: '70px' }}>
-              <IoIosArrowDown/>
-            </IconContext.Provider>
-          </div> */}
+          
+          <div className={Style["skin-wrapper"]}>
+            <h2>参加中</h2>
+            <div className={Style["skin-container"]}>
+              {serverStats?.map(({ players }) =>
+                players.map(player => (
+                  <div key={player} className={Style["skin"]}>
+                    <Image src={`https://mineskin.eu/helm/${player}`} width={70} height={70} alt="skin" />
+                    <p>{player}</p>
+                  </div>
+                ))
+              )}
+              { !serverStats && <Rings height={150} width={150} />}
+            </div>
+          </div>
         </div>
       </section>
       <main ref={myRef}>
