@@ -91,12 +91,12 @@ function Home({ news, topImages }) {
           </Carousel>
           
             <div className={Style["skin-wrapper"]}>
-            {serverStats.length > 0 && (
+            {serverStats && (
               <>
                 <h2>参加中</h2>
                 <div className={Style["skin-container"]}>
-                  {serverStats.map(({ players }) =>
-                    players.length > 0 && players?.map(player => (
+                  {serverStats?.map(({ players }) =>
+                    players?.map(player => (
                       <div key={player} className={Style["skin"]}>
                         <Image src={`https://mineskin.eu/helm/${player}`} width={70} height={70} alt="skin" />
                         <p>{player}</p>
