@@ -94,7 +94,7 @@
           margin-left: 5px;
           @include mq(tab) {
             font-size: 4.5vw;
-            margin-left: 2vw;
+            margin-left: 1.2vw;
           }
         }
 
@@ -102,7 +102,7 @@
           margin: 7px 0;
           display: flex;
           @include mq(tab) {
-            margin: 5vw 0;
+            margin: 3vw 0;
           }
           .other-option {
             width: 70%;
@@ -132,6 +132,7 @@
           padding-left: 30px;
           @include mq (tab) {
             padding-left: 7vw;
+            height: 6vw;
           }
 
           /*label手前にチェックボックス用の余白を開ける*/
@@ -181,6 +182,8 @@
             /*チェック時の位置調整*/
             left: 10px;
             @include mq(tab) {
+              height: 1.5vw;
+              width: 3vw;
               top: 2vw;
               left: 2vw;
             }
