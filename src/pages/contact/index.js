@@ -53,7 +53,7 @@ const Contact = () => {
   const onSubmit = async (data) => {
     let formData = {}
     for(const [key, value] of Object.entries(data)) {
-      const newKey = key.replace('-', '.')
+      const newKey = key.replaceAll('-', '.')
       formData[newKey] = value
     }
 
