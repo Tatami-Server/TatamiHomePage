@@ -16,6 +16,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    formState: {errors},
   } = useForm();
 
   const topicCheckboxes = [
@@ -35,7 +36,9 @@ const Contact = () => {
       topicCheckboxes.map((topicCheckbox, i) => {
         return (
           <div className={Style["topicCheckboxes"]} key={topicCheckbox}>
-            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" {...register('entry-1515577470')}
+            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" {...register('entry-1515577470', {
+              required:true,
+            })}
               value={topicCheckbox} />
             <label htmlFor={"checbox" + i} className={Style["Input-chackbox-label"]}>
               {topicCheckbox}
@@ -66,6 +69,7 @@ const Contact = () => {
       // console.log('error')
     }
   }
+
 
   return (
     <div>
@@ -106,6 +110,7 @@ const Contact = () => {
                 <label htmlFor="name" className={Style["item-name"]}>お問い合わせの内容を選択してください。(複数選択可能)</label>
               </div>
               <div className={Style["Input-screen"]}>
+              {errors['entry-1515577470'] && <sapn className={Style["error-mesege"]}>※お問い合わせの内容を１つ以上選択してください</sapn>}
                 <CheckboxTopic />
                 <div className={Style["topicCheckboxes"]}>
                   <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" {...register('entry-1515577470')}
@@ -121,7 +126,10 @@ const Contact = () => {
                 <label htmlFor="name" className={Style["item-name"]}>お問い合わせのタイトルを入力してください</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" {...register('entry-1958689868')} id="title" placeholder="お問い合わせのタイトル"></input>
+                {errors['entry-1958689868'] && <sapn className={Style["error-mesege"]}>※お問い合わせのタイトルを入力してください</sapn>}
+                <input type="text" {...register('entry-1958689868',{
+                  required: true,
+                })} id="title" placeholder="お問い合わせのタイトル"></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
@@ -130,7 +138,11 @@ const Contact = () => {
                 <label htmlFor="name" className={Style["item-name"]}>お問い合わせの内容をご記入ください</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <textarea {...register('entry-1518817003')} id="inquiry-details"
+              {errors['entry-1518817003'] && <sapn className={Style["error-mesege"]}>※お問い合わせの内容をご記入ください</sapn>}
+                <textarea {...register('entry-1518817003', {
+                  required:true,
+                })} 
+                id="inquiry-details"
                   placeholder="お問い合わせの内容" ></textarea>
                   <p>※画像や動画のアップロードを希望される場合は、discordの #チケット作成 チャンネルまでお願いします。</p>
               </div>

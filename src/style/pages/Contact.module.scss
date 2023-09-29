@@ -57,6 +57,8 @@
       .Input-screen {
         margin-bottom: 30px;
         align-self: flex-start;
+        display: flex;
+        flex-direction: column;
         @include mq(tab) {
           margin-bottom: 5vw;
         }
@@ -186,6 +188,15 @@
 
           &:checked::after {
             opacity: 1;
+          }
+        }
+
+        .error-mesege {
+          color: rgb(231, 31, 31);
+          font-weight: bold;
+          font-size: 19px;
+          @include mq(tab) {
+            font-size: 4.6vw;
           }
         }
       }
