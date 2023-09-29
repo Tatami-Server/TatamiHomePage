@@ -16,8 +16,6 @@ import useSWR from 'swr'
 import Carousel from 'react-bootstrap/Carousel'
 
 // 画像をインポート
-import logo from '/public/images/Home.images/logo.png';
-import hero from '/public/images/Home.images/hero2.png';
 import donation from '/public/images/Home.images/donation.jpg';
 import map from '/public/images/Home.images/map.png';
 import omikuzi from '/public/images/Home.images/omikuzi.jpg';
@@ -92,20 +90,24 @@ function Home({ news, topImages }) {
             )}
           </Carousel>
           
-          <div className={Style["skin-wrapper"]}>
-            <h2>参加中</h2>
-            <div className={Style["skin-container"]}>
-              {serverStats?.map(({ players }) =>
-                players.map(player => (
-                  <div key={player} className={Style["skin"]}>
-                    <Image src={`https://mineskin.eu/helm/${player}`} width={70} height={70} alt="skin" />
-                    <p>{player}</p>
-                  </div>
-                ))
-              )}
-              { !serverStats && <Rings height={150} width={150} />}
+            <div className={Style["skin-wrapper"]}>
+            {serverStats.length > 0 && (
+              <>
+                <h2>参加中</h2>
+                <div className={Style["skin-container"]}>
+                  {serverStats.map(({ players }) =>
+                    players.length > 0 && players?.map(player => (
+                      <div key={player} className={Style["skin"]}>
+                        <Image src={`https://mineskin.eu/helm/${player}`} width={70} height={70} alt="skin" />
+                        <p>{player}</p>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </>
+            )}
+            { !serverStats && <Rings height={150} width={150} />}
             </div>
-          </div>
         </div>
       </section>
       <main ref={myRef}>
