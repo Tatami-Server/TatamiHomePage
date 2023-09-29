@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import Style from '@style/pages/Contact.module.scss';
 
 import { useRouter } from 'next/router';
+import { required } from 'react-admin';
 
 const Contact = () => {
   const router = useRouter();
@@ -113,7 +114,9 @@ const Contact = () => {
               {errors['entry-1515577470'] && <sapn className={Style["error-mesege"]}>※お問い合わせの内容を１つ以上選択してください</sapn>}
                 <CheckboxTopic />
                 <div className={Style["topicCheckboxes"]}>
-                  <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" {...register('entry-1515577470')}
+                  <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" {...register('entry-1515577470',{
+                    required:true,
+                  })}
                     value="__other_option__"  />
                   <label htmlFor="other-option" className={Style["Input-chackbox-label"]}>その他:</label>
                   <input type="text" className={Style["other-option"]} {...register('entry-1515577470-other_option_response')}/>
