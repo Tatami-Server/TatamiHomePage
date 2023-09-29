@@ -13,7 +13,7 @@ export default async function handler(req, res) {
                 const {
                     onlinePlayers
                 } = stat
-                
+
                 const statData = {
                     type,
                     players: Object.keys(onlinePlayers.players)
@@ -25,7 +25,6 @@ export default async function handler(req, res) {
             res.status(200).json(serverStats)
         })
         .catch((error) => {
-            console.error('エラーが発生しました:', error);
-            res.status(500).json({error})
+            res.status(200).json([])
         });
 };
