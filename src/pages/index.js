@@ -91,7 +91,7 @@ function Home({ news, topImages }) {
           </Carousel>
           
             <div className={Style["skin-wrapper"]}>
-            {serverStats && (
+            {serverStats && serverStats.length > 0 && (
               <>
                 <h2>参加中</h2>
                 <div className={Style["skin-container"]}>
