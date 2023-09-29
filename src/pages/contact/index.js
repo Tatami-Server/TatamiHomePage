@@ -114,7 +114,7 @@ const Contact = () => {
                   <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" {...register('entry-1515577470')}
                     value="__other_option__"  />
                   <label htmlFor="other-option" className={Style["Input-chackbox-label"]}>その他:</label>
-                  <input type="text" className={Style["other-option"]} name="entry.1515577470.other_option_response" />
+                  <input type="text" className={Style["other-option"]} {...register('entry-1515577470-other_option_response')}/>
                 </div>
               </div>
             </div>
