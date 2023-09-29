@@ -28,7 +28,7 @@ import omikuzi from '/public/images/Home.images/omikuzi.jpg';
 import please from '/public/images/Home.images/please.jpg';
 import application from '/public/images/Home.images/application.jpg';
 import history from '/public/images/Home.images/history.jpg';
-import sns from '/public/images/Home.images/sns.jpg';
+import sns from '/public/images/Home.images/sns.png';
 import inquery from '/public/images/Home.images/inquery.jpg';
 import event from '/public/images/Home.images/event.png';
 import life from '/public/images/Home.images/life.png';

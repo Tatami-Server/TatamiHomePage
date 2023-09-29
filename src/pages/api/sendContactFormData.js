@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const googleForm = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScrfFjwolk-AVfgHLMVatXeJlK1XuzAn8MgF-aVYDl5a4HL2A/formResponse'
+const googleForm = 'https://docs.google.com/forms/d/e/1FAIpQLSeEoTfU545LYlSVpEb_tArIQ82nAxRP6hju2Rszoe_aUufc0A/viewform'
 
 export default async function handler({body}, res) {
     const formData = new FormData()

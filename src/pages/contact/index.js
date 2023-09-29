@@ -37,7 +37,7 @@ const Contact = () => {
       topicCheckboxes.map((topicCheckbox, i) => {
         return (
           <div className={Style["topicCheckboxes"]} key={topicCheckbox}>
-            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" {...register('entry-1515577470', {
+            <input className={Style["Input-chackbox"]} id={"checbox" + i} type="checkbox" {...register('entry-370516198', {
               required:true,
             })}
               value={topicCheckbox} />
@@ -93,7 +93,7 @@ const Contact = () => {
                 <label htmlFor="name" className={Style["item-name"]}>ニックネームをお書きください。(匿名での送信も可能です)</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" id="name" placeholder="ニックネームをお書きください。" {...register('entry-1337207535')} ></input>
+                <input type="text" id="name" placeholder="ニックネームをお書きください。" {...register('entry-666156945')} ></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
@@ -102,7 +102,7 @@ const Contact = () => {
                 <label htmlFor="name" className={Style["item-name"]}>返信をご希望の方は、連絡のつくアカウントやメールアドレスをお書きください。</label>
               </div>
               <div className={Style["Input-screen"]}>
-                <input type="text" {...register('entry-638518570')} id="mail" placeholder="example@example.com"></input>
+                <input type="text" {...register('entry-1178584302')} id="mail" placeholder="example@example.com"></input>
               </div>
             </div>
             <div className={Style["Input-item"]}>
@@ -111,15 +111,15 @@ const Contact = () => {
                 <label htmlFor="name" className={Style["item-name"]}>お問い合わせの内容を選択してください。(複数選択可能)</label>
               </div>
               <div className={Style["Input-screen"]}>
-              {errors['entry-1515577470'] && <sapn className={Style["error-mesege"]}>※お問い合わせの内容を１つ以上選択してください</sapn>}
+              {errors['entry-370516198'] && <sapn className={Style["error-mesege"]}>※お問い合わせの内容を１つ以上選択してください</sapn>}
                 <CheckboxTopic />
                 <div className={Style["topicCheckboxes"]}>
-                  <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" {...register('entry-1515577470',{
+                  <input className={Style["Input-chackbox"]} id="other-option" type="checkbox" {...register('entry-370516198',{
                     required:true,
                   })}
                     value="__other_option__"  />
                   <label htmlFor="other-option" className={Style["Input-chackbox-label"]}>その他:</label>
-                  <input type="text" className={Style["other-option"]} {...register('entry-1515577470-other_option_response')}/>
+                  <input type="text" className={Style["other-option"]} {...register('entry-370516198-other_option_response')}/>
                 </div>
               </div>
             </div>
@@ -129,8 +129,8 @@ const Contact = () => {
                 <label htmlFor="name" className={Style["item-name"]}>お問い合わせのタイトルを入力してください</label>
               </div>
               <div className={Style["Input-screen"]}>
-                {errors['entry-1958689868'] && <sapn className={Style["error-mesege"]}>※お問い合わせのタイトルを入力してください</sapn>}
-                <input type="text" {...register('entry-1958689868',{
+                {errors['entry-207957247'] && <sapn className={Style["error-mesege"]}>※お問い合わせのタイトルを入力してください</sapn>}
+                <input type="text" {...register('entry-207957247',{
                   required: true,
                 })} id="title" placeholder="お問い合わせのタイトル"></input>
               </div>
@@ -141,8 +141,8 @@ const Contact = () => {
                 <label htmlFor="name" className={Style["item-name"]}>お問い合わせの内容をご記入ください</label>
               </div>
               <div className={Style["Input-screen"]}>
-              {errors['entry-1518817003'] && <sapn className={Style["error-mesege"]}>※お問い合わせの内容をご記入ください</sapn>}
-                <textarea {...register('entry-1518817003', {
+              {errors['entry-1718713665'] && <sapn className={Style["error-mesege"]}>※お問い合わせの内容をご記入ください</sapn>}
+                <textarea {...register('entry-1718713665', {
                   required:true,
                 })} 
                 id="inquiry-details"
