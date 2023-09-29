@@ -59,7 +59,7 @@ function Home({ news, topImages }) {
 
   const myRef = useRef(null);
 
-  const { data: serverStats } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json()));
+  const { data: serverStats } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json().catch((e) => e)));
 
   return (
     <>
