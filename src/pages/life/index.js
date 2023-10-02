@@ -17,6 +17,7 @@ import lifeGacha from '/public/images/Life.images/life-gacha.png'
 import lifeMap from '/public/images/Life.images/life-map.png'
 import lifeShop from '/public/images/Life.images/life-shop.png'
 import tatami from '/public/images/Igusa.images/sister1.png';
+import dayryQuest from '/public/images/Life.images/dayry-quest.png'
 
 // cssインポート
 import Style from '@style/pages/Life.module.scss';
@@ -30,6 +31,7 @@ const Life = () => {
     { href: `https://map.tatamiserver.com/`, imgTitle: "webマップ", img: lifeMap, title: "Webマップ", description: <>Web上で生活サーバーのマップが確認できる！？<br />町の発展状況やオンライン状況を確認しよう。</> },
     { href: `https://seesaawiki.jp/tatamiserver/d/%a5%b7%a5%e7%a5%c3%a5%d7%ba%ee%c0%ae%ca%fd%cb%a1`, imgTitle: "お店", img: lifeShop, title: "自動ショップ", description: <>誰でも簡単に無人のお店を作れちゃう!<br />オフラインでも稼げるし、買うほうも楽々!</> },
     { href: `https://twitter.com/tatami_mc`, imgTitle: "イベント", img: lifeEvent, title: "季節イベント", description: <>夏祭りやハロウィンなどの季節系イベントもご用意！<br />最新情報はここをクリックしてTwitterで確認だ!</> },
+    {href:`https://tatamiserver.netlify.app/event/u1BLcCJJaK5SSKyr2waO`,imgTitle:"畳デイリークエスト", img:dayryQuest, title:"デイリークエスト", description:<>毎日3時リセットで、 3つのクエストが出現するよ！<br/>クエストをクリアして、お金やガチャチケットを手に入れよう！</>}
   ];
 
   return (
