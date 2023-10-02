@@ -28,7 +28,6 @@
     "firebase": "^9.0.0",
     "html-react-parser": "^4.2.0",
     "is-url": "^1.2.4",
-    "minecraft-server-util": "^5.4.4",
     "moment": "^2.29.4",
     "next": "^13.4.19",
     "ra-input-rich-text": "^4.12.1",

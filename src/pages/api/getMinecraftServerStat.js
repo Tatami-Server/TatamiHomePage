@@ -1,16 +1,30 @@
-const util = require('minecraft-server-util');
+import axios from 'axios'
 
-const serverAddress = 'rusian0.com';
-const port = 25565;
-// const serverAddress = 'mc.tatamiserver.com';
-// const port = 49160;
-
+const endpoint = 'https://api.tatamiserver.com/minecraft/server';
 export default async function handler(req, res) {
-    util.status(serverAddress, port)
+    axios.get(endpoint)
         .then((response) => {
-            res.status(200).json(response)
+            const serverStats = []
+
+            for(const serverStat of response.data) {
+                const [ type, stat ] = Object.entries(serverStat)[0]
+                if(!stat.online) continue
+                
+                const {
+                    onlinePlayers
+                } = stat
+
+                const statData = {
+                    type,
+                    players: Object.keys(onlinePlayers.players)
+                }
+
+                serverStats.push(statData)
+            }
+
+            res.status(200).json(serverStats)
         })
         .catch((error) => {
-            console.error('エラーが発生しました:', error);
+            res.status(200).json([])
         });
 };
