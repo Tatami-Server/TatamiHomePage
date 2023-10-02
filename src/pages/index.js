@@ -59,7 +59,7 @@ function Home({ news, topImages }) {
 
   const myRef = useRef(null);
 
-  const { data: serverStats } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json().catch((e) => e)));
+  // const { data: serverStats } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json().catch((e) => e)));
 
   return (
     <>
@@ -90,7 +90,7 @@ function Home({ news, topImages }) {
             )}
           </Carousel>
           
-            <div className={Style["skin-wrapper"]}>
+            {/* <div className={Style["skin-wrapper"]}>
             {serverStats && serverStats.length > 0 && (
               <>
                 <h2>参加中</h2>
@@ -107,7 +107,7 @@ function Home({ news, topImages }) {
               </>
             )}
             { !serverStats && <Rings height={150} width={150} />}
-            </div>
+            </div> */}
         </div>
       </section>
       <main ref={myRef}>

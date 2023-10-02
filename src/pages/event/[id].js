@@ -5,8 +5,8 @@ import Style from '@style/pages/EventDetail.module.scss'
 
 import parse from 'html-react-parser';
 
-const EventDetail = ({event: { title, body, mainImg } }) => {
-    body = body.replace(/colwidth="([0-9]+)"/g, `style="width: $1px"`)
+const EventDetail = ({event: { title, body } }) => {
+    body = body?.replace(/colwidth="([0-9]+)"/g, `style="width: $1px"`) || ''
 
     return (
         <>
