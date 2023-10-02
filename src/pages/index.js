@@ -133,7 +133,7 @@ function Home({ news, topImages }) {
 }
 
 export async function getStaticProps() {
-  const news = await getAll('notice', { sort: { field: 'date', order: 'desc' } })
+  const news = await getAll('notice', { sort: [{ field: 'date', order: 'desc' }] })
   const { img } = await getOne('top', 'image')
 
   return {
