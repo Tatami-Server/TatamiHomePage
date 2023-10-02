@@ -8,6 +8,10 @@
   justify-content: space-between;
   padding: 0 50px;
   background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
   @include mq(tab) {
     height: 15vw;
     padding: 0 3vw;
