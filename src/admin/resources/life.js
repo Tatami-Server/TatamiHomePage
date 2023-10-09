@@ -21,7 +21,6 @@ export const LifeList = props => (
     <List {...props} perPage={50} actions={<LifeListActions/>}>
         <Datagrid rowClick="edit" optimized>
             <TextField source="title" label="タイトル" />
-            <TextField source="eventType.shortTitle" label="イベント種別" />
             <DateField source='updatedAt' label='更新日時' showTime />
             <EditButton />
         </Datagrid>
