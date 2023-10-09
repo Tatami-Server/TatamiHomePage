@@ -59,7 +59,25 @@ function Home({ news, topImages }) {
 
   const myRef = useRef(null);
 
-  // const { data: serverStats } = useSWR("/api/getMinecraftServerStat", (url) => fetch(url).then(r => r.json().catch((e) => e)));
+  const { data: serverStats } = useSWR("/api/minecraft/simple/server",
+    url => fetch(url)
+    .then(async r => {
+      let existPlayer = false
+      const rawStats = await r.json()
+      const stats = rawStats.map(rawStat => {
+        const [type, stat] = Object.entries(rawStat)[0]
+        const players = stat?.players || []
+        if(players.length > 0) existPlayer = true
+
+        return {
+          type,
+          players,
+        }
+      })
+
+      return { existPlayer, stats }
+    })
+    .catch((e) => e));
 
   return (
     <>
@@ -90,12 +108,12 @@ function Home({ news, topImages }) {
             )}
           </Carousel>
           
-            {/* <div className={Style["skin-wrapper"]}>
-            {serverStats && serverStats.length > 0 && (
+            <div className={Style["skin-wrapper"]}>
+            {serverStats && serverStats.existPlayer > 0 && (
               <>
                 <h2>参加中</h2>
                 <div className={Style["skin-container"]}>
-                  {serverStats?.map(({ players }) =>
+                  {serverStats.stats?.map(({ players }) =>
                     players?.map(player => (
                       <div key={player} className={Style["skin"]}>
                         <Image src={`https://mineskin.eu/helm/${player}`} width={70} height={70} alt="skin" />
@@ -107,7 +125,8 @@ function Home({ news, topImages }) {
               </>
             )}
             { !serverStats && <Rings height={150} width={150} />}
-            </div> */}
+            </div>
+
         </div>
       </section>
       <main ref={myRef}>

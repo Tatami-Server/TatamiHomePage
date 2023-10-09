@@ -12,6 +12,14 @@ const nextConfig = {
         includePaths: [path.join(__dirname, 'styles')],
         prependData: `@import '@style/variables.scss'; @import '@style/mixin';`,
     },
+    async rewrites() {
+        return [
+            {
+                source: '/api/minecraft/:path*',
+                destination: 'https://api.tatamiserver.com/minecraft/:path*',
+            },
+        ];
+    },
 }
 
 module.exports = nextConfig
