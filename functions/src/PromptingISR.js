@@ -5,7 +5,7 @@ const topCollections = ['top', 'notice']
 
 module.exports = firestore.onDocumentWritten('{collection}/{docId}', async (event) => {
     const { collection, docId } = event.params
-    const baseUrl = process.env.BASE_URL
+    const baseUrl = 'https://tatamiserver.com'
     logger.log(event.params)
     
     const isTop = topCollections.some(colName => collection.includes(colName));
