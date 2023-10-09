@@ -18,11 +18,12 @@ module.exports = firestore.onDocumentWritten('{collection}/{docId}', async (even
     
     logger.log(urls)
     for (const url of urls) {
+        logger.log(url)
         try {
             await got(url)
             logger.log('success')
         } catch (error) {
-            logger.log('not found')
+            logger.log(error)
         }
     }
     return
