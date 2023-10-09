@@ -36,7 +36,7 @@ const EditForm = ({toolbar}) => (
         <CustomImageInput />
         <NumberInput hidden fullWidth required source="sortNum" label="並び順" defaultValue={0} />
         <CustomRichTextInput label="本文" source="body" resource="life" />
-        <DateTimeInput source='publishAt' required label="公開日時" defaultValue={new Date()} />
+        {/* <DateTimeInput source='publishAt' required label="公開日時" defaultValue={new Date()} /> */}
     </SimpleForm>
 )
 
