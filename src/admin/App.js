@@ -18,6 +18,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import PersonalVideoIcon from '@mui/icons-material/PersonalVideo';
 import LayersIcon from '@mui/icons-material/Layers';
 import MapIcon from '@mui/icons-material/Map';
+import HikingIcon from '@mui/icons-material/Hiking';
 
 import { NoticeList, NoticeEdit, NoticeCreate } from './resources/notice';
 import { AdminList } from './resources/admin';
@@ -28,6 +29,8 @@ import TopImageEdit from './pages/TopImageEdit';
 import { MapTypeCreate, MapTypeEdit, MapTypeList } from './resources/mapType';
 import { MapCreate, MapEdit, MapList } from './resources/map';
 import EventSort from './pages/EventSort';
+import { LifeCreate, LifeEdit, LifeList } from './resources/life';
+import LifeSort from './pages/LifeSort';
 
 const App = () => {
     
@@ -90,6 +93,19 @@ const App = () => {
                         label: 'イベント種別',
                     }}
                 />
+
+                <Resource 
+                    name="life"
+                    icon={HikingIcon}
+                    list={LifeList}
+                    edit={LifeEdit}
+                    create={LifeCreate}
+                    options={{
+                        label: '生活サーバー',
+                    }}
+                >
+                    <Route path="sort" element={<LifeSort />} />
+                </Resource>
 
 
                 <Resource 

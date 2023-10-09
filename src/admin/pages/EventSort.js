@@ -10,6 +10,7 @@ import { SortableContext, arrayMove } from "@dnd-kit/sortable";
 import { SortableItem } from "@admin/components/SortableItem";
 import AdminSubProduct from "@admin/components/AdminSubProduct";
 import { CardContent } from "@mui/material";
+import Heading from "@components/Heading";
 
 const merge = (oldData, newData) => {
     return oldData.map(item => {
@@ -108,6 +109,7 @@ const EventSort = () => {
         <>
             <Title title="イベント順並び替え" />
             <CardContent>
+                <Heading heading="イベント順並び替え" />
                 <DndContext
                     sensors={sensors}
                     onDragEnd={onDragEndHandle}
