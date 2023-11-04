@@ -20,9 +20,10 @@ import donation from '/public/images/Home.images/donation.jpg';
 import map from '/public/images/Home.images/map.png';
 import omikuzi from '/public/images/Home.images/omikuzi.jpg';
 import please from '/public/images/Home.images/please.jpg';
-import application from '/public/images/Home.images/application.jpg';
-import history from '/public/images/Home.images/history.jpg';
+import application from '/public/images/Home.images/application.png';
+import history from '/public/images/Home.images/history.png';
 import sns from '/public/images/Home.images/sns.png';
+import rules from '/public/images/Home.images/rules.png';
 import inquery from '/public/images/Home.images/inquery.jpg';
 import event from '/public/images/Home.images/event.png';
 import life from '/public/images/Home.images/life.png';
@@ -49,7 +50,8 @@ function Home({ news, topImages }) {
     { href: `/help/`, imgTitle: "応募", img: application, title: "運営への応募", description: "建築や開発など、私たちと共に制作しませんか？" },
     { href: `/contact/`, imgTitle: "問い合わせ", img: inquery, title: "お問い合わせ・意見箱", description: "意見や要望はこちらから！" },
     { href: `/please/`, imgTitle: "お願い", img: please, title: "運営からのお願い", description: "サーバーの維持や盛り上げのためにお願いしていることを記載しています。" },
-    { href: `/omikuzi/`, imgTitle: "おみくじ", img: omikuzi, title: "畳おみくじ", description: "今日の運勢とクエストを占おう！ちょっとした遊び心で用意したコンテンツです。" }
+    { href: `/omikuzi/`, imgTitle: "おみくじ", img: omikuzi, title: "畳おみくじ", description: "今日の運勢とクエストを占おう！ちょっとした遊び心で用意したコンテンツです。" },
+    { href: `/rules/`, imgTitle: "ルール", img: rules, title: "ルール", description: "みんながサーバーで心地よく過ごすために守って欲しいルール！" }
   ];
   const MainProductsList = [
     { href: `/join/`, img: join, title: "サーバー参加方法", description: "Discordやマイクラサーバーへの参加方法を紹介しています。" },

@@ -8,9 +8,13 @@ import Link from 'next/link';
 
 // 画像インポート
 import tatami from '/public/images/Igusa.images/sister1.png';
+import detail from '/public/images/help.images/detail.png';
+import staffRules from '/public/images/help.images/staffRules.png';
 
 // cssインポート
 import HelperStyle from '@style/pages/Helpre.module.scss';
+import SubProducts from '@components/SubProducts';
+import SubTitle from '@components/Subtitle';
 
 const Help = () => {
 
@@ -51,19 +55,22 @@ const Help = () => {
     },
   ]
 
+  const CheckPointList = [
+    { href: `/rules/staff/`, imgTitle: "運営規約", img: staffRules, title: "運営規約", description: "運営になるうえで守らなければいけないことを掲載しています。" },
+    { href: `https://mineidea.net/projects/6160894485`, img: detail, imgTitle: "詳細", title: "詳細", description: "募集役職や応募資格などを掲載しています。" },
+  ]
+
   return (
     <div>
         <Heading heading="運営応募"/>
         <Subtitle subtitle="運営って何？"/>
-          <div className='subtitle-content'>
-            <p>
-              運営とは、畳サーバーのイベント開発やマップ製作、テクスチャ作成、動画編集等様々な分野でお手伝いをいただいている方の総称です。<br/>
-              もちろん全てを出来なければならないわけではありませんし、足りない技術は覚えながら補えば構いません。<br/>
-              <Link href="https://mineidea.net/projects/6160894485">
-              詳細はこちらから！
-              </Link>
-            </p>
-          </div>
+        <div className='subtitle-content'>
+          <p>
+            運営とは、畳サーバーのイベント開発やマップ製作、テクスチャ作成、動画編集等様々な分野でお手伝いをいただいている方の総称です。<br/>
+            もちろん全てを出来なければならないわけではありませんし、足りない技術は覚えながら補えば構いません。<br/>
+          </p>
+        </div>
+
         <Subtitle subtitle="よくある質問"/>
         <div className={HelperStyle["Question-wrapper"]}>
         {QuestionList.map(({question, answer}, index) =>
@@ -74,6 +81,12 @@ const Help = () => {
           />
         )}
         </div>
+
+        <SubTitle subtitle="確認事項" />
+        <div className="Products">
+          <SubProducts products={CheckPointList} />
+        </div>
+
         <UpArrow/>
       <Igusa text="ここでは畳サーバーの運営募集とよくある質問について掲載しているわ。
         開発でも建築でもテクスチャでも動画編集でもなんでもOK!
