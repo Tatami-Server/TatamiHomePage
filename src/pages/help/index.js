@@ -71,6 +71,11 @@ const Help = () => {
           </p>
         </div>
 
+        <SubTitle subtitle="確認事項" />
+        <div className="Products">
+          <SubProducts products={CheckPointList} />
+        </div>
+
         <Subtitle subtitle="よくある質問"/>
         <div className={HelperStyle["Question-wrapper"]}>
         {QuestionList.map(({question, answer}, index) =>
@@ -80,11 +85,6 @@ const Help = () => {
             answer={answer}
           />
         )}
-        </div>
-
-        <SubTitle subtitle="確認事項" />
-        <div className="Products">
-          <SubProducts products={CheckPointList} />
         </div>
 
         <UpArrow/>
