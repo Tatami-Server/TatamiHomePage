@@ -37,7 +37,7 @@ const Rules = () => {
         <Subtitle subtitle="3. Minecraft共通ルール"/>
         <div className='subtitle-content'>
           <p>
-            1 - 当サーバーはクロスプレイ対応ですが、 PS4,PS5からの参加はできません。(SONY"PlayStation Network"利用規約に基づく)<br />
+            1 - 当サーバーはクロスプレイ対応ですが、 PS4,PS5からの参加はできません。(SONY&lquotPlayStation Network&lquot利用規約に基づく)<br />
             2 - 第三者にアドレスとポート番号を公開しないでください。<br />
             3 - チートは行わないでください。<br />
             4 - サーバーに過度に負荷をかける行為はしないでください。<br />
