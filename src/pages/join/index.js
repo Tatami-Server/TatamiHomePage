@@ -20,7 +20,7 @@ const Join = () => {
         <div className='subtitle-content'>
           <p>
             畳サーバーで遊ぶにはDiscordサーバーへの参加が必須になります。<br/>
-            Discordサーバーに参加したら、まず最初に利用規約をご確認ください！
+            Discordサーバーに参加したら、まず最初に<Link href={"/rules/"}>利用規約</Link>をご確認ください！
           </p>
           <JoinBtn size="large"/>
         </div>

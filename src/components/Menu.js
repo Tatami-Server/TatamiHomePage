@@ -10,6 +10,7 @@ const Menu = (props) => {
   const links = [
     { href: "/", text: "Home" },
     { href: "/join/", text: "サーバー参加方法" },
+    { href: "/rules/", text: "利用規約"},
     { href: "/event/", text: "イベント一覧" },
     { href: "/map/", text: "配布マップ" },
     { href: "/life/", text: "生活サーバー" },
