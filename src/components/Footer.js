@@ -15,7 +15,7 @@ const Footer = () => {
     { href: "https://twitter.com/tatami_mc", reactIcon: ImTwitter },
     { href: "https://www.youtube.com/channel/UCnXR4abcAVt8Cial0rbLe3A", reactIcon: AiFillYoutube },
     { href: "https://www.twitch.tv/Ototaki0622/", reactIcon: SiTwitch },
-    { href: "https://discord.gg/t4YAKKxaq9", reactIcon: SiDiscord }
+    { href: "https://discord.gg/V5v3jKRYB6", reactIcon: SiDiscord }
   ]
   
   return (
