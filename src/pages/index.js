@@ -51,7 +51,7 @@ function Home({ news, topImages }) {
     { href: `/contact/`, imgTitle: "問い合わせ", img: inquery, title: "お問い合わせ・意見箱", description: "意見や要望はこちらから！" },
     { href: `/please/`, imgTitle: "お願い", img: please, title: "運営からのお願い", description: "サーバーの維持や盛り上げのためにお願いしていることを記載しています。" },
     { href: `/omikuzi/`, imgTitle: "おみくじ", img: omikuzi, title: "畳おみくじ", description: "今日の運勢とクエストを占おう！ちょっとした遊び心で用意したコンテンツです。" },
-    { href: `/rules/`, imgTitle: "ルール", img: rules, title: "利用規約", description: "みんながサーバーで心地よく過ごすために守って欲しいルール！" }
+    { href: `/rules/`, imgTitle: "利用規約", img: rules, title: "利用規約", description: "みんながサーバーで心地よく過ごすために守って欲しいルール！" }
   ];
   const MainProductsList = [
     { href: `/join/`, img: join, title: "サーバー参加方法", description: "Discordやマイクラサーバーへの参加方法を紹介しています。" },
