@@ -7,12 +7,12 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { v4 as uuidv4 } from "uuid";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCSSIgM_OdbDqXt_Zl_uwBPNIjye5KE_dk",
-    authDomain: "tatami-f2ad1.firebaseapp.com",
-    projectId: "tatami-f2ad1",
-    storageBucket: "tatami-f2ad1.appspot.com",
-    messagingSenderId: "896115515729",
-    appId: "1:896115515729:web:7bc9fe7d0ce483c5f33370"
+    apiKey: process.env.FIREBASE_APIKEY,
+    authDomain: process.env.FIREBASE_AUTHDOMAIN,
+    projectId: process.env.FIREBASE_PROJECTID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APPID
 };
 
 export const app = initializeApp(firebaseConfig)
