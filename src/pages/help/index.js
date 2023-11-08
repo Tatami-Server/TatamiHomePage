@@ -10,6 +10,7 @@ import Link from 'next/link';
 import tatami from '/public/images/Igusa.images/sister1.png';
 import detail from '/public/images/help.images/detail.png';
 import staffRules from '/public/images/help.images/staffRules.png';
+import application from '/public/images/Home.images/application.png';
 
 // cssインポート
 import HelperStyle from '@style/pages/Helpre.module.scss';
@@ -58,7 +59,7 @@ const Help = () => {
   const CheckPointList = [
     { href: `/rules/staff/`, imgTitle: "運営規約", img: staffRules, title: "運営規約", description: "運営になるうえで守らなければいけないことを掲載しています。" },
     { href: `https://mineidea.net/projects/6160894485`, img: detail, imgTitle: "詳細", title: "詳細", description: "募集役職や応募資格などを掲載しています。" },
-    { href: `https://forms.gle/wdCdCS6QXvAofKjEA`, img: detail, imgTitle: "応募", title: "応募", description: "運営に応募するためのフォームです。" },
+    { href: `https://forms.gle/wdCdCS6QXvAofKjEA`, img: application, imgTitle: "応募", title: "応募", description: "運営に応募するためのフォームです。" },
   ]
 
   return (
