@@ -14,7 +14,7 @@ const SnsIcons = () => {
     { href: "https://twitter.com/tatami_mc", reactIcon: ImTwitter },
     { href: "https://www.youtube.com/channel/UCnXR4abcAVt8Cial0rbLe3A", reactIcon: AiFillYoutube },
     { href: "https://www.twitch.tv/Ototaki0622/", reactIcon: SiTwitch },
-    { href: "https://discord.gg/t4YAKKxaq9", reactIcon: SiDiscord }
+    { href: "https://disco.tatamiserver.com/", reactIcon: SiDiscord }
   ]
   
   return (
