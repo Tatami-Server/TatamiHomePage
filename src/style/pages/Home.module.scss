@@ -38,7 +38,7 @@
 
   .first-view-content {
     position: absolute;
-    right: 0;
+    right: 30px;
     display: flex;
     width: 400px;
     gap: 50px;
@@ -92,9 +92,9 @@
   position: relative;
 
   .skin-wrapper {
-    height: 100%;
+    height: calc(100% - 87px);
     width: 100%;
-    top: 30px;
+    top: 87px;
     left: 0;
     position: absolute;
     display: flex;

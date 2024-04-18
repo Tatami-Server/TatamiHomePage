@@ -11,10 +11,10 @@ import Style from '@style/components/SnsIcons.module.scss';
 const SnsIcons = () => {
 
   const FooterIconList = [
-    { href: "https://twitter.com/tatami_mc", reactIcon: ImTwitter },
-    { href: "https://www.youtube.com/channel/UCnXR4abcAVt8Cial0rbLe3A", reactIcon: AiFillYoutube },
-    { href: "https://www.twitch.tv/Ototaki0622/", reactIcon: SiTwitch },
-    { href: "https://discord.gg/t4YAKKxaq9", reactIcon: SiDiscord }
+    { href: "https://twitter.com/tatamiserver", reactIcon: ImTwitter },
+    { href: "https://www.youtube.com/@tatamiserver", reactIcon: AiFillYoutube },
+    { href: "https://twitch.tv/ototaki_soji", reactIcon: SiTwitch },
+    { href: "https://disco.tatamiserver.com", reactIcon: SiDiscord }
   ]
   
   return (

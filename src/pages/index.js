@@ -7,6 +7,7 @@ import UpArrow from '@components/UpArrow';
 import Igusa from '@components/Igusa';
 import SnsIcons from '@components/snsIcons';
 import Menu from '@components/Menu';
+import JoinBtn from '@components/JoinBtn';
 
 // reactの機能をインポート
 import { useRef } from 'react';
@@ -88,6 +89,7 @@ function Home({ news, topImages }) {
             <div className={`${Style.triangle} ${Style.line}`}></div>
             <Image className={Style.logo} src='/images/Home.images/logo.png' width={300} height={300} alt="畳アイコン" />
             <div className={Style["first-view-content"]}>
+              <JoinBtn size="small"/>
               <SnsIcons />
               <div className={Style["first-view-menu"]}>
                 <Menu right noOverlay />

@@ -9,7 +9,7 @@ const JoinBtn = ({ size }) => {
   const className = `${Style['join-btn']} ${size === 'large' ? Style['join-btn-large'] : Style['join-btn-small']}`;
 
   return (
-    <Link href="https://discord.com/invite/t4YAKKxaq9">
+    <Link href="https://disco.tatamiserver.com">
       <button className={className}>参加はこちらから！</button>
     </Link>
   );
