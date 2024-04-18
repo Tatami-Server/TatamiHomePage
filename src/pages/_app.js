@@ -8,9 +8,13 @@ import '@style/components/Menu.scss';
 function MyApp({ Component, pageProps, router }) {
     const Layout = router.pathname.includes('admin') ? NoLayout : Component.Layout || MainLayout;
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <>
+            <title>畳サーバーホームページ</title>
+            
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </>
     );
 }
 

@@ -20,7 +20,7 @@ const Join = () => {
         <div className='subtitle-content'>
           <p>
             畳サーバーで遊ぶにはDiscordサーバーへの参加が必須になります。<br/>
-            Discordサーバーに参加したら、まず最初に利用規約をご確認ください！
+            Discordサーバーに参加したら、まず最初に<Link href={"/rules/"}>利用規約</Link>をご確認ください！
           </p>
           <JoinBtn size="large"/>
         </div>
@@ -28,20 +28,9 @@ const Join = () => {
         <div className='subtitle-content'>
           <Image className='subtitle-img' src={joinDiscord} alt="利用規約とはじめにをよく見てね"></Image>
           <p>
-            Discordに加入したら、管理が確認次第
-            <span className='green'>Tatamiロール</span>
-            が付与されます。<br/>
-            （もし１日以上待っても
-            <span className='green'>Tatamiロール</span>
-            が付与されない場合は、大変お手数をおかけしますが
-            <Link href={"https://forms.gle/4v4KK23h1i6UTCae9"} className="contact-link">
-            お問い合わせ・意見箱
-            </Link>
-            、またはDiscordの
-            <span className='bold'>＃チケット作成</span>
-            チャンネルまでご連絡いただけますと幸いです）<br/>
-            <span className='green'>Tatamiロール</span>
-            が付与されますと、鯖民交流に必要なチャンネルが表示されるようになります。
+            Discordに加入しましたら<span className='green'> #ルール </span>より利用規約を確認し、テキストの最後にある同意ボタンを押して規約に同意してください。
+            <br />
+            同意後は自動的に<span className='green'> Tatamiロール </span>が付与されサーバーへの接続方法や鯖民交流に必要なチャンネルが表示されるようになります。
           </p>
         </div>
         <Subtitle subtitle="限定企画に参加したい！"/>

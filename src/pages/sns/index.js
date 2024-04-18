@@ -15,25 +15,27 @@ import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
 import Style from '@style/pages/SNS.module.scss';
+import Link from 'next/link';
 
 const SNS = () => {
 
   const SnsContentList1 =[
-    {icon:AiFillYoutube, color: '#B13E3E',title:"畳YouTube", discription:"メインの動画も切り抜き名場面もこのチャンネルで投稿しています。"},
-    {icon:SiDiscord, color:'#4E649C', title:"畳Discord", discription:"畳サーバーで遊ぶ際に参加が必要となるサーバーです。リンク先の利用規約をご確認の上、お楽しみください！"},
-    {icon:ImTwitter, color:'#52A7AC', title:"畳Twitter", discription:"イベント情報や最新情報をお伝えしています。"},
-    {icon:ImTwitter, color:'#52A7AC', title:"おとたきTwitter（鯖主）", discription:"配信通知を流したり、今夜の配信内容をフォロワーに決めてもらったりすることがあります。もちろんつぶやきも！"},
-    {icon:SiTwitch, color:'#6660A7', title:"おとたきTwitch（鯖主）", discription:"基本火・木・日夜の定期配信をしています。Mincraft中心ですが、最近は歌枠やSwitch配信も始めました。"},
-    {icon:FaWikipediaW, color:'#617A4E', title:"畳公式Wiki", discription:"当ホームページにも書いているようなイベント一覧や各種SNS等が載っています。また、イベントの詳細ルールも搭載されています。"},
+    {icon:AiFillYoutube, color: '#B13E3E',title:"畳YouTube", discription:"メインの動画も切り抜き名場面もこのチャンネルで投稿しています。", link: "https://youtube.com/@tatamiserver"},
+    {icon:SiDiscord, color:'#4E649C', title:"畳Discord", discription:"畳サーバーで遊ぶ際に参加が必要となるサーバーです。リンク先の利用規約をご確認の上、お楽しみください！", link: "https://disco.tatamiserver.com/"},
+    {icon:ImTwitter, color:'#52A7AC', title:"畳Twitter", discription:"イベント情報や最新情報をお伝えしています。", link: "https://twitter.com/tatami_mc"},
+    {icon:ImTwitter, color:'#52A7AC', title:"おとたきTwitter（鯖主）", discription:"配信通知を流したり、今夜の配信内容をフォロワーに決めてもらったりすることがあります。もちろんつぶやきも！", link: "https://twitter.com/ototakisouji"},
+    {icon:SiTwitch, color:'#6660A7', title:"おとたきTwitch（鯖主）", discription:"基本火・木・日夜の定期配信をしています。Mincraft中心ですが、最近は歌枠やSwitch配信も始めました。", link: "https://www.twitch.tv/ototakisouji"},
+    {icon:FaWikipediaW, color:'#617A4E', title:"畳公式Wiki", discription:"当ホームページにも書いているようなイベント一覧や各種SNS等が載っています。また、イベントの詳細ルールも搭載されています。", link: "https://seesaawiki.jp/tatamiserver/"},
   ]
 
   return (
     <div>
         <Heading heading="公式SNS等"/>
         <div className={Style["sns-wrapper"]}>
-          {SnsContentList1.map((item) => {
+          {SnsContentList1.map((item, index) => {
             return(
-              <div key={item.title} className={Style["sns-content"]}>
+              <Link href={item.link} key={index} className={Style["sns-link"]}>
+                <div key={item.title} className={Style["sns-content"]}>
                 <div className={Style.icon}>
                   <IconContext.Provider value={{ color: item.color, size: '60px' }}>
                     <item.icon />
@@ -42,6 +44,7 @@ const SNS = () => {
                 <h3 className={Style["sns-title"]}>{item.title}</h3>
                 <p className={Style["sns-discription"]}>{item.discription}</p>
               </div>
+              </Link>
             );
           })}
         </div>

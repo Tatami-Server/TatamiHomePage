@@ -12,16 +12,6 @@ import AdminSubProduct from "@admin/components/AdminSubProduct";
 import { CardContent } from "@mui/material";
 import Heading from "@components/Heading";
 
-const merge = (oldData, newData) => {
-    return oldData.map(item => {
-        const newItem = newData.find(n => n.id === item.id);
-        if (newItem) {
-            return { ...item, sortNum: newItem.sortNum };
-        }
-        return item;
-    });
-}
-
 const LifeSort = () => {
     const [lifes, setLifes] = useState([])
 
