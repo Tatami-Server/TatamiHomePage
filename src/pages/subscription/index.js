@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // 画像インポート
-import twitchImg from '/public/images/Subscription.images/twitchImg.png';
+import tebeximg from '/public/images/Subscription.images/tebeximg.png';
 import sub1 from '/public/images/Subscription.images/sub1-1.png';
 import sub2 from '/public/images/Subscription.images/sub1-2.png';
 import sub3 from '/public/images/Subscription.images/sub1-3.png';
@@ -45,16 +45,25 @@ const Subscription = () => {
   return (
     <>
       <Heading heading="サブスクライブ・ご寄付について" />
-      <Subtitle subtitle="サブスクライバーとは？" />
+      <Subtitle subtitle="サブスクライブとは？" />
       <div className='subtitle-content'>
-        <Image className='subtitle-img' src={twitchImg} alt="twitchの画像"></Image>
+        <Image className='subtitle-img' src={tebeximg} alt="tebexの画像"></Image>
         <p>
-          当サーバーにはサブスクライブ制度が存在します。なお当サーバーのサブスクライバーとは、鯖主：おとたきのTwitchチャンネルのサブスクライブをしている人を指します。<br />
-          サブスクライブをすると、自動的にサブスクライバーロールが付与されます。<br />
-          なおTwitchは
-          <span className='light-blue'>Amazon Prime会員</span>
-          であれば、毎月一人無料でサブスクライブできます！ぜひご検討ください。<br />
-          以下ではメリットを紹介します。
+        当サーバーには
+            <Link href={"https://tatamiserver.tebex.io/"}>
+            Tebex
+            </Link>
+            というサイトを用いた支援制度が存在します。<br/>
+            いただいたご支援は、<br/>
+            ・サーバーの維持や強化<br/>
+            ・新機能を作るためのプラグインの購入<br/>
+            ・外注依頼をする際の費用<br/>
+            などの目的で利用させていただきます。<br/>
+
+            Tebexでは月額制(サブスクライブ)で入手できる特典や、<br/>
+            買い切りでアイテムを入手できる特典を用意しています。<br/>
+            今後、随時プランを追加予定です。<br/>
+            是非一度ご覧になってみてください！<br/>
         </p>
       </div>
       <Subtitle subtitle="サブスクライブのメリット！" />

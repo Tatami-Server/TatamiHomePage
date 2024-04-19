@@ -9,7 +9,7 @@ import Image from "next/image";
 
 // 画像インポート
 import joinDiscord from '/public/images/Join.images/join1.png';
-import joinTwichSub from '/public/images/Join.images/join2.png';
+import joinTebex from '/public/images/Join.images/join3.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 const Join = () => {
@@ -24,7 +24,7 @@ const Join = () => {
           </p>
           <JoinBtn size="large"/>
         </div>
-        <Subtitle subtitle="Discordにはいったら..."/>
+        <Subtitle subtitle="Discordに入ったら..."/>
         <div className='subtitle-content'>
           <Image className='subtitle-img' src={joinDiscord} alt="利用規約とはじめにをよく見てね"></Image>
           <p>
@@ -33,22 +33,25 @@ const Join = () => {
             同意後は自動的に<span className='green'> Tatamiロール </span>が付与されサーバーへの接続方法や鯖民交流に必要なチャンネルが表示されるようになります。
           </p>
         </div>
-        <Subtitle subtitle="限定企画に参加したい！"/>
+        <Subtitle subtitle="畳サーバーをもっと楽しみたい！"/>
         <div className='subtitle-content'>
-          <Image className='subtitle-img' src={joinTwichSub} alt="サブスクライバーとは？"></Image>
+          <Image className='subtitle-img' src={joinTebex} alt="Tebexサイト"></Image>
           <p>
-            当サーバーにはサブスクライブ制度が存在します。<br/>
-            なお当サーバーのサブスクライバーとは、鯖主:
-            <Link href={"https://www.twitch.tv/Ototaki0622/"}>
-            おとたきのTwitchチャンネル
+            当サーバーには
+            <Link href={"https://tatamiserver.tebex.io/"}>
+            Tebex
             </Link>
-            のサブスクライブをしている人を指します。
-            サブスクライブをすると自動的に
-            <span className='green'>サブスクライバーロール</span> 
-            が付与されます。<br/>
-            <span className='green'>サブスクライバーロール</span>
-            が付与されますと、限定企画の募集やイベントの優先参加枠を獲得することができます。<br/>
-            ほかにもメリットはたくさんあります。詳しくは
+            というサイトを用いた支援制度が存在します。<br/>
+            Tebexでの支援をすると
+            <span className='green'>畳サーバー愛好家</span> 
+            になれます。<br/>
+            <span className='green'>畳サーバー愛好家</span>
+            になると、<br/>
+            ・ユニークな入退出メッセージに変更<br/>
+            ・プレイヤー名の前に("[畳+]")のような特別な文字が追加<br/>
+            ・イベントサーバーの貸し出し / 貸し切りが可能に<br/>
+            ・ロビーを飛び回れるグラップリングフックを入手<br/>
+            などなど、たくさんのメリットがあります！詳しくは
             <Link href={`/subscription/`}>
             こちら
             </Link>
