@@ -16,8 +16,7 @@ import sub4 from '/public/images/Subscription.images/sub1-4.png';
 import sub5 from '/public/images/Subscription.images/sub1-5.png';
 import sub6 from '/public/images/Subscription.images/sub1-6.png';
 import sub7 from '/public/images/Subscription.images/sub1-7.png';
-import doneruLogo from '/public/images/Subscription.images/doneru-logo.png';
-import kirakira from '/public/images/Subscription.images/kirakira.png';
+import tebex from '/public/images/Subscription.images/tebex.png';
 import tatami from '/public/images/Igusa.images/sister1.png';
 
 // cssインポート
@@ -33,13 +32,6 @@ const Subscription = () => {
     { title: "専用スタンプが使用可能に！", img: sub5, description: "Twitch及びDiscordでオリジナルスタンプが利用可能になります!配信や会話を盛り上げよう！" },
     { title: "お名前の横にバッジが付く", img: sub6, description: <>サブスクライバーの証となるバッジが付与され、他の方と違った雰囲気を出すことが可能です。<br />しかもこのバッジは、サブスク年月によって成長していきます。</> },
     { title: "付近vcMODが使える(Java版限定)", img: sub7, description: <>サブスクライバー限定で、付近vcMODでの通話ができるようになりました!<br />味方との連携をする際や敵の位置を察知する際など、楽しさの幅がぐっと広がります！</> },
-  ];
-
-  const SpecialThenksList = [
-    "Yukina様",
-    "S2ns_mash様",
-    "まりゅ🐴様",
-    "虚空教信者様",
   ];
 
   return (
@@ -86,7 +78,7 @@ const Subscription = () => {
       <div className={Style["subscription-subtitle-content"]}>
         <p>ご寄付はこちらをクリック↓</p>
         <Link href={"https://doneru.jp/Ototaki0622/login"} target="_blank" >
-          <Image src={doneruLogo} className={Style["doneru-logo"]} alt="doneruのロゴ" width={"400"}></Image>
+          <Image src={tebex} className={Style["tebex"]} alt="tebexのロゴ" width={"400"}></Image>
         </Link>
         <p>
           平素より、畳サーバー並びに鯖主:おとたきの活動に関心をお寄せくださり、
@@ -99,28 +91,6 @@ const Subscription = () => {
           <li>配信機材　静音キーボード　オーディオインターフェース等の購入</li>
           <li>新規ゲームやシステムの開発</li>
         </ul>
-        <p>
-          PayPalまたはクレジットカードでのご寄付が可能です。<br />
-          ご寄付くださった方は、Special Thanksにて氏名(またはニックネーム)を掲載させていただきます。
-        </p>
-        <div className={Style["special-thenks-content"]}>
-          <div className={Style["special-thenks"]}>
-            <Image src={kirakira} alt="" width={"50"}></Image>
-            <h2 >Special Thanks</h2>
-            <Image src={kirakira} alt="" width={"50"}></Image>
-          </div>
-          <table>
-            <tbody>
-              {SpecialThenksList.map((name) => {
-                return (
-                  <tr key={name}>
-                    <td className={Style["special-thenks-name"]}>{name}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
       </div>
       <UpArrow />
       <Igusa text="ここではサブスクライバーのメリットや支援者への御礼を掲載しているわ。
