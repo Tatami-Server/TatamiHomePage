@@ -106,7 +106,7 @@ function Home({ news, topImages }) {
                   className={`d-block w-100 ${Style["carousel-img"]}`}
                   src={img.src}
                   alt="slide"
-                  fill
+                  layout='fill'
                 />
               </Carousel.Item>
             )}
