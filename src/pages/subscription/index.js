@@ -77,7 +77,7 @@ const Subscription = () => {
       <Subtitle subtitle="ご寄付" />
       <div className={Style["subscription-subtitle-content"]}>
         <p>ご寄付はこちらをクリック↓</p>
-        <Link href={"https://doneru.jp/Ototaki0622/login"} target="_blank" >
+        <Link href={"https://tatamiserver.tebex.io/"} target="_blank" >
           <Image src={tebex} className={Style["tebex"]} alt="tebexのロゴ" width={"160"}></Image>
         </Link>
         <p>
