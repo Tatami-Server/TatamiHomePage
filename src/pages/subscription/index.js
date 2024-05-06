@@ -78,7 +78,7 @@ const Subscription = () => {
       <div className={Style["subscription-subtitle-content"]}>
         <p>ご寄付はこちらをクリック↓</p>
         <Link href={"https://doneru.jp/Ototaki0622/login"} target="_blank" >
-          <Image src={tebex} className={Style["tebex"]} alt="tebexのロゴ" width={"400"}></Image>
+          <Image src={tebex} className={Style["tebex"]} alt="tebexのロゴ" width={"160"}></Image>
         </Link>
         <p>
           平素より、畳サーバー並びに鯖主:おとたきの活動に関心をお寄せくださり、
