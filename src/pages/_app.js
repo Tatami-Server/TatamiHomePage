@@ -6,10 +6,11 @@ import '@style/app.scss';
 import '@style/components/Menu.scss';
 
 function MyApp({ Component, pageProps, router }) {
-    const Layout = router.pathname.includes('admin') ? NoLayout : Component.Layout || MainLayout;
+    const isAdmin = router.pathname.includes('admin')
+    const Layout = isAdmin ? NoLayout : Component.Layout || MainLayout;
     return (
         <>
-            <title>畳サーバーホームページ</title>
+            <title>{ !isAdmin ? '畳サーバーホームページ' : '管理画面 for 畳サーバーホームページ' }</title>
             
             <Layout>
                 <Component {...pageProps} />

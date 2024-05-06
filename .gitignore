@@ -29,3 +29,5 @@ yarn-error.log*
 firebase-debug.log
 *.log
 emulatorData
+
+batch/key
