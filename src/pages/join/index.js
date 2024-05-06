@@ -20,17 +20,17 @@ const Join = () => {
         <div className='subtitle-content'>
           <p>
             畳サーバーで遊ぶにはDiscordサーバーへの参加が必須になります。<br/>
-            Discordサーバーに参加したら、まず最初に<Link href={"/rules/"}>利用規約</Link>をご確認ください！
+            まず最初に<Link href={"/rules/"}>利用規約</Link>をご確認ください！
           </p>
           <JoinBtn size="large"/>
         </div>
         <Subtitle subtitle="Discordに入ったら..."/>
         <div className='subtitle-content'>
-          <Image className='subtitle-img' src={joinDiscord} alt="利用規約とはじめにをよく見てね"></Image>
+          <Image className='subtitle-img' src={joinDiscord} alt="はじめに と 📘ルール をよく見てね"></Image>
           <p>
-            Discordに加入しましたら<span className='green'> #ルール </span>より利用規約を確認し、テキストの最後にある同意ボタンを押して規約に同意してください。
+            Discordに加入しましたら<span className='green'> #📘ルール </span>より利用規約を確認し、同意ボタンを押して規約に同意してください。
             <br />
-            同意後は自動的に<span className='green'> Tatamiロール </span>が付与されサーバーへの接続方法や鯖民交流に必要なチャンネルが表示されるようになります。
+            同意後は自動的に<span className='green'> Tatamiロール </span>が付与され、サーバーへの接続方法や鯖民交流に必要なチャンネルが表示されるようになります。
           </p>
         </div>
         <Subtitle subtitle="畳サーバーをもっと楽しみたい！"/>
