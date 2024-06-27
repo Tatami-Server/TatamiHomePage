@@ -100,7 +100,7 @@ const Rules = () => {
       <Subtitle subtitle="4. イベントサーバー共通ルール" />
       <div className='subtitle-content'>
         <p>
-          1 - あらかじめイベントのルールや注意事項をご確認の上参加してください。<br />
+          1 - あらかじめイベントのルールや注意事項を確認の上参加してください。<br />
                ┗ <Link href={"https://www.tatamiserver.com/event/"}>イベント一覧</Link>から確認できます。<br />
           2 -人数制限付きのイベントは、Tebexサブスクプラン(畳サーバー愛好家+以上)の購入者を優先的に参加させる可能性があります。予めご了承下さい。<br />
                ┗ <Link href={"https://tatamiserver.tebex.io/"}>Tebex</Link> 並びに <Link href={"https://disco.tatamiserver.com/"}>Discord</Link> から確認できます。<br />
