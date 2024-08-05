@@ -1,3 +1,6 @@
+# 注意 こちらは移行前の古いリポジトリです。
+# 最新は　https://github.com/digital-sorovider/TatamiHomePage　こちらです！
+
 # TatamiHomePage
 畳サーバー公式ホームページのリポジトリです。
 ## プロジェクトのセットアップ
